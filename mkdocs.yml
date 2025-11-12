@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Material for MkDocs
+site_name: VC Hub User Manual
 site_url: https://squidfunk.github.io/mkdocs-material/
 site_author: Martin Donath
 site_description: >-
@@ -27,8 +27,8 @@ site_description: >-
   minutes – searchable, customizable, in 60+ languages, for all devices
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+# repo_name: squidfunk/mkdocs-material
+# repo_url: https://github.com/squidfunk/mkdocs-material
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2025 Martin Donath
