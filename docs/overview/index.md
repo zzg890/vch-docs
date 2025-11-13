@@ -49,6 +49,7 @@
 
 
 **Data-driven**
+
  VC Hub supports multiple data protocols, allowing you to easily connect on-site data to VC Hub. And we are also constantly increasing and expanding these data protocols to enable VC Hub to be applied to a wider range of fields.
 
 ![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/SKeLj43H/resources/YY7I3Mgz6Q7kIinee7GtVi6NnM2eqkeDy1dryA-WXuU.png?token=W.9BOxqua3jxkHKwk8e5JjmQNPnwve_-VQcqy2BQxkuJ7wihEOB22ouO4gNe4EEE0)
