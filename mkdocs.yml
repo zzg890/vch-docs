@@ -179,16 +179,26 @@ nav:
     - installation/index.md
     - installation/windows-environment.md
     - installation/linux-environment.md
+  - Quick Start Guide:
+    - quick-start-guide/index.md
+  - System Deployment:
+    - system-deployment/index.md
   - Appendix:
     - appendix/index.md
     - System.Function:
-      - appendix.system-function/index.md
+      - appendix/system-function/index.md
       - System.Alarm:
-        - appendix.system-function.system-alarm/index.md
-        - appendix.system-function.system-alarm/system-alarm-query.md
-        - appendix.system-function.system-alarm/system-alarm-queryHistory.md
+        - appendix/system-function/system.alarm/index.md
+        - appendix/system-function/system.alarm/system.alarm.query.md
+        - appendix/system-function/system.alarm/system.alarm.queryHistory.md
+      - System.Context:
+        - appendix/system-function/system.context/index.md
+      - System.Datatable:
+        - appendix/system-function/system.datatable/index.md
+      - System.Db:
+        - appendix/system-function/system.db/index.md
     - Demo Workspace:
-      - appendix.demo-workspace/index.md
-      - appendix.demo-workspace/home.md
-      - appendix.demo-workspace/components.md
-      - appendix.demo-workspace/features.md
+      - appendix/demo-workspace/index.md
+      - appendix/demo-workspace/home.md
+      - appendix/demo-workspace/components.md
+      - appendix/demo-workspace/features.md
