@@ -170,7 +170,7 @@ not_in_nav: |
 nav:
   - Overview:
     - overview/index.md
-    - overview/Version Update Notes.md
+    - overview/version-update-notes.md
     - overview/Support and Assistance.md
     - overview/System Requirements.md
     - overview/Breaking Changes.md
