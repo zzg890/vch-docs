@@ -2,13 +2,14 @@
 
  A VC Hub  node deployed within a local area network can be networked with VC Hub  in the cloud. In the absence of a public IP address, nodes within a local area network can generally only create outbound connections from local area.
 
-<img width="1182" height="681" alt="image" src="https://github.com/user-attachments/assets/9f3dcbd2-e5db-4742-b81c-a96a74b44d4b" />
+<img width="3060" height="1718" alt="image" src="https://github.com/user-attachments/assets/db79485a-988c-408d-8f58-b54e8ccca18f" />
+
 
 #### **Tunnel Network**
 
  When the outbound connection is successfully connected, a tunnel network will be established between the two nodes. Through this tunnel network, the nodes in the local area network (LAN) and the nodes in the cloud can realize bi-directional access, even if the nodes in the LAN don't have a public IP, the nodes in the cloud are still able to send HTTP requests to the nodes in the LAN and read/write the data of the nodes in the LAN through the tunnel network.
 
-<img width="781" height="298" alt="image" src="https://github.com/user-attachments/assets/52dfb0d5-7c22-4efb-9830-e9e66ddda59e" />
+<img width="787" height="314" alt="image" src="https://github.com/user-attachments/assets/fac9e670-c47b-400b-9ba4-3bcd3190f40f" />
 
 #### **Flow Control**
 
