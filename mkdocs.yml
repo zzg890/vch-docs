@@ -75,9 +75,6 @@ theme:
   icon:
     logo: logo
 
- 
-
-
 # Plugins
 plugins:
   - blog
@@ -169,43 +166,64 @@ not_in_nav: |
 # Page tree
 nav:
   - Product Overview:
-    - overview/index.md
-    - overview/version-update-notes.md
-    - overview/system-requirements.md
-    - overview/breaking-changes.md
-  - New in this Version:  
-    - new-version/index.md
+      - overview/index.md
+      - overview/version-update-notes.md
+      - overview/system-requirements.md
+      - overview/breaking-changes.md
+  - New in this Version:
+      - new-version/index.md
   - Installation and Upgrade:
-    - installation/index.md
-    - installation/windows-environment.md
-    - installation/linux-environment.md
+      - installation/index.md
+      - installation/windows-environment.md
+      - installation/linux-environment.md
   - Quick Start Guide:
-    - quick-start-guide/index.md
+      - quick-start-guide/index.md
   - System Deployment:
-    - system-deployment/index.md
-    - system-deployment/standalone-deployment.md
-    - system-deployment/network-deployment.md
-    - system-deployment/hybrid-cloud-and-local-deployment.md
-    - system-deployment/redundant-deployment.md
-    - system-deployment/azure-cloud-deployment.md
+      - system-deployment/index.md
+      - system-deployment/standalone-deployment.md
+      - system-deployment/network-deployment.md
+      - system-deployment/hybrid-cloud-and-local-deployment.md
+      - system-deployment/redundant-deployment.md
+      - system-deployment/azure-cloud-deployment.md
+  - Management Platform:
+      - management-platform/index.md
+      - management-platform/license-and-activation.md
+      - Workspaces:
+          - management-platform/workspaces/index.md
+      - Projects:
+          - management-platform/projects/index.md
+      - Devices:
+          - management-platform/devices/index.md
+      - Assets and Tags:
+          - management-platform/assets-and-tags/index.md
+      - Alarming:
+          - management-platform/alarming/index.md
+      - Scripts:
+          - management-platform/scripts/index.md
+      - management-platform/networking.md
+      - Databases:
+        - management-platform/databases/index.md
+      - Redundancy:
+        - management-platform/redundancy/index.md   
+      - Security:
+        - management-platform/security/index.md       
   - Appendix:
-    - appendix/index.md
-    - System.Function:
-      - appendix/system-function/index.md
-      - System.Alarm:
-        - appendix/system-function/system.alarm/index.md
-        - appendix/system-function/system.alarm/system.alarm.query.md
-        - appendix/system-function/system.alarm/system.alarm.queryHistory.md
+      - appendix/index.md
+      - System.Function:
+          - appendix/system-function/index.md
+          - System.Alarm:
+              - appendix/system-function/system.alarm/index.md
+              - appendix/system-function/system.alarm/system.alarm.query.md
+              - appendix/system-function/system.alarm/system.alarm.queryHistory.md
 
-        
-      - System.Context:
-        - appendix/system-function/system.context/index.md
-      - System.Datatable:
-        - appendix/system-function/system.datatable/index.md
-      - System.Db:
-        - appendix/system-function/system.db/index.md
-    - Demo Workspace:
-      - appendix/demo-workspace/index.md
-      - appendix/demo-workspace/home.md
-      - appendix/demo-workspace/components.md
-      - appendix/demo-workspace/features.md
+          - System.Context:
+              - appendix/system-function/system.context/index.md
+          - System.Datatable:
+              - appendix/system-function/system.datatable/index.md
+          - System.Db:
+              - appendix/system-function/system.db/index.md
+      - Demo Workspace:
+          - appendix/demo-workspace/index.md
+          - appendix/demo-workspace/home.md
+          - appendix/demo-workspace/components.md
+          - appendix/demo-workspace/features.md
