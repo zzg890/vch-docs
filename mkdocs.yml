@@ -173,6 +173,8 @@ nav:
     - overview/version-update-notes.md
     - overview/system-requirements.md
     - overview/breaking-changes.md
+  - New in this Version:  
+    - new-version/index.md
   - Installation and Upgrade:
     - installation/index.md
     - installation/windows-environment.md
@@ -180,11 +182,13 @@ nav:
   - Appendix:
     - appendix/index.md
     - System.Function:
-      - appendix/index.md
+      - appendix.system-function/index.md
       - System.Alarm:
-        - appendix.system-alarm/index.md
-        - appendix.system-alarm/system-alarm-query.md
-        - appendix.system-alarm/system-alarm-queryHistory.md
+        - appendix.system-function.system-alarm/index.md
+        - appendix.system-function.system-alarm/system-alarm-query.md
+        - appendix.system-function.system-alarm/system-alarm-queryHistory.md
     - Demo Workspace:
-      - demo/index.md
- 
+      - appendix.demo-workspace/index.md
+      - appendix.demo-workspace/home.md
+      - appendix.demo-workspace/components.md
+      - appendix.demo-workspace/features.md
