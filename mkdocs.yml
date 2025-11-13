@@ -168,7 +168,7 @@ not_in_nav: |
 
 # Page tree
 nav:
-  - Overview:
+  - Product Overview:
     - overview/index.md
     - overview/version-update-notes.md
   - Installation:
