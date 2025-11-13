@@ -173,7 +173,8 @@ nav:
     - overview/version-update-notes.md
     - overview/system-requirements.md
     - overview/breaking-changes.md
-  - Installation:
+  - Installation and Upgrade:
     - installation/index.md
     - installation/windows-environment.md
+    - installation/linux-environment.md
  
