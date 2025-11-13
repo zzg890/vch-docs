@@ -171,9 +171,6 @@ nav:
   - Overview:
     - overview/index.md
     - overview/version-update-notes.md
-    - overview/Support and Assistance.md
-    - overview/System Requirements.md
-    - overview/Breaking Changes.md
   - Installation:
     - installation/index.md
     - installation/windows-environment.md
