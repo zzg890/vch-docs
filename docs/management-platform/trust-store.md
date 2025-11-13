@@ -1,1 +1,1 @@
-# Trust Storef
+# Trust Store

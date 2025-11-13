@@ -206,7 +206,14 @@ nav:
       - Redundancy:
         - management-platform/redundancy/index.md   
       - Security:
-        - management-platform/security/index.md       
+        - management-platform/security/index.md    
+      - management-platform/certificate-management.md
+      - management-platform/node-configuration.md      
+      - management-platform/trust-store.md
+      - Open API:
+        - management-platform/open-api/index.md
+      - management-platform/diagnostics.md
+
   - Appendix:
       - appendix/index.md
       - System.Function:
