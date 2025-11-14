@@ -105,7 +105,8 @@ Azure provides the  [Azure Backup](https://azure.microsoft.com/en-us/products/ba
 
 The specific location of the application data directory can be configured during the installation process, as shown in the following image.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/7H8Qv2rs/resources/2hNWBl-yCqZM6e93-lETDUTrgXegzJClVdpsE-zfaM8.png?token=W.W4I3355eyWZmu5ncolwR49KkZdjqhO8AY9r3US9RsbdxMH3_COJOHurva9lVtaGAsnDIVG6gUPJn3OBOIQk9lcjq0Q)
+<img width="600" height="465" alt="image" src="https://github.com/user-attachments/assets/f1472c48-8222-4815-ba4c-a0a4fdaa4bea" />
+
 
 ## Data Monitor
 
@@ -117,7 +118,8 @@ System administrators can use the monitoring dashboard to observe the server's s
 
 By enabling the Azure Monitor agent in Azure VMs hosting VC Hub services, real-time data can be received in the Azure Monitor center.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/7H8Qv2rs/resources/srmb762aNtUqC5CQpnuUs9CjwDPANpWNithyJVIgEaA.png?token=W.W4I3355eyWZmu5ncolwR49KkZdjqhO8AY9r3US9RsbdxMH3_COJOHurva9lVtaGAsnDIVG6gUPJn3OBOIQk9lcjq0Q)
+<img width="1417" height="737" alt="image" src="https://github.com/user-attachments/assets/d1fae880-be72-4e51-af74-58f0c2569b72" />
+
 
 #### Azure Monitor Url
 
