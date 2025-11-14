@@ -191,10 +191,10 @@ nav:
       - Workspaces:
           - management-platform/workspaces/index.md
           - management-platform/workspaces/multi-workspace-management.md
-          - management-platform/workspaces/current-workspace-configure File.md
+          - management-platform/workspaces/current-workspace-configure-file.md
           - management-platform/workspaces/workspace-directory.md
           - management-platform/workspaces/upgrade-workspace.md
-          - management-platform/workspaces/cannot-log-in.md
+          - management-platform/workspaces/can-not-log-in.md
       - Projects:
           - management-platform/projects/index.md
       - Devices:
