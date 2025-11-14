@@ -190,6 +190,11 @@ nav:
       - management-platform/license-and-activation.md
       - Workspaces:
           - management-platform/workspaces/index.md
+          - management-platform/workspaces/multi-workspace-management.md
+          - management-platform/workspaces/current-workspace-configure-file.md
+          - management-platform/workspaces/workspace-directory.md
+          - management-platform/workspaces/upgrade-workspace.md
+          - management-platform/workspaces/can-not-log-in.md
       - Projects:
           - management-platform/projects/index.md
       - Devices:
@@ -206,9 +211,10 @@ nav:
       - Redundancy:
           - management-platform/redundancy/index.md   
       - Security:
-          - management-platform/security/index.md    
+          - management-platform/security/index.md  
+      - management-platform/node-configuration.md     
       - management-platform/certificate-management.md
-      - management-platform/node-configuration.md      
+      - management-platform/mqtt-broker.md     
       - management-platform/trust-store.md
       - Open API:
           - management-platform/open-api/index.md
@@ -281,10 +287,56 @@ nav:
                   - appendix/system-function/system-context/system-context-currentevent/system-context-currentevent-type.md
                   - appendix/system-function/system-context/system-context-currentevent/system-context-currentevent-x.md
                   - appendix/system-function/system-context/system-context-currentevent/system-context-currentevent-y.md
-          - System.Datatable:
-              - appendix/system-function/system.datatable/index.md
-          - System.Db:
-              - appendix/system-function/system.db/index.md
+          - System-Datatable:
+              - appendix/system-function/system-datatable/index.md
+              - appendix/system-function/system-datatable/system-datatable-todatatable.md              
+          - System-Db:
+              - appendix/system-function/system-db/index.md
+              - appendix/system-function/system-db/system-db-runsqlquery.md
+          - System-Event:
+              - appendix/system-function/system-event/index.md
+              - appendix/system-function/system-event/system-event-fail.md  
+              - appendix/system-function/system-event/system-event-success.md 
+          - System-Page:
+              - appendix/system-function/system-page/index.md
+              - appendix/system-function/system-page/system-page-getpropertyvalue.md
+              - appendix/system-function/system-page/system-page-setpropertyvalue.md
+          - System-PTZControl:
+              - appendix/system-function/system-ptzcontrol/index.md
+              - appendix/system-function/system-ptzcontrol/system-ptzcontrol-move.md
+              - appendix/system-function/system-ptzcontrol/system-ptzcontrol-stop.md
+              - appendix/system-function/system-ptzcontrol/system-ptzcontrol-setposition.md
+          - System-Security:
+              - appendix/system-function/system-security/index.md
+              - appendix/system-function/system-security/system-security-changepassword.md
+              - appendix/system-function/system-security/system-security-getroles.md
+              - appendix/system-function/system-security/system-security-getusername.md
+              - appendix/system-function/system-security/system-security-login.md
+              - appendix/system-function/system-security/system-security-logout.md
+          - System-Tag:
+              - appendix/system-function/system-tag/index.md
+              - appendix/system-function/system-tag/system-tag-getpropertyvalues.md
+              - appendix/system-function/system-tag/system-tag-mock.md
+              - appendix/system-function/system-tag/system-tag-querypropertyvalues.md
+              - appendix/system-function/system-tag/system-tag-readvalue.md
+              - appendix/system-function/system-tag/system-tag-subscribe.md
+              - appendix/system-function/system-tag/system-tag-writevalue.md
+          - System-UI:
+              - appendix/system-function/system-ui/index.md
+              - appendix/system-function/system-ui/system-ui-applychanges.md
+              - appendix/system-function/system-ui/system-ui-back.md
+              - appendix/system-function/system-ui/system-ui-close.md
+              - appendix/system-function/system-ui/system-ui-findcontrol.md
+              - appendix/system-function/system-ui/system-ui-forward.md
+              - appendix/system-function/system-ui/system-ui-gohome.md
+              - appendix/system-function/system-ui/system-ui-open.md
+              - appendix/system-function/system-ui/system-ui-opennewtab.md
+              - appendix/system-function/system-ui/system-ui-openpopup.md
+              - appendix/system-function/system-ui/system-ui-redirect.md
+              
+
+
+              
       - Demo Workspace:
           - appendix/demo-workspace/index.md
           - appendix/demo-workspace/home.md
