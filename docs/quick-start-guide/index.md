@@ -6,7 +6,8 @@ We have outlined some simple steps to guide you through configuring your project
 
 Click the "Add" button in the project list to create a project.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/21V1JZuFFT8MUrSWZcTV2q0tO5NWZoY3J4LQ6-f2gMU.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1907" height="302" alt="image" src="https://github.com/user-attachments/assets/adb1b2ec-68b2-4286-8673-a5daed813e82" />
+
 
 #### **2** **. Add a Database**
 
@@ -20,37 +21,44 @@ After the installation of VC Hub, a default asset will be automatically created,
 
 On the project list page, click the "Design" button for the project.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/0wX5BPfsPR7kB_bLrshZudLeksK9ICD9dm2ym8fIYmA.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1895" height="239" alt="image" src="https://github.com/user-attachments/assets/c5546d2d-9098-4b0d-a825-be9c0fb6f618" />
+
 
 Open the configuration editor to display the following interface.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/Rmz-PR1K6MUeRIoIt0yW7aTxT6npikah5MWnfJi8kW0.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1920" height="941" alt="image" src="https://github.com/user-attachments/assets/ad7fcdd6-8cfb-4953-a62a-ec071703c024" />
+
 
 #### **5. Create a New Page**
 
 Click "New Page" to quickly create a new page.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/bqsgE-ItRQUqdPkOVMogWaUxkgGE681ZBb3POBaxsT4.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="246" height="372" alt="image" src="https://github.com/user-attachments/assets/a227ee58-3ad6-4cd4-9cf5-1de2f181e181" />
+
 
 In the **Tools** window on the left side of the designer, add for example "Rect" , "Label" , "Value Display",and "Historical Trend Chart" controls to the page. You can also use the search functionality.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/VwWrXRmriVGhiLYFZvItpPpoLah7iUSVzN0SOV5fuUw.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1915" height="604" alt="image" src="https://github.com/user-attachments/assets/dc56dbc1-12e9-4589-b24f-057c7b7cc6eb" />
+
 
 #### **6. Create a Tag**
 
 In the asset dropdown box of the asset window in the configuration editor, select an asset and then click the add button to add a memory tag to that asset. Tag name: liquid.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/k1kqHwoJbD-jUm-eL_cFyGLekFGeoZz3QEyIX-TW4co.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="376" height="706" alt="image" src="https://github.com/user-attachments/assets/1d87b78d-4022-4ec3-b4ef-612cca9a687f" />
+
 
 Enable the simulated property for this tag, using simulated value as the tag value. Types supported are **Random**, **Increment**, **Decrement**, and **Fixed.**
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/NSvhW9OBFOU-Q14Mf87RkcmaB4VdYzvkYSSE0vLtiPw.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1090" height="495" alt="image" src="https://github.com/user-attachments/assets/e44da068-a6f8-44eb-b723-4204617ef49c" />
+
 
 #### **7. Enable History for Tags**
 
 At the top of the tag editing page, enable history recording to store the value of the tag historically.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/tlTSpdWC4EduNrGSgJmTOscymrV5r3xVIuN2d8Xf5v8.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1092" height="571" alt="image" src="https://github.com/user-attachments/assets/79ff5d78-3ab6-4ea0-999c-6c7d3dd1fb7b" />
+
 
 #### **8. Bind Tag**
 
@@ -58,19 +66,23 @@ Bind tags to controls on the page.
 
 1. Set the display content of the text label to: "Liquid level:"
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/x84YdsVVKC9LA7MCQ-F4YOEIlTM3808KCQ-nEX8_st0.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1579" height="452" alt="image" src="https://github.com/user-attachments/assets/8daad4c6-6f35-4a52-8786-c8e25116b32c" />
+
 
 2.  In the animation of the rectangle, select the fill animation. Click the value binding button and bind the created tag:liquid.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/yblwiXQTVWsfulli7TBQd4RcBZSDkoZ96ta8yJe-5yA.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1919" height="723" alt="image" src="https://github.com/user-attachments/assets/20fc173a-9004-4e74-8723-f2f7c1b50bbf" />
+
 
 3. In the value display control, click the value binding button and bind the created tag:liquid. Afte binding, the binding icon will turn from gray to green.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/J9jOyT5mqZwgcMiitzCYJnt9MNBcXS-QY_ishmHvYd0.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1549" height="480" alt="image" src="https://github.com/user-attachments/assets/0aaeb96d-847a-462c-a750-8aa8a8020a5e" />
+
 
 4. In the historical chart control, click the value binding button and bind the created tag:liquid. 
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/Ct-842HDUfaECEskYNrhwr1CSJ23uivPvwbsf5aDtV8.png?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="1324" height="494" alt="image" src="https://github.com/user-attachments/assets/16361bcd-19c5-4d86-8794-a1ab69ac3d69" />
+
 
 Note: For more information on binding, please refer to the Property Binding page. 
 
@@ -78,7 +90,10 @@ Note: For more information on binding, please refer to the Property Binding page
 
 Click the preview button in the page tool bar to view the preview effect. You can also click the run button for the project in the project list to view the running page.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/YB1ge5e1/resources/PCquW_p7odGSaeBw_OK_AcHLcEfFEwrrrPWOTbPsp4w.gif?token=W.hrMkmMCPTMLO89vkgmDbxybJoir9Boo_iPEh1rd2jElzeBsABtrlZyX9b9rGOchRiKlcdE_cE8m1ybhVyfRbgR3-2w)
+<img width="829" height="306" alt="image" src="https://github.com/user-attachments/assets/35ce933b-cf8b-4906-84cf-a962a4a04dc8" />
+
+
+
 
 
 
