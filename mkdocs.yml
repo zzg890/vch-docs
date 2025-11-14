@@ -315,8 +315,25 @@ nav:
               - appendix/system-function/system-security/system-security-logout.md
           - System-Tag:
               - appendix/system-function/system-tag/index.md
-              - appendix/system-function/system-tag/system-tag-getpropertyvalues
-
+              - appendix/system-function/system-tag/system-tag-getpropertyvalues.md
+              - appendix/system-function/system-tag/system-tag-mock.md
+              - appendix/system-function/system-tag/system-tag-querypropertyvalues.md
+              - appendix/system-function/system-tag/system-tag-readvalue.md
+              - appendix/system-function/system-tag/system-tag-subscribe.md
+              - appendix/system-function/system-tag/system-tag-writevalue.md
+          - System-UI:
+              - appendix/system-function/system-ui/index.md
+              - appendix/system-function/system-ui/system-ui-applychanges.md
+              - appendix/system-function/system-ui/system-ui-back.md
+              - appendix/system-function/system-ui/system-ui-close.md
+              - appendix/system-function/system-ui/system-ui-findcontrol.md
+              - appendix/system-function/system-ui/system-ui-forward.md
+              - appendix/system-function/system-ui/system-ui-gohome.md
+              - appendix/system-function/system-ui/system-ui-open.md
+              - appendix/system-function/system-ui/system-ui-opennewtab.md
+              - appendix/system-function/system-ui/system-ui-openpopup.md
+              - appendix/system-function/system-ui/system-ui-redirect.md
+              
 
 
               
