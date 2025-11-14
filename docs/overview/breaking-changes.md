@@ -30,7 +30,8 @@
    -  Use an Admin account to create a new role under Access Level.
    -  Open the desired project in the editor.
    -  In the editor's settings, assign design and delete permissions for the role.
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/KW1MWEmK/resources/Osk5u4vV7mQk9fu5ppBM-WwzeygCt-azCB4qBtQA40c.png?token=W.wX__9WOWiLowHH8xeO6xTgk008cHumlUHXDELEYmHGlcPsWuJJmAukrRPep5KkGnjR1oPWdKSdL2CU2f_eAqEVGDtg)
+<img width="868" height="755" alt="image" src="https://github.com/user-attachments/assets/e0cde2da-1f12-4841-805b-2ae57cf29658" />
+
 
 ###### **Breaking Change 4: Bezier curve removed**
 
