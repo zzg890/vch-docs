@@ -68,3 +68,4 @@ tmp
 
 # uv Python package manager
 uv.lock
+/.vs
