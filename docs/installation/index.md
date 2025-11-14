@@ -17,8 +17,8 @@ The installation program defaults to using port 8066 for HTTP and port 10443 for
 | 8066     | HTTP default port                     | **“Node“>“Node Settings“>"Web Server"** |
 | 10443    | HTTPS default port                    | **“Node“>“Node Settings“>"Web Server"** |
 | 8099     | Networking default port               | **“Node“>“Networking“>"Main"**          |
-| 1884     | Built-in Mqtt Broker default TCP port | **“Node“>“MQTT Broker“>"Basic"**      |
-| 3883     | Built-in Mqtt Broker default TLS port | **“Node“>“MQTT Broker“>"Basic"**      |
+| 1884     | Built-in Mqtt Broker default TCP port | **“Node“>“MQTT Broker“>"Basic"**        |
+| 3883     | Built-in Mqtt Broker default TLS port | **“Node“>“MQTT Broker“>"Basic"**        |
 
 **The http and https ports are configured as follows：**
 
@@ -52,11 +52,11 @@ Direct upgrade installation is not currently supported. Before upgrading, please
 
 #### **System Environment Tags**
 
-| **Tag Name**                               | **Description**        | **Windows Environment DefaultValue**                | **Linux Environment DefaultValue**        | **Usage Instructions**                                                                                                                                                                                                                                   |
-|--------------------------------------------|------------------------|-----------------------------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WAGO_Visualization_And_Control_Hub_APP     | Installation directory | C:\Program Files\WAGO Visualization And Control Hub | /usr/local/bin                            | Used only to record the application directory, do not modify.                                                                                                                                                                                            |
-| WAGO_Visualization_And_Control_Hub_DATA    | Data directory         | C:\ProgramData\WAGOVisualizationAndControlHub       | /usr/share/wagovisualizationandcontrolhub | Used to configure the VC Hub application data directory. If not configured, the default value is used.  If you want to change the application directory, you can modify this tag value and restart the application for the configuration to take effect. |
-| WAGO_Visualization_And_Control_Hub_Version | Version                | Installation program version                        | Installation program version              | Used only to record the application version, do not modify.                                                                                                                                                                                              |
+| **Tag Name**                               | **Description**        | **Windows Environment DefaultValue** | **Linux Environment DefaultValue** | **Usage Instructions**      |
+|--------------------------------------------|------------------------|--------------------------------------|----------------------------------- |-----------------------------|
+| WAGO_Visualization_And<br>_Control_Hub_APP     | Installation directory | C:\Program Files\WAGO Visualization And Control Hub | /usr/local/bin      | Used only to record the application directory, do not modify.                                                                                                                                                                                            |
+| WAGO_Visualization_And<br>_Control_Hub_DATA    | Data directory         | C:\ProgramData\WAGO<br>VisualizationAndControlHub| /usr/share/wagovisualization<br>andcontrolhub | Used to configure the VC Hub application data directory. If not configured, the default value is used.  If you want to change the application directory, you can modify this tag value and restart the application for the configuration to take effect. |
+| WAGO_Visualization_And<br>_Control_Hub_Version | Version                | Installation program version         | Installation program version       | Used only to record the application version, do not modify.                                                                                                                                                                                              |
 
 #### **User Data Directory**
 
