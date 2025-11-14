@@ -2,7 +2,7 @@
 
  A VC Hub  node deployed within a local area network can be networked with VC Hub  in the cloud. In the absence of a public IP address, nodes within a local area network can generally only create outbound connections from local area.
 
-<img width="3060" height="1718" alt="image" src="https://github.com/user-attachments/assets/db79485a-988c-408d-8f58-b54e8ccca18f" />
+<img width="3387" height="1875" alt="image" src="https://github.com/user-attachments/assets/13584ccf-3ce3-49b4-99b7-d6a55bb58790" />
 
 
 #### **Tunnel Network**
