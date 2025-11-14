@@ -31,8 +31,10 @@
 
  A complete root directory for workspace data should contain at least one .ini file and a workspace folder named with a random GUID. The following figure shows the workspace data directory in Windows.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/47FcTtW3/resources/Av2STP6P01bFSb2rf3uUiQlXjXvL3CL_dB5KqB5ALOg.png?token=W.QcFQeQLlqdlxE1QxkjIul9xQBpdI4GSdjko5Idkvpi-Q14OMvJYjNdzfdUi-iL3jPPhSLGNOfK3w4V17LRKfOGpYsw)
+<img width="724" height="241" alt="image" src="https://github.com/user-attachments/assets/01286a34-f9aa-46e8-8dbb-17abc9c3b084" />
+
 
 - Current Workspace Configure File: The current workspace configuration file is a .ini suffix configuration file containing configuration information that serves as the basis for the startup of the VC Hub service.
 - Workspace Directory: A single workspace directory stores all the workspace data of a workspace and contains the basic information of the workspace, named with a random GUID string, which also serves as aunique identifier of a workspace. A VC Hub node can contain several workspaces, and the workspace names must be different from one workspace to another.
+
 
