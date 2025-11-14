@@ -10,4 +10,6 @@
 
 | **Code Example**                                                                                                                          |
 |-------------------------------------------------------------------------------------------------------------------------------------------|
-| Get the acknowledgment mode of the current alarm.  ```typescript const mode = System.Context.currentAlarm.ackMode; console.log(mode); ``` |
+| Get the acknowledgment mode of the current alarm.  
+```const mode = System.Context.currentAlarm.ackMode; ``` 
+```console.log(mode); ``` |
