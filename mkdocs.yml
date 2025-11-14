@@ -206,9 +206,10 @@ nav:
       - Redundancy:
           - management-platform/redundancy/index.md   
       - Security:
-          - management-platform/security/index.md    
+          - management-platform/security/index.md  
+      - management-platform/node-configuration.md     
       - management-platform/certificate-management.md
-      - management-platform/node-configuration.md      
+      - management-platform/mqtt-broker.md     
       - management-platform/trust-store.md
       - Open API:
           - management-platform/open-api/index.md
