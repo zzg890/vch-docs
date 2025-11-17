@@ -45,7 +45,7 @@ For the COM port, manually convert its format to a number. After that, during th
 
 Click the "Import" button in the upper right corner of the list to import the exported content. After importing, the newly added devices will have their enabled status set to "Disabled" by default.
 
-<img width="1893" height="489" alt="image" src="https://github.com/user-attachments/assets/65245311-687f-4f97-af0a-fbedd6605d28" />
+<img width="1902" height="330" alt="image" src="https://github.com/user-attachments/assets/3d01f482-a2e9-4a55-b029-e2647e8342b2" />
 
 
 ## Batch Modification
@@ -61,7 +61,8 @@ You can batch modify device information through the exported Excel. After making
 
 After selecting the devices to be deleted, click the **Delete** button at the top of the list to perform batch deletion.
 
-<img width="1900" height="490" alt="image" src="https://github.com/user-attachments/assets/2da556ae-7f67-4f50-9a6a-4923b875b291" />
+<img width="1896" height="341" alt="image" src="https://github.com/user-attachments/assets/ca20dc68-1fe8-4d53-ba3e-9ce964c520e4" />
+
 
 
 Notes:
