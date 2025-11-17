@@ -1,5 +1,4 @@
-# System.Library.getLocalImage
-
+# System.Page.getPropertyValue
 
 ## Description
 Get the value of the current page's custom property or control property.
