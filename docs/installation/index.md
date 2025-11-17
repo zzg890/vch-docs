@@ -60,7 +60,7 @@ Direct upgrade installation is not currently supported. Before upgrading, please
 
 #### **User Data Directory**
 
-Windows installation environment user data directory: "%ProgramData%\WAGOVisualizationAndControlHub", usually "C:\ProgramData\VisualizationAndControlHub".
+Windows installation environment user data directory: "%ProgramData%\WAGOVisualizationAndControlHub", usually "C:\ProgramData\WAGOVisualizationAndControlHub".
 
 Linux installation environment user data directory: /usr/share/wagovisualizationandcontrolhub
 
