@@ -211,7 +211,6 @@ nav:
                       - OPC UA:
                               - management-platform/devices/opc-ua/index.md
                               - management-platform/devices/opc-ua/test-report.md
-                              opc-ua
                       - MQTT Native:
                               - management-platform/devices/mqtt-native/index.md 
                               - management-platform/devices/mqtt-native/batch-operation.md
