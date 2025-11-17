@@ -204,18 +204,26 @@ nav:
                       - management-platform/devices/index.md
                       - Modbus TCP:
                               - management-platform/devices/modbus-tcp/index.md
+                              - management-platform/devices/modbus-tcp/batch-operation.md
                       - Modbus RTU:
-                              - management-platform/devices/modbus-rtu/index.md                  
+                              - management-platform/devices/modbus-rtu/index.md 
+                              - management-platform/devices/modbus-rtu/batch-operation.md
                       - OPC UA:
-                              - management-platform/devices/opc-ua/index.md        
-                      - Mqtt Native:
-                              - management-platform/devices/mqtt-native/index.md            
-                      - Mqtt SparkplugB:
-                              - management-platform/devices/mqtt-sparkplugb/index.md    
-                      - SIMENS S7:
-                              - management-platform/devices/simens-s7/index.md    
+                              - management-platform/devices/opc-ua/index.md
+                              - management-platform/devices/opc-ua/test-report.md
+                              opc-ua
+                      - MQTT Native:
+                              - management-platform/devices/mqtt-native/index.md 
+                              - management-platform/devices/mqtt-native/batch-operation.md
+                      - MQTT SparkplugB:
+                              - management-platform/devices/mqtt-sparkplugb/index.md
+                              - management-platform/devices/mqtt-sparkplugb/batch-operation.md
+                      - SIEMENS S7:
+                              - management-platform/devices/siemens-s7/index.md  
+                              - management-platform/devices/siemens-s7/batch-operation.md
                       - WAGO Protocol:
-                              - management-platform/devices/wago-protocol/index.md    
+                              - management-platform/devices/wago-protocol/index.md
+                              - management-platform/devices/wago-protocol/batch-operation.md
               - Assets and Tags:
                       - management-platform/assets-and-tags/index.md
               - Alarming:
