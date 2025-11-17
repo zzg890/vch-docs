@@ -1,26 +1,26 @@
-
-# System.PTZControl.stop
+# System.Tag.mock
 
 
 ## Description
-Stops the current movement operation of the PTZ camera.
+Give a simulated value to the tag.
 
 ## Grammar
-System.PTZControl.stop(streamName: string,cameraName: string): Promise<void>
+
+System.Tag.mock(path:string, value:any): void
 
 Parameter
-      
-streamName - The name of the WebRTC Streamer
 
-cameraName - The name of the camera
+path - Tag path
+
+value - Simulated value 
 
 Return
 
 Nothing
 ## Code Example                                                                                                                                                                                                                                                                                                          
-Stop the movement operation of camera Camera1 of WebRTC Streamer Streamer1.
+Generate a random integer between 0 and 99 and assign it to the tag "Device:Temperature".
 ```typescript 
-
-await System.PTZControl.stop("Streamer1","Camera1");
+const value = parseInt(`${Math.random() * 100}`);
+System.Tag.mock('@Device:Temperature', value);
 
 ```   

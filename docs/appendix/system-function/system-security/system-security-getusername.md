@@ -1,26 +1,30 @@
 
-# System.PTZControl.stop
+
+# System.Security.getUsername
 
 
 ## Description
-Stops the current movement operation of the PTZ camera.
 
+Gets the username of the currently logged in user.
 ## Grammar
-System.PTZControl.stop(streamName: string,cameraName: string): Promise<void>
+System.Security.getUsername(): string
+
 
 Parameter
-      
-streamName - The name of the WebRTC Streamer
 
-cameraName - The name of the camera
+Nothing
 
 Return
 
-Nothing
+Username
+
 ## Code Example                                                                                                                                                                                                                                                                                                          
-Stop the movement operation of camera Camera1 of WebRTC Streamer Streamer1.
+Displays the username of the currently logged in person on a  label.
 ```typescript 
 
-await System.PTZControl.stop("Streamer1","Camera1");
+const user = System.Security.getUsername();
+const label = await System.UI.findControl('Label1');
+label.text = user;
+label.applyChanges();
 
 ```   
