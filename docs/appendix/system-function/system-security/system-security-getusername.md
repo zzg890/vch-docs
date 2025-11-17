@@ -1,19 +1,30 @@
 
 
-#
+# System.Security.getUsername
 
 
 ## Description
 
-
+Gets the username of the currently logged in user.
 ## Grammar
-```typescript
+System.Security.getUsername(): string
 
-```
+
+Parameter
+
+Nothing
+
+Return
+
+Username
 
 ## Code Example                                                                                                                                                                                                                                                                                                          
-
+Displays the username of the currently logged in person on a  label.
 ```typescript 
 
+const user = System.Security.getUsername();
+const label = await System.UI.findControl('Label1');
+label.text = user;
+label.applyChanges();
 
 ```   
