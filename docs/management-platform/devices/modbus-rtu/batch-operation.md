@@ -25,21 +25,21 @@ When exporting Modbus RTU devices, the exported file will include frame informat
 
 Select the devices and frames, then drag the mouse to quickly copy.
 
-![rtu-1](../assets/images/rtu-1.gif)
+![rtu-1](../../../assets/images/rtu-1.gif)
 
 If you want to keep a specific column unchanged, such as using the same frame name for all devices, you can first copy one device and manually set the frame name to be consistent. Then, select all and drag to copy.
 
-![rtu-2](../assets/images/rtu-2.gif)
+![rtu-2](../../../assets/images/rtu-2.gif)
 
 For the **SlaveAddress**, as shown in the image above, if you want to keep the same slave address for each device, you need to manually modify this column. Select two sets of device data, then hold down the Ctrl key while dragging to copy.
 
 The operations for the **StartAddress**, **EndAddress**, and **Frequency** are the same as for the **SlaveAddress**.
 
-![rtu-3](../assets/images/rtu-3.gif)
+![rtu-3](../../../assets/images/rtu-3.gif)
 
 For the COM port, manually convert its format to a number. After that, during the creation process, the COM port can increment automatically.
 
-![rtu-4](../assets/images/rtu-4.gif)
+![rtu-4](../../../assets/images/rtu-4.gif)
 
 #### 3.Import Devices
 
