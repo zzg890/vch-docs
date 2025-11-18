@@ -55,6 +55,7 @@
 
  VC Hub supports multiple data protocols, allowing you to easily connect on-site data to VC Hub. And we are also constantly increasing and expanding these data protocols to enable VC Hub to be applied to a wider range of fields.
 
-<img width="967" height="367" alt="image" src="https://github.com/user-attachments/assets/e5d1bb57-2a79-47d9-982b-867357b56464" />
+<img width="967" height="381" alt="image" src="https://github.com/user-attachments/assets/68b59819-f8bd-42a9-8421-f3ccf7178311" />
+
 
 
