@@ -232,6 +232,39 @@ nav:
                   - Assets and Tags:
                             - management-platform/assets-and-tags/index.md
                             - management-platform/assets-and-tags/aggregation-modes.md
+                            - Asset:
+                                      - management-platform/assets-and-tags/asset/index.md
+                                      - Models and Instances:
+                                              - management-platform/assets-and-tags/asset/model-and-instance/index.md
+                                              - management-platform/assets-and-tags/asset/model-and-instance/batch-instantiate-models.md
+                                              - management-platform/assets-and-tags/asset/model-and-instance/referencing-and-override.md
+                                      - Asset Tree:
+                                              - management-platform/assets-and-tags/asset/asset-tree/index.md
+                                             - Batch Operation:
+                                                      - management-platform/assets-and-tags/asset/asset-tree/batch-operation/index.md
+                                                      - management-platform/assets-and-tags/asset/asset-tree/batch-operation/batch-add.md
+                                                      - management-platform/assets-and-tags/asset/asset-tree/batch-operation/batch-update.md
+                                                      - management-platform/assets-and-tags/asset/asset-tree/batch-operation/export-and-import.md
+                            - Tag:
+                                      - management-platform/assets-and-tags/tag/index.md
+                                      - Tag Type:
+                                              - management-platform/assets-and-tags/tag/tag-type/index.md
+                                              - management-platform/assets-and-tags/tag/tag-type/system-tag.md
+                                      - Creating Tags:
+                                              - management-platform/assets-and-tags/tag/creating-tags/index.md
+                                              - management-platform/assets-and-tags/tag/creating-tags/io-tag-binding-data-source.md
+                                      - Tag Properties:
+                                              - management-platform/assets-and-tags/tag/tag-properties/index.md
+                                              - management-platform/assets-and-tags/tag/tag-properties/alarm.md
+                                              - management-platform/assets-and-tags/tag/tag-properties/history.md
+                                              - management-platform/assets-and-tags/tag/tag-properties/deadband.md
+                                              - management-platform/assets-and-tags/tag/tag-properties/scale.md
+                                              - management-platform/assets-and-tags/tag/tag-properties/event.md
+                                              - management-platform/assets-and-tags/tag/tag-properties/simulate.md
+                                              - management-platform/assets-and-tags/tag/tag-properties/custom.md
+                                      - management-platform/assets-and-tags/tag/tag-group.md
+                                      - management-platform/assets-and-tags/tag/quality.md
+                                              
                   - Alarming:
                             - management-platform/alarming/index.md
                   - Scripts:
