@@ -1,4 +1,4 @@
-# Sytem.UI
+# System.UI
 
 The following functions allow you to modify control properties or manipulate browser tabs.
 
