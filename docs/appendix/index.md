@@ -1,5 +1,6 @@
 # Appendix
- In this chapter, we will introduce all the built-in script functions available in VC Hub.
 
- System functions are named after System, and you can see many different categories of system functions below.
 
+[System Function](https://docs.wagoscada.cn/wiki/external/org/Vm8TaFZ4/#/page/YX8eRsqz/GZQQHg67)
+
+[Demo Workspace](https://docs.wagoscada.cn/wiki/external/org/Vm8TaFZ4/#/page/YX8eRsqz/26FN6Mmr)
