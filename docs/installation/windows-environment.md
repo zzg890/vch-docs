@@ -1,4 +1,4 @@
-<img width="67" height="20" alt="image" src="https://github.com/user-attachments/assets/1f9c7a8f-dbd0-4404-a345-8aadeb1b4e82" /># Windows Environment
+# Windows Environment
 
 VC Hub provides installation packages for the 64-bit Windows operating system.
 
@@ -11,7 +11,7 @@ Recommended Systems for Installation:
 - Windows 10  (Not supported in Home Edition)
 - Windows 11  (Not supported in Home Edition)
 
-#### **Installation Steps:**
+## **Installation Steps:**
 
 1. Run the installation package program as an administrator.
 2. Select the installation language.
@@ -50,7 +50,7 @@ Recommended Systems for Installation:
 
 9.  After completion, the default access to the VC Hub site is: `http://localhost:8066`. After the installation, you will enter the configuration wizard interface.
 
-#### Configuration **Steps**:
+## Configuration **Steps**:
 
 1. Create an administrator user. Remember this username and password, as you will use them to log in for the first time. 
 
@@ -64,10 +64,9 @@ Recommended Systems for Installation:
 
 3. After completing the above steps, wait for the program to load, and then you can log in to the default-created workspace with the user created in step 1.
 
-| **Note**: After each installation, a new empty workspace will be created by default. To return to the original workspace, you need to log in to the new workspace first and then manually open the original workspace from the workspace list. |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+**Note**: After each installation, a new empty workspace will be created by default. To return to the original workspace, you need to log in to the new workspace first and then manually open the original workspace from the workspace list.
 
-#### Security Configuration (Optional)
+## Security Configuration (Optional)
 
 To further enhance system security, it is recommended to perform the following steps after configuration to set permissions on the **service directory **and** application data directory**, allowing only specific users to access or modify them. This ensures that sensitive data is well protected and potential risks are minimized.
 
@@ -106,7 +105,7 @@ Navigate to the service installation directory (e.g., C:\Program Files\WAGO Visu
 
       Access the VC Hub site (e.g., `http://localhost:8066`) and confirm that the site is running normally.
 
-#### **Uninstallation Steps:**
+## **Uninstallation Steps:**
 
 1. Enter the software uninstall list from the Control Panel. Find VC Hub and proceed with the uninstallation.
 
