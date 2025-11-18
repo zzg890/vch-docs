@@ -41,7 +41,7 @@ You can use the `sc config` command to configure the login information for a ser
 sc config "WAGO_Visualization_And_Control_Hub" obj= "Domain\Username" password= "Password"
 ```
  
-**Domain** **\** **Username:** This represents the account name, which can be in the format `. \Username` (for local accounts) or `Domain\Username` (for domain accounts). Using a domain account may be more appropriate if the service needs to access network resources or resources on other computers.
+**Domain\Username:** This represents the account name, which can be in the format `. \Username` (for local accounts) or `Domain\Username` (for domain accounts). Using a domain account may be more appropriate if the service needs to access network resources or resources on other computers.
 
 **Password:** The password for the account.
 
