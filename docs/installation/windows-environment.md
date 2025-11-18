@@ -1,4 +1,4 @@
-<img width="67" height="20" alt="image" src="https://github.com/user-attachments/assets/1f9c7a8f-dbd0-4404-a345-8aadeb1b4e82" /># Windows Environment
+# Windows Environment
 
 VC Hub provides installation packages for the 64-bit Windows operating system.
 
