@@ -54,7 +54,7 @@ The Siemens driver in VC Hub supports the basic connection to S7 devices. Curren
 **Note:**
 
 1. In the device list, The **Enabled Status** indicates whether the device has been enabled or not, unenabled devices will not connect and enabled devices will try to connect; the **Connection Status** indicates whether the device has successfully established a communication connection with the system.
-2. **Enable All** and **Disable All **are to enable or disable all data in the list.
+2. **Enable All** and **Disable All** are to enable or disable all data in the list.
 3. Shared connection of multiple devices under the same IP is not supported for the time being.
 4. Per-bit writes are not supported for Bool tags; each write value overwrites the previous byte.
 5. For S7-1200 and S7-1500, the following precautions and configuration changes must be made:
