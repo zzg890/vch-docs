@@ -23,7 +23,7 @@ At the top of the page, there is a 'Switch User' button. Clicking the button ope
 
 Switch User Button Script
 
-<img width="220" height="113" alt="image" src="https://github.com/user-attachments/assets/fd327a32-8ced-4020-b306-aa291112feca" />
+![alt text](a_sf_ss-login1.png)
 
 ```typescript 
 const result = await System.UI.openPopup('LoginPopup');
@@ -35,7 +35,7 @@ if (result === 'GoHomePage') {
 ```   
 Login Button Script for the LoginPopup page
 
-<img width="397" height="412" alt="image" src="https://github.com/user-attachments/assets/a982f9ac-1a41-4ed5-b74f-3a31690966b7" />
+![alt text](a_sf_ss-login2.png)
 
 ```typescript 
 const usernameInput = await System.UI.findControl('UsernameInput');

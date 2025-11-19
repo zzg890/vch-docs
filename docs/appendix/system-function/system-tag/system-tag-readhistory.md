@@ -58,6 +58,8 @@ System.Tag.readHistory(
 Parameter
 
 
+
+
 ## Code Example                                                                                                                                                                                                                                                                                                          
 Retrieve the historical records of the raw values for the tag "Device:Temperature" between 2024-08-14 00:00:00 and 2024-08-15 00:00:00.
 ```typescript 

@@ -30,10 +30,9 @@ Unsubscription function
 ## Code Example                                                                                                                                                                                                                                                                                                          
 First create a tag group and select the refresh type of the tag group as "Value Change".
 
-<img width="791" height="373" alt="image" src="https://github.com/user-attachments/assets/8495e378-9087-483c-92e6-a6c76e00cfb0" />
-
+![alt text](a_sf_st-subscribe1.png)
 Then create a tag and check the tag group you just created.
-<img width="1084" height="696" alt="image" src="https://github.com/user-attachments/assets/faae2f4a-8798-467f-b5f0-8a55734f0744" />
+![alt text](a_sf_st-subscribe2.png)
 
 Finally, when you subscribe to the "Device: Rotate" tag, you will receive the pushed data and print out the new value when the tag changes.
 ```typescript 
