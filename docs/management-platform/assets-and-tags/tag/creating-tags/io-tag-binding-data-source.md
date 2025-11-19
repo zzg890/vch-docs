@@ -74,7 +74,7 @@ You can replace the parameter values with the model's custom property, which are
 
 6. In the **Add** window, select the **Motor** model. Click the **"Batch Generate"** setting button, set the **"Quantity"** to 10, and set the **"Starting Index"** to 1.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/EJgG7UWS/resources/c9QpzafhAQZldxc2aAvkIO3ZcSstQsrcKmmXboHmEdI.png?token=W.z2JrHmDwoF0ZFNh-c46R5rD6fnAU9J2P50ip16Ntfr7QSL76mNnXG91_deHvN2hjXqblq1ttJvoFW25pDwxzxduzMA)
+![alt text](22.png)
 
 7. Next, we will set the custom parameter **No** for each instance. We will bind **Motor** **_** **1** to **Device1**, set the **No** value of all **Motor** **_** **1** instances to 1, and so on for the other instances.
 
@@ -84,16 +84,15 @@ For example:
 - **Motor** **_** **2** -> Device2, **No** = 2
 - And so on, until **Motor** **_** **10** -> **Device10**, **No** = 10.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/EJgG7UWS/resources/enZh1vD37lEhIqWX8O48ga-Oc9OQ-uDRUXBfVq51WPU.png?token=W.z2JrHmDwoF0ZFNh-c46R5rD6fnAU9J2P50ip16Ntfr7QSL76mNnXG91_deHvN2hjXqblq1ttJvoFW25pDwxzxduzMA)
+![alt text](23.png)
 
 8. Once the settings are complete, click the **"OK"** button. This will generate 10 instances under the **Motor** directory. Each instance will contain the same tag: **Power**.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/EJgG7UWS/resources/atgz5lMssHNPipZSjD_XNd0t-KXmd8Pta-7YB7LS4jU.png?token=W.z2JrHmDwoF0ZFNh-c46R5rD6fnAU9J2P50ip16Ntfr7QSL76mNnXG91_deHvN2hjXqblq1ttJvoFW25pDwxzxduzMA)
+![alt text](24.png)
 
 9. You can use a label control to bind the "Text" property to the tag's **DataSource** property and view the path. This allows you to dynamically display the data source path associated with the tag.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/EJgG7UWS/resources/cpdliRWqOVOuHjzmcodvN3rgLOWbtDdNQra_Voe6Tr8.gif?token=W.z2JrHmDwoF0ZFNh-c46R5rD6fnAU9J2P50ip16Ntfr7QSL76mNnXG91_deHvN2hjXqblq1ttJvoFW25pDwxzxduzMA)
-
+![io-binding](../../../../assets/images/io-binding.gif)
 
 
 10. The final result achieves batch binding of tags. All tags of Motor 1 are bound to Device 1, all tags of Motor 2 are bound to Device 2, and so on, with all tags of Motor 10 bound to Device 10.
