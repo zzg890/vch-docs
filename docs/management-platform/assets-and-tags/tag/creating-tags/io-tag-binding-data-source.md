@@ -16,7 +16,7 @@ I/O tags can be bound to data sources. You can either bind a fixed data source p
 
 ![alt text](13.png)
 
-| **Notes**：  1. Binding to different data sources will display different data source path parameters. 2. In the data source text box, the left side of the "=" represents the parameter name, and the right side represents the parameter value. You can modify the parameter value, but it is not recommended to modify the parameter name, as changing the parameter name will invalidate the binding path. 3. Please ensure that the content on both sides of the "=" in the data source input field matches the case of the fields on the configuration page. Otherwise, the data source binding may fail. It is recommended not to modify the parameter name on the left side of the "=".  Example:  Data Source Parameter Field: ![alt text](14.png) Configuration Page Field:  ![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/EJgG7UWS/resources/vLJ6rXzIqEa8YHbR64X18y4e6xDJRdC8z1BVXaq4xqQ.png?token=W.z2JrHmDwoF0ZFNh-c46R5rD6fnAU9J2P50ip16Ntfr7QSL76mNnXG91_deHvN2hjXqblq1ttJvoFW25pDwxzxduzMA) |
+| **Notes**：  1. Binding to different data sources will display different data source path parameters. 2. In the data source text box, the left side of the "=" represents the parameter name, and the right side represents the parameter value. You can modify the parameter value, but it is not recommended to modify the parameter name, as changing the parameter name will invalidate the binding path. 3. Please ensure that the content on both sides of the "=" in the data source input field matches the case of the fields on the configuration page. Otherwise, the data source binding may fail. It is recommended not to modify the parameter name on the left side of the "=".  <br> Example: Data Source Parameter Field: <br>![alt text](14.png) <br> Configuration Page Field: <br> ![alt text](15.png) |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Data Source Binding Path Parameters
@@ -33,9 +33,7 @@ I/O tags can be bound to data sources. You can either bind a fixed data source p
 
 ## Parameterized Binding
 
-I/O tags created under a model or instance support parameterized binding. After the data source text box, a settings button will be displayed. From the settings popup, you can select the parameters that need to be replaced.
-
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/EJgG7UWS/resources/_92_txrm1EPZZelu3hSCUSVf7p0TAq-I7i4y3zQGIeM.png?token=W.z2JrHmDwoF0ZFNh-c46R5rD6fnAU9J2P50ip16Ntfr7QSL76mNnXG91_deHvN2hjXqblq1ttJvoFW25pDwxzxduzMA)
+I/O tags created under a model or instance support parameterized binding. You can select the parameters that need to be replaced.
 
 #### Example
 
@@ -43,14 +41,13 @@ The factory has 10 motors, each with the same tags. The only difference is that 
 
 For batch creation of devices, please refer to the following section.
 
-- [known-link] 
-- [known-link]
-- [known-link] 
-- [known-link] 
-- [known-link]
-- [known-link] 
-- [known-link]
-- [known-link] 
+- Batch operation of Modbus TCP Devices
+- Batch operation of Modbus RTU Devices
+- Batch operation of OPC UA Devices 
+- Batch operation of MQTT Native Devices
+- Batch operation of MQTT SparkplugB Devices
+- Batch operation of SIEMENS S7 Devices
+- Batch operation of WAGO Protocol Devices
 
 1. In the **"Devices" -> Modbus TCP list**, batch create 10 Modbus TCP devices with names from **Device1** to **Device10**. Only the **DeviceName** and **Host** will differ, while other configurations remain the same.
 2. On the **"Models"** tab, create a new model called **"Motor"**, which includes one custom parameter, **"No"**, representing the motor number.
