@@ -14,7 +14,7 @@ When exporting OPC UA devices, the exported file will include frame information.
 
 **Example of an Exported File:**
 
-<img width="1905" height="123" alt="image" src="https://github.com/user-attachments/assets/050d10a9-29d4-4fa0-b6e7-7f42f80a43ed" />
+![alt text](23.png)
 
 
 - The content inside the red box represents the field information.
@@ -34,7 +34,7 @@ Select the devices and groups, then drag the mouse to quickly copy.
 
 Click the "Import" button in the upper right corner of the list to import the exported content. After importing, the newly added devices will have their enabled status set to "Disabled" by default.
 
-<img width="1897" height="429" alt="image" src="https://github.com/user-attachments/assets/71e24809-e279-49b2-8114-2ac2ae49e6cb" />
+![alt text](24.png)
 
 
 ## Batch Modification
@@ -50,7 +50,7 @@ You can batch modify device information through the exported Excel. After making
 
 After selecting the devices to be deleted, click the **Delete** button at the top of the list to perform batch deletion.
 
-<img width="1898" height="427" alt="image" src="https://github.com/user-attachments/assets/bd790c0f-183c-4436-ace6-5b824f566de3" />
+![alt text](25.png)
 
 
 Notes:

@@ -10,28 +10,28 @@ Groups: Groups are a way to organize devices into groups for easier management a
 
 2. Enter a **group name** in the Add page.
 
-<img width="1896" height="251" alt="image" src="https://github.com/user-attachments/assets/1f9f748f-c1fa-4a3e-8eb8-5d9ad6a81e10" />
+![alt text](1.png)
 
 
 3. Click the "**OK**" button. The data will be displayed in the device list page of MQTT Native.
 
-<img width="1888" height="228" alt="image" src="https://github.com/user-attachments/assets/43326907-1c0b-4b1c-b365-4b28bb4b7017" />
+![alt text](2.png)
 
 
 4. Click "**Add Node**" in the Operation column, enter the node name and add a new node for the current group.
 
 **Node**: Node represents the entity of a specific device, and has a unique identifier, which is used to distinguish each device.
 
-<img width="1905" height="251" alt="image" src="https://github.com/user-attachments/assets/50e658a1-27f2-415a-872d-d41ae126bc2d" />
+![alt text](3.png)
 
 
 5. Click the "**OK**" button. The data will be displayed in the node list page of the current group. Please note that the Status column only indicates the start/stop status of the current node, not the connection status.
 
-<img width="1893" height="332" alt="image" src="https://github.com/user-attachments/assets/e258d2be-11cc-49d7-892e-1fcd19eb64c2" />
+![alt text](4.png)
 
 6. Click the Enable button in the  Enabled Status column to enable the node.
 
-<img width="1890" height="329" alt="image" src="https://github.com/user-attachments/assets/56ee8fb2-6696-4697-8afa-38d515bc2a3c" />
+![alt text](5.png)
 
 
 
@@ -47,7 +47,7 @@ Groups: Groups are a way to organize devices into groups for easier management a
 **Note:**
 
 1. In the node list, The **Enabled Status** indicates whether the device has been enabled or not, unenabled devices will not connect and enabled devices will try to connect.
-2. **Enable All** and **Disable All **are to enable or disable all data in the list.
+2. **Enable All** and **Disable All** are to enable or disable all data in the list.
 3. Please keep the user name and password information in a safe place to avoid leakage to unauthorized personnel, and if leakage occurs, please reset the password in time.
 
 ## **Connecting to MQTT Broker**
@@ -259,17 +259,17 @@ Bind the tag to the client measurement point.
 
 1. Create an I/O tag.
 
-<img width="380" height="412" alt="image" src="https://github.com/user-attachments/assets/10a7bc52-e744-4c51-8277-cba5d0e87349" />
+![alt text](6.png)
 
 
 2. On the add window, click the binding button of the data source.
 
-<img width="863" height="630" alt="image" src="https://github.com/user-attachments/assets/57c1db14-4f19-43e4-993b-a62ccc638940" />
+![alt text](7.png)
 
 
 3. Select the groups, nodes, devices and directories to be bound, and check the data types to match the measurement points.
 
-<img width="1281" height="748" alt="image" src="https://github.com/user-attachments/assets/9591dd81-9fa0-44a2-b9ff-7b80c99fc448" />
+![alt text](8.png)
 
 4. Click the "**OK**" button to complete the configuration.
 

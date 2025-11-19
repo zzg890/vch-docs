@@ -1,7 +1,8 @@
 # MQTT SparkplugB
 
 The MQTT SparkplugB driver in VC Hub is designed and developed based on the MQTT protocol and supports the transmission of message information that satisfies the SparkplugB protocol. At the same time, the system comes with an MQTT Broker, which allows the user to connect with the account and password provided by the system and communicate with the data via the MQTT SparkplugB driver.
-### **Driver Connection to MQTT Broker**
+
+## **Driver Connection to MQTT Broker**
 
 1. On the "**Devices**" -> "**MQTT SparkplugB** page, click the "**Add Group**" button.
 
@@ -9,13 +10,12 @@ Groups: Groups are a way to organize devices into groups for easier management a
 
 2. Enter a **group name** in the Add page. 
 
-<img width="1895" height="266" alt="image" src="https://github.com/user-attachments/assets/0eecc107-d22a-4c85-8425-67cef6dc1c35" />
-
+![alt text](1.png)
 
 
 3. Click the **"OK"** button. The data will be displayed in the device list page of MQTT SparkplugB. 
 
-<img width="1896" height="265" alt="image" src="https://github.com/user-attachments/assets/cd9aaffe-f442-4ac5-a6f0-7792419e08e0" />
+![alt text](2.png)
 
 
 
@@ -23,18 +23,18 @@ Groups: Groups are a way to organize devices into groups for easier management a
 
 Node: Node represents the entity of a specific device, and has a unique identifier, which is used to distinguish each device. 
 
-<img width="1905" height="300" alt="image" src="https://github.com/user-attachments/assets/9d6496eb-b987-4938-87ef-ffb61965f60e" />
+![alt text](3.png)
 
 
 5. Click the **"OK"** button. The data will be displayed in the node list page of the current group. Please note that the status column only indicates the start/stop status of the current node, not the connection status. 
 
-<img width="1905" height="333" alt="image" src="https://github.com/user-attachments/assets/066e3514-0a61-4d1d-a583-fcf2df3c40e3" />
+![alt text](4.png)
 
 
 
 6. Click the Enable button in the Enable Status column to enable the node.
 
-<img width="1894" height="320" alt="image" src="https://github.com/user-attachments/assets/0ea67ee1-0f72-4248-9c1e-01a6fd0d7517" />
+![alt text](5.png)
 
 
 **Configuration Fields**
@@ -49,7 +49,7 @@ Node: Node represents the entity of a specific device, and has a unique identifi
 **Note:**
 
 1. In the node list, The **Enabled Status** indicates whether the device has been enabled or not, unenabled devices will not connect and enabled devices will try to connect; the **Connection Status** indicates whether the device has successfully established a communication connection with the system.
-2. **Enable All** and **Disable All **are to enable or disable all data in the list.
+2. **Enable All** and **Disable All**are to enable or disable all data in the list.
 3. Please keep the user name and password information in a safe place to avoid leakage to unauthorized personnel, and if leakage occurs, please reset the password in time.
 
 Data types currently supported by the system:
@@ -94,16 +94,16 @@ Bind a tag to a client measurement point.
 
 1. Create an I/O tag
 
-<img width="380" height="412" alt="image" src="https://github.com/user-attachments/assets/5421c3ec-0f33-4ada-9108-e56371e08a2b" />
+![alt text](6.png)
 
 2. On the edit screen of the tag, click the binding button of the data source.
 
-<img width="837" height="619" alt="image" src="https://github.com/user-attachments/assets/abfc88dc-3b7d-4460-83e9-c2f2b71eb92f" />
+![alt text](7.png)
 
 
 3. Select the groups, nodes, devices, and directories to be bound, and check the measurement points with matching data types.
 
-<img width="1291" height="753" alt="image" src="https://github.com/user-attachments/assets/cdc1aca2-bbac-4f3c-817d-5dd9e41ad808" />
+![alt text](8.png)
 
 
 4. Click the "**OK**" button to complete the configuration.

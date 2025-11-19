@@ -14,7 +14,7 @@ When exporting MQTT Native devices, the exported file will include node informat
 
 **Example of an Exported File:**
 
-<img width="358" height="167" alt="image" src="https://github.com/user-attachments/assets/41878c7c-d5c3-4782-a406-70981842ae7f" />
+![alt text](9.png)
 
 
 - The content inside the red box represents the field information.
@@ -32,7 +32,7 @@ Select the groups and nodes, then drag the mouse to quickly copy.
 
 Click the "Import" button in the upper right corner of the list to import the exported content. After importing, the newly added devices will have their enabled status set to "Disabled" by default.
 
-<img width="1889" height="428" alt="image" src="https://github.com/user-attachments/assets/9a5f65f0-855a-4f88-aadd-9311879b4a76" />
+![alt text](10.png)
 
 
 ## Batch Modification
@@ -48,7 +48,7 @@ You can batch modify device information through the exported Excel. After making
 
 After selecting the devices to be deleted, click the **Delete** button at the top of the list to perform batch deletion.
 
-<img width="1891" height="425" alt="image" src="https://github.com/user-attachments/assets/e70d4276-e6c7-49a9-a325-ce511d444163" />
+![alt text](11.png)
 
 
 Notes:

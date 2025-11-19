@@ -14,7 +14,7 @@ When exporting MQTT SparkplugB devices, the exported file will include node info
 
 **Example of an Exported File:**
 
-<img width="340" height="154" alt="image" src="https://github.com/user-attachments/assets/558f5ba5-b6bd-4e15-8f18-dee5f62af346" />
+![alt text](9.png)
 
 
 - The content inside the red box represents the field information.
@@ -32,7 +32,7 @@ Select the groups and nodes, then drag the mouse to quickly copy.
 
 Click the "Import" button in the upper right corner of the list to import the exported content. After importing, the newly added devices will have their enabled status set to "Disabled" by default.
 
-<img width="1892" height="478" alt="image" src="https://github.com/user-attachments/assets/d0f5201a-e667-4ed0-9f6f-67456a10d515" />
+![alt text](10.png)
 
 
 ## Batch Modification
@@ -48,7 +48,7 @@ You can batch modify device information through the exported Excel. After making
 
 After selecting the devices to be deleted, click the **Delete** button at the top of the list to perform batch deletion.
 
-<img width="1901" height="474" alt="image" src="https://github.com/user-attachments/assets/5149f6e8-55e8-473d-95fa-944ade2e17c3" />
+![alt text](11.png)
 
 
 Notes:
