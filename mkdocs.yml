@@ -267,6 +267,28 @@ nav:
                                               
                   - Alarming:
                             - management-platform/alarming/index.md
+                            - management-platform/alarming/acknowledge-alarm.md
+                            - management-platform/alarming/failed.md
+                            - management-platform/alarming/rules.md
+                            - management-platform/alarming/schedules.md
+                            - Messages:
+                                     - management-platform/alarming/messages/index.md
+                                     - management-platform/alarming/messages/dingtalk.md 
+                                     - management-platform/alarming/messages/wecom.md 
+                                     - management-platform/alarming/messages/email(smtp).md 
+                                     - management-platform/alarming/messages/sms(twilio).md 
+                                     - management-platform/alarming/messages/sms(alicloud).md 
+
+                            - Services:
+                                 - management-platform/alarming/messages/index.md
+                                     - management-platform/alarming/services/dingtalk.md 
+                                     - management-platform/alarming/services/wecom.md 
+                                     - management-platform/alarming/services/email(smtp).md 
+                                     - management-platform/alarming/services/sms(twilio).md 
+                                     - management-platform/alarming/services/sms(alicloud).md
+
+
+
                   - Scripts:
                             - management-platform/scripts/index.md
                   - management-platform/networking.md
