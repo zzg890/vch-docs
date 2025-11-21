@@ -309,7 +309,7 @@ nav:
                             - History Database:
                                       - management-platform/databases/history-database/index.md
                                       - Create History Database:
-                                             - management-platform/databases/history-database/create-history-database/index.md
+                                        - management-platform/databases/history-database/create-history-database/index.md
                                              - management-platform/databases/history-database/create-history-database/data-partitioning-and-deletion.md
                                              - management-platform/databases/history-database/create-history-database/pre-processed.md
                                       - management-platform/databases/history-database/create-duplicated-history-database.md
@@ -317,9 +317,9 @@ nav:
                             - Database Table Reference:
                                       - management-platform/databases/database-connection/database-table-reference/index.md
                                       - Tag Table Reference:
-                                             - management-platform/databases/database-tablereference/tag-table-reference/index.md
-                                             - management-platform/databases/database-tablereference/tag-table-reference/relational-database-table-schema.md
-                                             - management-platform/databases/database-tablereference/tag-table-reference/influxDB-table-schema.md
+                                             - management-platform/databases/database-table-reference/tag-table-reference/index.md
+                                             - management-platform/databases/database-table-reference/tag-table-reference/relational-database-table-schema.md
+                                             - management-platform/databases/database-table-reference/tag-table-reference/influxDB-table-schema.md
       
              
                   - Redundancy:
@@ -330,6 +330,19 @@ nav:
 
                   - Security:
                             - management-platform/security/index.md
+                            - management-platform/security/roles-and-users.md
+                            - management-platform/security/user-group.md
+                            - management-platform/security/permission.md
+                            - management-platform/security/access-level.md
+                            - Identity Provider:
+                                      - management-platform/security/identity-provider/index.md
+                                      - management-platform/security/identity-provider/user-attribute-mapping.md
+                                      - management-platform/security/identity-provider/user-grants.md
+                                      - management-platform/security/identity-provider/test-login-and-logout.md
+                                      - management-platform/security/identity-provider/troubleshooting.md
+                                      - management-platform/security/identity-provider/azure-AD-integration.md
+                                      - management-platform/security/identity-provider/integrates-with-OAuth0.md
+                            - management-platform/security/open-api.md
                   - management-platform/node-configuration.md
                   - management-platform/certificate-management.md
                   - management-platform/mqtt-broker.md
