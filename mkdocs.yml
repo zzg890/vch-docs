@@ -173,7 +173,6 @@ nav:
                   - overview/index.md
                   - overview/version-update-notes.md
                   - overview/system-requirements.md
-                  - overview/breaking-changes.md
         - New in this Version:
                   - new-version/index.md
         - Installation and Upgrade:
