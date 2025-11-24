@@ -349,16 +349,39 @@ nav:
                   - management-platform/trust-store.md
                   - Open API:
                             - management-platform/open-api/index.md
+                            - management-platform/open-api/api-document(Swagger).md
+                            - management-platform/open-api/open-id-connect.md
+                            - management-platform/open-api/asset-api-definitions.md
+                            - management-platform/open-api/historical-data-api-definitions.md
+                            - management-platform/open-api/realtime-data-api-definitions.md
+                            - management-platform/open-api/integration-api-definitions.md
+                            - Test With Postman:
+                                      - management-platform/open-api/test-with-postman/index.md
+                                      - management-platform/open-api/test-with-postman/get-access-token.md
+                                      - management-platform/open-api/test-with-postman/invoke.md
+                                      - management-platform/open-api/test-with-postman/subscribe.md 
+
                   - management-platform/diagnostics.md
         - 2D Visualization:
                   - 2d-visualization/index.md
+                  - 2d-visualization/editor-introduction.md
                   - Page:
                             - 2d-visualization/page/index.md
+                            - 2d-visualization/page/page-type.md
+                            - 2d-visualization/page/page-parameter-passing.md
+                            - 2d-visualization/page/navigation.md
+                            - 2d-visualization/page/resolution-adaptation.md
+                            - 2d-visualization/page/page-permission.md                    
+                  - 2d-visualization/page-template.md
                   - Sql Query:
                             - 2d-visualization/sql-query/index.md
+                            - 2d-visualization/sql-query/create-sql-query.md
                             - Sql Query Example:
                                       - 2d-visualization/sql-query/sql-query-example/index.md
-
+                                      - 2d-visualization/sql-query/sql-query-example/query.md
+                                      - 2d-visualization/sql-query/sql-query-example/scalar-query.md
+                                      - 2d-visualization/sql-query/sql-query-example/update-query.md
+                            - 2d-visualization/sql-query/supported-data-types.md
                   - Controls:
                             - 2d-visualization/controls/index.md
                             - Alarm:
