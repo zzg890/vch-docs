@@ -10,17 +10,17 @@ If the remote certificate itself or any certificate in its chain exists in the T
 
 Click **“Node” → “Trust Store”** to display the certificate list.
 
-<img width="1895" height="552" alt="image" src="https://github.com/user-attachments/assets/23248bed-d20a-4c57-80c0-a10fa9544d43" />
+![alt text](18.png)
 
 
 If a certificate is due to expire within 30 days, the **Expiration Time** will be shown in red to alert the user to update it in time.
 
-<img width="1670" height="45" alt="image" src="https://github.com/user-attachments/assets/60426b3e-ec36-4eea-89d7-f75d1c844a07" />
+![alt text](19.png)
 
 
 If a certificate is already expired, an **“Expired”** label will appear next to its expiration date.
 
-<img width="1641" height="102" alt="image" src="https://github.com/user-attachments/assets/0587544f-8ff0-48ce-9b3c-7b14959168fb" />
+![alt text](20.png)
 
 
 ## Import Certificate
@@ -38,14 +38,14 @@ Supported certificate formats:
 
 Click the **“View”** button on a certificate row to open a detailed view of the certificate’s information and properties.
 
-<img width="837" height="746" alt="image" src="https://github.com/user-attachments/assets/dd3b6abd-c368-4a43-85b2-0a897ddb37f4" />
+![alt text](21.png)
 
 
 ## Delete Certificate
 
 Click the **“Delete”** button next to a certificate to remove it. A confirmation dialog will appear before deletion.
 
-<img width="454" height="170" alt="image" src="https://github.com/user-attachments/assets/f75fc02d-f745-4b9e-af13-8e0912014dea" />
+![alt text](22.png)
 
 
 **Notes**

@@ -2,7 +2,7 @@
 
 Click on **Node** -> **Node Settings** to configure the current node information. This page is mainly used to configure the node's name, web server port.
 
-<img width="1554" height="575" alt="image" src="https://github.com/user-attachments/assets/827cb9e9-1cd8-456b-99e1-d1d5d0348363" />
+![alt text](12.png)
 
 
 | **Name**        | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |

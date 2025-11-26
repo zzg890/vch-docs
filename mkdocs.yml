@@ -86,6 +86,9 @@ plugins:
                   separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
         - minify:
                   minify_html: true
+        - pdf-export:
+                  verbose: true
+                  media_type: print
 
 # Hooks
 hooks:
@@ -173,7 +176,6 @@ nav:
                   - overview/index.md
                   - overview/version-update-notes.md
                   - overview/system-requirements.md
-                  - overview/breaking-changes.md
         - New in this Version:
                   - new-version/index.md
         - Installation and Upgrade:
@@ -235,118 +237,257 @@ nav:
                             - Asset:
                                       - management-platform/assets-and-tags/asset/index.md
                                       - Models and Instances:
-                                              - management-platform/assets-and-tags/asset/model-and-instance/index.md
-                                              - management-platform/assets-and-tags/asset/model-and-instance/batch-instantiate-models.md
-                                              - management-platform/assets-and-tags/asset/model-and-instance/referencing-and-override.md
+                                                - management-platform/assets-and-tags/asset/model-and-instance/index.md
+                                                - management-platform/assets-and-tags/asset/model-and-instance/batch-instantiate-models.md
+                                                - management-platform/assets-and-tags/asset/model-and-instance/referencing-and-override.md
                                       - Asset Tree:
-                                              - management-platform/assets-and-tags/asset/asset-tree/index.md
-                                              - Batch Operation:
-                                                      - management-platform/assets-and-tags/asset/asset-tree/batch-operation/index.md
-                                                      - management-platform/assets-and-tags/asset/asset-tree/batch-operation/batch-add.md
-                                                      - management-platform/assets-and-tags/asset/asset-tree/batch-operation/batch-update.md
-                                                      - management-platform/assets-and-tags/asset/asset-tree/batch-operation/export-and-import.md
+                                                - management-platform/assets-and-tags/asset/asset-tree/index.md
+                                                - Batch Operation:
+                                                          - management-platform/assets-and-tags/asset/asset-tree/batch-operation/index.md
+                                                          - management-platform/assets-and-tags/asset/asset-tree/batch-operation/batch-add.md
+                                                          - management-platform/assets-and-tags/asset/asset-tree/batch-operation/batch-update.md
+                                                          - management-platform/assets-and-tags/asset/asset-tree/batch-operation/export-and-import.md
                             - Tag:
                                       - management-platform/assets-and-tags/tag/index.md
                                       - Tag Type:
-                                              - management-platform/assets-and-tags/tag/tag-type/index.md
-                                              - management-platform/assets-and-tags/tag/tag-type/system-tag.md
+                                                - management-platform/assets-and-tags/tag/tag-type/index.md
+                                                - management-platform/assets-and-tags/tag/tag-type/system-tag.md
                                       - Creating Tags:
-                                              - management-platform/assets-and-tags/tag/creating-tags/index.md
-                                              - management-platform/assets-and-tags/tag/creating-tags/io-tag-binding-data-source.md
+                                                - management-platform/assets-and-tags/tag/creating-tags/index.md
+                                                - management-platform/assets-and-tags/tag/creating-tags/io-tag-binding-data-source.md
                                       - Tag Properties:
-                                              - management-platform/assets-and-tags/tag/tag-properties/index.md
-                                              - management-platform/assets-and-tags/tag/tag-properties/alarm.md
-                                              - management-platform/assets-and-tags/tag/tag-properties/history.md
-                                              - management-platform/assets-and-tags/tag/tag-properties/deadband.md
-                                              - management-platform/assets-and-tags/tag/tag-properties/scale.md
-                                              - management-platform/assets-and-tags/tag/tag-properties/event.md
-                                              - management-platform/assets-and-tags/tag/tag-properties/simulate.md
-                                              - management-platform/assets-and-tags/tag/tag-properties/custom.md
+                                                - management-platform/assets-and-tags/tag/tag-properties/index.md
+                                                - management-platform/assets-and-tags/tag/tag-properties/alarm.md
+                                                - management-platform/assets-and-tags/tag/tag-properties/history.md
+                                                - management-platform/assets-and-tags/tag/tag-properties/deadband.md
+                                                - management-platform/assets-and-tags/tag/tag-properties/scale.md
+                                                - management-platform/assets-and-tags/tag/tag-properties/event.md
+                                                - management-platform/assets-and-tags/tag/tag-properties/simulate.md
+                                                - management-platform/assets-and-tags/tag/tag-properties/custom.md
                                       - management-platform/assets-and-tags/tag/tag-group.md
                                       - management-platform/assets-and-tags/tag/quality.md
-                                              
+
                   - Alarming:
                             - management-platform/alarming/index.md
                             - management-platform/alarming/stale-alarm.md
                             - management-platform/alarming/history-storage.md
                             - management-platform/alarming/alarm-group.md
                             - Alarm Notification:
-                                      - management-platform/alarming/alarm-notification/index.md                                                                             
+                                      - management-platform/alarming/alarm-notification/index.md
                                       - Services:
-                                             - management-platform/alarming/alarm-notification/messages/index.md
-                                             - management-platform/alarming/alarm-notification/services/email(smtp).md 
-                                             - management-platform/alarming/alarm-notification/services/sms(twilio).md 
-                                             - management-platform/alarming/alarm-notification/services/sms(alicloud).md
-                                             - management-platform/alarming/alarm-notification/services/wecom.md 
-                                             - management-platform/alarming/alarm-notification/services/dingtalk.md  
+                                                - management-platform/alarming/alarm-notification/messages/index.md
+                                                - management-platform/alarming/alarm-notification/services/email(smtp).md
+                                                - management-platform/alarming/alarm-notification/services/sms(twilio).md
+                                                - management-platform/alarming/alarm-notification/services/sms(alicloud).md
+                                                - management-platform/alarming/alarm-notification/services/wecom.md
+                                                - management-platform/alarming/alarm-notification/services/dingtalk.md
                                       - Messages:
-                                             - management-platform/alarming/alarm-notification/messages/index.md
-                                             - management-platform/alarming/alarm-notification/messages/email(smtp).md 
-                                             - management-platform/alarming/alarm-notification/messages/sms(twilio).md
-                                             - management-platform/alarming/alarm-notification/messages/sms(alicloud).md                               
-                                             - management-platform/alarming/alarm-notification/messages/wecom.md
-                                             - management-platform/alarming/alarm-notification/messages/dingtalk.md                                                                            
+                                                - management-platform/alarming/alarm-notification/messages/index.md
+                                                - management-platform/alarming/alarm-notification/messages/email(smtp).md
+                                                - management-platform/alarming/alarm-notification/messages/sms(twilio).md
+                                                - management-platform/alarming/alarm-notification/messages/sms(alicloud).md
+                                                - management-platform/alarming/alarm-notification/messages/wecom.md
+                                                - management-platform/alarming/alarm-notification/messages/dingtalk.md
                                       - management-platform/alarming/alarm-notification/schedules.md
                                       - management-platform/alarming/alarm-notification/rules.md
                                       - management-platform/alarming/alarm-notification/failed.md
                                       - management-platform/alarming/alarm-notification/acknowledge-alarm.md
                   - Scripts:
                             - management-platform/scripts/index.md
+                            - management-platform/scripts/service-script.md
+                            - management-platform/scripts/custom-function.md
+                            - management-platform/scripts/schedule.md
+                            - management-platform/scripts/log-configuration.md
                   - management-platform/networking.md
                   - Databases:
                             - management-platform/databases/index.md
+                            - Database Connection:
+                                      - management-platform/databases/database-connection/index.md
+                                      - management-platform/databases/database-connection/mysql.md
+                                      - management-platform/databases/database-connection/sql-server.md
+                                      - management-platform/databases/database-connection/postgresql.md
+                                      - management-platform/databases/database-connection/sqlite.md
+                                      - management-platform/databases/database-connection/influxdb.md
+                                      - management-platform/databases/database-connection/query-exceptions.md
+                            - History Database:
+                                      - management-platform/databases/history-database/index.md
+                                      - Create History Database:
+                                                - management-platform/databases/history-database/create-history-database/index.md
+                                                  - management-platform/databases/history-database/create-history-database/data-partitioning-and-deletion.md
+                                                  - management-platform/databases/history-database/create-history-database/pre-processed.md
+                                      - management-platform/databases/history-database/create-duplicated-history-database.md
+                                      - management-platform/databases/history-database/create-remote-history-database.md
+                            - Database Table Reference:
+                                      - management-platform/databases/database-connection/database-table-reference/index.md
+                                      - Tag Table Reference:
+                                                - management-platform/databases/database-table-reference/tag-table-reference/index.md
+                                                - management-platform/databases/database-table-reference/tag-table-reference/relational-database-table-schema.md
+                                                - management-platform/databases/database-table-reference/tag-table-reference/influxDB-table-schema.md
+
                   - Redundancy:
                             - management-platform/redundancy/index.md
+                            - management-platform/redundancy/configuration.md
+                            - management-platform/redundancy/synchronization.md
+                            - management-platform/redundancy/switch.md
+
                   - Security:
                             - management-platform/security/index.md
+                            - management-platform/security/roles-and-users.md
+                            - management-platform/security/user-group.md
+                            - management-platform/security/permission.md
+                            - management-platform/security/access-level.md
+                            - Identity Provider:
+                                      - management-platform/security/identity-provider/index.md
+                                      - management-platform/security/identity-provider/user-attribute-mapping.md
+                                      - management-platform/security/identity-provider/user-grants.md
+                                      - management-platform/security/identity-provider/test-login-and-logout.md
+                                      - management-platform/security/identity-provider/troubleshooting.md
+                                      - management-platform/security/identity-provider/azure-AD-integration.md
+                                      - management-platform/security/identity-provider/integrates-with-OAuth0.md
+                            - management-platform/security/open-api.md
                   - management-platform/node-configuration.md
                   - management-platform/certificate-management.md
                   - management-platform/mqtt-broker.md
                   - management-platform/trust-store.md
                   - Open API:
                             - management-platform/open-api/index.md
+                            - management-platform/open-api/api-document(Swagger).md
+                            - management-platform/open-api/open-id-connect.md
+                            - management-platform/open-api/asset-api-definitions.md
+                            - management-platform/open-api/historical-data-api-definitions.md
+                            - management-platform/open-api/realtime-data-api-definitions.md
+                            - management-platform/open-api/integration-api-definitions.md
+                            - Test With Postman:
+                                      - management-platform/open-api/test-with-postman/index.md
+                                      - management-platform/open-api/test-with-postman/get-access-token.md
+                                      - management-platform/open-api/test-with-postman/invoke.md
+                                      - management-platform/open-api/test-with-postman/subscribe.md 
+
                   - management-platform/diagnostics.md
         - 2D Visualization:
                   - 2d-visualization/index.md
+                  - 2d-visualization/editor-introduction.md
                   - Page:
                             - 2d-visualization/page/index.md
+                            - 2d-visualization/page/page-type.md
+                            - 2d-visualization/page/page-parameter-passing.md
+                            - 2d-visualization/page/navigation.md
+                            - 2d-visualization/page/resolution-adaptation.md
+                            - 2d-visualization/page/page-permission.md                    
+                  - 2d-visualization/page-template.md
                   - Sql Query:
                             - 2d-visualization/sql-query/index.md
+                            - 2d-visualization/sql-query/create-sql-query.md
                             - Sql Query Example:
                                       - 2d-visualization/sql-query/sql-query-example/index.md
-
+                                      - 2d-visualization/sql-query/sql-query-example/query.md
+                                      - 2d-visualization/sql-query/sql-query-example/scalar-query.md
+                                      - 2d-visualization/sql-query/sql-query-example/update-query.md
+                            - 2d-visualization/sql-query/supported-data-types.md
                   - Controls:
                             - 2d-visualization/controls/index.md
-                            - Alarm:
-                                      - 2d-visualization/controls/alarm/index.md
-                                      - Historical Alarm:
-                                                - 2d-visualization/controls/alarm/historical-alarm/index.md
-                                      - Real-time Alarm:
-                                                - 2d-visualization/controls/alarm/real-time-alarm/index.md
-                            - Button:
-                                      - 2d-visualization/controls/button/index.md
-                            - Chart:
-                                      - 2d-visualization/controls/chart/index.md
-                            - Display:
-                                      - 2d-visualization/controls/display/index.md
                             - Drawing:
                                       - 2d-visualization/controls/drawing/index.md
+                                      - 2d-visualization/controls/drawing/shape.md
+                                      - 2d-visualization/controls/drawing/fill-stroke.md
+                            - Input:
+                                      - 2d-visualization/controls/input/index.md
+                                      - 2d-visualization/controls/input/dropdown.md
+                                      - 2d-visualization/controls/input/text-input.md
+                                      - 2d-visualization/controls/input/slider.md
+                                      - 2d-visualization/controls/input/datetime-input.md
+                                      - 2d-visualization/controls/input/number-input.md
+                            - Display:
+                                      - 2d-visualization/controls/display/index.md
+                                      - 2d-visualization/controls/display/label.md
+                                      - 2d-visualization/controls/display/value-display.md
+                                      - 2d-visualization/controls/display/led-display.md
+                                      - 2d-visualization/controls/display/iframe.md
+                                      - 2d-visualization/controls/display/rich-text.md
+                                      - 2d-visualization/controls/display/page-container.md
+                                      - 2d-visualization/controls/display/3d-viewer.md
+                                      - 2d-visualization/controls/display/ruler.md
+                            - Button:
+                                      - 2d-visualization/controls/button/index.md
+                                      - 2d-visualization/controls/button/button.md
+                                      - 2d-visualization/controls/button/menu.md
+                                      - 2d-visualization/controls/button/checkbox.md
+                                      - 2d-visualization/controls/button/radio-button.md
+                                      - 2d-visualization/controls/button/toggle-button.md
+                                      - 2d-visualization/controls/button/2-state-button.md
+                                      - 2d-visualization/controls/button/multi-state-button.md
+                            - Chart:
+                                      - 2d-visualization/controls/chart/index.md
+                                      - 2d-visualization/controls/chart/realtime-chart.md
+                                      - 2d-visualization/controls/chart/historical-chart.md
+                                      - 2d-visualization/controls/chart/bar-chart.md
+                                      - 2d-visualization/controls/chart/pie-chart.md
+                                      - 2d-visualization/controls/chart/custom-curve.md
+                                      - 2d-visualization/controls/chart/gauge.md
+                                      - 2d-visualization/controls/chart/custom-chart.md          
+                            - Alarm:
+                                      - 2d-visualization/controls/alarm/index.md
+                                      - Real-time Alarm:
+                                                - 2d-visualization/controls/alarm/real-time-alarm/index.md
+                                                - 2d-visualization/controls/alarm/real-time-alarm/alarm-filter.md
+                                                - 2d-visualization/controls/alarm/real-time-alarm/alarm-ack.md
+                                                - 2d-visualization/controls/alarm/real-time-alarm/shelve-alarm.md
+                                                - 2d-visualization/controls/alarm/real-time-alarm/details.md
+                                      - Historical Alarm:
+                                                - 2d-visualization/controls/alarm/historical-alarm/index.md
+                                                - 2d-visualization/controls/alarm/historical-alarm/filter.md
+                                                - 2d-visualization/controls/alarm/historical-alarm/details.md
+                            - Event:
+                                      - 2d-visualization/controls/event/index.md
+                                      - 2d-visualization/controls/event/realtime-event.md
+                                      - 2d-visualization/controls/event/historical-event.md
+                            - Table:
+                                      - 2d-visualization/controls/table/index.md
+                                      - 2d-visualization/controls/table/table.md
+                                      - 2d-visualization/controls/table/historical-data-table.md
+                                      - 2d-visualization/controls/table/tag-list.md
+                                      - 2d-visualization/controls/table/report-viewer.md          
+                            - 2d-visualization/controls/modify-control-properties.md                           
                   - Libraries:
                             - 2d-visualization/libraries/index.md
+                            - 2d-visualization/libraries/svg-editor.md
                   - Symbol:
                             - 2d-visualization/symbol/index.md
+                            - 2d-visualization/symbol/symbol-libraries.md
+                            - 2d-visualization/symbol/create-symbol.md
+                            - 2d-visualization/symbol/how-to-use.md
                   - Report:
                             - 2d-visualization/report/index.md
                             - Report Designer:
                                       - 2d-visualization/report/report-designer/index.md
+                                      - 2d-visualization/report/report-designer/design-report.md
+                            - 2d-visualization/report/create-data-source.md
+                            - 2d-visualization/report/view-report.md
+                            - 2d-visualization/report/export/export-and-import-report.md
                   - Function:
                             - 2d-visualization/function/index.md
+                            - 2d-visualization/function/expression-function.md
+                            - 2d-visualization/function/page-function.md
                   - Property Binding:
                             - 2d-visualization/property-binding/index.md
+                            - 2d-visualization/property-binding/tag.md
+                            - 2d-visualization/property-binding/property.md
+                            - 2d-visualization/property-binding/expression.md
+                            - 2d-visualization/property-binding/dynamic-tag.md
+                            - 2d-visualization/property-binding/dynamic-cell.md
+                            - 2d-visualization/property-binding/sql-query.md
+                            - 2d-visualization/property-binding/bidirectional-bindings.md 
+                  - 2d-visualization/controls/animation.md
                   - Event:
                             - 2d-visualization/event/index.md
+                            - 2d-visualization/event/navigation.md
+                            - 2d-visualization/event/set-value.md
+                            - 2d-visualization/event/set-property.md
+                            - 2d-visualization/event/script.md
+                            - 2d-visualization/event/security-group.md
                   - Project Properties:
                             - 2d-visualization/project-properties/index.md
+                            - 2d-visualization/project-properties/customize-login-page.md
         - 3D Visualization:
                   - 3d-visualization/index.md
                   - 3d-visualization/introduction-to-scene-editor.md
