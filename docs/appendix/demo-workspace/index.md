@@ -4,12 +4,12 @@ The purpose of the demo workspace is to demonstrate the various functions, opera
 
 **Download demo workspace**
 
-You can find it on our official website [https://www.wagoscada.cn](https://www.wagoscada.cn), go to the software download page and download the demo workspace.This demo is used to showcase the functionality of various controls in WAGO SCADA.
+You can find it on our official website [https://www.wagoscada.cn](https://www.wagoscada.cn), go to the software download page and download the demo workspace.This demo is used to showcase the functionality of various controls in WAGO VC Hub.
 
 
-**Import demo workspace to WAGO  SCADA**
+**Import demo workspace to WAGO  VC Hub**
 
-1.Install WAGO SCADA 
+1.Install WAGO VC Hub
 
 2.Extract the downloaded demo workspace file.
 
