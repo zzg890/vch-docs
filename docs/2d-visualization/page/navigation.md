@@ -122,7 +122,7 @@ Save the popup window.
 **Page:** Select "Parameter_Setting".
 ![alt text](36.png)
 
-**Title:** Binding expression "Parameter Setting" +"_"+ property('Dropdown1#selectedText')
+**Title:** Binding expression " return Parameter Setting" +"_"+ property('Dropdown1#selectedText')
 
 ![alt text](37.png)
 
