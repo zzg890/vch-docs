@@ -2,7 +2,7 @@
 
 By specifying a particular user identity for the "VC Hub" service, you can limit the service's permissions, granting it only the **minimum privileges necessary** for its operation. This helps prevent the service from being misused or exploited for malicious activities. Running different services under different users can **isolate** these services from each other, preventing vulnerabilities or issues in one service from affecting others. It also makes it easier to **track and audit** the activities of the "WAGO Visualization And Control Hub" service.
 
-The default log-on identity for the WAGO Visualization And Control Hub service in Windows is the **Local System account**, while in Linux, it runs by default as the** root** user.
+The default log-on identity for the WAGO Visualization And Control Hub service in Windows is the **Local System account**, while in Linux, it runs by default as the **root** user.
 
 ## "Log On As" for Windows Services
 

@@ -2,7 +2,7 @@
 
 We have outlined some simple steps to guide you through configuring your project. You can run a project in a short amount of time.
 
-## **1. Create a Project**
+## 1.Create a Project
 
 Click the "Add" button in the project list to create a project.
 
@@ -10,15 +10,15 @@ Click the "Add" button in the project list to create a project.
 
 
 
-## **2. Add a Database**
+## 2.Add a Database
 
 After the installation of VC Hub, a SQLite database will be automatically created, which you can use for basic testing. You can also click "Database" -> "Database Connection" page and then click the "New" button to create a new database connection. 
 
-## **3. Add Assets**
+## 3.Add Assets
 
 After the installation of VC Hub, a default asset will be automatically created, which you can use for basic testing. You can also click "Tags" -> "Assets" page and then click the "New" button to create new assets.
 
-## **4. Open the Editor**
+## 4.Open the Editor
 
 On the project list page, click the "Design" button for the project.
 
@@ -32,7 +32,7 @@ Open the configuration editor to display the following interface.
 
 
 
-## **5. Create a New Page**
+## 5.Create a New Page
 
 Click "New Page" to quickly create a new page.
 
@@ -45,7 +45,7 @@ In the **Tools** window on the left side of the designer, add for example "Rect"
 ![alt text](5.png)
 
 
-## **6. Create a Tag**
+## 6.Create a Tag
 
 In the asset dropdown box of the asset window in the configuration editor, select an asset and then click the add button to add a memory tag to that asset. Tag name: liquid.
 
@@ -59,7 +59,7 @@ Enable the simulated property for this tag, using simulated value as the tag val
 
 
 
-## **7. Enable History for Tags**
+## 7.Enable History for Tags
 
 At the top of the tag editing page, enable history recording to store the value of the tag historically.
 
@@ -67,7 +67,7 @@ At the top of the tag editing page, enable history recording to store the value 
 
 
 
-## **8. Bind Tag**
+## 8.Bind Tag
 
 Bind tags to controls on the page.
 
@@ -97,7 +97,7 @@ Bind tags to controls on the page.
 
 Note: For more information on binding, please refer to the Property Binding page. 
 
-#### **9. Preview/Run**
+## 9.Preview/Run
 
 Click the preview button in the page tool bar to view the preview effect. You can also click the run button for the project in the project list to view the running page.
 
