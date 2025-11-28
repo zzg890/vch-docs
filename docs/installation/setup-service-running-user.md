@@ -82,14 +82,12 @@ WantedBy=multi-user.target graphical.target
  
 3. Reload the systemd Configuration and Start the Service: 
 
-After editing the unit file, reload the systemd configuration and start the service.。
+After editing the unit file, reload the systemd configuration and start the service.
 
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl start visualizationandcontrolhub
 ```
- 
-
 
 **Notes:**
 
