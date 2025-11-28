@@ -11,7 +11,6 @@ In Windows, you can set the "Log On As" identity for a Windows service using sev
 Changing the service login identity requires administrator privileges.
 
 
-
 **Method 1: Using the Services Console**
 
 1. **Open the Services Console:**
@@ -82,14 +81,12 @@ WantedBy=multi-user.target graphical.target
  
 3. Reload the systemd Configuration and Start the Service: 
 
-After editing the unit file, reload the systemd configuration and start the service.。
+After editing the unit file, reload the systemd configuration and start the service.
 
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl start visualizationandcontrolhub
 ```
- 
-
 
 **Notes:**
 

@@ -704,8 +704,3 @@ nav:
                                       - appendix/system-function/system-utils/system-utils-importscript.md
                                       - appendix/system-function/system-utils/system-utils-importstyle.md
 
-                  - Demo Workspace:
-                            - appendix/demo-workspace/index.md
-                            - appendix/demo-workspace/home.md
-                            - appendix/demo-workspace/components.md
-                            - appendix/demo-workspace/features.md
