@@ -552,7 +552,7 @@ nav:
                                       - 3d-visualization/3d-low-code-example/scenario-operation/stopfirstpersoncontrols.md
                                       - 3d-visualization/3d-low-code-example/scenario-operation/skybox.md
                                       - 3d-visualization/3d-low-code-example/scenario-operation/creatediffusion.md
-                            - Object models in the scene:
+                            - Object-models-in-the-scene:
                                       - 3d-visualization/3d-low-code-example/object-models-in-the-scene/index.md
                                       - Basic Model:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/basic-model/index.md
