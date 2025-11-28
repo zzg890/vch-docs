@@ -7,5 +7,6 @@ Type of event
 - System events:Record events of system running status and behavior, which can be used to analyze issues related to system performance, faults, etc. For example: system start/stop, service program start/stop, etc.
 
 Includethe following controls: 
+
 - [Historical Event](event/historical-event.md) 
 - [Real Time Event ](event/realtime-event.md)

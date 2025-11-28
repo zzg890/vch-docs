@@ -489,7 +489,7 @@ nav:
                   - Project Properties:
                             - 2d-visualization/project-properties/index.md
                             - 2d-visualization/project-properties/customize-login-page.md
-        - 3D-Visualization:
+        - 3D Visualization:
                   - 3d-visualization/index.md
                   - 3d-visualization/introduction-to-scene-editor.md
                   - 3d-visualization/introduction-to-model-editor.md
@@ -498,11 +498,11 @@ nav:
                   - 3d-visualization/event.md
                   - 3d-visualization/convert-3d-models-to-glb-format.md
                   - 3d-visualization/lighting-settings.md
-                  - 3d-Low-Code Example:
+                  - 3d-Low Code Example:
                             - 3d-visualization/3d-low-code-example/index.md
                             - 3d-visualization/3d-low-code-example/find-3dview.md
                             - 3d-visualization/3d-low-code-example/getscene.md
-                            - Scenario-Operation:
+                            - Scenario Operation:
                                       - 3d-visualization/3d-low-code-example/scenario-operation/index.md
                                       - 3d-visualization/3d-low-code-example/scenario-operation/background.md
                                       - 3d-visualization/3d-low-code-example/scenario-operation/backgroundimg.md
@@ -561,7 +561,7 @@ nav:
                                       - 3d-visualization/3d-low-code-example/camera/rotate-around.md
                                       - 3d-visualization/3d-low-code-example/camera/pause.md
                                       - 3d-visualization/3d-low-code-example/camera/resume.md
-                            - Object-models-in-the-scene:
+                            - Object models in the scene:
                                       - 3d-visualization/3d-low-code-example/object-models-in-the-scene/index.md
                                       - Basic Model:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/basic-model/index.md
@@ -575,14 +575,14 @@ nav:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/basic-model/position.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/basic-model/userdata.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/basic-model/visible.md
-                                      - Custom annotations:
+                                      - Custom Annotations:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/custom-annotations/index.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/custom-annotations/element.md
                                       - Embedded Page:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/embedded-page/index.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/embedded-page/src.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/embedded-page/title.md
-                                      - Grid model:
+                                      - Grid Model:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/grid-model/index.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/grid-model/addoutline.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/grid-model/color.md
@@ -617,7 +617,7 @@ nav:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/surface/index.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/surface/doubleside.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/surface/image.md
-                                      - Text annotation:
+                                      - Text Annotation:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/text-annotation/index.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/text-annotation/fontcolor.md
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/text-annotation/fontsize.md
@@ -625,15 +625,15 @@ nav:
                                                 - 3d-visualization/3d-low-code-example/object-models-in-the-scene/text-annotation/text.md
         - Appendix:
                   - appendix/index.md
-                  - System-Function:
+                  - System Function:
                             - appendix/system-function/index.md
-                            - System-Alarm:
+                            - System.Alarm:
                                       - appendix/system-function/system-alarm/index.md
                                       - appendix/system-function/system-alarm/system-alarm-query.md
                                       - appendix/system-function/system-alarm/system-alarm-queryhistory.md
-                            - System-Context:
+                            - System.Context:
                                       - appendix/system-function/system-context/index.md
-                                      - System-Context-alarm:
+                                      - System.Context.alarm:
                                                 - appendix/system-function/system-context/system-context-alarm/index.md
                                                 - appendix/system-function/system-context/system-context-alarm/system-context-currentalarm-ackmode.md
                                                 - appendix/system-function/system-context/system-context-alarm/system-context-currentalarm-acknotes.md
@@ -654,7 +654,7 @@ nav:
                                                 - appendix/system-function/system-context/system-context-alarm/system-context-currentalarm-alarmgroups.md
                                                 - appendix/system-function/system-context/system-context-alarm/system-context-currentalarm-cleartime.md
                                                 - appendix/system-function/system-context/system-context-alarm/system-context-currentalarm-notificationrule.md
-                                      - System-Context-currentEvent:
+                                      - System.Context.currentEvent:
                                                 - appendix/system-function/system-context/system-context-currentevent/index.md
                                                 - appendix/system-function/system-context/system-context-currentevent/system-context-currentevent-newvalue.md
                                                 - appendix/system-function/system-context/system-context-currentevent/system-context-currentevent-offsetx.md
@@ -665,28 +665,28 @@ nav:
                                                 - appendix/system-function/system-context/system-context-currentevent/system-context-currentevent-type.md
                                                 - appendix/system-function/system-context/system-context-currentevent/system-context-currentevent-x.md
                                                 - appendix/system-function/system-context/system-context-currentevent/system-context-currentevent-y.md
-                            - System-Datatable:
+                            - System.Datatable:
                                       - appendix/system-function/system-datatable/index.md
                                       - appendix/system-function/system-datatable/system-datatable-todatatable.md
-                            - System-Db:
+                            - System.Db:
                                       - appendix/system-function/system-db/index.md
                                       - appendix/system-function/system-db/system-db-runsqlquery.md
-                            - System-Event:
+                            - System.Event:
                                       - appendix/system-function/system-event/index.md
                                       - appendix/system-function/system-event/system-event-fail.md
                                       - appendix/system-function/system-event/system-event-success.md
-                            - System-Page:
+                            - System.Page:
                                       - appendix/system-function/system-page/index.md
                                       - appendix/system-function/system-page/system-page-getpropertyvalue.md
                                       - appendix/system-function/system-page/system-page-setpropertyvalue.md
-                            - System-Security:
+                            - System.Security:
                                       - appendix/system-function/system-security/index.md
                                       - appendix/system-function/system-security/system-security-changepassword.md
                                       - appendix/system-function/system-security/system-security-getroles.md
                                       - appendix/system-function/system-security/system-security-getusername.md
                                       - appendix/system-function/system-security/system-security-login.md
                                       - appendix/system-function/system-security/system-security-logout.md
-                            - System-Tag:
+                            - System.Tag:
                                       - appendix/system-function/system-tag/index.md
                                       - appendix/system-function/system-tag/system-tag-getpropertyvalues.md
                                       - appendix/system-function/system-tag/system-tag-mock.md
@@ -696,7 +696,7 @@ nav:
                                       - appendix/system-function/system-tag/system-tag-readvalue.md
                                       - appendix/system-function/system-tag/system-tag-subscribe.md
                                       - appendix/system-function/system-tag/system-tag-writevalue.md
-                            - System-UI:
+                            - System.UI:
                                       - appendix/system-function/system-ui/index.md
                                       - appendix/system-function/system-ui/system-ui-applychanges.md
                                       - appendix/system-function/system-ui/system-ui-back.md
@@ -708,7 +708,7 @@ nav:
                                       - appendix/system-function/system-ui/system-ui-opennewtab.md
                                       - appendix/system-function/system-ui/system-ui-openpopup.md
                                       - appendix/system-function/system-ui/system-ui-redirect.md
-                            - System-Utils:
+                            - System.Utils:
                                       - appendix/system-function/system-utils/index.md
                                       - appendix/system-function/system-utils/system-utils-importscript.md
                                       - appendix/system-function/system-utils/system-utils-importstyle.md

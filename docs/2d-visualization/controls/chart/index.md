@@ -1,6 +1,7 @@
 # Chart
 Present data in various chart styles.
 Contains the following controls:
+
 - [Bar Chart](chart/bar-chart.md) 
 - [Custom Chart](chart/custom-chart.md) 
 - [Custom Curve](chart/custom-curve.md) 

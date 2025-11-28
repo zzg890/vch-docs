@@ -12,10 +12,12 @@ To apply animation effects such as rotation to these controls, configure animati
 
 
 **Drawing** 
+
 - [Fill,Stroke,Shadow and Pick Color](drawing/fill-stroke.md) 
 - [Shape](drawing/shape.md)
 
 **Input**  
+
 - [Datetime Input](input/datetime-input.md) 
 - [Dropdown](input/dropdown.md) 
 - [Number Input](input/number-input.md) 
@@ -35,6 +37,7 @@ To apply animation effects such as rotation to these controls, configure animati
 
 
 **Button**  
+
 - [2-State Button](button/2-state-button.md)
 - [Button](button/button.md) 
 - [Checkbox](button/checkbox.md) 
@@ -60,6 +63,7 @@ To apply animation effects such as rotation to these controls, configure animati
 
 
 **Event**  
+
 - [Historical Event](event/historical-event.md) 
 - [Real Time Event ](event/realtime-event.md)
 

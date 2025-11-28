@@ -9,7 +9,7 @@ Description of 3D files supported on VC Hub:
 3. Models can be converted to glb format within 3D drawing tools, such as 3D Max, Auto CAD, etc.
 4. The initial scene loading time is dependent on the network bandwidth quality. For subsequent loads, local caching is automatically utilized according to the browser's default behavior(On the condition that each single model size does not exceed 20 MB).
 
-### 3D **Model Requirements**
+### **3D Model Requirements**
 
 To ensure smooth performance of 3D models within the editor, the following requirements must be met:
 
