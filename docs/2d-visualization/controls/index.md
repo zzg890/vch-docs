@@ -12,57 +12,63 @@ To apply animation effects such as rotation to these controls, configure animati
 
 
 **Drawing** 
-- Shape  
-- Fill,Stroke,Shadow and Pick Color
+- [Fill,Stroke,Shadow and Pick Color](drawing/fill-stroke.md) 
+- [Shape](drawing/shape.md)
 
 **Input**  
-- Dropdown  
-- Text Input
-- Slider 
-- Datetime Input  
-- Number Input
+- [Datetime Input](input/datetime-input.md) 
+- [Dropdown](input/dropdown.md) 
+- [Number Input](input/number-input.md) 
+- [Slider](input/slider.md) 
+- [Text Input](input/text-input.md)
 
 **Display**  
-- Label
-- Value Display 
-- LED Display 
-- IFrame  
-- Rich Text  
-- Page Container  
-- 3D Viewer  
-- Ruler 
+
+- [3D Viewer](display/3d-viewer.md)
+- [IFrame](display/iframe.md) 
+- [Label](display/label.md) 
+- [LED Display](display/led-display.md) 
+- [Page Container](display/page-container.md) 
+- [Rich Text](display/rich-text.md) 
+- [Ruler](display/ruler.md) 
+- [Value Display](display/value-display.md)
+
 
 **Button**  
-- Button  
-- Menu
-- Checkbox 
-- Radio Button
-- Toggle Button
-- 2-State Button
-- Multi-State Button
+- [2-State Button](button/2-state-button.md)
+- [Button](button/button.md) 
+- [Checkbox](button/checkbox.md) 
+- [Menu](button/menu.md) 
+- [Multi-State Button](button/multi-state-button.md) 
+- [Radio Button](button/radio-button.md) 
+- [Toggle Button](button/toggle-button.md)
 
 **Chart**  
-- Real Time Chart 
-- Historical Chart  
-- Bar Chart 
-- Pie Chart  
-- Custom Curve  
-- Gauge  
-- Custom Chart
+
+- [Bar Chart](chart/bar-chart.md) 
+- [Custom Chart](chart/custom-chart.md) 
+- [Custom Curve](chart/custom-curve.md) 
+- [Gauge](chart/gauge.md) 
+- [Historical Chart](chart/historical-chart.md) 
+- [Pie Chart](chart/pie-chart.md) 
+- [Real Time Chart](chart/realtime-chart.md)
 
 **Alarm**  
-- Real Time Alarm  
-- Historical Alarm  
+
+- [Historical Alarm](alarm/historical-alarm/index.md)
+- [Real Time Alarm](alarm/real-time-alarm/index.md)
+
 
 **Event**  
-- Real Time Event  
-- Historical Event
+- [Historical Event](event/historical-event.md) 
+- [Real Time Event ](event/realtime-event.md)
 
 **Table**  
-- Table
-- Historical Data Table 
-- Tag List 
-- Report Viewer
+
+- [Historical Data Table](table/historical-data-table.md) 
+- [Report Viewer](table/report-viewer.md) 
+- [Table](table/table.md) 
+- [Tag List](table/tag-list.md)
  
 
  
