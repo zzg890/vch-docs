@@ -5,6 +5,7 @@ In this chapter, we will introduce all the built-in script functions available i
 System functions are named after System, and you can see many different categories of system functions below.
 
 **System.Alarm**
+
 - [System.Alarm.query](system-alarm/system-alarm-query.md) 
 - [System.Alarm.queryHistory](system-alarm/system-alarm-queryhistory.md)
 
@@ -28,6 +29,7 @@ System functions are named after System, and you can see many different categori
 - [​System.Event.success​](system-event/system-event-success.md)
 
 **System.Library**
+
 - [​System.Library.getLocalImage​](system-library/system-library-getlocalimage.md) 
 - [​System.Library.getSystemImage​](system-library/system-library-getsystemimage.md)
 
@@ -47,6 +49,7 @@ System functions are named after System, and you can see many different categori
 
 
 **System.Tag**
+
 - [​System.Tag.getPropertyValues​](system-tag/system-tag-getpropertyvalues.md) 
 - [​System.Tag.mock​](system-tag/system-tag-mock.md) 
 - [​System.Tag.queryPropertyValues​](system-tag/system-tag-querypropertyvalues.md) 
