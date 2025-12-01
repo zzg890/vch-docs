@@ -55,12 +55,12 @@ VC Hub provides an installation package for the Linux environment, with the file
 
 2. Create an administrator user. Remember this username and password, as you will use them to log in for the first time. 
 
-![alt text](25.png)
+   ![alt text](25.png)
 
 
 3. Port configuration, configure HTTP, HTTPS ports, and remember the access port. 
 
-![alt text](26.png)
+   ![alt text](26.png)
 
 
 4. After completing the above steps, wait for the program to load, and then you can log in to the default workspace with the administrator user created in step 2.
@@ -70,17 +70,17 @@ VC Hub provides an installation package for the Linux environment, with the file
 
 ## Security Configuration (Optional)
 
-To further enhance system security, it is recommended to perform the following steps after configuration to set permissions on the **service directory **and** application data directory**, allowing only specific users to access or modify them. This ensures that sensitive data is well protected and potential risks are minimized.
+To further enhance system security, it is recommended to perform the following steps after configuration to set permissions on the **service directory and application data directory**, allowing only specific users to access or modify them. This ensures that sensitive data is well protected and potential risks are minimized.
 
 1.  Create a Dedicated Service Account
 
     Create a dedicated system account (e.g., wago_vc_hub) with no interactive login, used only to run service processes:
 
-```Plain Text
+```
 sudo useradd -r -s /sbin/nologin wago_vc_hub
 ```
  
-    Then, configure passwordless sudo for this account via the sudoers file:
+Then, configure passwordless sudo for this account via the sudoers file:
 
 ```Plain Text
 wago_vc_hub ALL=(ALL) NOPASSWD: ALL
