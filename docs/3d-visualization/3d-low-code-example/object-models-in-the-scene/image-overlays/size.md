@@ -13,6 +13,4 @@ canvas.size = {width: 1000, height: 1000}// Modify the size of canvas
 
 Write the above code on the button, click the button to modify the size of the canvas. 
 
-
-Write the above code on the button, click the button to modify the canvas. 
 ![1](../../../../assets/images/3d_lowcode_object_overlays_size1.gif)
