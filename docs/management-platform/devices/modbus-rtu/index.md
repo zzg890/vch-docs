@@ -6,20 +6,21 @@ The Modbus RTU driver in VC Hub communicates data with devices (typically PLCs, 
 
 1. On the "**Devices**" -> "**Modbus RTU**" page, click the "**Add**" button.
 2. On the Add screen, leave the default values and enter the following information in the following fields (Note: The following data is only an example, please fill in the fields according to the actual situation).
-      Name: test1
-      COM: 2
-      Baud Rate: 9600
-      Data Bits: 8
-      Stop Bits: 1 bit
-      Parity: None
-      Connection Timeout (ms): 10000
-      Read Data Timeout (ms): 5000
-      Write Data Timeout (ms): 2000
+   - Name: test1
+   - COM: 2
+   - Baud Rate: 9600
+   - Data Bits: 8
+   - Stop Bits: 1 bit
+   - Parity: None
+   - Connection Timeout (ms): 10000
+   - Read Data Timeout (ms): 5000
+   - Write Data Timeout (ms): 2000
 3. Click the "**OK**" button. The data will be displayed in the device list page of Modbus RTU.
    ![alt text](1.png)
 4. Click the Enable button in the Enable Status column to enable the device.
    ![alt text](2.png)
    **Configuration Fields**
+
    | **Name**              | **Description**        |
    |-------------------------|-----------------------------|
    | Name                    | The name of the device connection.                    |
@@ -32,18 +33,20 @@ The Modbus RTU driver in VC Hub communicates data with devices (typically PLCs, 
    | Read Data Timeout (ms)  | Read data timeout of the device in milliseconds       |
    |Write Data Timeout (ms) | The device's write data timeout in milliseconds.      |
 5. Click on the "**Add Frame**" button on the created device to add a frame to the current device.
+
    **Frame**: The frame is the same as a data frame in the Modbus protocol, it is the basic unit of data transmission, it is used to record the slave address, storage area, start and end address, data encoding format and frequency of data acquisition for data communication, and the I/O tags can be bound to the frame in the VC Hub program.
 6. In the Add Frame screen, leave the default values and enter the following information in the following fields (Note: The following data is only an example, please fill in the fields according to the actual situation).
-   Name: HoldingRegister1
-   Slave Address: 1
-   Function: Holding Register
-   Start Address: 1
-   Endind Address: 11
-   Data Encoding: Big Endian
-   Frequency (ms): 1000
+   - Name: HoldingRegister1
+   - Slave Address: 1
+   - Function: Holding Register
+   - Start Address: 1
+   - Endind Address: 11
+   - Data Encoding: Big Endian
+   = Frequency (ms): 1000
 7. Click the "**OK**" button. The data will be displayed under the previously created device.
    ![alt text](3.png)
    **Configuration Fields**
+
    | **Name**    | **Description**                  |
    |----------------|---------------------------------------|
    | Name           | Name of the frame connection.      |
@@ -77,6 +80,7 @@ Bind a tag to the data of a Modbus RTU device.
    Bit: 1
    ![alt text](6.png)
    **Configuration Fields**
+
    | **Function**    |     |
    |--------------------------|------------------------|
    | **Name**                 | **Description**   |
