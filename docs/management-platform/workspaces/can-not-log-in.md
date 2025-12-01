@@ -14,11 +14,10 @@ If you have other workspaces in your system and have the login information for t
       - For Linux installation, the default user data directory is: `/usr/share/`wagovisualizationandcontrolhub.
       - If you changed the user data directory during installation, go to the directory you modified.
 1. **Navigate to the \Workspaces folder.**
-
       - This directory contains all the workspaces, with each workspace stored in its own separate folder.
       Go to the root directory of a specific workspace folder, where you can check the **“.ini”** file to view information such as the workspace name.
       ![alt text](21.png)
-      - Modify the ".ini" file in the root directory of the workspace folder.** Change the **Current** field to the **target workspace ID**.
+      - Modify the ".ini" file in the root directory of the workspace folder. Change the **Current** field to the **target workspace ID**.
 4. **Restart the service.**
 
 5. **Log in using the switched workspace user information.** 
