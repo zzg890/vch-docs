@@ -10,7 +10,6 @@ If you have other workspaces in your system and have the login information for t
 
 1. **Log in to the VC Hub installation server.**
 2. **Go to the user data directory.**
-
       - For Windows installation, the default user data directory is: “%ProgramData%\WAGOVisualizationAndControlHub”, usually located at “C:\ProgramData\WAGOVisualizationAndControlHub”.
       - For Linux installation, the default user data directory is: `/usr/share/`wagovisualizationandcontrolhub.
       - If you changed the user data directory during installation, go to the directory you modified.
@@ -20,8 +19,7 @@ If you have other workspaces in your system and have the login information for t
       Go to the root directory of a specific workspace folder, where you can check the **“.ini”** file to view information such as the workspace name.
       ![alt text](21.png)
 4. **Modify the ".ini" file in the root directory of the workspace folder.**
-
-      Change the **Current** field to the **target workspace ID**.
+      <br>Change the **Current** field to the **target workspace ID**.
 5. **Restart the service**
 6. **Log in using the switched workspace user information**
 
