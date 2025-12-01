@@ -20,7 +20,9 @@ If you have other workspaces in your system and have the login information for t
       ![alt text](21.png)
 4. **Modify the ".ini" file in the root directory of the workspace folder.**
       Change the **Current** field to the **target workspace ID**.
+
 5. **Restart the service**
+
 6. **Log in using the switched workspace user information**
 
 # **Method 2: Create a New Workspace**
