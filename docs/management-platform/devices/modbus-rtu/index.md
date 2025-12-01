@@ -6,15 +6,15 @@ The Modbus RTU driver in VC Hub communicates data with devices (typically PLCs, 
 
 1. On the "**Devices**" -> "**Modbus RTU**" page, click the "**Add**" button.
 2. On the Add screen, leave the default values and enter the following information in the following fields (Note: The following data is only an example, please fill in the fields according to the actual situation).
-   - Name: test1
-   - COM: 2
-   - Baud Rate: 9600
-   - Data Bits: 8
-   - Stop Bits: 1 bit
-   - Parity: None
-   - Connection Timeout (ms): 10000
-   - Read Data Timeout (ms): 5000
-   - Write Data Timeout (ms): 2000
+    - Name: test1
+    - COM: 2
+    - Baud Rate: 9600
+    - Data Bits: 8
+    - Stop Bits: 1 bit
+    - Parity: None
+    - Connection Timeout (ms): 10000
+    - Read Data Timeout (ms): 5000
+    - Write Data Timeout (ms): 2000
 3. Click the "**OK**" button. The data will be displayed in the device list page of Modbus RTU.
    ![alt text](1.png)
 4. Click the Enable button in the Enable Status column to enable the device.
