@@ -1,22 +1,17 @@
 # Create History Database
 
 1. On the "**Databases**" -> "History Database" screen, click the "Add" button.
-
-![alt text](1.png)
-
+    ![alt text](1.png)
 2.  In the following popup window, select History Database and click "Next" button.
-
-![alt text](2.png)
-
+    ![alt text](2.png)
 3. Fill in the configuration and click "OK" button to save.
+    ![alt text](3.png)
 
-![alt text](3.png)
+     **Note**: When InfluxDB is selected , there is no configuration for partitioning, pre-processing, and data cleaning (InfluxDB itself has the above configurations,  VC Hub does not provide this configuration). 
 
- **Note**: When InfluxDB is selected , there is no configuration for partitioning, pre-processing, and data cleaning (InfluxDB itself has the above configurations,  VC Hub does not provide this configuration). 
+    When data of type InfluxDB is selected for the database connection, the following screen is displayed:
 
-When data of type InfluxDB is selected for the database connection, the following screen is displayed:
-
-![alt text](4.png)
+    ![alt text](4.png)
 
 **Configuration description**
 

@@ -1,16 +1,11 @@
 # Create a Duplicated History Database
 
 1. On the "**Databases**" -> "**History Database**" page, click the "Add" button. 
-
-![alt text](1.png)
-
+    ![alt text](1.png)
 2.  In the following pop-up window, select the Duplicated History Database and click "Next" button.
-
-![alt text](2.png)
-
+    ![alt text](2.png)
 3. Fill in the configuration and click "OK" button to save. 
-
-![alt text](3.png)
+    ![alt text](3.png)
 
 **Configuration** ** Description**
 

@@ -1,18 +1,11 @@
 # Create a Remote History Database
 
 1. On the "**Databases**" -> "**History Database**" screen, click the "Add" button.
-
-![alt text](1.png)
-
-
-
+    ![alt text](1.png)
 2. In the following popup window, select the Remote History Database and click "Next" button. 
-![alt text](5.png)
-
-
+    ![alt text](5.png)
 3. Fill in the configuration and click **"OK** **"** button to save.  
-
-![alt text](4.png)
+    ![alt text](4.png)
 
 **Configuration Description**
 

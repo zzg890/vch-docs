@@ -10,12 +10,9 @@ The data cleanup feature will delete partitioned data (raw and preprocessed part
 
 1. On the "**Databases**" -> "**History Database**" screen, click the "Add" button. 
 2. In the following pop-up window, select History Library and click "Next" button.
-
-![alt text](5.png)
-
+    ![alt text](5.png)
 3. Configure data partitioning and data pruning in the following screen.
-
-![alt text](6.png)
+    ![alt text](6.png)
 
 **Configuration Description**
 
