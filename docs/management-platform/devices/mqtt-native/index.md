@@ -76,6 +76,8 @@ Subject: Topic
     **Permission:** Read  
     Clients can subscribe to this Topic to receive data when they need and allow certain points to receive values from the system.
 
+**Notes:**
+
 - Square brackets `[]` indicate that the path segment is **optional**.
 - Curly braces `{}` indicate that the content is a **placeholder** (to be replaced with an actual value).
 - Therefore, combining them as `[{group_name}]` means it is an "**optional placeholder**".
