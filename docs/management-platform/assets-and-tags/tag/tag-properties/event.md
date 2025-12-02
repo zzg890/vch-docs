@@ -12,7 +12,7 @@
 
 ![alt text](22.png)
 
-| **Data Type** | **Set** ** Value** | **Value Changed** |
+| **Data Type** | **Set Value** | **Value Changed** |
 |---------------|--------------------|-------------------|
 | Integer       | √                  | X                 |
 | Double        | √                  | X                 |

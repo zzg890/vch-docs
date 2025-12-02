@@ -17,20 +17,15 @@ Simulate a change in water level.
 ![alt text](23.png)
 
 1. Create an memory tag: level, turn on the simulate , and set the parameters as follows:
-
-- Type: Increment
-- Initial value: 10
-- Value: 20~60
-- Change Frequency (s): 1 
-- Change Amplitude: 5
-
-2. Draw a rectangle on the page and set the fill animation. 
-
-![alt text](24.png)
-
-3. View the running effect.
-
-![simulate](../../../../assets/images/simulate.gif)
+     - Type: Increment
+     - Initial value: 10
+     - Value: 20~60
+     - Change Frequency (s): 1 
+     - Change Amplitude: 5
+2. Draw a rectangle on the page and set the fill animation. <br>
+    ![alt text](24.png)
+3. View the running effect.<br>
+    ![simulate](../../../../assets/images/simulate.gif)
 
 ## **How to enable**
 

@@ -15,8 +15,8 @@
 | **Name** | **Description**                                                                                                                                                                                                                                                                         |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Mode     | There  are 3 modes:  -  Linear:This mode is displayed when the data type of the tag is Integer, Double. -  Square: This mode is displayed when the data type of the tag is Integer,Double. - Re verse:This mode is displayed when the data type of the tag is Bool.                     |
-| Raw      | Configurable when the mode is Linear or Square.   ![alt text](19.png) |
-| Value    | Configurable when the mode is Linear or Square.  ![alt text](20.png)  |
+| Raw      | Configurable when the mode is Linear or Square.   <br>![alt text](19.png) |
+| Value    | Configurable when the mode is Linear or Square.  <br>![alt text](20.png)  |
 
 ## **Formula**
 
@@ -28,7 +28,7 @@
 
  Displayed value = Min value + √(Current raw value -Min raw value) * (Max value - Min value)\ √(Max raw value - Min raw value ) 
 
- Note: √  means square
+ **Note:**  √  means square
 
 #### **Reverse**
 
