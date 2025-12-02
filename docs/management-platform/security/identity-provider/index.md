@@ -20,16 +20,11 @@ When the **Local** Identity Provider is enabled, users can log in using accounts
 **Prerequisite:There must be no existing **Local** Identity Provider in the system.**
 
 1. In the **"Security" → "Identity Provider"** list, click the **"Add"** button in the upper right corner.
-
-![alt text](26.png)
-
+    ![alt text](26.png)
 2. In the **Identity Provider** pop-up window, select **Local**, then click **"Next"**.
-
-![alt text](27.png)
-
+    ![alt text](27.png)
 3. In the **Add** pop-up window, enter a name, then click the **"OK"** button to complete the addition.
-
-![alt text](28.png)
+    ![alt text](28.png)
 
 ## **Add an OpenID Connect Identity Provider**
 
@@ -37,12 +32,9 @@ You are allowed to create multiple **OpenID Connect** type Identity Providers.
 
 1. In the **"Security" → "Identity Provider"** list, click the **"Add"** button in the upper right corner.
 2. In the **Identity Provider** pop-up window, select **OpenID Connect** and then click **"Next"** to proceed.
-
-![alt text](29.png)
-
+    ![alt text](29.png)
 3. In the **Add** pop-up window, complete the setup, then click the **"OK"** button to finish the addition.
-
-![alt text](30.png)
+    ![alt text](30.png)
 
 **Properties**
 
@@ -64,7 +56,9 @@ According to the OpenID Connect (OIDC) protocol, when integrating a third-party 
 
 When a project file is exported from the original server and imported to a new server, OIDC validation will fail if the new server’s address is not registered with the third-party Identity Provider, resulting in users being unable to log in. Therefore, after migrating the project, the new server’s callback URLs must be added to the existing configuration on the third-party platform (e.g., in the Auth0 management console).
 
-**Example for Auth0:** In the application's **Allowed Callback URLs** and **Allowed Logout URLs** fields, append the new server's address to the existing list, separated by a comma. For example:
+**Example for Auth0:** In the application's **Allowed Callback URLs** and **Allowed Logout URLs** fields, append the new server's address to the existing list, separated by a comma. 
+
+For example:
 
 ![alt text](32.png)
 

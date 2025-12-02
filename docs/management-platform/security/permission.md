@@ -70,4 +70,4 @@ It includes six categories:
 | Match All             | Users must have all access levels in order to possess the corresponding permissions.               |
 | Match Any             | Users can have the corresponding permissions as long as they possess any one of the access levels. |
 
-3. **Click the "OK" button to save.**
+3.**Click the "OK" button to save.**

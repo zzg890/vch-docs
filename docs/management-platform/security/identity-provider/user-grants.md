@@ -18,19 +18,19 @@ Configuring user grants is divided into two parts: adding users, assigning acces
 
 1. Click the **"Security" → "Identity Provider"** menu.
 
-![alt text](../1.png)
+    ![alt text](../1.png)
 
 2. In the **Identity Provider** list, click the **"User Grants"** in the action column for a specific entry.
 
-![alt text](36.png)
+    ![alt text](36.png)
 
 3. In the pop-up window, click the **"Add"** button to add a username.
 
-![alt text](37.png)
+    ![alt text](37.png)
 
 4. Select a user, and set the access levels for that user on the right-side panel. The currently selected user will be highlighted.
 
-![alt text](38.png)
+    ![alt text](38.png)
 
 5. After setting the access levels for one user, continue selecting the next user to configure their access levels. Once all users have been configured, click the **"OK"** button to save the settings.
 

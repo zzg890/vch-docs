@@ -49,7 +49,7 @@ Click the "Register" button to add new  OpenId Client.
 
      The **Logout Redirect URL:** http://{server-host}/.well-known/openid-configuration
 
-![alt text](36.png)
+     ![alt text](36.png)
 
 3. Open the **Identity Provider** configuration interface in the client application.Enter the following information:Client ID,Client Secret.
 
@@ -61,18 +61,18 @@ If VC Hub is the client application, you should fill in the identity provider co
 
 1. When registering an **OpenID client**, you should select only the **Client Credentials Flow** as grant type.
 
-In this mode, the **client application** can request an **access token** directly by using its:
+     In this mode, the **client application** can request an **access token** directly by using its:
 
-- **Client ID**
-- **Client Secret**
+      - **Client ID**
+      - **Client Secret**
 
-![alt text](38.png)
+     ![alt text](38.png)
 
 2. After the client application is registered, click the "**Open API**" button to configure the which APIs third party application can use the credential to call.
 
-![alt text](39.png)
+     ![alt text](39.png)
 
-![alt text](40.png)
+     ![alt text](40.png)
 
 ## Edit
 

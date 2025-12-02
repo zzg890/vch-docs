@@ -8,17 +8,17 @@ After configuring the Identity Provider, you can use the **Login Test** to verif
 
 1. Click the ”Security“->”Identity Provider“  menu。
 
-![alt text](../1.png)
+    ![alt text](../1.png)
 
 2. In the Identity Provider list, click the **"Login Test"** button in the action column for a specific entry.
 
-![alt text](39.png)
+    ![alt text](39.png)
 
 3. A new browser window will open with the login page.。
 4. Use the username and password of the currently selected Identity Provider to log in.
 5. If the login is successful, you will be redirected back to the Identity Provider Login Test page, where the response result will be displayed.
 
-![alt text](40.png)
+    ![alt text](40.png)
 
 ## Test Logout 
 
