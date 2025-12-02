@@ -5,18 +5,11 @@ This configuration is used to set up the SMS sending service for alarm notificat
 ## Create SMS (Twilio) Service
 
 1. Click "**Alarming**" -> "**Alarm Notifications**" -> "**Services**" to open the "**Services**" list page.
-
-![alt text](2.png)
-
-
-
+    ![alt text](2.png)
 2. Click the "Add" button. In the new pop-up window, select "SMS(Twilio)".
-
-![alt text](11.png)
-
+    ![alt text](11.png)
 3. Click "Next" to enter the detailed configuration window. 
-
-![alt text](12.png)
+    ![alt text](12.png)
 
 **Properties**
 
@@ -40,7 +33,7 @@ This configuration is used to set up the SMS sending service for alarm notificat
 2. Click the **"New"** button in the upper right corner of the list.
 3. In the pop-up window, click the **'+SMS'** button to add a new SMS notification rule.In the notification service dropdown, select the previously created notification service.
 
-![alt text](13.png)
+    ![alt text](13.png)
 
 
 

@@ -5,21 +5,13 @@ Used to configure sending alarm notifications via DingTalk to specific groups or
 ## Create WeCom Service
 
 1. Click "**Alarming**" -> "**Alarm Notifications**" -> "**Services**" to open the “**Services**” list page.
-
-![alt text](2.png)
-
+    ![alt text](2.png)
 2. Click the "Add" button. In the new pop-up window, select "DingTalk".
-
-![alt text](37.png)
-
+    ![alt text](37.png)
 3. Click "Next" to enter the detailed configuration window. 
-
-![alt text](38.png)
-
-In the “Send To” field, **DingTalk Group** is selected by default. To send notifications to individual users, check the **DingTalk Memeber** option. You may select both simultaneously.
-
-![alt text](39.png)
-
+    ![alt text](38.png)
+    In the “Send To” field, **DingTalk Group** is selected by default. To send notifications to individual users, check the **DingTalk Memeber** option. You may select both simultaneously.
+    ![alt text](39.png)
 4. Once the settings are complete, click the 'OK' button to add this configuration data.
 
 **Properties**
@@ -35,34 +27,21 @@ In the “Send To” field, **DingTalk Group** is selected by default. To send n
 #### How to add a group robot
 
 1. Click the settings button of an  DingTalk group 
-
-![alt text](45.png)
-
+    ![alt text](45.png)
 2. In the Group Settings window, click on “Bot”.
-
-![alt text](46.png)
-
+    ![alt text](46.png)
 3. Click “Add Bot” (Note: Only group owners and group administrators can add bots).
-
-![alt text](47.png)
-
+    ![alt text](47.png)
 4. Click “Custom” 
-
-![alt text](48.png)
-
+    ![alt text](48.png)
 5. Click the "Add" button
-
-![alt text](49.png)
-
+    ![alt text](49.png)
 6. Add Robot
+    ![alt text](50.png)
+    If “Additional Signature” is enabled under **Security Settings**, then when creating a DingTalk service and adding a DingTalk group, you must enter the robot’s generated signature key into the corresponding **Secret** field. If “Additional Signature” is not enabled, no secret needs to be provided.
+    ![alt text](51.png)
 
-![alt text](50.png)
-
-If “Additional Signature” is enabled under **Security Settings**, then when creating a DingTalk service and adding a DingTalk group, you must enter the robot’s generated signature key into the corresponding **Secret** field. If “Additional Signature” is not enabled, no secret needs to be provided.
-
-![alt text](51.png)
-
- **Note**: Adding group robots is only supported on the desktop client; it is not supported on mobile. 
+**Note**: Adding group robots is only supported on the desktop client; it is not supported on mobile. 
 
 
 ## How to view group robot Webhook URL and Additional Signature
@@ -77,45 +56,25 @@ In a DingTalk group, click the **Group Settings** button in the top-right corner
 #### How to create an app
 
 1. Log in to the  DingTalk management  system (  [https://open-dev.dingtalk.com](https://open-dev.dingtalk.com/) )，Click **Create an app** on the “App Management” page.
-
-![alt text](53.png)
-
+    ![alt text](53.png)
 2. Fill in and save your application information.
-
-![alt text](54.png)
-
+    ![alt text](54.png)
 3. After saving, you will be redirected to the following page, click “View Version Details” at the top of the page to enter the details page.
-
-![alt text](55.png)
-
+    ![alt text](55.png)
 4. Click the edit button
-
-![alt text](56.png)
-
+    ![alt text](56.png)
 5. When you are finished editing, click ”Save” button
-
-![alt text](57.png)
-
+    ![alt text](57.png)
 6. Click "Direct Publishing" to publish the application
-
-![alt text](58.png)
-
+    ![alt text](58.png)
 7. You can view the created applications on the** Application Development** page
-
-![alt text](59.png)
-
+    ![alt text](59.png)
 8. On the “Application Development” page, click the “Application Details” button of the application to enter the Add Application Capability page.
-
-![alt text](60.png)
-
+    ![alt text](60.png)
 9. Click the robot to start the robot configuration. After the configuration is completed, click the "Publish" button at the bottom of the page to publish.
-
-![alt text](61.png)
-
+    ![alt text](61.png)
 10. Open **Robot Configuration** and click the “Publish” button at the bottom of the page to publish the configuration.
-
-![alt text](62.png)
-
+    ![alt text](62.png)
 11. Configuration completed
 
 ## How to use the Email Notification Service
@@ -126,7 +85,7 @@ In the alarm notification rules, you will select the notification service.
 2. Click the **"New"** button in the upper right corner of the list.
 3. In the pop-up window, click the **'+DingTalk'** button to add a new Email notification rule.In the notification service dropdown, select the previously created notification service.
 
-![alt text](63.png)
+    ![alt text](63.png)
 
 
 

@@ -5,19 +5,11 @@ Used to configure the SMS sending service for alarm notifications.
 ## Create SMS (Ali Cloud) Service
 
 1. Click "**Alarming**" -> **"Alarm Notifications**" -> "**Services**" to open the "**Services**" list page.
-
-![alt text](2.png)
-
-
-
+    ![alt text](2.png)
 2. Click the "Add" button. In the new pop-up window, select "SMS(Ali Cloud)".
-
-![alt text](14.png)
-
+    ![alt text](14.png)
 3. Click "Next" to enter the detailed configuration window. 
-
-![alt text](15.png)
-
+    ![alt text](15.png)
 4. Once the setup is complete, click the **"Confirm"** button.
 
  **Properties**
@@ -42,4 +34,4 @@ Used to configure the SMS sending service for alarm notifications.
 2. Click the **"New"** button in the upper right corner of the list.
 3. In the pop-up window, click the **'+SMS'** button to add a new SMS notification rule.In the notification service dropdown, select the previously created notification service.
 
-![alt text](13.png)
+    ![alt text](13.png)

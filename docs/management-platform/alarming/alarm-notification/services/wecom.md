@@ -5,21 +5,13 @@ Used to configure sending alarm notifications via WeCom to specific groups or us
 ## Create WeCom Service
 
 1. Click "**Alarming**" -> "**Alarm Notifications**" -> "**Services**" to open the “**Services**” list page.
-
-![alt text](2.png)
-
+    ![alt text](2.png
 2. Click the "Add" button. In the new pop-up window, select "WeCom".
-
-![alt text](16.png)
-
+    ![alt text](16.png)
 3. Click "Next" to enter the detailed configuration window. 
-
-![alt text](18.png)
-
-In the “Send To” field, **WeCom Group** is selected by default. To send notifications to individual users, check the **WeCom Account** option. You may select both simultaneously.
-
-![alt text](17.png)
-
+    ![alt text](18.png)
+    In the “Send To” field, **WeCom Group** is selected by default. To send notifications to individual users, check the **WeCom Account** option. You may select both simultaneously.
+    ![alt text](17.png)
 4. Once the settings are complete, click the 'OK' button to add this configuration data.
 
 **Properties**
@@ -39,27 +31,18 @@ In the “Send To” field, **WeCom Group** is selected by default. To send noti
 **Desktop**
 
 1. Click the settings button of an  WeCom group and select “Add Group Robot”.
-
-![alt text](24.png)
-
+    ![alt text](24.png)
 2. Create a robot
-
-![alt text](25.png)
-
+    ![alt text](25.png)
 3. Save the robot
-
-![alt text](26.png)
+    ![alt text](26.png)
 
 Mobile
 
 1. Enter an  WeCom group and click on the Settings button in the upper right corner
-
-![alt text](27.png)
-
+    ![alt text](27.png)
 2. Click on it to go to the **Chat Information** page, where you can click on the **Group Robot.**
-
-![alt text](28.png)
-
+    ![alt text](28.png)
 3. In the group robot window, click the “Add” button in the upper right corner of the page and follow the steps to add a robot.
 
 #### How to view group robot Webhook URL
@@ -88,27 +71,16 @@ In the list, click Group Robot to view it.
 #### How to create an app
 
 1. Log in to the  WeCom management  system (  [https://work.weixin.qq.com/wework_admin/frame#apps](https://work.weixin.qq.com/wework_admin/frame#apps) )，Click **Create an app** on the “App Management” page.
-
-![alt text](31.png)
-
-2. Create an app**.**
-
-**Note: The "Allowed users**" **must be set to select the departments or members that need to receive alarm notifications.**
-
-![alt text](32.png)
-
+    ![alt text](31.png)
+2. Create an app.
+    **Note:** The "Allowed users" must be set to select the departments or members that need to receive alarm notifications.
+    ![alt text](32.png)
 3. Once the application is created, click the **Settings** button of the “Company's Trusted IP”  at the bottom of the application page.
-
-![alt text](33.png)
-
- Set trusted domain name or Set the server URL for receiving messages
-
-![alt text](34.png)
-
+    ![alt text](33.png)
+    Set trusted domain name or Set the server URL for receiving messages
+    ![alt text](34.png)
 4. After setting up the trusted domain name, configure the company's trusted IP
-
-![alt text](35.png)
-
+    ![alt text](35.png)
 5. Complete the configuration.
 
 ## How to use the Email Notification Service
@@ -119,4 +91,4 @@ In the alarm notification rules, you will select the notification service.
 2. Click the **"New"** button in the upper right corner of the list.
 3. In the pop-up window, click the **'+WeCom'** button to add a new Email notification rule.In the notification service dropdown, select the previously created notification service.
 
-![alt text](36.png)
+    ![alt text](36.png)

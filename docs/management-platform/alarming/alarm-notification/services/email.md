@@ -5,18 +5,11 @@ Used to configure the email sending service for alarm notifications.
 ## Create Email (SMTP) Service
 
 1. Click "**Alarming**" -> "**Alarm Notifications**" -> "**Services**" to open the “**Services**” list page.
-
-![alt text](2.png)
-
+    ![alt text](2.png)
 2. Click the "Add" button. In the new pop-up window, select "Email (SMTP)".
-
-![alt text](1.png)
-
-
+    ![alt text](1.png)
 3. Click "Next" to enter the detailed configuration window. 
-
-![alt text](3.png)
-
+    ![alt text](3.png)
 4. After setting up, click the **"Connection Test"** button to check if the connection is successful.
 5. If the test is successful, click the **"OK"** button to add the data.
 
@@ -48,7 +41,7 @@ To use an app-specific password, the Gmail account must have two-step verificati
 3. Under “How you sign in to Google,” select **Turn on** **2-Step Verification**.
 4. Follow the steps.
 
-![alt text](4.png)
+    ![alt text](4.png)
 
 **Sign in with app passwords**
 
@@ -58,11 +51,11 @@ To use an app-specific password, the Gmail account must have two-step verificati
 2. Enter the name of the application that requires the password, such as "VCHub"
 3. Copy and save the app-specific password for future use
 
-![alt text](5.png)
+ ![alt text](5.png)
 
-If the following situation occurs when you open the application-specific password creation page, please refer to the above instructions, **enable two-step verification**, and then reopen the page
+ If the following situation occurs when you open the application-specific password creation page, please refer to the above instructions, **enable two-step verification**, and then reopen the page
 
-![alt text](6.png)
+ ![alt text](6.png)
 
 
 
@@ -70,13 +63,9 @@ If the following situation occurs when you open the application-specific passwor
 
 1. On your computer, open  [Gmail](https://mail.google.com/)
 2. In the top right, click Settings   **See all settings.**
-
-![alt text](7.png)
-
+    ![alt text](7.png)
 3. Click the **Forwarding and POP/IMAP** tab.
-
-![alt text](8.png)
-
+    ![alt text](8.png)
 4. In the "POP download" section, select **Enable POP for mail that arrives from now on.**
 
 **Test Gmail**
@@ -99,5 +88,5 @@ In the alarm notification rules, you will select the notification service.
 2. Click the **"New"** button in the upper right corner of the list.
 3. In the pop-up window, click the **'+Email'** button to add a new Email notification rule.In the notification service dropdown, select the previously created notification service.
 
-![alt text](10.png)
+    ![alt text](10.png)
 
