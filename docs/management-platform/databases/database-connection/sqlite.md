@@ -11,7 +11,7 @@ On this page, we will demonstrate how to connect VC Hub to SQLite.
     Since SQLite is an open source embedded relational database that implements a self-contained, serverless, configuration-less, transactional SQL database engine. It is a zero-configuration database.
 
     So creating a SQLite database connection means creating a SQLite file locally. So there is no need for Host, Port, Username, Password, etc. You just need to check where the SQLite file is stored.
-    
+
     ![alt text](17.png)
 
      - Name: Demo
@@ -22,7 +22,6 @@ On this page, we will demonstrate how to connect VC Hub to SQLite.
 
     **Notes:** The database name is the name of the SQLite file without suffix. 
 
-4.Click **"OK"** button, the popup window will be closed and the list of database connections will be displayed. The connection status of the data in the list is "Connected".
-
+4. Click **"OK"** button, the popup window will be closed and the list of database connections will be displayed. The connection status of the data in the list is "Connected".
     ![alt text](18.png)
 

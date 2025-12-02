@@ -27,8 +27,7 @@ On this page, we will demonstrate how to connect VC Hub to SQL Server.
      - Maximum Query Points: 5000000
      - Query Timeout(s): 30
 
-4.Click the **"OK"** button, the pop-up window closes and the list of database connections is displayed. The connection status of the data in the list is "Connected".
-
+4. Click the **"OK"** button, the pop-up window closes and the list of database connections is displayed. The connection status of the data in the list is "Connected".
     ![alt text](12.png)
 
 
