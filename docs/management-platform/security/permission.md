@@ -23,6 +23,7 @@ It includes six categories:
 | Security Permission       | It is used for the permission control of the admin console and for **viewing and operating** the pages related to the "Permission" menu.                                                                                                                                                                                                                                                                                                          | Authenticated/Roles/Admin                                   |
 
  **Notes:**  
+ 
  1. **Admin, Configurator, and Operator** among the above default permissions are **system-built-in roles**.
  2. The following page is referred to as the admin console.
 
@@ -32,37 +33,37 @@ It includes six categories:
 
 1. **Configure the Access Level**
 
-**Method 1**: Manually enter the path in the Access Level textarea.
+    **Method 1**: Manually enter the path in the Access Level textarea.
 
-![alt text](13.png)
+    ![alt text](13.png)
 
-In order to avoid manual input errors, you can go to the Access Level page, copy the path, and then paste it on the Permission page.
+    In order to avoid manual input errors, you can go to the Access Level page, copy the path, and then paste it on the Permission page.
 
-![alt text](14.png)
+    ![alt text](14.png)
 
-**Method 2:** Click the settings button on the right side of the Access Level textarea.
+    **Method 2:** Click the settings button on the right side of the Access Level textarea.
 
-![alt text](15.png)
+    ![alt text](15.png)
 
-In the Access Level pop-up window, select the required permissions.
+    In the Access Level pop-up window, select the required permissions.
 
-![alt text](16.png)
+    ![alt text](16.png)
 
-**Note: Each node in the Access Level can be selected independently.**
+    **Note: Each node in the Access Level can be selected independently.**
 
-For example, as shown in the following figure.
+    For example, as shown in the following figure.
 
-![alt text](17.png)
+    ![alt text](17.png)
 
-After clicking the “OK” button, the following path will be displayed in the Access Level textarea of the corresponding category on the Permission page:
+    After clicking the “OK” button, the following path will be displayed in the Access Level textarea of the corresponding category on the Permission page:
 
-![alt text](18.png)
+    ![alt text](18.png)
 
- **Note:** If all the content in the Access Level textarea is deleted, "**Authenticated**" will be automatically filled in. This means that any user who successfully logs in will have this permission.
+    **Note:** If all the content in the Access Level textarea is deleted, "**Authenticated**" will be automatically filled in. This means that any user who successfully logs in will have this permission.
 
 2. **Set the matching strategy**
 
-The matching strategy is set to "Match Any" by default. Users can adjust it according to the actual situation, and only one matching strategy is supported for selection.
+    The matching strategy is set to "Match Any" by default. Users can adjust it according to the actual situation, and only one matching strategy is supported for selection.
 
 | **Matching Strategy** | **Description**                                                                                    |
 |-----------------------|----------------------------------------------------------------------------------------------------|
