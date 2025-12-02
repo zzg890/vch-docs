@@ -11,12 +11,9 @@ In **Realtime Alarm control**, users can filter or sort alarms based on these al
 #### Add
 
 1. In the “Alarming” -> “Alarm Groups” page, click the “Add” button to create a new alarm group.
-
-![alt text](12.png)
-
+    ![alt text](12.png)
 2. In the pop-up window, set the alarm group’s name, and click the “Add” button to add tags to the alarm group.
-
-![alt text](13.png)
+    ![alt text](13.png)
 
 | **Name**    | **Description**                                                        |
 |-------------|------------------------------------------------------------------------|
@@ -34,7 +31,7 @@ Users can use the search box in the upper right corner to search by alarm group 
 
 Click the “Edit” button on any entry in the alarm group list to modify the alarm group information. In the edit pop-up window, all tag paths associated with the alarm group will be displayed.
 
-Note: After modifying the alarm group name, the tags that were using this group will lose their group information. Please be cautious when modifying the name.
+**Note:** After modifying the alarm group name, the tags that were using this group will lose their group information. Please be cautious when modifying the name.
 
 ![alt text](14.png)
 
@@ -42,4 +39,4 @@ Note: After modifying the alarm group name, the tags that were using this group 
 
 Click the delete button to remove an alarm group. 
 
-Note: When an alarm group is deleted, the tags bound to this group will lose their group information. Please be cautious when deleting.
+**Note:** When an alarm group is deleted, the tags bound to this group will lose their group information. Please be cautious when deleting.
