@@ -44,8 +44,8 @@ Support 8 limit alarms. H4, H3, H2, H, L,  L2, L3, L4. By default all types are 
 | Active Delay      | Unchecked by default. Used to set how long to wait before determining whether the current value is in alarm. The unit is ms.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Resume Delay      | Unchecked by default. Used to set how long to wait before judging whether the current value is in recovery state. The unit is ms.                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-| Note: The alarm of each limit value is judged separately. For example, if the value of a tag is greater than both the high limit and the high 1 limit, the tag will display two alarms at the same time in the alarm control, one of type high and one of type high 1. |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+**Note:**
+ The alarm of each limit value is judged separately. For example, if the value of a tag is greater than both the high limit and the high 1 limit, the tag will display two alarms at the same time in the alarm control, one of type high and one of type high 1. 
 
 #### **Equivalent Alarms**
 
