@@ -310,13 +310,13 @@ nav:
                             - History Database:
                                       - management-platform/databases/history-database/index.md
                                       - Create History Database:
-                                                - management-platform/databases/history-database/create-history-database/index.md
-                                                  - management-platform/databases/history-database/create-history-database/data-partitioning-and-deletion.md
-                                                  - management-platform/databases/history-database/create-history-database/pre-processed.md
+                                                 - management-platform/databases/history-database/create-history-database/index.md
+                                                 - management-platform/databases/history-database/create-history-database/data-partitioning-and-deletion.md
+                                                 - management-platform/databases/history-database/create-history-database/pre-processed.md
                                       - management-platform/databases/history-database/create-duplicated-history-database.md
                                       - management-platform/databases/history-database/create-remote-history-database.md
                             - Database Table Reference:
-                                      - management-platform/databases/database-connection/database-table-reference/index.md
+                                      - management-platform/databases/database-table-reference/index.md
                                       - Tag Table Reference:
                                                 - management-platform/databases/database-table-reference/tag-table-reference/index.md
                                                 - management-platform/databases/database-table-reference/tag-table-reference/relational-database-table-schema.md
