@@ -8,7 +8,7 @@ Export all data under the model or instance tab to a JSON file.
 
 **Export Model**
 
-In the** **Model tab, after clicking the Export button, the models in the current asset will be exported as a JSON file.
+In the Model tab, after clicking the Export button, the models in the current asset will be exported as a JSON file.
 
 ![alt text](20.png)
 
@@ -16,7 +16,7 @@ In the** **Model tab, after clicking the Export button, the models in the curren
 
 **Export  Instance**
 
-In the** **Instance tab, after clicking the Export button, the instances in the current asset will be exported as a JSON file.
+In the Instance tab, after clicking the Export button, the instances in the current asset will be exported as a JSON file.
 
 ![alt text](22.png)
 
@@ -48,10 +48,8 @@ In the pop-up window, click the "Import" button.
 
 ![alt text](27.png)
 
-Notes:
+**Notes:**
 
-1. After clicking the More button, the user can choose to import a JSON file that was previously exported. The imported file must match the current tab (Model or Instance); otherwise, an error message will be displayed.
-
-![alt text](28.png)
-
+1. After clicking the More button, the user can choose to import a JSON file that was previously exported. The imported file must match the current tab (Model or Instance); otherwise, an error message will be displayed.<br>
+    ![alt text](28.png)
 2. When importing instance data separately, ensure that the corresponding model objects exist in the current tree; otherwise, the import will fail.

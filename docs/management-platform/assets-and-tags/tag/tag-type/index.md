@@ -39,7 +39,7 @@ Calculates and determines its value by writing an expression.
 
 ![alt text](7.png)
 
-Expression tags must have the **Data Source Path**, **Expression (Read)**, and **Expression (Write) **set.
+Expression tags must have the **Data Source Path**, **Expression (Read)**, and **Expression (Write)** set.
 
 ![alt text](8.png)
 
