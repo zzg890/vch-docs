@@ -5,13 +5,9 @@ Notification rules offer flexible configuration options that allow you to precis
 ## Add
 
 1. Click "**Alarming**" -> "**Alarm Notifications**" -> "**Rules**" to open the “Rules” list page.
-
-![alt text](9.png)
-
+    ![alt text](9.png)
 2. Click the "Add" button. In the pop-up window, proceed with setting the properties.
-
-![alt text](10.png)
-
+    ![alt text](10.png)
 3. After completing the settings, click the "OK" button to save.
 
 **Porperties**
