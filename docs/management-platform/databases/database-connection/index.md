@@ -2,27 +2,16 @@
 ## **Creating a Connection**
 
 1.  On the "**Databases**" -> "**Database Connections**" screen, click the Add button.
-
-![alt text](1.png)
-
+    ![alt text](1.png)
 2. In the following window, select the type of database you want to add. Click the "Next" button when you are done. 
-
-![alt text](2.png)
-
+    ![alt text](2.png)
 3. Depending on the selected database type, different configuration screens will be displayed.
-
 When MySQL, SQL Server, PostgreSQL is selected, the following configuration screen is displayed: 
-
-![alt text](3.png)
-
-When InfluxDB is selected, the following configuration screen is displayed:
-
-![alt text](4.png)
-
-When SQLite is selected, the following configuration screen is displayed:
-
-![alt text](5.png)
-
+    ![alt text](3.png)
+    When InfluxDB is selected, the following configuration screen is displayed:
+    ![alt text](4.png)
+    When SQLite is selected, the following configuration screen is displayed:
+    ![alt text](5.png)
 4. Click **"OK"** button to save the data after setting is completed. 
 
 **Configuration items**
