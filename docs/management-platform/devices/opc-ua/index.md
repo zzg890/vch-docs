@@ -36,6 +36,7 @@ Used for communication with the OPC UA server. Only UA TCP is supported,  UA HTT
 6.Click the Enable button  to enable the device.
    ![alt text](7.png)
 7. Click the "Add Group" button on the created device to open a new window and add a group to the current device.
+
    Each group represents a subscription set, which can be created based on different subscription methods or intervals. The driver subscribes to and receives data according to the group's configuration.
    ![alt text](8.png)
 8. On the "Add Group" page, check **"Show Advanced Properties"** to access additional settings.
@@ -110,14 +111,14 @@ Configure the OPC client connection:
 
 Bind tags to data in the driver.
 
-1. Create an I/O tag.
+1. Create an I/O tag.<br>
    ![alt text](20.png)
 2. On the add window, click the binding button of the data source.
    ![alt text](21.png)
 3. In the pop-up data source window, you will see the node tree of the OPC UA Server. This tree structure reflects the server's hierarchy, containing all available objects, directories, and nodes.
-   1. Click the expand button ▶ next to a node name to expand the node and view its child nodes.
-   2. Click on the node you wish to bind. Once selected, the node will be highlighted, and the right window will update to display the relevant property information for that node.
-   3. If the selected node is an array, you can enter the desired index in the designated field on the right to access specific elements of the array. For example, entering 0 will access the first element of the array.
+    1. Click the expand button ▶ next to a node name to expand the node and view its child nodes.
+    2. Click on the node you wish to bind. Once selected, the node will be highlighted, and the right window will update to display the relevant property information for that node.
+    3. If the selected node is an array, you can enter the desired index in the designated field on the right to access specific elements of the array. For example, entering 0 will access the first element of the array.
    ![alt text](22.png)
 4. After completing the node selection and property editing, please ensure that you click the '**OK**' button on the interface to save your settings and binding information.
 5. If you decide not to proceed with the current binding, you can click the **'Cancel'** button to discard the changes you've made.
