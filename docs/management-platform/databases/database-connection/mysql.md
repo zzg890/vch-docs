@@ -2,7 +2,7 @@
 
 On this page we will demonstrate how to connect VC Hub to MySQL. 
 
-1. On the "**Database**s" -> "**Database Connection**" page, click the "Add" button. 
+1. On the "**Databases**" -> "**Database Connection**" page, click the "Add" button. 
     ![alt text](6.png)
 2.  In the following window, select MySQL and click on the Next button.
     ![alt text](7.png)
