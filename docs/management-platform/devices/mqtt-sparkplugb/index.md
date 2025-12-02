@@ -72,7 +72,7 @@ Before you can use the MQTT SparkplugB driver, you need to connect to the system
 
 Bind a tag to a client measurement point.
 
-1. Create an I/O tag
+1. Create an I/O tag<br>
    ![alt text](6.png)
 2. On the edit screen of the tag, click the binding button of the data source.
    ![alt text](7.png)

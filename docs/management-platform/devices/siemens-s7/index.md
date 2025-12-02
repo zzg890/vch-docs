@@ -45,23 +45,18 @@ The Siemens driver in VC Hub supports the basic connection to S7 devices. Curren
 3. Shared connection of multiple devices under the same IP is not supported for the time being.
 4. Per-bit writes are not supported for Bool tags; each write value overwrites the previous byte.
 5. For S7-1200 and S7-1500, the following precautions and configuration changes must be made:
-
-- Optimized block access must be turned off.
-
-![alt text](3.png)
-
-- The access level must be "full" and the "connection mechanism" must allow GET/PUT.
-
-![alt text](4.png)
-
-- Only the Global DB can be accessed.
-- Reads and writes are not supported in the Timer (TM) and Counter (CT) areas.
+    - Optimized block access must be turned off.
+    ![alt text](3.png)
+    - The access level must be "full" and the "connection mechanism" must allow GET/PUT.
+    ![alt text](4.png)
+    - Only the Global DB can be accessed.
+    - Reads and writes are not supported in the Timer (TM) and Counter (CT) areas.
 
 ## **Binding to tags**
 
 Bind tags to data in the Siemens PLC.
 
-1. Creating an I/O tag.
+1. Creating an I/O tag.<br>
    ![alt text](5.png)
 2. On the add window, click the binding button for the data source.
    ![alt text](6.png)

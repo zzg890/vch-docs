@@ -5,7 +5,7 @@ The MQTT Native driver in VC Hub is designed and developed based on the MQTT pro
 ## **Driver Connection to MQTT Broker**
 
 1. On the "**Devices**" -> "**MQTT Native**" page, click the "Add Group" button.
-    Groups: Groups are a way to organize devices into groups for easier management and operation.
+     Groups: Groups are a way to organize devices into groups for easier management and operation.
 2. Enter a **group name** in the Add page.
     ![alt text](1.png)
 3. Click the "**OK**" button. The data will be displayed in the device list page of MQTT Native.
@@ -75,6 +75,7 @@ Subject: Topic
     **Topic:** wsV1.0/**{group_name}**/NCMD/**{node_name}**/**[{device_name}]**  
     **Permission:** Read  
     Clients can subscribe to this Topic to receive data when they need and allow certain points to receive values from the system.
+
 - Square brackets `[]` indicate that the path segment is **optional**.
 - Curly braces `{}` indicate that the content is a **placeholder** (to be replaced with an actual value).
 - Therefore, combining them as `[{group_name}]` means it is an "**optional placeholder**".
@@ -82,6 +83,7 @@ Subject: Topic
 **payload Structure**
 
 1. Topic: wsV1.0/group_name/NBIRTH/node_name
+
 payload Structure:
 
 | **Attribute** | **Type** | **Description**               |
@@ -168,7 +170,7 @@ payload Structure:
 | Value         | String   | Measurement point value     |
 | Timestamp     | Int      | Point timestamp             |
 
-    Sample Message:
+Sample Message:
 
 ```json
 {
@@ -220,7 +222,8 @@ Sample Message:
 ## **Binding to tags**
 
 Bind the tag to the client measurement point.
-1. Create an I/O tag.
+
+1. Create an I/O tag.<br>
     ![alt text](6.png)
 2. On the add window, click the binding button of the data source.
     ![alt text](7.png)
