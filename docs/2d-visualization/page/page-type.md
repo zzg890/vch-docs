@@ -29,11 +29,11 @@ FFill the entire window with the page.
 1. Click on a blank area of the page
 2. Click on the page’s tab name
 
-![alt text](5.png)
+    ![alt text](5.png)
 
 3. After zooming the page, click the gray area outside the canvas (the area highlighted in the red box below).
 
-![alt text](6.png)
+    ![alt text](6.png)
 
 **Page Template**
 
@@ -85,11 +85,11 @@ A popup page has more properties than a page, such as title bar settings. You ca
 1. Click on a blank area of the page
 2. Click on the page’s tab name
 
-![alt text](12.png)
+    ![alt text](12.png)
 
 3. Click the gray area outside the canvas
 
-![alt text](13.png)
+    ![alt text](13.png)
 
 #### **Popup Position**
 

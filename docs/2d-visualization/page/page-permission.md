@@ -13,15 +13,15 @@ Once the page is created, there will be an initial permission: Authenticated.
 
 1. In the editor's "Project" window, right-click the "Pages" node, and in the pop-up menu, click the "Set Permissions" button.
 
-![alt text](46.png)
+   ![alt text](46.png)
 
 2. In the pop-up **Page Permissions** window, select a page from the left side of the window. By default, no pages are selected. Multiple pages can be selected. Clicking the **"Clear"** button in the page area will remove all selected pages.
 
-![alt text](47.png)
+   ![alt text](47.png)
 
 3. After selecting a page, configure permissions for the selected pages in the **Permissions** area on the right side of the pop-up window. 
 
-Clicking the **"Clear"** button in the permissions area will remove all selected permissions.
+   Clicking the **"Clear"** button in the permissions area will remove all selected permissions.
 
 - **Matching Strategy**：Single selection only。Default option: "Match All"，can be modified.
    -  **"Match All"**: The user must have **all** assigned permissions to view the page.
@@ -30,27 +30,29 @@ Clicking the **"Clear"** button in the permissions area will remove all selected
 
 4. Once the configuration is complete, click the **"Save"** button to apply the changes.
 
- For example, in the image below, the **Authenticated/Roles/Aconfigurator **permission is assigned to the **Demo1, Alarms, and History** pages.
+   For example, in the image below, the **Authenticated/Roles/Aconfigurator **permission is assigned to the **Demo1, Alarms, and History** pages.
 
-![alt text](48.png)
+   ![alt text](48.png)
 
 5. After clicking the **Save** button, the pop-up window will remain open, and the page and permissions will be reset to a cleared state, allowing you to continue selecting other pages to set their permissions.
 6. To view the permissions already assigned to a page, click the **"View"** button in the page area to check the configured permissions for each page.
 
-![alt text](49.png)
+   ![alt text](49.png)
 
 **Notes：**  
+
 1. Directory nodes do not require permission settings. 
 2. When setting permissions in batch mode, selecting pages will **not** display their existing permissions in the permissions area on the right. To view the assigned permissions, please use the **"View"** button in the page area. 
+
 ## Set permissions for individual page
 
 1. In the editor's **"Project"** window, right-click a single page in the page tree, and in the pop-up menu, click the **"Set Permissions"** button.
 
-![alt text](50.png)
+   ![alt text](50.png)
 
 2. In the pop-up **Access Level** window, set permissions for the page. The window will **default to displaying the currently assigned permissions and matching strategy** for the page, which can be modified as needed.
 
-![alt text](51.png)
+   ![alt text](51.png)
 
 3. Once the configuration is complete, click the **"OK"** button to finalize the permission settings for the page.
 
@@ -78,7 +80,7 @@ The user's access level path is included in the page's access level path, the us
 2. Create a page (PageA) and set its permission to: `Authenticated/PlantA/TeamLeader`.
 3. This user viewed the running page of Page A and does not have permission to view the running page.
 
-![alt text](52.png)
+   ![alt text](52.png)
 
 
 

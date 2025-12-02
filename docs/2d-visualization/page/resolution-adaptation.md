@@ -6,11 +6,11 @@ Resolution Adaptation allows web pages to work properly on different devices. Wh
 
 1. Draw the page and turn on resolution adaption and select aspect ratio scaling. 
 
-![alt text](40.png)
+    ![alt text](40.png)
 
 2. View the running page of the screen on your computer, tablet, and phone.
 
-![alt text](41.png)
+    ![alt text](41.png)
 
 **Scenario 2**: Enable different resolution methods on the same device and view the running effect of the page.
 
