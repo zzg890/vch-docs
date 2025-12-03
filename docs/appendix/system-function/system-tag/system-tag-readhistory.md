@@ -62,12 +62,13 @@ Parameter
 
 
 
-|  start         | Date l string         | Start Time    |
+|  Name         | Type        | Description    |
 |:---------------|:-----------------|:----------------|
-| end            | Date l string       | End Time          |
-| tag            | string l Array<string>     | Tag(s) to query            |
+|  start         | Date or string         | Start Time    |
+| end            | Date or string       | End Time          |
+| tag            | string or Array <string>     | Tag(s) to query            |
 | queryMode      | QueryMode           | Query Mode           |
-| aggregationMode  | AggregationMode l Array<AggregationMode> | Aggregation mode(s)  required for "FixedPoints" and "Periodic" query modes      |
+| aggregationMode  | AggregationMode or Array <AggregationMode> | Aggregation mode(s)  required for "FixedPoints" and "Periodic" query modes      |
 | points      | number            | Points,required for "FixedPoints" query modes     |
 | period        | number          | Period,required for "Periodic" query  |
 | periodMode    | PeriodMode      | Period mode,required for "Periodic" query modes  |
