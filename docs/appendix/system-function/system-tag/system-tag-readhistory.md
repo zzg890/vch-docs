@@ -78,8 +78,6 @@ Parameter
 | extraOption.includeBoundingValues | boolean    | Whether to include bounding values during interpolation.  If there is no data at the start or end of the query time range,  the system will retrieve the last value within one day before the start,  and the first value within one day after the end, for interpolation |
 
 
-
-
 ## Code Example
 
 Retrieve the historical records of the raw values for the tag "Device:Temperature" between 2024-08-14 00:00:00 and 2024-08-15 00:00:00.

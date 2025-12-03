@@ -36,6 +36,7 @@ Add a cube model to the page in the scene editor. When the mouse is clicked on t
 Assign a new value to the tag.
 
 ![alt text](3d_Event4.png)
+
 **Example**
 
 When the mouse is clicked and the model is lifted, the value of tag 1 will be modified to 10.
