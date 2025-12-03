@@ -4,26 +4,30 @@
 
 
 ## Description
-Execute SQL query to perform operations on the database.Before executing an SQL query to operate on the database, please refer to the" [Create SQL Query](https://docs.wagoscada.cn/wiki/external/org/Vm8TaFZ4/#/page/YX8eRsqz/UNZS2MTa) "section to complete the SqlQuery setup.
+Execute SQL query to perform operations on the database.Before executing an SQL query to operate on the database, please refer to the [Create SQL Query](../../../2d-visualization/sql-query/create-sql-query.md) section to complete the SqlQuery setup.  
 
 ## Grammar
-System.Db.runSqlQuery(projectName: string, queryName: string, parameters?: Array<{ name: string, value: any}>): Promise<any> 
+
+System.Db.runSqlQuery(projectName: string, queryName: string, parameters?: Array<{ name: string, value: any}>): Promise<any>
+
 System.Db.runSqlQuery(queryName: string, parameters?: Array<{ name: string, value: any}>): Promise<any> 
 
-Parameter 
+     - Parameter 
 
-projectName - Project name, see code example below for usage 
+        projectName - Project name, see code example below for usage 
 
-queryName - Query name       
+        queryName - Query name       
 
-parameters - Query parameters 
+        parameters - Query parameters 
 
-Return 
+     - Return 
 
-Query result
+        Query result
 
-## Code Example                                                                                                                                                                                                                                                                                                          
-Query: Query the database for male students and update the Table control.
+## Code Example     
+
+**Query:** Query the database for male students and update the Table control.
+
 ```typescript 
 
 // Scenario 1: Execute the SQL query in the current project
@@ -49,7 +53,8 @@ table1.table = System.Datatable.toDatatable(maleStudents);
 table1.applyChanges();
 
 ```   
-Scalar Query: Count the number of 12-year-old students and update the Label control.
+**Scalar Query:** Count the number of 12-year-old students and update the Label control.
+
 ```typescript 
 // Scenario 1: Execute the SQL query in the current project
 const count = await System.Db.runSqlQuery('number-of-students-by-age', [{
@@ -75,7 +80,7 @@ label1.applyChanges();
 
 
 ```   
-Update Query: Update Thomas' email to thomas@example.com and update the Label control.
+**Update Query:** Update Thomas' email to thomas@example.com and update the Label control.
 
 ```typescript 
 // Scenario 1: Execute the SQL query in the current project
@@ -105,6 +110,4 @@ const updatedRowCount = await System.Db.runSqlQuery('another-project-name', 'upd
 const label1 = await System.UI.findControl('Label1');
 label1.text = updatedRowCount == 1 ? 'update success' : 'update failed';
 label1.applyChanges();
-
-
 ```   
