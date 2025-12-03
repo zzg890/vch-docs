@@ -77,5 +77,5 @@ Use a custom chart to display a bar chart that displays the production line's ca
 - clear() 
 - dispose()  
 
-Not all 3D class charts in echarts are supported. \ 
+Not all 3D class charts in echarts are supported. 
 ![alt text](56.png)
