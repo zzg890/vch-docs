@@ -25,11 +25,11 @@ Create a sphere model that represents an alarm light that flashes when the value
 
 
 | **Name**   | **Value**   |
-|:------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Enable     | Enable                                                                                                                                                                                                    |
-| Bool value | Expression: tag('@Default:temperature) > 40;  | Note: This animation only takes effect when the value is a Boolean value. | |---------------------------------------------------------------------------| |
-| Executions | The number of times to flash when the value is true                                                                                                                                                       |
-| Duration   | The execution time of each flash, unit ms.                                                                                                                                                                |
+|:------------|:--------------------------|
+| Enable     | Enable      |
+| Bool value | Expression: tag('Default:temperature) > 40;  <br> **Note:** This animation only takes effect when the value is a Boolean value.  |
+| Executions | The number of times to flash when the value is true        |
+| Duration   | The execution time of each flash, unit ms.          |
 
 #### Translocation
 
@@ -52,8 +52,8 @@ The model is displaced according to the path on the conveyor belt.
 | Reverse Play                         | Does the model move to the end of the path and then move back in the opposite direction?                                                                                   |
 | Face Forward                         | The model always faces the direction of motion.                                                                                                                            |
 | Path                                 | The path where the model needs to be displaced                                                                                                                             |
-| Bool value                           | Tag: @Default:roll   |  Note: This animation only takes effect when the value is a Bool value. | |------------------------------------------------------------------------| |
-| The world position of current object | Show the world position of current object                                                                                                                                  |
+| Bool value                           | Tag: Default:roll   <br> **Note:** This animation only takes effect when the value is a Bool value.  |
+| The world position of current object | Show the world position of current object                     |
 
 #### **Rotation**
 
@@ -97,7 +97,7 @@ The cube determines whether to scale based on a Bool value.
 | **Name**     | **Value**                                                                                                                                                                 |
 |:--------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Enabled      | Enable                                                                                                                                                                    |
-| Bool value   | Tag: @Default:roll  | Note: This animation only takes effect when the value is a Bool value. | |------------------------------------------------------------------------| |
+| Bool value   | Tag: Default:roll  <br>**Note:** This animation only takes effect when the value is a Bool value. | 
 | Percentage   | The size of the deformation of the model.                                                                                                                                 |
 | Direction    | In which direction the model should deform.                                                                                                                               |
 | Executions   | The number of times it needs to be executed when the value is true.                                                                                                       |
