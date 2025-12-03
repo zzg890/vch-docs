@@ -36,9 +36,9 @@ Instead of creating four separate controls to display the values of these four t
        4. Click **OK** to save the binding.
    ![alt text](36.png)
 5. In the editor, click the "Preview" button to enter the preview page.
-6. When selecting **1** in the dropdown, the path is: **Default: Motor1.Current**, and the value display control shows the current value of Motor 1.
-   When selecting **2** in the dropdown, the path is: **Default: Motor2.Current**, and the value display control shows the current value of Motor 2.
-   When selecting **3** in the dropdown, the path is: **Default: Motor3.Current**, and the value display control shows the current value of Motor 3.
-   When selecting **4** in the dropdown, the path is: **Default: Motor4.Current**, and the value display control shows the current value of Motor 4.
+6. When selecting **1** in the dropdown, the path is: **Default: Motor1.Current**, and the value display control shows the current value of Motor 1.<br>
+   When selecting **2** in the dropdown, the path is: **Default: Motor2.Current**, and the value display control shows the current value of Motor 2.<br>
+   When selecting **3** in the dropdown, the path is: **Default: Motor3.Current**, and the value display control shows the current value of Motor 3.<br>
+   When selecting **4** in the dropdown, the path is: **Default: Motor4.Current**, and the value display control shows the current value of Motor 4.<br>
    ![dynamic-tag](../../assets/images/dynamic-tag.gif)
 
