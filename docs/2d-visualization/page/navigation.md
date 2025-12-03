@@ -24,7 +24,7 @@ This property is displayed when the page type is a popup window. Modifications a
 
 ## Custom Property
 
-When a page is selected, the custom properties for that page are automatically displayed, with support for modification and binding. See **example 2 **below.
+When a page is selected, the custom properties for that page are automatically displayed, with support for modification and binding. See **example 2** below.
 
 ## **Open Position**
 
@@ -58,9 +58,9 @@ The following script functions can be used for page navigation:
 
 ## **Navigation Example**
 
-#### Example 1: Use the button control to navigate between two pages.
+**Example 1:** Use the button control to navigate between two pages.
 
-1. In the "Project" window, right-click the ”Page” node and click ”Add Page” in the popup menu to create a new page: Page 1. Repeat this step to create Page 2. The background color of Page 1 is set to orange and the background color of Page 2 is set to blue.
+1. In the "Project" window, right-click the "Page" node and click "Add Page" in the popup menu to create a new page: Page 1. Repeat this step to create Page 2. The background color of Page 1 is set to orange and the background color of Page 2 is set to blue.
 
     ![alt text](26.png)
 
@@ -86,7 +86,7 @@ The following script functions can be used for page navigation:
 
     ![navigation](../../assets/images/navigation.gif)
 
-#### Example 2: Select the different device name in the drop-down box to bring up the “Parameter Settings” pop-up window for the device.
+**Example 2:** Select the different device name in the drop-down box to bring up the "Parameter Settings" pop-up window for the device.
 
 1. Create a page: Page 1 , and add a dropdown control to the page. The dropdown options are set to:
 
@@ -96,7 +96,7 @@ The following script functions can be used for page navigation:
 
     The contents of the labels are set to: Power, Speed. 
 
-    The name of the LED Display behind the “Power“ is: LED1; the name of the LED Display behind the "Speed" is: LED2.
+    The name of the LED Display behind the "Power" is: LED1; the name of the LED Display behind the "Speed" is: LED2.
 
     ![alt text](32.png)
 
@@ -105,11 +105,11 @@ The following script functions can be used for page navigation:
 
     ![alt text](33.png)
 
-    The “Text”property  of the LED1 is bound to the “Power” of the page custom property.
+    The "Text" property  of the LED1 is bound to the "Power" of the page custom property.
 
     ![alt text](34.png)
 
-    The “Text”property  of the LED2 is bound to the “Speed” of the page custom property.
+    The "Text" property  of the LED2 is bound to the "Speed" of the page custom property.
 
     ![alt text](35.png)
 
@@ -122,20 +122,19 @@ The following script functions can be used for page navigation:
     **Page:** Select "Parameter_Setting".
     ![alt text](36.png)
 
-    **Title:** Binding expression " return Parameter Setting" +"_"+ property('Dropdown1#selectedText')
+    **Title:** Binding expression "return Parameter Setting" +"_"+ property('Dropdown1#selectedText')
 
     ![alt text](37.png)
 
-    **Custom Property:** The value of “Speed“ is bound to a dynamic tag. When “Motor 1” is selected in the drop-down box, the tag path of the Speed value is: @Demo:Motor1.Speed; when “Motor 2” is selected in the drop-down box, the tag path of the Speed value is: @Demo:Motor2.Speed.
+    **Custom Property:** The value of "Speed" is bound to a dynamic tag. When "Motor 1" is selected in the drop-down box, the tag path of the Speed value is: Demo:Motor1.Speed; when "Motor 2" is selected in the drop-down box, the tag path of the Speed value is: Demo:Motor2.Speed.
 
     ![alt text](38.png)
 
-    The value of “Power“ is bound to a dynamic tag. When “Motor 1” is selected in the drop-down box, the tag path of the Power value is: @Demo:Motor1.Power; when “Motor 2” is selected in the drop-down box, the tag path of the Power value is: @Demo:Motor2.Power.
+    The value of "Power" is bound to a dynamic tag. When "Motor 1" is selected in the drop-down box, the tag path of the Power value is: Demo:Motor1.Power; when “Motor 2” is selected in the drop-down box, the tag path of the Power value is: Demo:Motor2.Power.
 
     ![alt text](39.png)
 
-5. Save the page, click the ”Preview” button, and when you switch the options of the dropdown box, the pop-up window displays different contents according to the current options of the dropdown box.
-
+5. Save the page, click the "Preview" button, and when you switch the options of the dropdown box, the pop-up window displays different contents according to the current options of the dropdown box.
 
     ![navigation1](../../assets/images/navigation1.gif)
 

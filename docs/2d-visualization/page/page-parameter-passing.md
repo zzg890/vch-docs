@@ -42,7 +42,7 @@ System.UI.openPopup("Motor_Details", {
 });
 ```
  
-4. Click on the "Motor 2" button and set the same script in the "Action" to change the value of the incoming parameter from 1 to 2. 
+4.Click on the "Motor 2" button and set the same script in the "Action" to change the value of the incoming parameter from 1 to 2. 
 
 ```typescript
 System.UI.openPopup("Motor_Details", {
@@ -55,7 +55,7 @@ System.UI.openPopup("Motor_Details", {
 });
 ```
  
-5. Click the Preview button . On the preview page, click the button "Motor 1" to open a popup page with the text "Motor 1"; click the button "Motor 2" to open a popup page with the text "Motor 2". 
+5.Click the Preview button . On the preview page, click the button "Motor 1" to open a popup page with the text "Motor 1"; click the button "Motor 2" to open a popup page with the text "Motor 2". 
 
     ![page-parameter-passing](../../assets/images/page-parameter-passing.gif)
 
