@@ -12,16 +12,11 @@ System.Db.runSqlQuery(projectName: string, queryName: string, parameters?: Array
 
 System.Db.runSqlQuery(queryName: string, parameters?: Array<{ name: string, value: any}>): Promise<any> 
 
-     - Parameter 
-
+    - Parameter 
         projectName - Project name, see code example below for usage 
-
         queryName - Query name       
-
         parameters - Query parameters 
-
      - Return 
-
         Query result
 
 ## Code Example     
