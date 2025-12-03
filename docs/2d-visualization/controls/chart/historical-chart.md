@@ -45,9 +45,8 @@ Use historical chart to show electricity usage.
 | Query Mode   | Select Raw.    |
 | Data         | Bind the tag and select raw value as the sampling type. Set the style of the curve.  <br>![alt text](19.png) Click to set the style. The set attribute values are as follows: <br>![alt text](20.png) <br>- **Tag**: @Factory:Area    <br>- **Name**: Electrical energy <br>- **Y Axis**: Y-Axis1           <br>- **Line Color**: #6ec800           <br>-**Line Type**: Line              <br>- **Line Style**: Solid Line        <br>- **Line Width**: 1                <br>- **Area**: heck           <br>- **Alarm Line**: Uncheck           <br>- **Average Line**: Uncheck           <br>- **Symbol Style**: None              <br>- **Symbol Size**: 6                 <br>- **Decimals**: 2     |
 
-3. Click the Preview button to preview.
-
-![alt text](21.png)
+3.Click the Preview button to preview.
+    ![alt text](21.png)
 
 **Example 2**
 
@@ -63,6 +62,5 @@ Use historical trends to show electricity usage, identifying the maximum and min
 | Data         | Bind the tag and select raw value as the sampling type. Set the style of the curve. <br>![alt text](22.png)  Click to set the style. The configurations are as follows: ![alt text](23.png) <br>- **Tag**: @Demo:Totalpower <br>- **Name**: Totalpower       <br>- **Y Axis**: Y-Axis1          <br>- **Line Color**: #6ec800          <br>- **Line Type**: Line             <br>- **Line Style**: Solid Line       <br>- **Line Width**: 1                <br>- **Area**: Uncheck          <br>- **Alarm Line**: Uncheck          <br>- **Average Line**: Uncheck          <br>- **Symbol Style**: None             <br>- **Symbol Size**: 6                <br>- **Decimals**: 2                |
 | Markers      | ![alt text](24.png) |
 
-3. Click the Preview button to preview.
-
-![alt text](25.png)
+3.Click the Preview button to preview.
+    ![alt text](25.png)
