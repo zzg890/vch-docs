@@ -40,7 +40,7 @@ Click the button to modify the appearance of the LED display.
 Click the button to modify the value bound to the LED display.
 
 1. Add Label, LED display, and button controls to the screen. Set the text of the Label control to "Running Status:". the text of the LED display to "true". Set the text of the button to "Status Switch", the background color to #6ec800, and the font color to #ffffff.
-2. In the properties window of the LED display, select the text and bind it to the boolean variable at the path @userManual:status.
+2. In the properties window of the LED display, select the text and bind it to the boolean variable at the path userManual:status.
 
     ![alt text](6.png)
 
@@ -74,7 +74,7 @@ Click the button to display different content in the popup.
 
 1. Add two Label, two LED display, and two button controls to the screen. Set the text of the Label controls to 'Device A Running Status:', and 'Device B Running Status:',respectively.Set the text of both LED displays to "true". Set the text of both buttons to "Device Details", the background color to #6ec800, and the font color to #ffffff.
 2. Create a new popup page named 'Device Details' to display values passed by scripts.
-3. Bind the text properties of the two digital tubes to the boolean variables @userManual:status and @userManual:status2, respectively.
+3. Bind the text properties of the two digital tubes to the boolean tags userManual:status and userManual:status2, respectively.
 
      - LED Display 1 :
 

@@ -23,6 +23,7 @@ Click the Settings button on the menu bar to set properties.
 | Salt                       | To share a runtime page with users who do not have an account, and to enhance system security, you must manually append `?salt=xxxxxxxxx` to the end of the runtime page URL.  <br>For example:  <br>If the current runtime screen URL is:<br>`http://vpc-sz-scadap52:8066/#/runtime/Project1/Home`  <br>To share this page with other users without an account, you need to provide them with the following URL:  <br>`http://vpc-sz-scadap52:8066/#/runtime/Project1/Home?salt=xxxxxxxxx`  <br>To **terminate access** for a user who has already received the shared link, perform either of the following actions in the dialog shown above:  <br>- Click **“Regenerate”** to update the **Salt** value, or <br>- Disable the **Auto Login** feature.  <br>After doing so, the user will no longer be able to view the page using the previously shared link.  <br>**Note:** Due to browser caching, the user may still be able to access the page for a short time while the cache is valid. Once the cache expires, the original link will no longer work. |
 
 **Notes:** 
+
 1. If the network connection is good, the loading effect of the runtime page will flash by almost instantly. 
 2. If auto-login is enabled and the username and password are correctly configured, the password field will be automatically hidden when reopening the settings page. If the username is changed, the password field will appear, allowing you to update the auto-login username and password. Once the username and password are correctly configured, auto-login will remain effective even if the password is later changed. If you no longer need the auto-login feature, you can disable it at any time. 
 3. Autologin is configured at the project level, and after logging in, only the current project's permissions are granted. It is not possible to use autologin for two different projects simultaneously in the same client browser. For example, if Project A has already been autologged in on the current browser, switching to autologin for Project B requires first logging out from Project A before autologin for Project B can take effect. 
@@ -45,7 +46,7 @@ Sets the loading effect for the running page when navigating from Page1 to Page 
 
 Run the page and click the "Open Page 2" button on page 1. The page is loading. When the loading is completed, Page 2 is displayed.
 
-![page1](../../assets/images/page1.gif)
+    ![page1](../../assets/images/page1.gif)
 
 ## Auto-login for Project Runtime Page
 
@@ -57,7 +58,7 @@ When the auto-login feature is enabled on a project, users can directly access t
 4. On the project list page, click the "Run" button of the project. In the runtime page, copy the link address.
 5. Open the link copied in step 4 in another browser or on a different machine. The project will automatically open without requiring a login.
 
-![page2](../../assets/images/page2.gif)
+    ![page2](../../assets/images/page2.gif)
 
 
 
