@@ -28,13 +28,13 @@ When a page is selected, the custom properties for that page are automatically d
 
 ## **Open Position**
 
-#### **Page:**
+#### **Page**
 
 Replace: The original page is closed and replaced by a new page.
 
 New Tab: The original page is unaffected and the new page is displayed in a new tab of the browser.
 
-#### **Popup Page:**
+#### **Popup Page**
 
 Center: The position of the popup page is displayed in the center of the window.
 
@@ -48,13 +48,14 @@ Custom: You can set the position of the popup page yourself.
 
 The following script functions can be used for page navigation:
 
-- System.UI.back
-- System.UI.close
-- System.UI.forward
-- System.UI.goHome
-- System.UI.open
-- System.UI.openNewTab
-- System.UI.openPopup
+- [System.UI.back](../../appendix/system-function/system-ui/system-ui-back.md) 
+- [System.UI.close](../../appendix/system-function/system-ui/system-ui-close.md) 
+- [System.UI.forward](../../appendix/system-function/system-ui/system-ui-forward.md) 
+- [System.UI.goHome](../../appendix/system-function/system-ui/system-ui-gohome.md) 
+- [System.UI.open](../../appendix/system-function/system-ui/system-ui-open.md) 
+- [System.UI.openNewTab](../../appendix/system-function/system-ui/system-ui-opennewtab.md) 
+- [System.UI.openPopup](../../appendix/system-function/system-ui/system-ui-openpopup.md) 
+
 
 ## **Navigation Example**
 

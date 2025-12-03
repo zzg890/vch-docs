@@ -2,6 +2,6 @@
 
 We will provide examples based on each query type to help you better understand which query type to choose in different scenarios.
 
-- Query
-- Scalar Query
-- Update Query
+- [Query](query.md) 
+- [Scalar Query](scalar-query.md) 
+- [Update Query](update-query.md)

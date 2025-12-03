@@ -8,7 +8,7 @@ Page templates are divided into five areas: the content area, the top sidebar, t
 
 ![alt text](65.png)
 
-## **Create a template **
+## **Create a Template**
 
 Entry 1: In the "Page" menu, click "New Template".
 
@@ -37,22 +37,19 @@ Entry 3: Right-click on the "Page Templates" node in the "Project" window and cl
 
 1. Click on a blank area of the page template
 2. Click on the tab name of the page template
-
-![alt text](74.png)
-
+    ![alt text](74.png)
 3. Click the gray area outside the canvas (the area highlighted in the red box below)
-
-![alt text](75.png)
+    ![alt text](75.png)
 
 **Example of Layout**
 
 - The top and bottom sidebars span horizontally across the entire page.
 
-![alt text](76.png)
+    ![alt text](76.png)
 
 - The left sidebar fills vertically, the top sidebar fills to the right, and the right sidebar fills downwards.
 
-![alt text](77.png)
+    ![alt text](77.png)
 
 ## **Using Page Templates**
 

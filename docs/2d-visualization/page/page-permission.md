@@ -4,35 +4,28 @@ You can set up security for your pages in VC Hub. After security is set, only us
 
 Once the page is created, there will be an initial permission: Authenticated.
 
-## How to set page permissions:
+## How to set page permissions
 
 - Set permissions in bulk
 - Set permissions for individual page
 
 ## Set permissions in bulk
 
-1. In the editor's "Project" window, right-click the "Pages" node, and in the pop-up menu, click the "Set Permissions" button.
+1. In the editor's "Project" window, right-click the "Pages" node, and in the pop-up menu, click the "Set Permissions" button.<br>
    ![alt text](46.png)
 2. In the pop-up **Page Permissions** window, select a page from the left side of the window. By default, no pages are selected. Multiple pages can be selected. Clicking the **"Clear"** button in the page area will remove all selected pages.
    ![alt text](47.png)
 3. After selecting a page, configure permissions for the selected pages in the **Permissions** area on the right side of the pop-up window. 
-
    Clicking the **"Clear"** button in the permissions area will remove all selected permissions.
-
-- **Matching Strategy**：Single selection only。Default option: "Match All"，can be modified.
-   - **"Match All"**: The user must have **all** assigned permissions to view the page.
-   - **"Match Any"**: The user only needs **one** of the assigned permissions to view the page.
-- **Permissions**：Set permissions for these pages in the **Permissions Tree**. By default, no permissions are selected. **Multiple selections are supported**, but a parent node and its child nodes cannot be selected simultaneously.
-
+ - **Matching Strategy**：Single selection only。Default option: "Match All"，can be modified.
+    - **"Match All"**: The user must have **all** assigned permissions to view the page.
+    - **"Match Any"**: The user only needs **one** of the assigned permissions to view the page.
+ - **Permissions**：Set permissions for these pages in the **Permissions Tree**. By default, no permissions are selected. **Multiple selections are supported**, but a parent node and its child nodes cannot be selected simultaneously.
 4. Once the configuration is complete, click the **"Save"** button to apply the changes.
-
    For example, in the image below, the **Authenticated/Roles/Aconfigurator** permission is assigned to the **Demo1, Alarms, and History** pages.
-
    ![alt text](48.png)
-
 5. After clicking the **Save** button, the pop-up window will remain open, and the page and permissions will be reset to a cleared state, allowing you to continue selecting other pages to set their permissions.
 6. To view the permissions already assigned to a page, click the **"View"** button in the page area to check the configured permissions for each page.
-
    ![alt text](49.png)
 
 **Notes：**  
@@ -43,13 +36,9 @@ Once the page is created, there will be an initial permission: Authenticated.
 ## Set permissions for individual page
 
 1. In the editor's **"Project"** window, right-click a single page in the page tree, and in the pop-up menu, click the **"Set Permissions"** button.
-
    ![alt text](50.png)
-
 2. In the pop-up **Access Level** window, set permissions for the page. The window will **default to displaying the currently assigned permissions and matching strategy** for the page, which can be modified as needed.
-
    ![alt text](51.png)
-
 3. Once the configuration is complete, click the **"OK"** button to finalize the permission settings for the page.
 
 **Example 1:**
@@ -75,7 +64,6 @@ The user's access level path is included in the page's access level path, the us
 1. Create a user and set the access level through Identity Provider → User Grants to: `Authenticated/PlantA`
 2. Create a page (PageA) and set its permission to: `Authenticated/PlantA/TeamLeader`.
 3. This user viewed the running page of Page A and does not have permission to view the running page.
-
    ![alt text](52.png)
 
 
