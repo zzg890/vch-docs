@@ -26,26 +26,19 @@ Instead of creating four separate controls to display the values of these four t
 
 1. Draw a value display control and a dropdown control on the page.
 2. Set the dropdown options for the dropdown control.
-
    ![alt text](34.png)
-
 3. Select the value display control and click the binding button for the "Text" property.
-
    ![alt text](35.png)
-
 4. In the pop-up property binding window, choose Dynamic Tag.
        1. On the left side of the asset tree, select the tag **Default: Motor1.Current**.
        2. On the right side in the path replacement section, delete **1** from the variable path and replace it with **{1}**.
        3. In the replacement list, select that row and click the binding button to bind it to the **selectedValue** property of the dropdown control.
        4. Click **OK** to save the binding.
-
    ![alt text](36.png)
-
 5. In the editor, click the "Preview" button to enter the preview page.
 6. When selecting **1** in the dropdown, the path is: **Default: Motor1.Current**, and the value display control shows the current value of Motor 1.
    When selecting **2** in the dropdown, the path is: **Default: Motor2.Current**, and the value display control shows the current value of Motor 2.
    When selecting **3** in the dropdown, the path is: **Default: Motor3.Current**, and the value display control shows the current value of Motor 3.
    When selecting **4** in the dropdown, the path is: **Default: Motor4.Current**, and the value display control shows the current value of Motor 4.
-
    ![dynamic-tag](../../assets/images/dynamic-tag.gif)
 

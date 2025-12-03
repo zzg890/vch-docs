@@ -48,6 +48,7 @@ In any property binding interface that supports **Expression**, you can access e
         return 0; // Normal
     }
     ```
+    
 2. Add a rectangular control to the page, click the bind button of background color, and bind the expression property. The script is as follows:
 
     ```typescript
