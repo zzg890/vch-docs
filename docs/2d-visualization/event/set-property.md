@@ -14,9 +14,9 @@ When the mouse clicks on the rectangle control, the fill color of the rectangle 
 4. In "Property", select the background color property of the ellipse.
 5. In New Value, select the background color property of the rectangle.
 6. Security group is not set.
-7. Click the **"** **OK** **"** button.
+7. Click the **"OK"** button.
 8. Click the "Preview" button on the screen to view the running effect.
 
-![set-property](../../assets/images/set-property.gif)
+    ![set-property](../../assets/images/set-property.gif)
 
 **Note:** Manual input is also supported in the text boxes for attributes and new values. 
