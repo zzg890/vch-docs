@@ -64,7 +64,7 @@ Parameter
 
 |  Name         | Type        | Description    |
 |:---------------|:-----------------|:----------------|
-|  start         | Date or string         | Start Time    |
+| start         | Date or string         | Start Time    |
 | end            | Date or string       | End Time          |
 | tag            | string or Array <string>     | Tag(s) to query            |
 | queryMode      | QueryMode           | Query Mode           |
@@ -80,8 +80,10 @@ Parameter
 
 
 
-## Code Example                                                                                                                                                                                                                                                                                                   
+## Code Example
+
 Retrieve the historical records of the raw values for the tag "Device:Temperature" between 2024-08-14 00:00:00 and 2024-08-15 00:00:00.
+
 ```typescript 
 const value = await System.Tag.readHistory('2024-08-14 00:00:00', '2024-08-15 00:00:00', '@Device:Temperature','Raw'，{
   timeout: 30
