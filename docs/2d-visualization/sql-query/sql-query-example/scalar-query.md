@@ -26,14 +26,14 @@ There is a table named `person_management` in the database, which is used to sto
 #### Create SQL Query
 
 1. Create the project, click the  **Design** button in the action bar to enter the 2D editor.
-2. Create an SQL Query by right-clicking on the SQL Query node in the 2D editor and selecting **Add** button.
+2. Create an SQL Query by right-clicking on the SQL Query node in the 2D editor and selecting **Add** button.<br>
     ![alt text](13.png)
 3. In this example, we set the name of this SQL Query to **ScalarQuery**.
     ![alt text](14.png)
-     **Database Connection:** Select an item whose status is "Connected "in the "Databases" ->"Database Connection" list. Here we select the **TestSQLQuery** already created in Step 1.
-     **Query Type:** In this case, the result of the execution returns a value, so we choose **Scalar Query**.
-     **Fallback Value:** Data returned if the SQL statement fails.
-     **SQL Editor:** Write the following query to find the total number of people in the `person_management` table.
+     - **Database Connection:** Select an item whose status is "Connected "in the "Databases" ->"Database Connection" list. Here we select the **TestSQLQuery** already created in Step 1.
+     - **Query Type:** In this case, the result of the execution returns a value, so we choose **Scalar Query**.
+     - **Fallback Value:** Data returned if the SQL statement fails.
+     - **SQL Editor:** Write the following query to find the total number of people in the `person_management` table.
     ```sql
     SELECT COUNT(*) FROM person_management;
     ```

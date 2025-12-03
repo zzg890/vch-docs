@@ -26,7 +26,7 @@ There is a table named `person_management` in the database, which is used to sto
 #### Create SQL Query
 
 1. Create the project, click the **Design** button in the action bar to enter the editor.
-2. Create an SQL Query by right-clicking on the SQL Query node in the 2D editor and selecting **Add** button.
+2. Create an SQL Query by right-clicking on the SQL Query node in the 2D editor and selecting **Add** button.<br>
     ![alt text](19.png)
 3. In this example, we set the name of this SQL Query to **UpdateQuery**.
     ![alt text](20.png)
@@ -53,59 +53,55 @@ There is a table named `person_management` in the database, which is used to sto
     ![alt text](25.png)
 3. Configure the **mouse pressed** event for the button.Each time the button is clicked, get the values for the input and drop-down fields, and add the values to the database.
     ![alt text](26.png)
+    ```typescript
+    // Get name
+    const nameValue = System.Page.getPropertyValue('nameInput#text')
+    // Get email
+    const emailValue = System.Page.getPropertyValue('emailInput#text')
+    // Get gender
+    const genderValue = System.Page.getPropertyValue('genderDropdown#selectedValue')
+    // Get age
+    const ageValue = System.Page.getPropertyValue('ageInput#value')
+    // Return if any value is missing
+    if (!nameValue || !emailValue || !genderValue || !ageValue) {
+        return;
+    }
+    // Execute script
+    const result = await System.Db.runSqlQuery('UpdateQuery', [
+        {
+            name: 'name',
+            value: nameValue
+        },
+        {
+            name: 'email',
+            value: emailValue
+        },
+        {
+            name: 'gender',
+            value: genderValue
+        },
+        {
+            name: 'age',
+            value: ageValue
+        },
+    ])
+    // If execution is successful, clear values
+    if (result) {
+        // Clear name
+        System.Page.setPropertyValue('nameInput#text', '')
+        // Clear email
+        System.Page.setPropertyValue('emailInput#text', '')
+        // Clear gender
+        System.Page.setPropertyValue('genderDropdown#selectedValue', 'Male')
+        // Clear age
+        System.Page.setPropertyValue('ageInput#value', '')
+        // Refresh table data
+        const table = await System.UI.findControl('Table2')
+        table.reload()
+    }
 
-```typescript
-// Get name
-const nameValue = System.Page.getPropertyValue('nameInput#text')
-// Get email
-const emailValue = System.Page.getPropertyValue('emailInput#text')
-// Get gender
-const genderValue = System.Page.getPropertyValue('genderDropdown#selectedValue')
-// Get age
-const ageValue = System.Page.getPropertyValue('ageInput#value')
-// Return if any value is missing
-if (!nameValue || !emailValue || !genderValue || !ageValue) {
-    return;
-}
-
-// Execute script
-const result = await System.Db.runSqlQuery('UpdateQuery', [
-    {
-        name: 'name',
-        value: nameValue
-    },
-    {
-        name: 'email',
-        value: emailValue
-    },
-    {
-        name: 'gender',
-        value: genderValue
-    },
-    {
-        name: 'age',
-        value: ageValue
-    },
-])
-// If execution is successful, clear values
-if (result) {
-    // Clear name
-    System.Page.setPropertyValue('nameInput#text', '')
-    // Clear email
-    System.Page.setPropertyValue('emailInput#text', '')
-    // Clear gender
-    System.Page.setPropertyValue('genderDropdown#selectedValue', 'Male')
-    // Clear age
-    System.Page.setPropertyValue('ageInput#value', '')
-    // Refresh table data
-    const table = await System.UI.findControl('Table2')
-    table.reload()
-}
-
-```
- 
-4.Click the preview button on the page, and press the button on the preview page to add data to the database. When the new data is added, the table is reloaded and the new data is displayed.
-
+    ```
+4. Click the preview button on the page, and press the button on the preview page to add data to the database. When the new data is added, the table is reloaded and the new data is displayed.
     ![update-query](../../../assets/images/update-query.gif)
 
 
