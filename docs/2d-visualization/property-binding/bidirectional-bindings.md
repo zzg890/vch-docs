@@ -29,11 +29,11 @@ Number input control and tag are bound in both directions.
 1. Draw a number input control on the page.
 2. Click the bind button on the "Value" property of the control.
 
-![alt text](52.png)
+    ![alt text](52.png)
 
 3. After selecting the tag in the "Property Binding" window, check the “Bidirectional ” box and click the "OK" button to complete the binding.
 
-![alt text](53.png)
+    ![alt text](53.png)
 
 4. On the running page, when the value of the tag changes, the value displayed in the number input control changes synchronously; clicking the **Enter** key after entering the value in the number input control will write the entered value back to the bound tag.
 
@@ -50,21 +50,21 @@ The number input and slider are bound in both directions.
 1. Draw a number input and a slider control on the page.
 2. Click the bind button of the "Value" property of the number input.
 
-![alt text](55.png)
+    ![alt text](55.png)
 
 3. In the "Property Binding" window, select the **value** property of the slider, check the “Bidirectional” box, and click the "OK" button to complete the binding.
 
-![alt text](56.png)
+    ![alt text](56.png)
 
 4. On the running page, when the value of the slide changes, the value displayed in the number input changes synchronously; when you enter a value in the number input and click the **Enter** key, the value of the slide changes accordingly.
 
-![bidirectional](../../assets/images/bidirectional.gif)
+    ![bidirectional](../../assets/images/bidirectional.gif)
 
 ## Bidirectional Dynamic Tag Bindings
 
 In the property binding window, after selecting a dynamic tag, you can enable the **"Bidirectional"** option. After enabling bidirectional binding, a fallback option can be set. If the property change fails, it will revert to the last valid value.
 
-![img](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/FqZJ8d8u/resources/lTee5e9hvk4-DME3Ixqr1ZuqoyUmdUVWGzM-lbemVz8.png?token=W.HGq1ucLBF5QBUGJDncQq9mqthAfIYSSfNEwnRekywQYtdt1A0DyJbMlONEx3iMANfU4_A7ck5dB60y2GbI97PUZEIQ)
+![alt text](60.png)
 
 **Example**
 
@@ -72,16 +72,16 @@ The text input is bound to an dynamic tag to display the running status of diffe
 
 1. Draw a text input, a dropdown, and 2 text label controls on the page.
 
-![alt text](57.png)
+    ![alt text](57.png)
 
 2. The dropdown options are set to: Motor 1, Motor 2, Motor 3.
 3. Click the bind button of the "Text" property of the text input control.
 
-![alt text](58.png)
+    ![alt text](58.png)
 
 4. After selecting ”Dynamic Tag“ in the property binding window, make the following settings, check “Bidirectional ”, and click the ”OK“ button to complete the binding.
 
-![alt text](59.png)
+    ![alt text](59.png)
 
 5. On the running page, when the options in the dropdown  change, the value of the text input  changes. When Motor 1 is selected, the text input displays the running status of Motor 1, and when Motor 2 is selected, the text input displays the running status of Motor 2.
 6. Entering **true** or **false** in the text input and clicking the Enter key will modify the operating status of the currently selected motor.
