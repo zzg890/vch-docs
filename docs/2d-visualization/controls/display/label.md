@@ -63,8 +63,8 @@ When the user right clicks on the label , the following context menu pops up
 | **Name**         | **Description**  |
 |------------------|--------------|
 | Text             | Pump temperature |
-| 字体             | Calibri, 16, #000000, Horizontal center, Vertical center|
-| Right Click Menu | Add the following 2 right-click menus: <br> ![alt text](8.png)  <br> - View Historical Chart: Click on the Action button, select “Navigation” in the Action Settings window, and select a pop-up window that displays the historical chart of the pump.          Note: The pop-up window needs to be pre-configured.  <br>![alt text](9.png) <br> - Set Alarm Limits: Click the Action button and select “Set Value” in the Action Setting window. Select “@Demo:temperature#Alarm. Limit”. Select ‘NumberInput1#value’ for the new value. <br> When you click on this context menu, it takes the value entered in the numberinput,set it as the limit value of @Demo:temperature#Alarm.High.  <br>![alt text](10.png) |
+| Font             | Calibri, 16, #000000, Horizontal center, Vertical center|
+| Right Click Menu | Add the following 2 right-click menus: <br> ![alt text](8.png)  <br> - View Historical Chart: Click on the Action button, select “Navigation” in the Action Settings window, and select a pop-up window that displays the historical chart of the pump.          <br>Note: The pop-up window needs to be pre-configured.  <br>![alt text](9.png) <br> - Set Alarm Limits: Click the Action button and select “Set Value” in the Action Setting window. Select “Demo:temperature#Alarm. Limit”. Select ‘NumberInput1#value’ for the new value. <br> When you click on this context menu, it takes the value entered in the numberinput,set it as the limit value of Demo:temperature#Alarm.High.  <br>![alt text](10.png) |
 
 Click the preview button on the page, click the label control on the preview page, and then click “View Historical Chart” in the right-click menu to display the following effect:
 

@@ -36,7 +36,7 @@ Display the temperature of the current working environment.
 | **Property** | **Value**     |
 |--------------|--------------|
 | Fill         | 2c2c2c |
-| Text         | Binding tag: @Demo: temperature  <br>![alt text](15.png) |
+| Text         | Binding tag: Demo:temperature  <br>![alt text](15.png) |
 | Units        | ℃    |
 | Font         | Calibri, 16, ffffff, horizontal right, vertical center |
 

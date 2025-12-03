@@ -2,7 +2,7 @@
 
 Rich Text controls allow you to apply rich styles, formatting and multimedia elements to text. Compared to plain text, rich text can include font styles, colors, bold, italic, underline and other text styles, as well as insert tables, links and more.
 
-VC Hub's built-in rich text editor supports two editing modes: Markdown and WYSIWYG（what you see is what you get）.
+VC Hub's built-in rich text editor supports two editing modes: Markdown and WYSIWYG(what you see is what you get).
 
 **Markdown Mode**
 

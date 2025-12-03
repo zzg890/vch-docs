@@ -30,11 +30,11 @@ Use a **Page Container** to embed other pages into the current page.
 3. Create another new page and name it Page02.
 4. Add a Page Container to Page02. Click the page container, and set the "Page" property to "Page01", indicating that Page01will be displayed inside the page container.
 
-![alt text](54.png)
+    ![alt text](54.png)
 
 5. The display effect is as follows:
 
-![alt text](55.png)
+    ![alt text](55.png)
 
 **Example 2**
 
@@ -42,21 +42,21 @@ Use a **page container** to monitor multiple devices' statuses simultaneously.
 
 1. Create a new page named **"Motor1"**. Place a motor image and two labels on the page. Set the content of one tlabel to **"Running Status"**, and bind the other label to the tag **Motor1.RunningStatus** to display the current operating status of Motor1.
 
-![alt text](56.png)
+    ![alt text](56.png)
 
 2. Create a new page named **"Motor2"**. Place a motor image and two labels on the page. Set the content of one tlabel to **"Running Status"**, and bind the other label to the tag **Motor2.RunningStatus** to display the current operating status of Motor2.
 
-![alt text](57.png)
+    ![alt text](57.png)
 
-3. Create a new page named **"Home"**. Place a page** **container and a dropdown on the page. When switching the dropdown selection, the displayed page inside the page container updates accordingly.Set the dropdown options to **"Motor1"** and **"Motor2"**, with the default selection text as **"Motor1"**. Bind the page property of the page container to the **selectedText** property of the dropdown.
+3. Create a new page named **"Home"**. Place a page container and a dropdown on the page. When switching the dropdown selection, the displayed page inside the page container updates accordingly.Set the dropdown options to **"Motor1"** and **"Motor2"**, with the default selection text as **"Motor1"**. Bind the page property of the page container to the **selectedText** property of the dropdown.
 
-![alt text](58.png)
+    ![alt text](58.png)
 
-![alt text](59.png)
+    ![alt text](59.png)
 
 
 
 4. In the running page, when switching the dropdown selection, the page inside the page container automatically updates.
 
-![page-container](../../../assets/images/page-container.gif)
+    ![page-container](../../../assets/images/page-container.gif)
 

@@ -30,15 +30,15 @@ Add 3 indicators to the ruler to indicate the max, min and avg values.
 1. Insert a ruler control on the page
 2. Click on the control and in the Appearance property of the control click on the setting button of the indicator 
 
-![alt text](87.png)
+    ![alt text](87.png)
 
 3. Make the following settings in the datatable popup window
 
-![alt text](88.png)
+    ![alt text](88.png)
 
 4. After saving the popup, the ruler is displayed as follow：
 
-![alt text](89.png)
+    ![alt text](89.png)
 
 
 
