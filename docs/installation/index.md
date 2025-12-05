@@ -14,21 +14,21 @@ The installation program defaults to using port 8066 for HTTP and port 10443 for
 
 | **Port** | **Description**                       | **Configuration**                       |
 |----------|---------------------------------------|-----------------------------------------|
-| 8066     | HTTP default port                     | **“Node“>“Node Settings“>"Web Server"** |
-| 10443    | HTTPS default port                    | **“Node“>“Node Settings“>"Web Server"** |
-| 8099     | Networking default port               | **“Node“>“Networking“>"Main"**          |
-| 1883     | Built-in Mqtt Broker default TCP port | **“Node“>“MQTT Broker“>"Basic"**        |
-| 8883     | Built-in Mqtt Broker default TLS port | **“Node“>“MQTT Broker“>"Basic"**        |
+| 8066     | HTTP default port                     | **"Node">"Node Settings">"Web Server"** |
+| 10443    | HTTPS default port                    | **"Node">"Node Settings">"Web Server"** |
+| 8099     | Networking default port               | **"Node">"Networking">"Main"**          |
+| 1883     | Built-in Mqtt Broker default TCP port | **"Node">"MQTT Broker">"Basic"**        |
+| 8883     | Built-in Mqtt Broker default TLS port | **"Node">"MQTT Broker">"Basic"**        |
 
-**The http and https ports are configured as follows：**
+**The http and https ports are configured as follows:**
 
 ![alt text](1.png)
 
-**The networking port is configured as follows：**
+**The networking port is configured as follows:**
 
 ![alt text](2.png)
 
-**The Mqtt port is configured as follows：**
+**The Mqtt port is configured as follows:**
 
 ![alt text](3.png)
 

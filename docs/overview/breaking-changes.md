@@ -371,9 +371,9 @@ INNER JOIN public."ScadaTagMapping" d ON c."TagId" = d."Id" AND c."ProviderId" =
 
 - **Impact** : Scripts using this function.
 - **Change** : The parameter structure of the System.UI.openPopup function has been adjusted since version 4.2: 
-   -  New **titleBar**  parameteris added to set the title of the popup;
-   -  The original parameter used to set the position of the popup window should be unified into the **options ** object;
-   -  The page Properties parameter that was originally passed in now needs to be unified into the **options ** object.
+   -  New **titleBar** parameteris added to set the title of the popup;
+   -  The original parameter used to set the position of the popup window should be unified into the **options** object;
+   -  The page Properties parameter that was originally passed in now needs to be unified into the **options** object.
 - **Solution** : Old syntax works but shows warnings. Update to new format.
 
  Please refer to: **Appendix->System Functions->System.UI->System.UI.openPopup**
@@ -407,12 +407,12 @@ INNER JOIN public."ScadaTagMapping" d ON c."TagId" = d."Id" AND c."ProviderId" =
 - **Impact** : Scripts modifying historical chart properties.
 - **Change** : From version 4.2, the following parameters have been adjusted.
    -  Button style parameter:
-      -    tagButton replaced with tagButtonColor
-      -   exportButton replaced with exportButtonColor
-      -  calendarButton replaced with calendarButtonColor
-   -  showCalendarButton replaced with showSearchButton
-   -   Removed cycle and unit from Data and migrated them to queryMode.
-   -    series in yAxis replaced with axes
+      - tagButton replaced with tagButtonColor
+      - exportButton replaced with exportButtonColor
+      - calendarButton replaced with calendarButtonColor
+   - showCalendarButton replaced with showSearchButton
+   - Removed cycle and unit from Data and migrated them to queryMode.
+   - series in y Axis replaced with axes
 - **Solution** : Update to match new structure.
 
 #### Breaking Change 22: Pie chart parameter adjustments
