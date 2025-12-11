@@ -180,12 +180,12 @@ Sample Message:
         {
             "Name": "Temp",
             "Value": 45,
-            "Timestamp": 1687858118
+            "Timestamp": 1687858118000
         },
         {
             "Name": "Voltage",
             "Value": 10,
-            "Timestamp": 1687858118
+            "Timestamp": 1687858118000
         }
     ]
 }
@@ -194,7 +194,7 @@ Considering the bandwidth saving and improving the transmission performance, the
 
 ```json
 {
-	"Timestamp": 1687858118,
+	"Timestamp": 1687858118000,
 	"Tags": [{
 			"Name": "Temp",
 			"Value": 45
