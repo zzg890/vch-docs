@@ -1,8 +1,8 @@
-# Usage of Legacy Protocols
+# 传统协议使用说明
 
-Protocols like **Modbus TCP/RTU**, **SIEMENS S7**, are commonly used in industrial settings for communication with PLCs, I/O devices, and various automation equipment. However, they lack inherent support for **authentication and encryption**, posing security challenges in modern networks.
+**Modbus TCP/RTU**、**SIEMENS S7** 是工业自动化中常用的协议，广泛用于与 PLC、I/O 设备以及其他自动化设备的通信。然而，这些协议都缺乏内置的**身份验证和加密**支持，在现代网络中存在一定的安全隐患：
 
-1. **Modbus TCP/RTU**: One of the oldest and most widely used protocols in industrial automation, Modbus is simple and reliable but lacks authentication and encryption mechanisms in its original form. This makes it vulnerable to attacks such as replay, unauthorized access, and data tampering. **Modbus TLS extension protocol is currently not supported.**
-2. **SIEMENS S7**: The S7 protocol is specific to Siemens PLCs and also lacks built-in security features. The absence of authentication and encryption leaves it susceptible to network attacks, including interception and unauthorized commands, especially concerning for critical control applications.
+1. **Modbus TCP/RTU**：作为最早期且应用最广泛的工业协议之一，Modbus 协议结构简单且可靠，但其原始形式没有提供认证和加密机制，因此容易受到重放攻击、未经授权的访问和数据篡改等风险。**暂不支持Modbus TLS扩展协议。**
+2. **SIEMENS S7**：S7 协议是西门子 PLC 特有的通信协议，同样缺乏安全特性。由于没有认证和加密支持，数据通信容易被拦截、篡改，尤其是在关键控制应用中，这种风险更加值得关注。
 
-Given these limitations, it’s increasingly essential to implement security measures such as **VPNs**, **segmented networks**, and firewalls to control access, as well as consider protocol gateways or proxies with security features to encapsulate these protocols securely when possible.
+鉴于这些协议的局限性，建议在使用时加强外围安全措施，如部署 **VPN**、**网络分段** 和 **防火墙** 以控制访问。此外，使用带有安全特性的协议网关或代理来封装这些不安全的协议，尽可能提升整体的通信安全性。

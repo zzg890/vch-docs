@@ -1,63 +1,55 @@
-# Version Update Notes
+# 版本更新说明
 
- VC Hub is constantly evolving and being updated, with each new version bringing new features and bug fixes. Here, you can quickly preview the new features and resolved issues of the corresponding versions.
+WAGO VC Hub一直在不断地发展和更新中，每一个版本都会出现一些新的功能和问题修复。在此处您可以快速预览相应版本的新增功能和修复的问题。
 
-## Determining Your Current Version
+#### 确定当前版本
 
- You can find out the version number of VC Hub you are currently using in the following two ways:
+您可以通过以下两种方式获取您当前使用的WAGO VC Hub版本号：
 
-1.  In the bottom right corner of the management platform, you can find the corresponding VC Hub version number.
-2.  In the top right corner ofthe configuration editing interface, there is an exclamation mark icon. You can click on this icon to get the corresponding VC Hub version number information.
+1. 在管理平台的右下角，您可以找到对应的WAGO VC Hub版本号。
+2. 在组态编辑界面的右上角，有一个感叹号图标，您可以点击此图标获取对应的WAGO VC Hub版本号信息。
 
-![alt text](5.png)
+![alt text](9.png)
 
-![alt text](6.png)
+![alt text](10.png)
 
--  WYSIWYG Configuration Editor：VC Hub provides a WYSIWYG (What You See Is What You Get) configuration editor, allowing you to preview the configuration effects in real-time.
--  Standardized Alarms：VC Hub offers standardized alarm functions, including various limit alarms, rate of change alarms, and equal value alarms, and provides corresponding real-time and historical configuration controls.
--  Object-Oriented VC Hub supports the direct creation of tags and supports the creation of tags in an object-oriented manner. You can build your field applications through the concept of assets.
--  Multi-Database: VC Hub supports the configuration of various databases for historical data storage, such as MySQL, SQL Server, etc.
--  Networking and Redundancy: VC Hub supports large-scale configurations and high-availability scenarios. You can build your complexfield configuration projects through multiple SCADA networking.
--  3D Digital Twin: VC Hub supports 3D configuration, like 2D configuration. You can build your digital twin scenarios, and it provides many 3D API for you to configure more advanced and complex digital twin applications.
+- 所见即所得组态编辑器：WAGO VC Hub提供了一个所见即所得[known-link]，方便您实时预览组态效果。
+- 标准化报警：WAGO VC Hub提供标准化[known-link]功能，包括各类限值报警、变化速率报警以及等值报警等，并且提供相应的实时和历史组态控件。
+- 对象化：WAGO VC Hub支持直接创建变量，也支持对象化方式创建变量，通过[known-link]的概念组建您的现场应用。
+- 多数据库：WAGO VC Hub支持配置多种[known-link]行历史数据存储，比如MySQL、SQL Server等。
+- 组网和冗余：WAGO VC Hub支持大规模组态已经高可用场景，您可以通过多套VC Hub[known-link]构建您的复杂现场组态项目。
+- 3D数字孪生：WAGO VC Hub支持3D组态，类似于2D组态，您可以构建您的数字孪生场景，同时其提供了大量的[known-link]供您组态出更高级和复杂的数字孪生应用。
 
-## New Features
+#### 新功能
 
-#### 4.5.X
+###### 4.3.X
 
-- **License Management**: Activate the license using DRM. This version only supports the trial mode of the license.
+- **SVG编辑器**：可以通过SVG编辑器，对图库中的SVG图片进行属性修改并保存，例如修改颜色，尺寸，文本内容，可见性等。
+- **Toggle Button**： 点击后在开/关两个状态之间切换。常用来控制布尔型设备，比如启停、开关。
+- **2-State Button**：表示两种明确的状态，通常是 ON / OFF 或 Start / Stop。可以为每种状态设置特定的外观样式。
+- **Multi-State Button**：包含多种状态，可以在多个状态之间切换。可以为每种状态设置特定的外观样式。
+- **变量的历史数据支持存储原始值**：在对变量进行历史数据存储时，可以存储变量的原始历史值。
+- **画面函数和表达式函数**：通过编写画面函数或者表达式函数，可以集中管理共用逻辑，避免在每个控件件中重复编写，一处修改，全局生效，减少维护成本。
+- **动画的启用和禁用支持绑定**：为控件配置动画时，可以通过属性绑定，控制动画的开启和关闭。
 
-#### 4.4.X
+###### 4.2.X
 
-- **Logo and Name Modification**: The product logo has been replaced, and the product name has been changed from WAGO SCADA to Visualization and Control Hub, abbreviated as VC Hub.
+- **权限**：支持单点登录；可以对项目和画面设置权限。
+- **SQL Query**：可以从第三方数据库查询数据。是一种预配置的查询，后续可以在控件上进行绑定。在执行SQL语句时，可以通过参数传递返回动态结果集。
+- **表格控件**：以表格的形式显示数据。您可以自定义表格的显示内容，样式和交互效果。
+- **双向绑定**：变量，间接变量和属性，支持双向绑定。例如控件绑定了变量，变量变化时，控件上的值会同步变化；当修改控件的值时，也会同步将变量的值修改掉。
+- **变量数据源路径支持参数化绑定**：在对变量进行数据源绑定时，可以用参数对路径内容进行替换，后续只需修改参数值，即可实现路径的修改。
+- **批量修改控件属性**：针对同一类型的控件，例如多个文本标签，全选后，可以批量修改这些控件的属性。
+- **系统变量可编辑**：可以编辑系统变量，对其进行报警，历史存储等配置。
+- **OPC UA：** 增加发现服务功能。
+- **Camera：**通过WebRTC Streamer配置摄像头，实现摄像头推流和WAGO  VC Hub服务器分离。
+- **企业微信和钉钉支持接收报警通知：**支持向企业微信群，企业微信账号，钉钉群，钉钉账号，发送报警通知。
 
-#### 4.3.X
+###### 4.1.X
 
-- **SVG Editor**: Through the SVG editor, users can modify and save attributes of SVG images in the library, such as color, size, text content, and visibility.
-- **Toggle Button**: Switches between ON and OFF states when clicked. Commonly used to control Boolean-type devices, such as start/stop or on/off switches.
-- **2-State Button**: Represents two distinct states, typically ON/OFF or Start/Stop. Each state can be configured with specific appearance styles.
-- **Multi-State Button**: Contains multiple states and can switch between them. Each state can be configured with its own appearance style.
-- **Historical Data Storage of Raw Values**: When storing historical data for variables, it is possible to store the original raw values of the variables.
-- **Screen Functions and Expression Functions**: By defining screen functions or expression functions, common logic can be centralized and reused. This avoids writing the same logic repeatedly in each component, allowing one modification to take effect globally, reducing maintenance costs.
-- **Binding Support for Enabling/Disabling Animations**: When configuring animations for components, the enabling and disabling of animations can be controlled through property bindings.
-
-#### 4.2.X
-
-- **Permissions**：Supports single sign-on; allows setting permissions for projects and pages.
-- **SQL Query**：Enables querying data from third-party databases. It is a pre-configured query that can be later bound to controls. When executing SQL statements, parameters can be passed to return dynamic result sets.
-- **Table Control**: Displays data in a table format. You can customize the table’s content, style, and interactive effects.
-- **Bidirectional Binding**：Tags, indirect tags, and properties support bidirectional binding. For example, if a control is bound to a tag, changes in the tag will be reflected in the control, and modifying the control’s value will also update the tag.
-- **Parameterized Data Source Binding**：When binding a data source to a tag, parameters can be used to replace path content. Later, modifying the parameter value will automatically update the path.
-- **Batch Editing Control Properties**：For the same type of controls, such as multiple labels, selecting all of them allows batch modification of their properties.
-- **Editable System Tags**：System tags can be edited and configured for alarms, historical storage, and other settings.
-- **OPC UA**：Add discovery service function.
-- **Camera**: Configure WebRTC Streamer to set up the camera, enabling camera streaming while keeping it separate from the VC Hub server.
-- **WeCom and DingTalk support to receive alarm notification**: Support to send alarm notification to WeCom group, WeCom account, DingTalk group , DingTalk account.
-
-#### 4.1.X
-
-- **Alarm Notifications**: VC Hub can send alarm notifications to specific users when a system alarm occurs. Notifications can be sent via email or SMS.
-- **Symbols**: Symbols can be used to create detailed models of devices or systems, supporting combinations of multiple components and sub-symbols. This allows users to easily monitor the overall system operation. VC Hub supports user-defined symbols, enhancing operational efficiency.
-- **Workspace Upgrades**: VC Hub supports upgrading historical workspaces to the version of the currently installed package.
-- **Open API**: VC Hub allows data to be shared with external applications or partners via APIs for seamless data sharing.
-- **Property Binding**: Added support for "Dynamic Tag" binding and "Cell Update" binding.
-- **Batch Operation Tags**: VC Hub supports bulk addition and editing of tags through Excel.
+- **报警通知**：WAGO VC Hub可以在系统产生报警时，给特定用户发送报警通知。可以通过邮件发送，也可以通过短信进行发送。
+- **图符**：图符可用于创建复杂设备或系统的模型视图，支持多个组件和子图符的组合，便于用户观察系统整体运行情况。WAGO VC Hub支持用户自定义图符，提升了用户的操作效率。
+- **工程升级**：WAGO VC Hub支持对历史工程进行升级，升级到当前安装包的版本。
+- **Open API**：WAGO VC Hub允许将数据通过API开放给外部应用或合作伙伴，以实现数据共享。
+- **属性绑定**：新增了“动态变量”绑定和“单元格替换”绑定。
+- **批量操作变量**：WAGO VC Hub支持通过Excel批量新增和编辑变量。

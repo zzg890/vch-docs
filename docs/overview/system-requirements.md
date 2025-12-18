@@ -1,40 +1,61 @@
-# System Requirements
+# 系统要求
 
-## Recommended Hardware Configuration
+#### **推荐硬件配置**
 
--  CPU: x86 64-bit architecture, 4 cores or above
--  Memory: 16GB
--  HardDrive: SSD or higher performance hard drive, with at least 10GB of available space
+ CPU:   x86 64位架构，4核心及以上
 
- The requirements for server hardware configurations are directly related to the number of devices that need to be connected to the customer's project, communication protocols, the number of collection points, collection frequency, historical storage requirements, the number of alarms, and the number and complexity of scripts.
+ 内存：16GB
 
-## Minimum Hardware Configuration Requirements
+ 硬盘：SSD硬盘或以上性能硬盘， 10G以上可用硬盘空间
 
--  CPU: x86 64-bit architecture, 4 cores
--  Memory: 4GB
--  HardDrive: SSD or higher performance hard drive, with at least 10GB of available space
+**对服务器硬件配置的要求和客户项目需要接入的设备数量，通讯协议，采集点数，采集频率，历史存储要求，报警数量，脚本数量和复杂度等有直接的关系。**
 
-## Supported Operating Systems
 
--  Windows10/11
--  Windows Server 2019/2022
--  Linux (Supports mainstream Linux operating systems, with Ubuntu 20.04 being the tested and recommended version)
 
-## Unsupported Operating Systems
+#### **最低硬件配置要求**
 
-- RHEL 7 and earlier versions
-- All versions of CentOS
+ CPU:   x86 64位架构，4核心
 
-## Supported Browsers
+ 内存：4GB
 
--  Google Chrome
--  Microsoft Edge
+ 硬盘：SSD硬盘或以上性能硬盘，10G以上可用硬盘空间
 
-## Supported Databases
 
--  Microsoft®SQL Server
--  MySQL
--  PostgreSQL
--  SQLite
--  InfluxDB
 
+#### 支持的操作系统
+
+Windows 10/11
+
+Windows Server 2019/2022 
+
+Linux (支持主流的Linux操作系统, 实测和推荐版本Ubuntu 20.04) 
+
+
+
+#### 不支持的操作系统
+
+RHEL 7 及之前版
+
+CentOS的所有版本
+
+
+
+#### 支持的浏览器
+
+Google Chrome
+
+Microsoft Edge
+
+
+
+#### 支持的数据库
+
+Microsoft® SQL Server 
+
+MySQL
+
+PostgreSQL
+
+SQLite
+
+InfluxDB

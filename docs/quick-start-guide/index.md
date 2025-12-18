@@ -1,95 +1,82 @@
-# Quick Start Guide
+# 快速入门
 
-We have outlined some simple steps to guide you through configuring your project. You can run a project in a short amount of time.
+我们概述了一些简单的步骤来指导您配置项目。您可以在短时间内，运行一个项目。                                                                                               
 
-## 1.Create a Project
+#### 1.创建项目
 
-Click the "Add" button in the project list to create a project.
+在项目列表中点击“新增“按钮来创建项目。
 
 ![alt text](1.png)
 
+#### 2.添加数据库
 
+WAGO VC Hub安装后会自动创建一个SQLite数据库，您可以使用该数据库进行入门测试。您也可以点击”数据库“->"数据库连接"页面的“新增“按钮来创建新的数据库连接。详见[数据库连接](../management-platform/databases/database-connection/index.md)。
 
-## 2.Add a Database
+#### 3.添加资产
 
-After the installation of VC Hub, a SQLite database will be automatically created, which you can use for basic testing. You can also click "Database" -> "Database Connection" page and then click the "New" button to create a new database connection. 
+WAGO VC Hub安装后会自动创建一个Default资产，您可以使用该资产进行入门测试。您也可以点击”变量“->"资产"页面的“新增“按钮来创建新的资产。详见[资产](../management-platform/assets-and-tags/asset/index.md)。
 
-## 3.Add Assets
+#### 4.打开编辑器
 
-After the installation of VC Hub, a default asset will be automatically created, which you can use for basic testing. You can also click "Tags" -> "Assets" page and then click the "New" button to create new assets.
-
-## 4.Open the Editor
-
-On the project list page, click the "Design" button for the project.
+在项目列表页面，点击项目的”设计“按钮。
 
 ![alt text](2.png)
 
-
-
-Open the configuration editor to display the following interface.
+打开组态编辑器，显示如下界面。
 
 ![alt text](3.png)
 
+#### 5.新建画面
 
-
-## 5.Create a New Page
-
-Click "New Page" to quickly create a new page.
+点击”新建画面“，快速创建一个画面。
 
 ![alt text](4.png)
 
-
-
-In the **Tools** window on the left side of the designer, add for example "Rect" , "Label" , "Value Display",and "Historical Trend Chart" controls to the page. You can also use the search functionality.
+在设计器右侧的工具窗口中，在画面上添加”文本标签”,”值显示”,“矩形”，“历史趋势图”控件。
 
 ![alt text](5.png)
 
+#### 6.创建变量
 
-## 6.Create a Tag
-
-In the asset dropdown box of the asset window in the configuration editor, select an asset and then click the add button to add a memory tag to that asset. Tag name: liquid.
+在组态编辑器的资产窗口的资产下拉框中选择一个资产，之后点击添加按钮，为该资产添加一个存变量。名称为：液位。
 
 ![alt text](6.png)
 
-
-
-Enable the simulated property for this tag, using simulated value as the tag value. Types supported are **Random**, **Increment**, **Decrement**, and **Fixed.**
+为该变量开启模拟属性，使用模拟值作为变量值。类型支持随机、递增、递减和固定。
 
 ![alt text](7.png)
 
+#### 7.为变量开启历史记录
 
-
-## 7.Enable History for Tags
-
-At the top of the tag editing page, enable history recording to store the value of the tag historically.
+在变量的编辑页面顶部，开启历史记录，可以将该变量的值进行历史存储。详见[历史记录](../management-platform/assets-and-tags/tag/tag-properties/history.md)。
 
 ![alt text](8.png)
 
+#### 8.绑定变量
 
+为画面上的控件绑定变量。
 
-## 8.Bind Tag
+1. 将文本标签的显示内容设置为：液位:
 
-Bind tags to controls on the page.
+![alt text](9.png)
 
-1. Set the display content of the text label to: "Liquid level:"
-    ![alt text](9.png)
-2.  In the animation of the rectangle, select the fill animation. Click the value binding button and bind the created tag:liquid.
-    ![alt text](10.png)
-3. In the value display control, click the value binding button and bind the created tag:liquid. Afte binding, the binding icon will turn from gray to green.
-    ![alt text](11.png)
-4. In the historical chart control, click the value binding button and bind the created tag:liquid. 
-    ![alt text](12.png)
-    
-**Note:** For more information on binding, please refer to the Property Binding page. 
+2. 在矩形的动画中，选择填充动画。点击值的绑定按钮，绑定已创建的变量：液位。
 
-## 9.Preview/Run
+![alt text](10.png)
 
-Click the preview button in the page tool bar to view the preview effect. You can also click the run button for the project in the project list to view the running page.
+3. 在值显示控件中，点击值的绑定按钮，绑定已创建的变量：液位。绑定后，绑定图标会由灰色变为绿色。
 
+![alt text](11.png)
 
-![quick-start-guide](../assets/images/quick-start-guide.gif)
+4. 在历史趋势图上，绑定已创建的变量：液位。
 
+![alt text](12.png)
 
+#### 9.预览/运行
+
+点击画面菜单栏中的预览按钮，查看预览效果。也可以在项目列表中，点击项目的运行按钮，查看运行页面。
+
+![alt text](1.gif)
 
 
 

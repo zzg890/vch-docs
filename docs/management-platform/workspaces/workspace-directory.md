@@ -1,34 +1,31 @@
-# Workspace Directory
+# 工程目录
 
- A single workspace directory stores all workspace data for a workspace and contains the workspace base information, with a random GUID string as a unique identifier for the workspace.
+单个工程目录中存储了一个工程所有的工程数据，包含工程基础信息，以一个随机的GUID字符串作为工程的唯一标识。
 
- A VC Hub node can contain more than one workspace, and the workspace name needs to be unique.
+一个WAGO VC Hub节点中可以包含多个工程，工程名需唯一。
 
-## **Content Analysis**
+#### 内容解析
 
- Each workspace directory contains two parts, the workspace basic information file and the workspace data file. The workspace basic information file has the same naming and file format as the **Current Workspace Configure File** , and the workspace data file is used to store business data and files within the current workspace and is used to store part of the system's business data, and the structure of the directory is as follows:
+每个工程目录中，主要包含两个部分，工程基础信息文件和工程数据文件，工程基础信息文件命名和文件格式和[known-link]相同，工程数据文件用来存储当前工程内部的业务数据和文件，用作存储系统部分业务数据，目录中结构如下：
 
 ![alt text](12.png)
 
+###### 工程基础信息文件
 
-#### **Workspace basic information file**
-
- The workspace basic information file is a configuration file with. ini as the suffix, and the standard content is shown in the following figure:
+工程基础信息文件是一个*.ini*为后缀的配置文件，标准内容如下图所示。
 
 ![alt text](13.png)
 
+- **Id**：工程目录标识，与工程目录名称相同。
+- **Code**：工程编号，两个相同的工程，工程编号相同，如一个工程被导出后，再导入，工程编号不变，但**Id**会发生变化。
+- **Name**：工程名称。
+- **Description**：工程描述。
+- **Version**：工程版本号，用于记录创建该工程的WAGO VC Hub版本。
+- **CreationTime**：创建该工程的时间。
+- **UserName**：工程初始化时所使用的用户名，在首次切换到该工程后，该用户名会作为初始用户用户名进行登录。首次切换工程并完成工程初始化后，用户名将被置空。
+- **Password**：工程初始化时所使用的密码，在用户成功创建工程时，加密后临时存储到工程基础信息文件，在首次切换到该工程后，配合UserName进行登录使用。首次切换工程并完成工程初始化后，密码将被置空。
 
-- **Id** : workspace catalog identification, the same as the workspace catalog name.
-- **Code** : workspace number, two identical workspaces, workspace number is the same, such as a workspace is exported, and then imported, the workspace number remains unchanged, but Id will change.
-- **Name** : name of the workspace.
-- **Description** : description of the workspace.
-- **Version** : Version number of the workspace, used to record the VC Hub version of the workspace.
-- **CreationTime** : The time when the workspace was created.
-- **UserName** : The user name used for initializing the workspace, which is used as the initial username for logging in after switching to the workspace for the first time. After switching to the workspace for the first time and completing the workspace initialization, the user name will be blank.
-- **Password** : The password used for workspace initialization, encrypted and temporarily stored in the workspace base information file when the user successfully creates the workspace, and used together with the User Name for login after switching to the workspace for the first time. After switching to the workspace for the first time and completing the workspace initialization, the password will be blank.
+###### 工程数据文件
 
-#### **Workspace Data File**
-
- It is used to store the internal business data and files of the workspace, which mainly contains the business data of seven modules: workspace, device, asset and tag, alarm, script, data and permission.
-
+用于存储工程内部的业务数据及文件，主要包含项目、设备、资产和变量、报警、脚本、数据、权限七个模块的业务数据。
 

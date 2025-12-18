@@ -1,42 +1,38 @@
-# Upgrade Workspace
+# 工程升级
 
-## Overview
+#### 概述
 
-When workspaces in the system are on versions lower than the current system version, users won’t be able to open, copy, or edit them. To address this, an upgrade is necessary to ensure compatibility and access. Users can initiate the upgrade by clicking the green upgrade arrow button next to the corresponding version number. The process is handled server-side, where the workspace is seamlessly updated to match the current system version. This upgrade retains all existing data from the older version, ensuring that no information is lost while enabling full functionality in the latest system environment.
+当系统中存在低于当前系统版本的工程时，用户无法打开、复制或编辑该工程。这时，用户可以通过点击“升级”按钮来进行升级操作。
 
-## How to Operate
+升级过程将在服务端完成，成功后，工程将与当前系统版本匹配，并保留旧版本的所有数据。
 
-As shown in the figure below, there are two workspaces in the list. The workspace named "Default" has a version of 4.3.0, which is lower than the system version displayed in the lower right corner (4.4.0). Since it meets the upgrade criteria, a green upgrade arrow button is displayed next to the version number.
+#### 如何操作
+
+如下图所示，工程列表存在两个工程，其中名称为Test的工程版本为4.3.0，低于右下角所显示的当前系统版本号4.5.0，且符合升级条件，此时会在版本号旁显示绿色箭头按钮，表示此工程可从4.3.0版本升级到4.5.0版本。
 
 ![alt text](14.png)
 
-
-After the user clicks the upgrade button, the system will prompt a dialog asking whether to Backup. The user can choose to either "Upgrade" or "Backup and Upgrade" based on their needs.
+用户点击升级按钮后，系统会弹出是否备份的提示框，用户可根据需要选择“升级”或“备份并升级”。
 
 ![alt text](15.png)
 
-After clicking the "Upgrade" or "Backup and Upgrade" button, the upgrade arrow will change to "Upgrading..." indicating that the system is currently upgrading the workspace in the background.
+点击“升级”或“备份并升级”后，升级按钮将变为“升级中...”，此时代表系统后台正在对该工程进行升级。
 
 ![alt text](16.png)
 
-
-If the user selects "Upgrade" , then after a successful upgrade, only the updated workspace named "Test" with the new version 4.4.0 will appear in the list, while the old version 4.3.0 of the "Test" workspace will be removed.
+当用户选择“升级”时，在升级成功后，列表中仅会存在升级成功后的Test的工程，而旧版本4.3.0的Test工程会直接消失。
 
 ![alt text](17.png)
 
-
-If the user selects "Backup and Upgrade," then after a successful upgrade, the list will contain both the updated workspace named "Test" with the new version 4.4.0 and an additional backup of the old version 4.3.0, named "Test_{Backup Time}_bak," as shown in the figure below.
+当用户选择“备份并升级”时，在升级成功后，列表中除了会存在升级成功后的Test工程外，会额外备份一份4.3.0版本的Test工程并命名为Test_{备份时间}_bak，如下图所示。
 
 ![alt text](18.png)
 
-
-
-If any error occurs during the backend upgrade of the workspace, the upgrade will fail. A red "Upgrade Failed" message will appear next to the upgrade arrow to alert the user. The user can click on the adjacent exclamation mark button to view detailed information about the failure.
+当系统后台升级该工程发生错误时，将提示升级失败，用户点击后，可查看失败原因。
 
 ![alt text](19.png)
 
-
 ![alt text](20.png)
 
+用户可根据失败信息尝试解决问题。在问题修复后，用户可再次点击升级按钮，重新进行升级操作。
 
-Users can attempt to resolve the issues based on the failure information. After resolving the issues, the user can click the upgrade arrow button again to retry the upgrade process.

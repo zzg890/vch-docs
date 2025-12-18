@@ -1,24 +1,23 @@
-# Assets and Tags
+# 资产和变量
 
- Assets can be used in configuration software to represent various devices, facilitiesor materials in the real world. The hierarchy of assets allows the user tovisualize the structure and layout of the system.
+ 资产在组态软件中可以用来代表现实世界中的各种设备、设施或物料。通过资产的层级结构，用户可以直观地了解系统的结构和布局。
 
- In the VC Hub system, tags are used as a medium to establish communicationwith the actual production device through various common industrial protocols for the purpose of equipment detection and issuing commands.
+在WAGO VC Hub系统中，以变量作为媒介，通过各种通用的工业协议与实际的生产设备建立通讯，达到设备检测、下发指令的目的。
 
- A tag is an abstract concept used to identify real-time data or configuration information. It can represent the measured value of a sensor, the state of a device, or other device-related data.
+变量是一个用于标识实时数据或配置信息的抽象概念。它可以代表一个传感器的测量值、一个设备的状态、或其它与设备相关的数据。
 
- An asset is the top node of a tag. There can be any number of assets in a VC Hub system, and the user can create tags to be maintained in any asset, with the tags in each asset isolated from each other, and the tags are dependent on the assets to exist in the system.
+资产是变量的顶部节点，WAGO VC Hub系统中，可以有任意数量的资产，用户可以将变量创建到任意资产中进行维护，每个资产中的变量相互隔离，变量依托于资产存在于系统中。
 
- It can be considered that tags are atomic level objects of assets, and assets are containers of tags, and multiple tags can be created in one asset. (Based on performance and a reasonable grouping mechanism, it is recommended that the number of tags in a single asset does not exceed 30,000.)
+可以认为，变量是资产的原子级对象，而资产是变量的容器，一个资产中，可以创建多个变量。（基于性能以及合理的分组机制，单个资产中建议变量的数量不超过**3万**个变量）
 
- In order to be applicable to complex real production environments, VC Hub introduces the concept of models and instances, which are located in the same subset of assets as tags, in order to make it easier for the user to model real devices, reuse the model and instantiate multiple device instances.
+为了适用于复杂的实际生产环境，WAGO VC Hub引入了**模型**与**实例**概念，它们与变量一样位于资产的子集中，目的是为了让用户更方便的对真实的设备进行建模，复用该模型，实例出多个设备实例。
 
-## **An example**
+#### 举个例子
 
- For example, in a workshop, there are 5 production lines, and each line is equipped with 10 motors, assuming that these 10 motors are of the same brand and model,then in the model management, we can first create a model of the motor, which can be created under the model with multiple tags, and then create a model of the line, and then create 10 instances of the motor using the motor model under the model of the line, and we get a model of the line with 10 motor instances mounted under it.
+比如一个车间中，存在5条生产线，每个生产线都装有10台电机，假设这10个电机的品牌型号完全相同，那么在模型管理中，我们可以先创建一个电机的模型，该模型下可创建多个变量，再创建一个产线模型，在该产线模型下，使用电机模型创建10个电机实例，我们就得到了一个产线模型下挂载了10个电机实例。
 
- In the early stage of production, which is the case of the 5 production lines we are talking about, we switch to instance management, create 5 production line instances by referencing the production line model, and update the difference configuration of the tags under the motors in the 5 production lines.
+在生产初期，也就是我们所说的5条生产线的情况，我们切换到实例管理中，引用产线模型创建5个产线实例，并更新5条产线中电机下变量的差异配置。
 
- Under the above operation, finally, we get 5 sets of complete production line data,which makes it easier to modify the program in case of increasing or decreasing the production line in the subsequent workshops.
+在上述操作下，最终，我们得到了5组完整的产线数据，在后续车间增加或减少产线的情况下，更容易对程序进行修改。
 
- The models, examples and tags mentioned here are all attributed to one asset, the data between the assets are isolated from each other and cannot be referenced to each other. The examples here are mainly used to understand why the VC Hub system proposes the concept of assets on top of the tags, for the specific use of the module, please refer to the introduction of the specific manual for the relevant functions of this module.
-
+这里所提到的模型、实例、变量都归属于一个资产，资产间的数据相互隔离，并不能相互引用，这里的例子，主要用于理解WAGO VC Hub系统为什么要在变量之上提出资产的概念，具体使用请参照本模块相关功能具体操作手册的介绍。

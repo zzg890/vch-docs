@@ -1,29 +1,31 @@
-# Devices
+# 设备
 
- The VC Hub supports a wide range of communication protocols, so you only need to configure the appropriate communication driver for each hardware device.
+WAGO VC Hub支持多种通讯协议，对于不同的硬件设施，只需为其配置相应的通信驱动程序即可。
 
- To quickly connect to one of your devices, click on the "Devices" menu of the VC Hub and select the type of device you want to add.
+要快速连接到您的一台设备，请点击WAGO VC Hub 的**“设备**”菜单，选择要添加的设备类型。
 
-## **Supported Device Types**
+#### 支持的设备类型
 
-- Modbus TCP
-- Modbus RTU
-- OPC UA
-- MQTT Native
-- MQTT SparkplugB
-- SIEMENS S7
-- WAGO Protocol
+- [known-link] 
+- [known-link] 
+- [known-link] 
+- [known-link]
+- [known-link]
+- [known-link]
+- [known-link]
+- [known-link] 
 
 ![alt text](1.png)
 
+#### 如何从我的 PLC 获取数据？
 
-## **How do I get data from my PLC?**
+将数据从 PLC 接入 WAGO VC Hub 的过程分为两步：
 
- The process of getting data from a PLC into VC Hub is divided into two steps:
-
-1.  Add the device.
-2.  Add the I/O tag in the Assets window of the editor. Bind a data source to the tag and select the device you added in step 1 in the data source. See the "Creating Tags" page.
-3.  Bind a data source to the tag and select the device you added in step 1 in the data source. See the "I/O Tag Binding Data Source" page.
+1. 添加设备。
+2. 在编辑器的资产窗口中添加I/O变量。请参阅[known-link]页面。
+3. 为变量绑定数据源，在数据源中选择步骤1中添加的设备。请参阅[known-link]页面。
 
 ![alt text](2.png)
+
+
 

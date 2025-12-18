@@ -1,36 +1,54 @@
-# Cannot Log In
+# 无法登录工程
 
-**Note** **:** If you forget all administrator user passwords for the current workspace you will not have any opportunity to log back into the current workspace. Please make sure to securely store the password.
+ 注意：如果您忘记了当前工程的所有管理员用户密码，您将没有机会再登录进入当前工程，请妥善保存工程密码。
 
-If you are unable to log into the current workspace, you can try switching workspaces or creating a new workspace.
+无法登录当前工程可以尝试切换工程或创建新工程。
 
-# Method 1: Switching Workspaces
+## 方法1：切换工程
 
-If you have other workspaces in your system and have the login information for those workspaces, you can manually switch to one of them.
+当你忘记当前工程的密码，但是依然记得其他工程的密码，可以手动切换到该工程。
 
-1. **Log in to the VC Hub installation server.**
-1. **Go to the user data directory.**
-      - For Windows installation, the default user data directory is: “%ProgramData%\WAGOVisualizationAndControlHub”, usually located at “C:\ProgramData\WAGOVisualizationAndControlHub”.
-      - For Linux installation, the default user data directory is: `/usr/share/`wagovisualizationandcontrolhub.
-      - If you changed the user data directory during installation, go to the directory you modified.
-1. **Navigate to the \Workspaces folder.**
-      - This directory contains all the workspaces, with each workspace stored in its own separate folder.
-      Go to the root directory of a specific workspace folder, where you can check the **“.ini”** file to view information such as the workspace name.
-      ![alt text](21.png)
-4. **Modify the ".ini" file in the root directory of the workspace folder.** Change the **Current** field to the **target workspace ID**.
-5. **Restart the service.**
+1. **登录WAGO VC Hub安装服务器**
+2. **进入用户数据目录**
 
-6. **Log in using the switched workspace user information.** 
+   - Windows 安装环境默认用户数据目录：“%ProgramData%\WAGOVisualizationAndControlHub”，一般在 “C:\ProgramData\WAGOVisualizationAndControlHub”。
+   - Linux 安装环境默认用户数据目录：/usr/share/WAGOVisualizationAndControlHub
+   - 如果您安装时修改过用户数据目录，请进入您修改的用户数据目录。
+3. **进入工程文件夹\Workspaces**
 
-# **Method 2: Create a New Workspace**
+该目录下包含了所有工程，每个工程存储在独立的文件夹中
 
-If there are no other available workspaces in your system, Method 1 will not be applicable. In this case, you can choose to create a new workspace.
+进入某个工程文件夹根目录查看“.ini”文件可以查看该工程名称等信息   
 
-1. **Log in to the VC Hub installation server.**
-2. **Navigate to the program installation directory.**
-      - Default installation directory for Windows: `C:\Program Files\WAGO Visualization And Control Hub`
-      - Default installation directory for Linux: `/usr/local/bin/wagovisualizationandcontrolhub-x.x.x-linux-x64`
-      - If you changed the installation directory during setup, go to your custom installation directory.
-3. **Delete the "workspace_initialized" file in the root directory**
-4. **Restart the service**
-5. **Refresh the frontend page, and you will be guided to create a new workspace Simply enter a username and password to complete the workspace creation.**
+![alt text](21.png)
+
+4. **修改工程文件夹根目录的".ini"文件**
+
+      将Current字段修改为目标工程id
+
+![alt text](22.png)
+
+5. **重启服务**
+6. **用切换后的工程用户信息进行登录**
+
+
+
+## 方法2：创建新工程
+
+当你忘记所有工程的密码时，方法1将不适用，此时您可以选择创建新建工程。
+
+1. **登录WAGO VC Hub安装服务器**
+2. **进入程序安装目录**
+
+ 默认服务安装目录：
+
+**Windows**：`"C:\Program Files\WAGO SCADA" `
+
+**Linux**：`"/usr/local/bin/wagoscada"`
+
+ 如果您安装时修改过安装目录，请进入您修改的安装目录。
+
+3. **删除根目录" workspace_initialized"文件 **
+4. **重启服务**
+5. **刷新前端页面将会重新引导创建新工程，输入用户名密码即可完成创建新工程**
+

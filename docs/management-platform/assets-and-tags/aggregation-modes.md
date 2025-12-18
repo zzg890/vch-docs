@@ -1,19 +1,19 @@
-# Aggregation Modes for Historical Tags
+# 历史变量的聚合模式
 
-For tags with historical storage enabled, historical data can be queried using aggregation modes.
+对于开启历史存储的变量，可以按照聚合模式对历史数据进行查询。
 
-**Aggregation mode** is a data processing method used for querying or displaying historical data. Typically, a time range is divided into multiple time intervals (based on time periods or a fixed number of points). Within each interval, data is processed according to the selected aggregation mode, enabling users to quickly extract valuable insights.
+**聚合模式**是一种数据处理方法，用于在查询或显示历史数据。通常我们会将一段时间划分为多个时间片(可以按时间周期划分，也可以按照固定点数进行划分)，在每个时间片内按照所设的聚合模式对数据进行查询，帮助用户快速获取有价值的信息。
 
-**VC Hub** supports the following aggregation modes:
+WAGO VC Hub支持以下聚合模式：
 
-- **Max**: The maximum value within the time interval.
-- **Min**: The minimum value within the time interval.
-- **Avg**: The average of all data points within the time interval.
-- **First**: The first data point within the time interval.
-- **Last**: The last data point within the time interval.
-- **Count**: The number of data points within the time interval.
-- **Range**: The difference between the maximum and minimum values within the time interval.
-- **Count On**: The number of times the value changes from 0 to a non-zero value within the time interval.
-- **Count Off**: The number of times the value changes from a non-zero value to 0 within the time interval.
-- **Duration On**: The cumulative duration (in seconds) within the time interval when the value is non-zero.
-- **Duration Off**: The cumulative duration (in seconds) within the time interval when the value is 0.
+- Max: 时间片内的最大值。
+- Min: 时间片内的最小值。
+- Avg: 时间片内所有数据点的平均值。
+- First: 时间片内的第一个数据。
+- Last: 时间片内的最后一个数据。
+- Count: 统计时间片内的数据点数。
+- Range: 时间片内，最大值和最小值之间的范围。
+- Count On: 时间片内，数值从0变为非0的次数。
+- Count Off: 时间片内，数值从非0变为0的次数。
+- Duration On: 时间片内，值为非0的累计持续秒数。
+- Duration Off: 时间片内，值为0的累计持续秒数。

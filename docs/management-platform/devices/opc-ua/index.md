@@ -1,165 +1,201 @@
 # OPC UA
 
-Used for communication with the OPC UA server. Only UA TCP is supported,  UA HTTPS is currently not supported.
+用于与OPC UA服务器通信。仅支持UA TCP, 暂不支持UA HTTPS。
 
-## **Connect to an OPC UA Server**
+#### 连接到OPC UA服务器
 
 ![alt text](1.png)
 
-1. On the "**Devices**" ->" **OPC UA**" page, click the “**Add"** button ，open the " Server Discovery" popup.
-   ![alt text](2.png)
-2. On the "**Server Discovery**" page, after entering the Discovery URL, click the search button to display the list of all OPC UA servers under the current URL.
-   ![alt text](3.png)
-   **Note**: Click the "**Skip**" button to manually configure connection settings. This is especially useful when the server does not allow anonymous endpoint access but provides a separate discovery endpoint. 
-3. Select a server and click "Next" to proceed to the "Select Endpoint" page. Choose a security policy and security mode. The default selection is **Best Available**. Selecting an entry means that the chosen security policy and security mode will be used to connect to the endpoint.
-   ![alt text](4.png)
-4. Click ​**Next** to proceed to the ​**Authentication** page, where you can enter the device **Name**.
-   ![alt text](5.png)
+1. 在”**设备**“->”**OPC UA**“页面，点击“**新增**”按钮，打开”发现服务器“弹窗。
 
-**Configuration Fields**
+![alt text](2.png)
 
-| **Name**            | **Description**                                                          |
-|------------------------|--------------------------------------------------------------------------|
-| Name                   | Name of the frame connection.                                            |
-| Endpoint URL           | The address of the device connection.                                    |
-| Best Available         | Use the highest level of security to connect.                            |
-| Security Mode          | Protection level for communication with OPC UA servers.                  |
-| Security Policy        | Specific algorithms and protocols for implementing secure communication. |
-| Authentication         | Whether the device has authentication enabled.                           |
-| -Username              | The username used for device authentication.                             |
-| -Password              | The ​password used for device authentication.                            |
-| Operation Timeout (ms) | The operation timeout time of the device in milliseconds.                |
-| Session Timeout (ms)   | The session timeout time for the device in milliseconds.                 |
+2. 在"**发现服务器**“页面，输入Discovery URL后，点击搜索按钮，显示当前URL下所有OPC UA Server列表。
 
-5.Click the **"OK"** button. The data will be displayed on the OPC UA list.
-   ![alt text](6.png)
-6.Click the Enable button  to enable the device.
-   ![alt text](7.png)
-7. Click the "Add Group" button on the created device to open a new window and add a group to the current device.
+![alt text](3.png)
 
-   Each group represents a subscription set, which can be created based on different subscription methods or intervals. The driver subscribes to and receives data according to the group's configuration.
-   ![alt text](8.png)
-8. On the "Add Group" page, check **"Show Advanced Properties"** to access additional settings.
-   ![alt text](9.png)
-   ![alt text](10.png)
+| **注意**：点击“**跳过**“按钮，允许您手动配置连接设置。这在服务器不允许匿名端点访问，但提供独立发现Endpoint的情况下非常有用。 |
+|-------------------------------------------------------------------------------------------------------------------------|
 
-**Advanced Property Fields**
+3. 选择一个 Server，点击"下一步"，进入“选择Endpoint"页面，选择安全策略和安全模式。默认选择**Best Available**。选择某条数据，表示之后将使用所选择的安全策略和安全模式连接到Endpoint。
 
-| **Name**                      | **Description**                                                                                                                                                                                                                        |
-|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Life Time Count(s)            | Maintain the subscription in an active state for a default duration of 1200 seconds.                                                                                                                                                   |
-| Keep Alive Count(s)           | Specifies the maximum time between Publish responses for a Subscription. If no notifications are available, an empty Publish response is returned in order to tell the Client that the Subscription is still alive. The default is 5s. |
-| Max Notifications Per Publish | Specifies the maximum number of notifications that the Client wishes to receive in a single Publish response. A value of zero indicates that there is no limit.                                                                        |
-| Priority                      | This setting defines the priority of the subscription relative to other subscriptions created by the client.A Client that does not require special priority settings should set this value to zero.                                    |
-| Sampling Interval(ms)         | The sampling interval. The default is 1000ms.                                                                                                                                                                                          |
-| Queue Size                    | The requested size of the MonitoredItem queue. The default is 1.                                                                                                                                                                       |
-| Discard Oldest                | Specifies the discard policy when the queue is full and a new Notification is to be queued. The default is true.                                                                                                                       |
-| Data Change Trigger           | Specifies the conditions under which a data change notification should be reported. The default is STATUS_VALUE.                                                                                                                       |
-| Deadband Type                 | The type of deadband.                                                                                                                                                                                                                  |
-| Deadband Value                | The value of deadband, if the range condition is not met, no data change notification will be triggered.                                                                                                                               |
-| Timestamp Origin              | Specifies the Timestamp Attributes to be transmitted for MonitoredItems or Nodes in Read and HistoryRead. The default is 'Source'.                                                                                                     |
+![alt text](4.png)
 
-For more detailed information on advanced properties, please refer to the official documentation:   [https://reference.opcfoundation.org/](https://reference.opcfoundation.org/) 
+4. 点击"下一步"将显示认证页面，填写设备名称。
 
-9.Click the **"OK"** button. The data will be displayed under the previously created device.
-   ![alt text](11.png)
+![alt text](5.png)
 
-## **Note**
+**配置字段**
 
-1. **Enable All** and **Disable All** are to enable or disable all data in the list.
-2. The **MaxNodesPerBrowse** configuration item on the server side affects the loading performance of the driver node, and it is recommended to set this configuration item to a larger value when more measurement points are configured on the server side.
-3. In the device list, The **Enabled Status** indicates whether the device has been enabled or not, unenabled devices will not connect and enabled devices will try to connect; the **Connection Status** indicates whether the device has successfully established a communication connection with the system.
+|**名称**       |**描述**                              |
+|:----------------|:---------------------------------------|
+| 名称           | 设备连接的名称。                       |
+| Endpoint URL   | 设备连接的地址。                       |
+| Best Available | 使用最高级别的安全性进行连接。         |
+| 安全模式       | 与OPC UA服务器之间通信的保护级别**。** |
+| 安全策略       | 实现安全通信的具体算法和协议。         |
+| 身份验证       | 设备是否开启身份验证。                 |
+| -用户名        | 设备身份验证时使用的用户名。           |
+| -密码          | 设备身份验证时使用的密码。             |
+| 操作超时(ms)   | 设备的操作超时时间，单位毫秒。          |
+| 会话超时(ms)   | 设备的会话超时时间，单位毫秒。          |
 
-## **Connection Example**
+5. 单击"**确认**"按钮。此时该条数据将显示在OPC UA的设备列表页面。
 
-#### **Connecting with Kepware**
+![alt text](6.png)
 
-Configure the OPC client connection:
+6. 在启用状态一栏点击启用按钮，启用该设备。
 
-1. Follow the steps in the example above to create an OPC UA device and group. 
-2. Click Test Connection.
-   ![alt text](12.png)
-3. The connection will be displayed as "**Test Connection Failed**". This is usually correct and expected because KEPServerEX denies access to the OPC UA client that the system creates for the first time. Therefore it is only necessary to allow KEPServerEX to trust the OPC UA client created by the system. 
-4. On the server where KEPServer is installed, right-click on the KEPServerEX icon on the desktop where KEPServerEX is installed and select "**OPC UA Configuration**" from the menu. As shown in the following figure, click the Trusted Clients tab:
-   ![alt text](13.png)
-5. Click the Trusted Clients tab.
-   ![alt text](14.png)
-6. Click the corresponding OPC UA client for your system, click the** Trust **button, and then click Close. The OPC Server Connections page now displays the status of the Kepware to which you want to connect.
-7. Right-click the KEPServerEX icon on the desktop where KEPServerEX is installed and select **Reinitialize** from the menu.
-8. Re-click **Test Connection** to verify that the connection was successful.
-9. Click **View** in the action bar to display information about the directories or nodes configured in the OPC UA server (Kepware).
-   ![alt text](15.png)
-10. Click on any directory or node to display the relevant property information for the current directory or node on the right side.
-   ![alt text](16.png)
+![alt text](7.png)
 
+7. 在创建的设备上单击"**添加组**"按钮，弹出新增窗口，为当前设备添加一个组。
 
-#### **Connecting with Codesys**
+每个组代表一个订阅集合，可按照不同订阅方式或订阅周期创建，并且驱动依据组的配置订阅和接收数据。
 
-Check OPC Port in Codesys:
+![alt text](8.png)
+
+8. 在添加组页面，勾选”显示高级属性“，还可以进行更多设置。
+
+![alt text](9.png)
+
+![alt text](10.png)
+
+**高级属性字段**
+
+| **名称**                      | **描述**                                                                                                      |
+|:-------------------------------|:---------------------------------------------------------------------------------------------------------------|
+| Life Time Count(s)            | 指定维持订阅处于活跃状态的时间，默认1200，单位秒。                                                               |
+| Keep Alive Count(s)           | 指定订阅的发布响应之间的最长时间，如果没有可用的通知，返回一个空的Publish响应，以告知客户端订阅仍然有效，默认5秒。 |
+| Max Notifications Per Publish | 指定客户端希望在单个Publish响应中接收的最大通知数，默认0，即表示没有限制。                                       |
+| Priority                      | 指定订阅相对于客户端创建的其他订阅的优先级，默认0，即不需要特殊优先级设置。                                      |
+| Sampling Interval(ms)         | 采样间隔，默认为1000毫秒。                                                                                      |
+| Queue Size                    | 指定所请求的受监视项目队列大小，默认为1。                                                                       |
+| Discard Oldest                | 指定队列已满且要排队新通知时的丢弃策略，默认是，即丢弃。                                                         |
+| Data Change Trigger           | 指定报告数据更改通知的条件，默认STATUS_VALUE，即状态码或者值发生变化时发送通知。                                 |
+| Deadband Type                 | 死区的类型，默认NONE。                                                                                          |
+| Deadband Value                | 死区值，如果不满足范围条件则不会触发数据更改通知。                                                              |
+| Timestamp Origin              | 指定要为读取和历史读取中的受监视项或节点传输的时间戳属性，默认是Source。                                        |
+
+**高级属性更详细的内容，请您参考OPC UA协议官方文档，** [https://reference.opcfoundation.org/](https://reference.opcfoundation.org/) 
+
+9. 单击"**确认**"按钮。此时该条数据将显示在之前创建的设备下。
+
+![alt text](11.png)
+
+#### 注意事项
+
+1. **全部启用**和**全部禁用**，是对列表中的所有数据进行启用或禁用。
+2. 服务端的**MaxNodesPerBrowse**配置项会影响到驱动节点的加载性能，当服务端配置的测点较多时，建议将此配置项设置一个较大的值。
+3. 设备列表中，**启用状态**表示设备是否已被启用，未启用的设备不会进行连接，启用的设备会尝试进行连接；**连接状态**表示设备是否已成功与系统建立通信连接。
+
+#### 连接示例
+
+##### 与Kepware连接
+
+配置OPC客户端连接：
+
+1. 按照上方示例的步骤创建OPC UA**设备**和**组。**
+2. 在操作栏中点击修改按钮，在认证页面，点击“测试连接“按钮。
+
+![alt text](12.png)
+
+3. 连接将显示为“**测试连接失败**”。这通常是正确且预期的，因为KEPServerEX拒绝访问系统第一次创建的OPC UA客户端。因此只需要让KEPServerEX信任系统创建的OPC UA客户端。
+4. 在安装了KEPServer的服务器上，右键单击安装了KEPServerEX的桌面的KEPServerEX图标，在菜单中选择“**OPC UA 配置(OPC UA Configuration)**”。如下图所示：
+
+![alt text](13.png)
+
+5. 点击**受信任的客户端**标签页**。**
+
+![alt text](14.png)
+
+6. 单击系统对应的OPC UA客户端，单击**信任**按钮，然后单击**关闭**。现在，OPC服务器连接页面显示要连接的Kepware的状态。
+7. 右键单击安装了KEPServerEX的桌面上的KEPServerEX图标，然后从菜单中选择**重新初始化**。
+8. 重新点击**测试连接**，检验是否连接成功。
+9. 点击操作栏中的**查看**可显示OPC UA服务器(Kepware)中配置的目录或节点信息。
+
+![alt text](15.png)
+
+10. 点击任何目录或者节点，右侧显示当前目录或者节点的相关属性信息。
+
+![alt text](16.png)
+
+##### 与Codesys连接
+
+在Codesys中检查OPC端口号:
 
 ![alt text](17.png)
 
-Configure the OPC client connection:
+配置OPC客户端连接：
 
-1. Follow the steps in the example above to create an OPC UA device and group. 
-2. Click Test Connection.
-   ![alt text](18.png)
-3. Trust VCHub certificate in Codesys
-   ![alt text](19.png)
+1. 按照上方示例的步骤创建OPC UA**设备**和**组。**
+2. 点击测试连接按钮。
 
-## **Binding to Tags**
+![alt text](18.png)
 
-Bind tags to data in the driver.
+3. 在Codesys中信任Wago VC Hub的证书。
 
-1. Create an I/O tag.<br>
-   ![alt text](20.png)
-2. On the add window, click the binding button of the data source.
-   ![alt text](21.png)
-3. In the pop-up data source window, you will see the node tree of the OPC UA Server. This tree structure reflects the server's hierarchy, containing all available objects, directories, and nodes.
-    1. Click the expand button ▶ next to a node name to expand the node and view its child nodes.
-    2. Click on the node you wish to bind. Once selected, the node will be highlighted, and the right window will update to display the relevant property information for that node.
-    3. If the selected node is an array, you can enter the desired index in the designated field on the right to access specific elements of the array. For example, entering 0 will access the first element of the array.
-   ![alt text](22.png)
-4. After completing the node selection and property editing, please ensure that you click the '**OK**' button on the interface to save your settings and binding information.
-5. If you decide not to proceed with the current binding, you can click the **'Cancel'** button to discard the changes you've made.
+![alt text](19.png)
 
-**Important Note on Updating NodeId:**
+#### 和变量绑定
 
-If you manually or batch-update the **NodeId** property, you must also update the corresponding **Path** property accordingly — or re-select the node in the Data Source Binding window. Failure to do so may cause the node displayed in the UI to become inconsistent with the actual bound node.
+将变量和驱动中的数据进行绑定。
 
-**Supported Data Types**
+1. 创建一个I/O变量。
 
-| **DataType**      | **Suggested Tag DataType**                    | **Read/Write** | **Description**                                                                                |
-|-------------------|-----------------------------------------------|----------------|-----------------------------------------------------------------------------------------|
-| Null              | [any]                                         | R              | **any:** Any data type.  Not a universal data type, usually occurs when an error occurs |
-| Byte              | Integer                                       | R/W            |                                                                                         |
-| SByte             | Integer                                       | R/W            |                                                                                         |
-| Int16             | Integer                                       | R/W            |                                                                                         |
-| Int32             | Integer                                       | R/W            |                                                                                         |
-| Int64             | Integer                                       | R/W            |                                                                                         |
-| UInt16            | Integer                                       | R/W            |                                                                                         |
-| UInt32            | Integer                                       | R/W            |                                                                                         |
-| UInt64            | Integer                                       | R/W            | The current maximum supported value is 9,223,372,036,854,775,807.                       |
-| Float             | Double                                        | R/W            |                                                                                         |
-| Double            | Double                                        | R/W            |                                                                                         |
-| String            | String                                        | R/W            |                                                                                         |
-| Boolean           | Bool                                          | R/W            |                                                                                         |
-| DateTime          | DateTime                                      | R/W            |                                                                                         |
-| Guid              | String                                        | R              |                                                                                         |
-| ByteString        | String                                        | R              |                                                                                         |
-| XmlElement        | String                                        | R              |                                                                                         |
-| NodeId            | String                                        | R              |                                                                                         |
-| ExpandedNodeId    | String                                        | R              |                                                                                         |
-| StatusCode        | String                                        | R              |                                                                                         |
-| QualifiedName     | String                                        | R              |                                                                                         |
-| LocalizedText     | String                                        | R              |                                                                                         |
-| ExtensionObject   | String                                        | R              |                                                                                         |
-| DataValue         | [any]                                         | R              |                                                                                         |
-| Variant           | [any]                                         | R              |                                                                                         |
-| Number            | Double                                        | R/W            |                                                                                         |
-| Integer           | Integer                                       | R/W            |                                                                                         |
-| UInteger          | Integer                                       | R/W            |                                                                                         |
-| Enumeration       | Integer                                       | R/W            |                                                                                         |
-| Array[**Simple**] | *Select based on the type of array elements.* | R/W            | **Simple:** Basic data types such as Int16, String, etc.                                |
-| Array[**Struct**] | String                                        | R              | **Struct:** Structure.                                                                  |
+![alt text](20.png)
+
+2. 在变量的编辑界面，点击数据源的设置按钮。
+
+![alt text](21.png)
+
+3. 在弹出的数据源窗口中，您将看到 OPC UA Server 的节点树。该树结构反映了服务器中的层次结构，包含所有可用的对象、目录和节点。
+   1. 点击节点名前的展开按钮 ▶ 可以展开节点，查看其子节点。
+   2. 单击您想要绑定的节点。选中后，该节点将被高亮显示，同时右侧窗口会更新显示该节点的相关属性信息。
+   3. 如果所选节点是一个数组，您可以在右侧窗口的指定位置输入所需的下标来访问数组中的特定元素，在输入框中填写下标值，例如0则访问数组的第一个元素。
+![alt text](22.png)
+
+4. 完成节点选择和属性编辑后，请确保点击界面上的“**确认**”按钮，以保存您的设置和绑定信息。
+5. 如果您决定不进行当前的绑定，可以点击“**取消**”按钮来放弃所做的更改。
+
+###### **关于更新NodeId的重要提示：**
+
+如果手动或批量更新**NodeId**属性，则还必须相应地更新相应的**Path**属性，或者在“数据源绑定”窗口中重新选择节点。如果不这样做，可能会导致UI中显示的节点与实际绑定的节点不一致。
+
+###### **支持的数据类型**
+
+| **数据类型**    | **建议绑定变量类型**     | **读写支持** | **说明**                                |
+|:-----------------|:--------------------------|:--------------|:-----------------------------------------|
+| Null            | *任意类型*               | 读           | 不是通用的数据类型，一般出现在发生错误时 |
+| Byte            | Integer                  | 读/写        |                                         |
+| SByte           | Integer                  | 读/写        |                                         |
+| Int16           | Integer                  | 读/写        |                                         |
+| Int32           | Integer                  | 读/写        |                                         |
+| Int64           | Integer                  | 读/写        |                                         |
+| UInt16          | Integer                  | 读/写        |                                         |
+| UInt32          | Integer                  | 读/写        |                                         |
+| UInt64          | Integer                  | 读/写        | 目前最大支持到9223372036854775807       |
+| Float           | Double                   | 读/写        |                                         |
+| Double          | Double                   | 读/写        |                                         |
+| String          | String                   | 读/写        |                                         |
+| Boolean         | Bool                     | 读/写        |                                         |
+| DateTime        | DateTime                 | 读/写        |                                         |
+| Guid            | String                   | 读           |                                         |
+| ByteString      | String                   | 读           |                                         |
+| XmlElement      | String                   | 读           |                                         |
+| NodeId          | String                   | 读           |                                         |
+| ExpandedNodeId  | String                   | 读           |                                         |
+| StatusCode      | String                   | 读           |                                         |
+| QualifiedName   | String                   | 读           |                                         |
+| LocalizedText   | String                   | 读           |                                         |
+| ExtensionObject | String                   | 读           |                                         |
+| DataValue       | *任意类型*               | 读           |                                         |
+| Variant         | *任意类型*               | 读           |                                         |
+| Number          | Double                   | 读/写        |                                         |
+| Integer         | Integer                  | 读/写        |                                         |
+| UInteger        | Integer                  | 读/写        |                                         |
+| Enumeration     | Integer                  | 读/写        |                                         |
+| Array[Simple]   | *依据数组元素的类型选择* | 读/写        | Simple：简单数据类型，如Int16，String等    |
+| Array[Struct]   | String                   | 读           | Struct：结构体                           |
+
+
 

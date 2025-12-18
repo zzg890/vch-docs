@@ -1,91 +1,88 @@
-# Asset
+# 资产
 
- There can be any number of assets in VC Hub, and the user can create tags to be maintained in any asset. Assets can be viewed as containers for tags, and the tags in each asset are isolated from each other, and the tags are dependent on the asset for their existence in the system. 
+WAGO VC Hub中可以有任意数量的资产，用户可以将变量创建到任意资产中进行维护，资产可以看作是变量的容器，每个资产中的变量相互隔离，变量依托于资产存在于系统中。
 
- By connecting two VC Hub nodes through a network and using a remote asset, you can view the tag information in an asset of the other node.
+在两个WAGO VC Hub节点间，通过组网建立连接，使用远程资产，便可以互相查看到对方节点某个资产中的变量信息。
 
- All tags are present in the asset and have real-time values. In addition, the asset can be bound to a history database, which is used to store and query the historical data of the tags.
+所有的变量都存在于资产中，并具有实时值。此外，资产可以绑定历史库，历史库用于存储和查询变量的历史数据。
 
-## **Asset Types**
+#### 资产类型
 
-There are two types of assets to choose from : local assets, and remote assets.
+有两种类型的资产可供选择：本地资产、远程资产。
 
-#### **Local Assets**
+###### 本地资产
 
- Local assets are owned by the current VC Hub node, which has all configuration rights for local assets. A local asset named "Default" is automatically created for each new workspace, and the user can create as many assets as needed.
+本地资产为当前WAGO VC Hub节点所有，当前节点拥有本地资产所有配置权限。每个新的工程中，都会自动创建一个名为“Default”的本地资产，用户可以根据需要创建任意数量的资产。
 
 ![alt text](1.png)
 
+**配置项**
 
+| **配置** | **描述**                                                                                                                                                              |
+|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 名称     | 资产的名称，名称不可重复，必填项。                                                                                                                                       |
+| 描述     | 资产描述信息，可选填。                                                                                                                                                  |
+| 类型     | 资产的类型，分为本地资产和远程资产，在资产创建后，类型不可更改。                                                                                                          |
+| 历史库   | 在资产类型为本地资产时可配置，可绑定系统中已存在的历史库。  选中的历史库会存储该资产下变量的实时值历史数据，在后续对该资产下变量进行历史相关读写时，都将通过该历史库进行。 |
 
-**Configuration items**
+###### 远程资产
 
-| **Configuration** | **Description**                                                                                                                                                                                                                                                                                                                                               |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name              | The name of the asset, the name cannot be repeated, required.                                                                                                                                                                                                                                                                                                 |
-| Description       | Description of the asset,optional.                                                                                                                                                                                                                                                                                                                            |
-| Type              | The type of the asset,categorized into local and remote assets, the type cannot be changed after the asset is created.                                                                                                                                                                                                                                        |
-| History Storage   | When the asset type is set to 'local asset', it can be configured to bind to an existing historical database in the system.   The selected historical database will store the real-time historical data of tags under this asset. Subsequent historical-related reads and writes of tags under this asset will be performed through this historical database. |
+远程资产可配置组网中远端节点的资产名，通过该绑定信息，访问其它节点的变量。
 
-#### **Remote Assets**
+远程资产的工作原理是通过组网网络，将读取请求转发到对端节点上，对端收到请求后，在通过网络将结果返回。
 
- Remote assets can be configured with the asset name of a remote node in the group network, and through this binding information, access to the tags of other nodes.
-
- Remote asset works by forwarding the read request to the remote node through the network, and the remote node receives the request and returns the result through the network.
- Currently, the remote asset only has the permission to read the asset data in the remote node, and any update operation can only be realized in the local asset.
+目前，远程资产仅拥有读取远端节点中资产数据的权限，任何更新操作，只可在本地资产中实现。
 
 ![alt text](2.png)
 
+**配置项**
 
-**Configuration items**
+| **配置**     | **描述**                                                                                                                                 |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| 名称         | 资产的名称，名称不可重复，必填项。                                                                                                          |
+| 描述         | 资产描述信息，可选填。                                                                                                                     |
+| 类型         | 资产的类型，分为本地资产和远程资产。在资产创建后，类型不可更改。                                                                             |
+| 远程节点     | 在资产类型为远程资产时可配置。选择和当前节点形成组网的其他节点的节点名称。                                                                 |
+| 远程资产名   | 在资产类型为远程资产时可配置。显示已选的远程节点下的所有资产，选择某个远程资产名后，会将该远程资产名下的所有信息显示在当前创建的资产名称下。 |
+| 显示高级属性 | 默认不勾选，勾选后显示“历史库”配置。  说明：勾选和不勾选，只是表示是否显示历史库配置，并不代表启用和禁用。                                     |
+| 历史库       | 选择一个本地的历史库。当所选的"远程资产名"的"远端历史库"恰好存储在当前节点下时，可以在此处直接选择当前节点下的历史库，提升查询性能。         |
 
-| Configuration            | Description                                                                                                                                                                                                                                                                              |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name                     | The name of the asset, the name is not repeatable and required.                                                                                                                                                                                                                          |
-| Description              | Description of the asset,optional.                                                                                                                                                                                                                                                       |
-| Type                     | The type of the asset,categorized into local and remote assets, the type cannot be changed after the asset is created.                                                                                                                                                                   |
-| Remote Node            | Configurable when the asset type is remote asset. Select the node name of other nodes that form a network with the current node.                                                                                                                                                         |
-| Remote Asset Name       | Configurable when the asset type is Remote Asset. Displays all assets under the selected remote node.When a remote asset name is selected, all information under that remote asset name is displayed under the currently created asset name.                                             |
-| Show Advances Properties | By default, this option is not selected. When selected, the "History Database" configuration is displayed.  **Note:** Selecting or not selecting this option only controls the visibility of the history database configuration and does not indicate whether it is enabled or disabled. |
-| History Database         | Select a local history database. If the "remote history database" of the selected "remote asset" is stored on the current node, you can directly choose the history database here to enhance query performance.                                                                          |
+#### 如何使用
 
-## **How to use**
-
- Click "**Tags** "->"**Asset** "menu to enter the asset management page.
+点击“变量“->"资产"菜单，即可进入资产管理页面。
 
 ![alt text](3.png)
 
+###### 查询
 
-#### **Query**
+在进入到资产管理页面后，用户可以查看到当前**工程下**所有的资产，默认以**创建时间**倒序排列，用户可以根据需要，自定义排序。
 
- After  entering the asset m anagement page, users can view all the assets under the current workspace, which are sorted in reverse chronological order by default,and users can customize the sorting according to their needs.
+用户可以通过右上角输入框，对资产名称进行模糊查询。
 
- Users can do fuzzy query on the asset name through the input box in the upper right corner.
+###### 新增
 
-#### **Add**
+用户点击右上角”新增”按钮，填入资产信息后，可新增资产。
 
- Users can add new assets by clicking the "Add" button in the upper right corner and filling in the asset information.
+###### 修改
 
-#### **Edit**
+用户点击资产列表任意资产右侧”修改”按钮，修改资产信息。资产一旦被创建后，它的**资产类型**不可被修改。
 
- Users can modify the asset information by clicking the "Modify" button on the right side of any asset in the asset list. Once an asset is created, its asset type cannot be modified.
+###### 删除
 
-#### **Delete**
+用户可点击资产列表中任意资产右侧的“删除”按钮，对选中资产进行删除，点击后会弹出提示框，用户点击确认后，即可删除，注意，当资产被删除后，资产下的所有模型、实例、变量将一起被删除。
 
- Users can click the "Delete" button on the right side of any asset in the asset list to delete the selected asset. After clicking the button, a prompt box will pop up, and users can click OK to delete the asset. Note that when the asset is deleted, all models, instances and tags under the asset will be deleted together.
+###### 导出
 
-#### **Export**
+用户可点击资产列表任意资产右侧的“导出“按钮，导出选中资产中资产配置及其下所有**模型**、**实例**、**变量**信息为**Json**文件。
 
- Users can click the "Export" button on the right side of any asset in the asset list to export the asset configuration and all models, instances and tagsunder the selected asset to a Json file.
+**远程资产**导出时，只会导出资产配置信息。
 
- When exporting remote assets, only the asset configuration information will be exported.
+注意，在对该**Json**文件中的内容不是特别理解的情况下，不建议对其进行修改。
 
- Note that it is not recommended to modify the Json file if you don't understand its contents.
+######## 导出*Json*示例
 
-#### **Import**
+![车间资产_20240123161724.json](https://docs.wagoscada.cn/wiki/api/wiki/editor/QHXVK91b/6rrAGavR/resources/space%3ANGeB7iWY?token=W.4hJ-_BZS3NYfJCwVX36TdE5oYoNsqNvQ8Y9LM5_wM8mJjAMKKPXBefKUnqhIPGo)
 
- With  the "Import" button on the top right corner of the page, users can import the Json file into the system again. If there is a renamed asset in the current system, users will be prompted to change the name.
+###### 导入
 
-  
-
-
+通过页面右上角的”导入”按钮，用户可以将**Json**文件再次导入到系统，如当前系统中存在重名的资产，则会提示用户修改名称。

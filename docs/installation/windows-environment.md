@@ -1,80 +1,107 @@
-# Windows Environment
+# Windows环境
 
-VC Hub provides installation packages for the 64-bit Windows operating system.
+WAGO VC Hub 提供Windows 64位操作系统安装包。
 
-Recommended Systems for Installation:
+推荐在以下系统上进行安装：
 
 - Windows Server 2012 R2
-- Windows Server 2016
+- Windows Server2016
 - Windows Server 2019
 - Windows Server 2022
-- Windows 10  (Not supported in Home Edition)
-- Windows 11  (Not supported in Home Edition)
+- Windows 10 （不支持家庭版）
+- Windows11（不支持家庭版）
 
-## **Installation Steps**
+#### 安装步骤
 
-1. Run the installation package program as an administrator.
-2. Select the installation language.
-   <br>![alt text](5.png)
-3. Perform a port check, if the port is occupied, the installation cannot proceed. 
-      ![alt text](6.png)
-4. Read and accept the license agreement.
-      ![alt text](7.png)
-5. Choose the installation location; the default path is: "C:\Program Files\WAGO Visualization And Control Hub".
-      ![alt text](8.png)
-6. Select the VC Hub application data directory.
-      ![alt text](9.png)
-7. Prepare for installation.
-      ![alt text](10.png)
-8. The installation is complete.
-      ![alt text](11.png)
-9.  After completion, the default access to the VC Hub site is: `http://localhost:8066`. After the installation, you will enter the configuration wizard interface.d
+1. 以管理员方式运行安装包程序
+2. 选择安装语言
 
-## Configuration **Steps**
+![alt text](5.png)
 
-1. Create an administrator user. Remember this username and password, as you will use them to log in for the first time. 
-      ![alt text](12.png)
-2. Port configuration, configure HTTP, HTTPS ports, and remember the access port. 
-      ![alt text](13.png)
-3. After completing the above steps, wait for the program to load, and then you can log in to the default-created workspace with the user created in step 1.
+3. 进行端口检查，如果端口被占用，将无法继续进行安装
 
-**Note**: After each installation, a new empty workspace will be created by default. To return to the original workspace, you need to log in to the new workspace first and then manually open the original workspace from the workspace list.
+![alt text](6.png)
 
-## Security Configuration (Optional)
+4. 阅读并同意许可协议
 
-To further enhance system security, it is recommended to perform the following steps after configuration to set permissions on the **service directory and application data directory**, allowing only specific users to access or modify them. This ensures that sensitive data is well protected and potential risks are minimized.
+![alt text](7.png)
 
-1. Create a dedicated service account
-      Create a dedicated account in Windows local users and groups (e.g., VCHubSvc):
-      ![alt text](14.png)
-2. Set service installation directory permissions
-Navigate to the service installation directory (e.g., C:\Program Files\WAGO Visualization And Control Hub), right-click the mouse, select "Properties" → "Security"
-   - Based on the actual security requirements, select the users or groups to be retained, and delete the unnecessary ones (such as Users, Everyone).
-   - Add the VCHubSvc user and grant Read, Write, and Modify permissions.
-   - Ensure the changes are applied to all subfolders and files.
-            Note: This step must be completed before changing the service logon account; otherwise, the service may fail to start or restart.
-3. Modify the service logon account
-      In Services (services.msc), locate the VC Hub service → right-click → Properties → Log On → select "This account":
-   - Enter .\VCHubSvc and the password.
-   - Save and restart the service.
-4. Set application data directory permissions
-     Navigate to the application data directory chosen during installation (e.g., C:\ProgramData\WAGOVisualizationAndControlHub), in the right-click menu, click "Properties"
-    → "Security":
-   - Based on the actual security requirements, select the users or groups to be retained, and delete the unnecessary ones (such as Users, Everyone).
-   - Add the VCHubSvc user and grant Read, Write, and Modify permissions.
-   - Ensure the changes are applied to all subfolders and files.
-5. Verify configuration
-      Access the VC Hub site (e.g., `http://localhost:8066`) and confirm that the site is running normally.
+5. 选择安装位置，默认路径：“C:\Program Files\WAGO VC Hub”
 
-## **Uninstallation Steps**
+![alt text](8.png)
 
-1. Enter the software uninstall list from the Control Panel. Find VC Hub and proceed with the uninstallation.
-      ![alt text](15.png)
-2. Confirm the uninstallation to complete the removal of the application.
-      ![alt text](16.png)
+6. 选择 WAGO VC Hub 应用程序数据目录
 
+![alt text](9.png)
 
+7. 准备安装
 
+![alt text](10.png)
 
+8. 安装完成
 
+![alt text](11.png)
+
+9. 完成后默认访问WAGO VC Hub站点：“http://localhost:8066”，安装完成后，将进入配置引导界面。
+
+#### 配置步骤
+
+1. 创建管理员用户，请牢记此用户名和密码，接下来将使用此用户名和密码进行首次登录。
+
+![alt text](12.png)
+
+2. 端口配置，配置 HTTP, HTTPS 端口，请牢记访问端口。
+
+![alt text](13.png)
+
+3. 上述步骤完成后，等待程序加载完毕即可用步骤1中创建的管理员用户登录默认工程。
+
+| **说明**：每次安装后会默认创建一个新的空的工程，要想回到原工程，需要登录新工程后，在工程列表中手动打开原工程。 |
+|-----------------------------------------------------------------------------------------------------------|
+
+#### 安全配置（可选）
+
+为进一步提升系统安全性，建议在配置完成后执行以下步骤，对**服务目录**及**应用程序数据目录**进行权限设置，只有特定的用户才能对其进行操作，以确保敏感数据受到有效保护并避免潜在风险。
+
+1. 创建专用服务账号
+
+       在Windows本地用户和组中新建一个账号（如 WagoVC HubSvc）：
+
+![alt text](14.png)
+
+2. 设置**服务安装目录**权限
+
+进入服务安装目录（例如 C:\Program Files\WAGO VC Hub），点击鼠标右键，选择“属性“ → “安全“
+
+   - 根据实际安全需求选择保留的用户或组，删除不必要的用户或组（如 Users、Everyone）。
+   - 添加 WagoVC HubSvc 用户，并为其赋予读取、写入、修改权限。
+   - 确认应用到子文件夹和文件。
+            注意：必须在修改服务运行账号之前完成此步骤，否则服务可能无法启动或重启。
+
+3. 修改服务运行账号
+
+      在服务管理器（services.msc）中找到 WAGO VC Hub服务 → 右键菜单中点击"属性" →"登录" → 选择“此账户”：
+
+   - 填入 .\WagoVC HubSvc 及密码。
+   - 保存并重启服务。
+4. 设置**应用程序数据目录**权限
+
+      进入安装时选择的应用程序数据目录（例如 C:\ProgramData\WAGOVC Hub），右键菜单中点击"属性"  → "安全"：
+
+   - 根据实际安全需求选择保留的用户或组，删除不必要的用户或组（如 Users、Everyone）。
+   - 添加 WagoVC HubSvc 用户，赋予读取、写入、修改权限。
+   - 确认应用到子文件夹和文件。
+5. 验证配置
+
+      访问 WAGO VC Hub 站点（例如 http://localhost:8066），确认站点正常运行。
+
+#### 卸载步骤
+
+1. 从控制面板进入软件卸载列表，找到WAGO VC Hub进行卸载。
+
+![alt text](15.png)
+
+2. 确认卸载将完成应用程序卸载。
+
+![alt text](16.png)
 

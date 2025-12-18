@@ -1,101 +1,95 @@
-# Multi-workspace management
+# 多工程管理
 
-## **Workspace Management Menu**
+#### 工程管理菜单
 
-After successfully log in, users can enter the workspace management list by clicking the workspace menu on the left menu bar.
+用户在成功登录后，可通过左侧菜单栏点击工程菜单进入到工程管理列表。
 
 ![alt text](2.png)
 
-## **Function Description**
 
-#### **Search**
 
-After entering the workspace management page, the user can view all the workspaces in the current VC Hub system, which are listed in reverse chronological order by default, and can be customized according to the user's needs. Currently, it only supports the reverse chronological order of the **creation time** and name.
+#### 功能描述
 
-In the list, the workspace currently in use will display a "flag" in front of the workspace name.
+###### 查询
 
-Users can do fuzzy query on workspace name through the input box in the upper right corner.
+在进入到工程管理页面后，用户可以查看到当前WAGO VC Hub系统中所有的工程，默认以**创建时间**倒序排列，用户可以根据需要，自定义排序，目前仅支持，创建时间、名称的正序倒序排列。
 
-#### **Add**
+在列表中，当前正在使用的工程前会在工程名称前显示“旗帜”标识。
 
-Users can add new workspaces by clicking the "**Add**" button at the upper right corner and filling in the workspace information.
+用户可以通过右上角输入框，对工程名称进行模糊查询。
+
+###### 新增
+
+用户点击右上角”**新增”**按钮，填入工程信息后，可实现新增工程。
 
 ![alt text](3.png)
 
+**配置项**
 
-**Configuration items**
+| **配置** | **描述**                                   |
+|----------|--------------------------------------------|
+| 名称     | 工程的名称。                                |
+| 描述     | 工程的描述。                                |
+| 用户名   | 首次切换工程，系统进行初始化时使用的用户名。 |
+| 密码     | 首次切换工程，系统进行初始化时使用的密码。   |
+| 确认密码 | 二次确认密码，必须与密码配置相同。           |
 
-| **Configuration**      | **Description**                                                                          |
-|------------------------|------------------------------------------------------------------------------------------|
-| Name                   | The name of the workspace.                                                               |
-| Description            | The description of the workspace.                                                        |
-| Username               | The username used to initialize the system when switching workspaces for the first time. |
-| Password               | The password used to initialize the system when switching workspaces for the first time. |
-| Confirmation PPassword | The second confirmation password must be the same as the password configuration.         |
+###### 修改
 
-#### **Edit**
-
-Users can click the **Edit** button on the right side of any workspace in the workspace list to edit the name and description of the workspace.
+用户可点击工程列表任意工程右侧**修改**按钮，修改工程的名称和描述。
 
 ![alt text](4.png)
 
+###### 打开
 
-#### **Open**
+用户可点击工程列表任意工程右侧**打开**按钮，切换到目标工程，点击后，会弹出确认提示框，用户点击**确认**后，页面会进入**Loading**状态，WAGO VC Hub后台进程将自动重启，完成重启后，页面将自动跳转到**登录**页面。
 
-Users can switch to the target workspace by clicking the **Open** button on the right side of any workspace in the workspace list. After clicking the button, a confirmation prompt box will pop up, and the page will enter the **Loading** state after the user clicks the OK button, and the background process of VC Hub will be restarted automatically, and after completing the restarting process, the page will be automatically jumped to the **login** page.
+注意，切换后，所有正在使用当前系统的用户都将被切换工程；重启过程中，系统将暂时失效，刷新页面会导致浏览器连接服务器失败，等待片刻后，重新进入网站仍可正常访问。
 
-Note that after the switch, all users who are using the current system will be switched to the workspace; during the restart process, the system will be temporarily disabled, and refreshing the page will cause the browser to fail to connect to the server, so wait for a few moments, and then re-enter the website can still be accessed normally.
+###### 复制
 
-#### **Copy**
+用户可点击工程列表任意工程右侧”**复制”**按钮，点击复制后，将弹出编辑框，被复制工程的默认名称为“{原工程名称}*_*Copy*”*，用户可以根据需求修改名称和描述后，点击”**确认**“**按钮**，即可完成复制。
 
-Users can click the "**Copy**" button on the right side of any workspace in the workspace list, after clicking Copy, an edit box will pop up, the default name of the copied workspace is "{original workspace name}_Copy", users can modify the name and description according to their needs, then click "**OK**" button. The default name of the copied workspace is "{original_workspace_name}_Copy".
-
-After successful copying, a brand-new workspace will be generated, the internal data is exactly the same as the copied Default workspace: 
+成功复制后，会生成一个全新的工程，内部数据与被复制的*Default*工程完全相同：
 
 ![alt text](5.png)
 
+###### 删除
 
-#### **Delete**
-
-Users can move their mouse over any of the workspace "**More**" buttons to display more drop-down menu options. 
+用户可将鼠标移动到任意工程“**更多**“按钮上，会显示更多的下拉菜单选项。
 
 ![alt text](6.png)
 
+用户点击“**删除**“按钮后，会弹出删除提示框，点击**确认**后，对选中的工程数据进行删除。
 
-After clicking the "**Delete**" button, a deletion prompt box will pop up, click on the **OK**, the selected workspace data will be deleted.
+注意：删除后不可恢复，请谨慎删除；当前工程的删除按钮会被禁用。
 
-Note: Deletion is not recoverable after deletion, please be careful; the delete button of the current workspace will be disabled.
+###### 导出
 
-#### **Export**
-
-The "More" dropdown menu under any project data includes an **Export** option, allowing users to export and download workspace data as needed.
-During the export process, users can optionally **set a password** for the exported file to enhance data security.
+任意工程数据更多按钮下拉菜单中包含**导出**选项，用户可以导出下载任意工程数据。导出时可以为导出文件设置密码。
 
 ![alt text](7.png)
 
-
-The exported file is saved in `.wsbk` format to the local Downloads directory. It can be used for workspace backup and synchronization across multiple nodes.
+导出后的文件以***wsbk***格式存储到本地的下载目录下，可用作工程的备份以及多节点间工程的同步。
 
 ![alt text](8.png)
 
-#### **Import**
+###### 导入
 
-The user can click the **Import** button in the upper-right corner to import a previously exported *.wsbk* file into the VC Hub system.
+用户点击右上角**导入**按钮，将先前导出的.*wsbk*文件导入到WAGO VC Hub系统中。
 
 ![alt text](9.png)
 
+选择本地.*wsbk*文件。如果导出时设置了密码，则导入时需要输入对应的密码方可导入。未设置密码的工程文件，可以直接导入。
 
-Select a local *.wsbk* file. If a password was set during export, you must enter the correct password to proceed with the import. Workspaces without a password can be imported directly.
+用户可根据需要选择导入工程时，是否需要保留当前系统的**节点配置**、**冗余**和**组网**信息。
 
-Users can choose whether to retain the current system’s **node settings, redundancy** and **networking** information during import.
+- 如果选择**保留**，则导入工程后，当前节点的节点配置、冗余和组网信息不会被修改；
+- 选择**替换**后，会正常完成工程数据的导入，使用导入文件中的节点配置、冗余和组网信息覆盖掉当前节点的对应配置。导入完成后，会自动重启，重启后显示登录页面。
 
-- If **Keep** is selected, the current node settings, redundancy and networking settings will remain unchanged after the import.
-- If **Replace** is selected, the workspace data will be successfully imported. The node settings, redundancy, and networking information from the import file will overwrite the corresponding configuration of the current node. After the import is completed, the system will automatically restart, and the login page will be displayed after the restart.
+如果导入的工程名称和列表中已有的工程重名，则导入后会自动在导入的工程名称后面增加_Copy。
 
-If the name of the imported workspace is the same as an existing workspace in the list, the system will automatically append **_Copy** to the imported workspace’s name.
-
-For a newly imported workspace, a **“New”** icon will be displayed after the workspace name for 30 minutes following the import.
+新导入的工程，在导入后的30分钟内，其名称后面会显示"**New**"图标。
 
 ![alt text](10.png)
-
 

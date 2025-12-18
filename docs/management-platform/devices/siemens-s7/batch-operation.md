@@ -1,56 +1,55 @@
-# Batch Operation of SIEMENS S7 Devices
+# 批量操作SIEMENS S7设备
 
-In industrial settings, it is often necessary to create multiple devices in bulk. VC Hub enables this through its export and import functions.
+在工业现场，往往需要批量创建设备。WAGO VC Hub通过**导出和导入**功能来实现这一功能。
 
-**Note:** To quickly create devices, it is recommended to first manually add a device to the list. Then, export the device and use the exported fields as a reference to add new devices.
+**说明：**要想实现快速创建设备，建议先在列表中手动新增一条设备信息，之后将该设备进行导出，根据导出的字段信息添加新的设备。
 
-## Batch Addition
-#### 1.Export Devices
+#### 批量新增
 
-Click the "Export" button in the upper right corner of the list to export all device information.
+###### 1.导出设备
 
-**Example of an Exported File:**
+点击列表右上角的“导出”按钮，可以将列表中的所有设备信息进行导出。
+
+导出文件示例：
 
 ![alt text](8.png)
 
+- 红框中内容为字段信息。
 
-- The content inside the red box represents the field information.
+###### 2.在Excel中新增设备
 
-#### 2.Adding Devices in Excel
+选中设备，拉动鼠标，完成快速复制。设备名称会递增。
 
-Select the devices , then drag the mouse to quickly copy.
+![alt text](9.gif)
 
-![s7-1](../../../assets/images/s7-1.gif)
-
-
-When batch creating devices, the model number does not need to increment. Instead, set the fill method to "Copy Cells" to fill the values.
-
-![alt text](9.png)
-
-
-
-#### 3.Import Devices
-
-Click the "Import" button in the upper right corner of the list to import the exported content. After importing, the newly added devices will have their enabled status set to "Disabled" by default.
+型号在批量创建的时候，数值不需要递增。将其填充方式改为填充单元格即可。
 
 ![alt text](10.png)
 
 
-## Batch Modification
 
-You can batch modify device information through the exported Excel. After making changes in the Excel, import it back. During the import, the data will be updated based on the name.
+###### 3.导入设备
 
-- If the device name in Excel matches the name in the SIEMENS S7 list, the corresponding configuration from Excel will be used to update the data.
-- If the device name in Excel does not exist in the SIEMENS S7 list, a new device will be added to the list.
-- If a device name in the SIEMENS S7 list does not exist in the import file, the data in the list will remain unaffected after the import.
+点击列表右上角的“导入”按钮，可以将导出的内容进行导入。导入后，新增的设备的启用状态默认为“已禁用”。
 
-## Batch Deletion
+![alt text](10.png)
 
-After selecting the devices to be deleted, click the **Delete** button at the top of the list to perform batch deletion.
+#### 批量修改
+
+可以通过导出的excel，对设备信息进行批量修改。修改后将excel导入，导入时，将按照名称进行数据更新。
+
+- Excel中的设备名称和SIEMENS S7列表中的名称一致，则使用excel中的该条配置进行数据更新。
+- Excel中的设备名称在SIEMENS S7列表中不存在，则在列表中新增该设备。
+- SIEMENS S7列表中的设备名，不存在于导入文件中，则导入后，列表中的该数据不受影响。
+
+#### 批量删除
+
+勾选需要删除的设备后，点击列表上方的删除按钮进行批量删除。
 
 ![alt text](11.png)
 
-Notes:
+**说明：**
 
-- Devices that are **Enabled** cannot be deleted.
-- Only devices on the current page can be deleted; cross-page deletion is not supported.
+1. 已启用状态的设备不允许删除
+2. 只能对当前页的数据进行删除，不支持跨页删除
+

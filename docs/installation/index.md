@@ -1,75 +1,75 @@
-# Installation and Upgrade
+# 安装和升级
 
-## **Installation Environment**
+#### **安装环境**
 
-VC Hub provides installation packages for both Windows and Linux environments. VC Hub does not support container deployment. Do not run it in a container.
+WAGO VC Hub 提供Windows以及Linux环境安装包，暂不支持容器化部署，请不要在容器中运行。
 
-If an old version is already installed in the installation environment, please uninstall it first. VC Hub does not support upgrade installation. You must uninstall the installed version before each new installation.
+如果安装环境中已经安装了旧版本请先卸载旧版本。目前不支持更新式安装，每次安装前请卸载已安装版本。
 
-***Note:*** ***Please close all local anti-virus software before installation.*** ***Because some antivirus software may mistakenly identify the installation files as viruses.***
+**说明：在安装前，请先关闭所有本地的防病毒软件。因为有的杀毒软件会把安装文件误认为是病毒。**
 
-## **Ports**
+#### 端口
 
-The installation program defaults to using port 8066 for HTTP and port 10443 for HTTPS. Please ensure that port 8066 is available during installation. 
+安装程序默认使用端口 8066作为Http端口，10443作为Https端口，请确保安装时 8066 端口可用。安装后可在配置引导界面修改Http端口。
 
-| **Port** | **Description**                       | **Configuration**                       |
-|----------|---------------------------------------|-----------------------------------------|
-| 8066     | HTTP default port                     | **"Node">"Node Settings">"Web Server"** |
-| 10443    | HTTPS default port                    | **"Node">"Node Settings">"Web Server"** |
-| 8099     | Networking default port               | **"Node">"Networking">"Main"**          |
-| 1883     | Built-in Mqtt Broker default TCP port | **"Node">"MQTT Broker">"Basic"**        |
-| 8883     | Built-in Mqtt Broker default TLS port | **"Node">"MQTT Broker">"Basic"**        |
+| **端口** | **说明**                 | **配置方式**                          |
+|:----------|:--------------------------|:---------------------------------------|
+| 8066     | Http默认端口             | **“节点“>“节点配置“>"网络设置"**      |
+| 10443    | Https默认端口            | **“节点“>“节点配置“>"网络设置"**      |
+| 8099     | 组网默认端口             | **“节点“>“组网“>"基本信息"**          |
+| 1883     | 内置Mqtt Broker的TCP端口 | **“节点”>”MQTT Broker”>"基本信息"** |
+| 8883     | 内置Mqtt Broker的TLS端口 | **”节点”>”MQTT Broker”>"基本信息"** |
 
-**The http and https ports are configured as follows:**
+**Http和HTTPS端口配置如下：**
 
 ![alt text](1.png)
 
-**The networking port is configured as follows:**
+**组网端口配置如下：**
 
 ![alt text](2.png)
 
-**The Mqtt port is configured as follows:**
+
+
+**Mqtt 端口配置如下：**
 
 ![alt text](3.png)
 
+#### 版本
 
-## **Version**
+WAGO VC Hub  采用版本号结构：“主版本号.次版本号.修订版本号”。工程数据版本必须和运行程序版本一致才可以运行。
 
-VC Hub uses a version structure: "Major Version. Minor Version. Revision Version". The project data version must match the version of the running program to operate.
+#### 卸载
 
-## **Uninstallation**
+用户数据目录和安装程序目录独立，卸载时不会删除用户数据。如果需要，您可以手动删除用户数据目录。
 
-The user data directory and the installation program directory are independent. Uninstalling will not delete user data. If necessary, you can manually delete the user data directory.
+#### 升级
 
-## **Upgrade**
+在维保有效期内，可以免费升级安装维保有效期期间发布的 WAGO VC Hub  安装包。
 
-Within the maintenance period, you can upgrade to the VC Hub installation package released during the maintenance period for free.
+如果维保过期，没有续保，可以免费升级修订版本。即只要“主版本号.次版本号”与当前授权版本号一致，升级无限制。
 
-If the maintenance has expired and has not been renewed, you can upgrade to the revision version for free. As long as the "Major Version. Minor Version" matches the current authorized version, there are no restrictions on upgrading.
+目前不支持直接升级安装，升级之前，请先卸载。卸载后安装新版本即可。
 
-Direct upgrade installation is not currently supported. Before upgrading, please uninstall first. After uninstalling, install the new version.
+#### 系统环境变量
 
-## **System Environment Tags**
+| **变量名**           | **描述** | **Windows环境默认值**        | **Linux环境默认值**   | **使用说明**                                                                                                                 |
+|:----------------------|:----------|:------------------------------|:-----------------------|:------------------------------------------------------------------------------------------------------------------------------|
+| WAGO_VC Hub _APP     | 安装目录 | C:\Program Files\WAGO VC Hub | /usr/local/bin        | 仅用于记录应用程序所在目录，请勿修改                                                                                          |
+| WAGO_VC Hub _DATA    | 数据目录 | C:\ProgramData\WAGOVC Hub    | /usr/share/WAGOVC Hub | 用于配置 WAGO VC Hub  应用程序数据目录。如果未配置则使用默认值。  如果想更改应用程序目录可修改此变量值，修改后重启应用配置生效。 |
+| WAGO_VC Hub _Version | 版本     | 安装程序版本                 | 安装程序版本          | 仅用于记录应用程序版本，请勿修改                                                                                              |
 
-| **Tag Name**                               | **Description**        | **Windows Environment DefaultValue** | **Linux Environment DefaultValue** | **Usage Instructions**      |
-|--------------------------------------------|------------------------|--------------------------------------|----------------------------------- |-----------------------------|
-| WAGO_Visualization_And<br>_Control_Hub_APP     | Installation directory | C:\Program Files\WAGO Visualization And Control Hub | /usr/local/bin      | Used only to record the application directory, do not modify.                                                                                                                                                                                            |
-| WAGO_Visualization_And<br>_Control_Hub_DATA    | Data directory         | C:\ProgramData\WAGO<br>VisualizationAndControlHub| /usr/share/wagovisualization<br>andcontrolhub | Used to configure the VC Hub application data directory. <br>If not configured, the default value is used.  <br>If you want to change the application directory, you can modify this tag value and restart the application for the configuration to take effect. |
-| WAGO_Visualization_And<br>_Control_Hub_Version | Version                | Installation program version         | Installation program version       | Used only to record the application version, do not modify.                                                                                                                                                                                              |
+#### 用户数据目录
 
-## **User Data Directory**
+Windows 安装环境用户数据目录：“%ProgramData%\WAGOVisualizationAndControlHub ”，一般在 “C:\ProgramData\WAGOVisualizationAndControlHub ”。
 
-Windows installation environment user data directory: "%ProgramData%\WAGOVisualizationAndControlHub", usually "C:\ProgramData\WAGOVisualizationAndControlHub".
+Linux 安装环境用户数据目录：/usr/share/WAGOVisualizationAndControlHub 
 
-Linux installation environment user data directory: /usr/share/wagovisualizationandcontrolhub
+#### 重启服务
 
-## **Restart Service**
-
-**Windows environment**: Restart the VC Hub service in the system services.
+**Windows环境**：在系统服务中，重启 WAGO VC Hub  服务。
 
 ![alt text](4.png)
 
+**Linux环境**：`sudo systemctl restart wagoVC Hub `
 
-**Linux environment**: `sudo systemctl restart virtualiztionandcontrolhub`
-
-And you can also stop the service first: `sudo systemctl stop virtualiztionandcontrolhub` and then start the service: `sudo systemctl start virtualiztionandcontrolhub`
+如果需要修改文件，可以先停止服务: `sudo systemctl stop wagoVC Hub ` 然后启动服务: `sudo systemctl start wagoVC Hub `

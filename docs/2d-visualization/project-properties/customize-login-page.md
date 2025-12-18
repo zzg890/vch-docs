@@ -1,67 +1,71 @@
-# Customize the Login Page
+# 自定义登录页面
 
-If you prefer not to use the default login screen for VC Hub, you can configure a custom login screen for your project. This custom login screen will be displayed when users access the operation screen and login authentication is required.
+如果用户不希望使用WAGO VC Hub的默认登录页面，可以自行在项目上配置一个登录画面。该登录画面，在用户访问运行画面，需要登录验证时显示。
 
-You can configure a custom login screen for each item individually.
+您可以对每个项目单独设置登录画面。
 
-## Customize a Login Page
+#### 自定义一个登录画面
 
-1. In the editor, create a page that will serve as the login page at runtime. For example, the page can include elements such as a username field, a password input box, and a login button, as shown in the figure below.
-    ![alt text](5.png)
-2. Set an execution script for the login button. When the login button is clicked, retrieve the values from the username and password input for authentication validation. 
-    ![alt text](6.png)
+1. 在编辑器中组态一个画面，该画面将作为运行时的登录页。例如下图所示：包含用户名，密码输入框，登录按钮。
 
-    ```typescript
-    const username = await System.UI.findControl('TextInput1')
-    const password = await System.UI.findControl('TextInput2')
-    // Execute Login
-    const loginSuccess = await System.Security.login(username.text, password.text)
-    // Login successfully, jump to startup page
-    if (loginSuccess) System.UI.redirect('#/runtime/yuan/Start', false)
-    ```
-**Note:** The script provided here is just an example. You can edit and customize the script according to your specific requirements. 
+![alt text](5.png)
 
-## To configure a login page for your project, follow these steps:
+2. 为登录按钮设置执行脚本。点击登录按钮时，获取用户名和密码输入框的值，用于登录校验。 
 
-1. In the editor, click the settings button in the top right corner of the project to open the "Project Configuration" popup.
-2. Set the startup page and login page for the project. If no login page is selected, the default VC Hub login page will be used when accessing the runtime page.
-3. After configuring, click the **OK** button to save the configuration.
+![alt text](6.png)
 
-    ![alt text](7.png)
+```typescript
+const username = await System.UI.findControl('文本输入框1')
+const password = await System.UI.findControl('文本输入框2')
+// 执行登录
+const loginSuccess = await System.Security.login(username.text, password.text)
+// 登录成功，跳转启动画面
+if (loginSuccess) System.UI.redirect('#/runtime/yuan/Start', false)
+```
+ 
+| **说明：**此处脚本仅是示例，您可以根据您的需求，灵活编辑脚本。 |
+|------------------------------------------------------------|
 
-## Accessing the Project Runtime Page
+#### 为项目配置登录画面
 
-**Scenario 1：The current Identity Provider is set to Local type, and a custom login page is configured for the project with auto login disabled.**
+1. 在编辑器中，点击项目右上角的设置按钮，打开项目管理弹窗。
+2. 为项目设置启动画面及登录画面。如果未选择登录画面，则在访问运行页面时将使用WAGO VC Hub自带的登录画面进行登录。
+3. 配置完成后，点击确定按钮，保存配置。
 
-When the user accesses the project's running page, the custom login page will be displayed. After completing the login on this page, the user will be able to view the running page.
+![alt text](7.png)
 
-**Scenario 2：The current Identity Provider is set to Local type, and a custom login page is configured for the project with auto login enabled.**
+#### 访问项目运行画面
 
-When the user accesses the project's running page, the custom login page  will not be displayed. Instead, the running page will be shown directly.
+**场景1：当前启用的Identity Provider为Local 类型，项目上配置了登录画面，项目未开启自动登录。**
 
-**Scenario 3：The current Identity Provider is set to OpenID Connect type, and a custom login page is configured for the project.**
+用户访问该项目的运行画面时，会显示自定义的登录画面，在该画面完成登录后，查看运行画面。
 
-When the user accesses the project's running page, the custom login page will not be displayed. Instead, the login page of the third-party system corresponding to the Identity Provider will be shown.
+**场景2：当前启用的Identity Provider为Local 类型，项目上配置了登录画面，且项目开启了自动登录。**
 
-**Scenario 4：The current Identity Provider is set to OpenID Connect type, and no custom login page is configured for the project.**
+用户访问该项目的运行画面时，不会显示自定义的登录画面，直接显示运行画面。
 
-When the user accesses the project's running page, the login page of the third-party system corresponding to the Identity Provider will be displayed instead of the custom login page.
+**场景3：当前启用的Identity Provider为OpenID Connect类型，项目上配置了登录画面。**
 
-## Exiting the Runtime Page
+用户访问该项目的运行画面时，不会显示自定义的登录画面，而是显示Identity Provider对应的第三方系统的登录画面。
 
-**Scenario1：The current Identity Provider is set to Local type, and a custom login page is configured for the project.**
+**场景4：当前启用的Identity Provider为OpenID Connect类型，项目未配置登录画面。**
 
-When the user logs out, they will be redirected to the custom login page set for the project.
+用户访问该项目的运行画面时，不会显示自定义的登录画面，而是显示Identity Provider对应的第三方系统的登录画面。
 
-**Scenario 2：The current Identity Provider is set to Local type, and no custom login page is configured for the project.**
+#### 退出运行画面
 
-When the user logs out, they will be redirected to the default VC Hub login page.
+**场景1：当前启用的Identity Provider为Local 类型，项目上配置了登录画面。**
 
-**Scenario 3：The current Identity Provider is set to OpenID Connect type, and no custom login page is configured for the project.**
+用户退出，会退至项目上设置的登录画面。
 
-When the user logs out, they will be redirected to the login page of the third-party system corresponding to the Identity Provider.
+**场景2：当前启用的Identity Provider为Local 类型，项目上未配置登录画面。**
 
-**Scenario 4：The current Identity Provider is set to OpenID Connect type, and a custom login page is configured for the project.**
+用户退出，会退至WAGO VC Hub自带的登录画面。
 
-When the user logs out, they will be redirected to the login page of the third-party system corresponding to the Identity Provider.
+**场景3：当前启用的Identity Provider为OpenID Connect类型，项目上未配置登录画面。**
 
+用户退出，会退至Identity Provider对应的第三方系统的登录画面。
+
+**场景4：当前启用的Identity Provider为OpenID Connect类型，项目上配置了登录画面。**
+
+用户退出，会退至Identity Provider对应的第三方系统的登录画面。

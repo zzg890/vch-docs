@@ -1,47 +1,44 @@
-# Azure Cloud Deployment
+# Azure 云部署
 
-## Introduction
+#### 简介
 
-This document primarily introduces how to deploy the VC Hub service based on Azure Virtual Machine, and how to enhance the availability, disaster recovery, and backup capabilities of the VC Hub service through the complementary services provided by Azure and the inherent capabilities of VC Hub.
+该文档主要介绍，如何基于Azure Virutal Machine部署WAGAO VC Hub服务，以及如何通过Azure提供的配套服务以及WAGO VC Hub自有的能力，提升WAGO VC Hub服务的可用性、容灾、备份能力。
 
-We will start with the deployment of a single virtual machine and progressively describe how to deploy a reliable VC Hub system for different business scenarios.
+我们将从单台虚拟机的部署开始，针对不同业务场景，循序渐进地描述如何部署一套可信赖使用的VC Hub系统。
 
-## Environment Requirements
+#### 环境要求
 
-#### Hardware (Virtual Machine Configuration)
+###### 硬件（虚拟机配置）
 
--  CPU: x86 64-bit architecture, 4 cores or above
--  Memory: 16GB
--  HardDrive: SSD or higher performance hard drive, with at least 10GB of available space
+[系统要求](../overview/system-requirements.md) 
 
-## Deployment Method
+#### 部署方式
 
-#### Single Virtual Machine Deployment
+###### 单虚拟机部署
 
-###### Overview
+######## 概要
 
-Subscribe to an Azure Virtual Machine with hardware configuration requirements and Azure Database service to proceed with cloud deployment in the future.
+订阅一台符合硬件配置的Azure Virtual Machine以及Azure Database服务，即可在后续完成云端部署工作。
 
-Currently, VC Hub supports the following Azure Database service types: Azure Database for MySQL, Azure Database for PostgreSQL, Azure SQL (SQL Server).
+目前，WAGO VC Hub支持的Azure Database服务类型有：Azure Database for MySQL,Azure Database for PostgreSQL，Azure SQL(SQL Server)。
 
-This method is only suitable for scenarios where system stability and disaster recovery capabilities are relatively low. The advantage lies in its simplicity of configuration.
+该方法仅适用于的业务场景，是在对系统稳定性、容灾能力要求相对不高的情况下使用，优势是配置简单。
 
-###### Deployment architecture
+###### 部署架构
 
-The diagram below illustrates the single-machine deployment architecture of VC Hub based on Azure, where VC Hub can be directly installed on an Azure VM using an installation package.
+下图为WAGO VC Hub基于Azure的单机部署架构，将WAGO VC Hub可直接通过安装包一键式安装到Azure VM上。
 
-We recommend users to subscribe directly to Azure Database service for storing VC Hub historical data (although VC Hub service also supports local database connection, users need to ensure the availability and backup of the database themselves for stability). After successfully subscribing to Azure Database, establish a connection with it through VC Hub's database connection feature.
+我们推荐用户直接订阅Azure Database服务来存储VC Hub的历史数据（VC Hub服务同样支持本地数据库连接，但需要用户自己保证数据库可用性与备份等稳定性功能），在成功订阅了Azure Database后，通过WAGO VC Hub的数据库连接功能与之建立联系。
 
-For cloud-based VC Hub nodes, communication with device sites can be achieved via the MQTT protocol, as depicted with Station2 in the diagram. To establish MQTT communication, users need to enable port 1883 on Azure Virtual Machine. Cloud-based VC Hub communicates with device sites through port 1883, which is currently not customizable.
+云端的WAGO VC Hub节点，支持通过MQTT协议与设备站点进行数据通讯，如图中**Station2**，建立MQTT通讯的前提，需要用户开启Azure Virtual Machine的**1883**端口，云端VC Hub将通过**1883**端口与设备站点进行通讯，该端口目前暂不支持自定义。
 
-Users can utilize the built-in networking feature of VC Hub to establish communication between cloud-based VC Hub nodes and other VC Hub nodes, as shown with Station1 in the diagram. Station1 can be deployed in the cloud or locally, and users need to enable port 8060 on Azure Virtual Machine for communication. This port can be customized within the VC Hub website.
+用户可以通过WAGO VC Hub内置的[组网](../management-platform/networking.md)功能，使云端的WAGO VC Hub节点与其它WAGO VC Hub节点建立通讯，如图中的**Station2**，**Station2**可以部署在云端或本地，用户需要开启Azure Virtual Machine的**8060**端口，该端口可在VC Hub网站中自定义修改。
 
 ![alt text](10.png)
 
+###### Service Level Agreements分析
 
-###### Service Level Agreements Analysis
-
-As of 2024-04-01, Azure officially provides the following Uptime Calculation for reference in single-instance virtual machine scenarios:
+截至2024-04-01，Azure官方提供了在单实例虚拟机场景中可供参考的Uptime Calculation如下：
 
  [Service Level Agreement for Microsoft Online Services (WW)](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/OnlineSvcsConsolidatedSLA(WW)(English)(April2024)(CR).docx)
 
@@ -49,80 +46,86 @@ As of 2024-04-01, Azure officially provides the following Uptime Calculation for
 |-----------------------|--------------|--------------|----------|
 | 99.9%                 | 99.5%        | 95%          | 99.9%    |
 
-#### Dual Virtual Machine Active-Standby Deployment
+###### 双虚拟机主备部署
 
-###### Overview
+为应对单台虚拟机服务可用性不能适应稳定性要求较高场景的情况下，可以利用两台Azure Virtual Machine实现WAGO VC Hub服务的主备部署（两台Azure VM推荐订阅在不同的Availability Zones中，可用性将提高到99.99%）。
 
-In scenarios where a single virtual machine service may not meet the stability requirements, a dual Azure Virtual Machine setup can be employed to achieve high availability for the VC Hub service. It is recommended to subscribe to two Azure VMs deployed in different Availability Zones to increase availability to 99.99%.
+利用WAGO VC Hub服务提供的[冗余](../management-platform/redundancy/index.md)配置，将两个VC Hub服务建立连接，形成主备，在主虚拟机宕机的情况下，备虚拟机会立刻接管数据监控服务，在用户角度做到无感切换。
 
-Utilizing the redundancy configuration provided by the VC Hub service, establish connections between the two VC Hub services to form a primary-secondary setup. In the event of the primary virtual machine failure, the secondary virtual machine will immediately take over the data monitoring service, ensuring seamless transition from the user's perspective.
+同时，两个WAGO VC Hub节点连接到同一个Azure Database上，Device需要通过MQTT协议同时与两个VC Hub节点进行数据交互。
 
-Simultaneously, both VC Hub nodes connect to the same Azure Database. Devices need to interact with both VC Hub nodes simultaneously via the MQTT protocol.
-
-For local VC Hub nodes, they only need to configure networking connections with the primary VC Hub node in the cloud. In the event of primary node failure, the local VC Hub will automatically switch its connection to the backup VM.
+而本地WAGO VC Hub节点则只需配置与云端主VC Hub节点的组网连接即可,在主节点宕机后，本地VC Hub与云端的连接将自动切换到备用VM上。
 
 ![alt text](11.png)
 
-###### Service Level Agreements Analysis
 
-System stability is enhanced. In the event of a VM failure, the VC Hub service on the other VM will continue to monitor device data, providing sufficient time for fault handling.
 
-| Across two or more availability zones in the same Azure region | In the same availability set or the same dedicated host group |
-|----------------------------------------------------------------|---------------------------------------------------------------|
-| 99.99%                                                         | 99.95%                                                        |
+##### Service Level Agreements分析
 
-## Port Configuration
+根据单台Azure VM提供的可用性描述，在双虚拟机部署配置主备理想状态下的Uptime Calculation如下：
 
-| Port | Function                  | Description                                                                                                                                   |
-|------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| 8066 | HTTP Service              | Provides the VC Hub HTTP service. Users can customize it during the installation process or modify it in the management platform.             |
-| 8043 | HTTPS Service             | Provides the VC Hub HTTPS service. Users can customize it during the installation process or modify it in the management platform.            |
-| 8060 | Networking and Redundancy | Used for communication in networking and redundancy functions. Default is 8060, which can be modified in the management platform by the user. |
-| 1883 | MQTT Communication        | Used for MQTT communication between the cloud-based VC Hub system and devices. Currently does not support customization.                      |
+| 同一 Azure 区域中跨两个或更多可用性区域 | 同一可用性集或同一专用主机组中 |
+|-----------------------------------------|--------------------------------|
+| 99.99%                                  | 99.95%                         |
 
-## Data Backup And Restore
+#### 端口配置
 
-#### Overview
+用户需要手动开启Azure Virtual Machine的端口，赋予WAGO VC Hub通讯权限。
 
-We recommend users to regularly back up important data within VC Hub. Users can choose to perform backups manually or automatically.
+| 端口号 | 功能       | 描述                                                                          |
+|--------|------------|-------------------------------------------------------------------------------|
+| 8066   | HTTP服务   | 提供了WAGO VC Hub HTTP服务，用户可在安装过程自定义修改，也支持在管理平台中修改  |
+| 8043   | HTTPS服务  | 提供了WAGO VC Hub HTTPS服务，用户可在安装过程自定义修改，也支持在管理平台中修改 |
+| 8060   | 组网与冗余 | 在组网和冗余功能通讯时使用，默认为8060，用户可在管理平台中修改                  |
+| 1883   | MQTT通讯   | 云端VC Hub系统与设备建立MQTT通讯时使用，暂不支持自定义                         |
 
-#### How to operate
+#### 数据备份及还原
 
-###### Historical database
+##### 概要
 
-In the cloud deployment scenario, we recommend using Azure Database to store VC Hub historical data (including collected historical data and alarm history data). Azure Database also provides data backup functionality. Users can refer to the technical documentation provided by Azure, specificall [Change automated backup settings for Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/automated-backups-change-settings?view=azuresql-db&preserve-view=true&tabs=azure-portal), to configure regular backups for the VC Hub historical database.
+我们推荐用户定期对WAGO VC Hub中的重要数据进行备份，用户可以采用手动或自动的方式进行。
 
-When it comes to restoring historical data, Azure Database also offers an automatic recovery feature. You can refer to the documentation on how to  [Restore a database from a backup in Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/recovery-using-backups?view=azuresql-db&tabs=azure-portal) for guidance on restoring data from backups in Azure SQL Database.
+##### 如何操作
 
-###### Application data directory
+##### 历史数据库
 
-All data in VC Hub, apart from historical data, is stored in a fixed directory in the form of folders and files, known as the application data directory. This directory includes data such as projects, certificates, network settings, logs, and more.
+在云部署方案中，我们推荐使用Azure Database来存储VC Hub历史数据(包含采集历史数据和报警历史数据)，Azure Database同样提供了数据备份功能，用户可以参照Azure提供的技术文档 [更改 Azure SQL 数据库的自动备份设置](https://learn.microsoft.com/en-us/azure/azure-sql/database/automated-backups-change-settings?view=azuresql-db&preserve-view=true&tabs=azure-portal)，配置定期备份VC Hub历史数据库。
 
-Users can manually copy the application data directory to another storage device for backup purposes on a regular basis. When restoration is needed, users can manually stop the VC Hub service on Azure VM, replace the application data directory on Azure VM with the backup directory, and then restart the VC Hub service.
+在需要还原历史数据时，Azure Database也提供了自动恢复功能， [从 Azure SQL 数据库中的备份还原数据库](https://learn.microsoft.com/en-us/azure/azure-sql/database/recovery-using-backups?view=azuresql-db&tabs=azure-portal)。
 
-Azure provides the [Azure Backup](https://azure.microsoft.com/en-us/products/backup) service, which allows for configuring automatic backups at regular intervals and provides cloud storage space. Azure Backup also offers restoration functionality, as detailed in [Restore files to an Azure virtual machine](https://learn.microsoft.com/en-us/azure/backup/tutorial-restore-files) (Note: Before restoration, the VC Hub service still needs to be manually stopped).
+###### 应用程序数据目录
 
-The specific location of the application data directory can be configured during the installation process, as shown in the following image.
+除历史数据外，WAGO VC Hub的所有数据都以文件的形式存储在一个固定的文件夹中，作为应用程序数据目录，其中包含工程、证书、网络、日志等数据。
+
+用户可定期手动复制应用程序数据目录到其它存储设备中进行备份。
+
+在需要还原时，用户可将WAGO VC Hub服务手动停止后，将Azure VM中的应用程序数据目录替换为备份的应用程序数据目录，再重新启动WAGO VC Hub服务即可。
+
+Azure提供了 [Azure Backup](https://azure.microsoft.com/en-us/products/backup)服务，该服务可配置定期进行自动备份，并提供了云存储空间。
+
+Azure Backup也提供了还原功能，具体可参考 [将文件还原到 Azure 中的虚拟机](https://learn.microsoft.com/en-us/azure/backup/tutorial-restore-files)（注意：在进行还原前，仍需手动停止WAGO VC Hub服务）
+
+应用程序数据目录的具体位置，可在安装过程配置，如下图所示。
 
 ![alt text](12.png)
 
+#### 数据监控
 
-## Data Monitor
+###### 概要
 
-#### Overview
+在生产环境中，当Azure VM整体宕机时，系统管理员通常都会收到异常报告信息，但在部分情景下，是服务器中的某个服务出现异常中断，例如VC Hub服务异常、数据库服务异常。此时，可引入Azure Monitor对服务器中VC Hub服务以及数据库服务进行性能监控。
 
-In a production environment, when Azure VM experiences a complete outage, system administrators typically receive abnormal report information. However, in some scenarios, it may be a specific service within the server that experiences an interruption, such as VC Hub service or database service. In such cases, Azure Monitor can be introduced to monitor the performance of VC Hub and database services within the server.
+系统管理员可以通过监测面板观测服务器状态，及时接收异常报警状态，处理故障，也可配置Azure Backup，监测备份故障与异常。
 
-System administrators can use the monitoring dashboard to observe the server's status, promptly receive alerts on abnormal states, and address issues. Additionally, they can configure Azure Backup to monitor backup failures and abnormalities.
-
-By enabling the Azure Monitor agent in Azure VMs hosting VC Hub services, real-time data can be received in the Azure Monitor center.
+在部署了WAGO VC Hub服务的Azure VM中，启用Azure Monitor代理，即可在Azure Monitor中心实时接收数据。
 
 ![alt text](13.png)
 
-#### Azure Monitor Url
+###### Azure Monitor地址
 
  [Azure Monitor](https://azure.microsoft.com/en-us/products/monitor)
 
-## Extension
+#### 扩展
 
-This manual primarily describes how to deploy VC Hub using the cloud services provided by Azure. Similarly, we also support similar hosted virtual machine services, database services, backup services, and monitoring services from other cloud service providers such as AWS, Alibaba Cloud, Tencent Cloud, and others.
+本手册主要描述了如何使用Azure提供的云服务部署WAGO VC Hub，同样，我们也支持其它云服务供应商类似的托管的虚拟机服务、数据库服务、备份服务、监控服务，如AWS、阿里云、腾讯云等。
+

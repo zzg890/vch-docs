@@ -1,60 +1,57 @@
-# Batch Operation of OPC UA Devices
+# 批量操作OPC UA设备
 
-In industrial settings, it is often necessary to create multiple devices in bulk. VC Hub enables this through its export and import functions.
+在工业现场，往往需要批量创建设备。WAGO VC Hub 通过**导出和导入**功能来实现这一功能。
 
-**Note:** To quickly create devices, it is recommended to first manually add a device to the list. Then, export the device and use the exported fields as a reference to add new devices.
+**说明**：要想实现快速创建设备，建议先在列表中手动新增一条设备信息，之后将该设备进行导出，根据导出的字段信息添加新的设备。
 
-## Batch Addition
+#### 批量新增
 
-#### 1.Export Devices
+###### 1.导出设备
 
-Click the "Export" button in the upper right corner of the list to export all device information.
+点击列表右上角的“导出”按钮，可以将列表中的所有设备信息进行导出。
 
-When exporting OPC UA devices, the exported file will include frame information.
+导出OPC UA设备时，会包含组的信息一起导出。
 
-**Example of an Exported File:**
+导出文件示例：
 
 ![alt text](23.png)
 
+- 红框中内容为字段信息。
+- 如果是设备，则“IsDevice”字段为True。
+- 组信息紧跟在对应的设备下面。例如上图的设备“Device1”下，存在1个组，Group。
 
-- The content inside the red box represents the field information.
-- If it is a device, the "IsDevice" field is set to **True**.
-- Group information is listed directly under the corresponding device.For example, in the image above, the device **"Device1"** has 2 groups, D and P.
+| **说明**：如果OPC UA设备使用**用户名，密码**进行身份验证，导出的时候**不包含**这两个字段。导入设备后，需手动为每个设备设置用户名和密码。 |
+|------------------------------------------------------------------------------------------------------------------------------------|
 
-**Note**: If the OPC UA device uses a **username** and **password** for authentication, these two fields will not be included during export. After importing the device, you need to manually set the username and password for each device.
+###### 2.在Excel中新增设备
 
-#### 2.Adding Devices in Excel
+选中设备和组，拉动鼠标，完成快速复制。名称会递增。
 
-Select the devices and groups, then drag the mouse to quickly copy.
+![alt text](24.gif)
 
-![opc](../../../assets/images/opc.gif)
+###### 3.导入设备
 
-
-#### 3.Import Devices
-
-Click the "Import" button in the upper right corner of the list to import the exported content. After importing, the newly added devices will have their enabled status set to "Disabled" by default.
-
-![alt text](24.png)
-
-
-## Batch Modification
-
-You can batch modify device information through the exported Excel. After making changes in the Excel, import it back. During the import, the data will be updated based on the name.
-
-- If the device name in the Excel matches the name in the OPC UA list, the data in the Excel for that entry will be used to update the data.
-- If the device name and group in the Excel match the entries in the OPC UA list, the data in the Excel for that entry will also be used to update the data.
-- If the device name or group name in the Excel does not exist in the OPC UA list, the device and group will be added to the list.
-- If a device in the OPC UA list does not exist in the imported file, the data for that device will remain unaffected in the list.
-
-## Batch Deletion
-
-After selecting the devices to be deleted, click the **Delete** button at the top of the list to perform batch deletion.
+点击列表右上角的“导入”按钮，可以将导出的内容进行导入。导入后，新增的设备的启用状态默认为“已禁用”。
 
 ![alt text](25.png)
 
+#### 批量修改
 
-Notes:
+可以通过导出的excel，对设备信息进行批量修改。修改后将excel导入，导入时，将按照名称进行数据更新。
 
-- Devices that are **Enabled** cannot be deleted.
-- Only devices on the current page can be deleted; cross-page deletion is not supported.
-- When a device is deleted, its associated groups will also be deleted.
+- Excel中的设备名称和OPC UA列表中的名称一致，则使用excel中的该条配置进行数据更新。
+- Excel中的设备名称和设备下的组，与OPC UA列表中的一致，则使用excel中的该条配置进行数据更新。
+- Excel中的设备名称或者组名称在OPC UA列表中不存在，则在列表中新增该设备和组。
+- OPC UA列表中的设备，不存在于导入文件中，则导入后，列表中的该数据不受影响。
+
+#### 批量删除
+
+勾选需要删除的设备后，点击列表上方的删除按钮进行批量删除。
+
+![alt text](26.png)
+
+**说明：**
+
+1. 已启用状态的设备不允许删除
+2. 只能对当前页的数据进行删除，不支持跨页删除
+3. 删除设备时，会连同组一起删除

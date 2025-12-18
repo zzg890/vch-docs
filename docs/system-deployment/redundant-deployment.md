@@ -1,26 +1,22 @@
-# Redundant Deployment
+# 冗余部署
 
- In some critical site scenarios, you can increase system availability by adding redundant servers. If the primary server fails, the redundant server immediately takes over from the primary server to ensure system availability and data integrity until the primary server is restored.
+在一些关键的现场场景中，你可以通过添加冗余服务器来提高系统的可用性。如果主服务器发生故障，冗余服务器会立即接手主服务器的工作，以保证在主服务器重新恢复前的系统可用性和数据完整性。
 
- The following is an example of a redundant server deployment in a standalone deployment architecture:
+下面是单机部署架构下的冗余服务器部署示例：
 
 ![alt text](7.png)
 
 
- The following is an example of a redundant server deployment in a grouped network architecture：
+
+下面是组网架构下的冗余服务器部署示例：
 
 ![alt text](8.png)
 
 
 
-
- The following is an example of a redundant server deployment under the Cloud Edge networking architecture:
+下面是云边组网架构下的冗余服务器部署示例：
 
 ![alt text](9.png)
-
-
-
-
 
 
 

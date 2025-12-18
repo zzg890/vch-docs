@@ -1,32 +1,33 @@
-# Hybrid Cloud and Local Deployment
+# 云端本地混合部署​
 
- A VC Hub  node deployed within a local area network can be networked with VC Hub  in the cloud. In the absence of a public IP address, nodes within a local area network can generally only create outbound connections from local area.
+一个部署在局域网内的VC Hub节点可以和云端的VC Hub进行组网。局域网内的节点在没有公网IP的情况下，一般只能从局域网的节点创建出站连接，连接到云端的节点。
+
 ![alt text](4.png)
 
+#### 隧道网络
 
-## **Tunnel Network**
-
- When the outbound connection is successfully connected, a tunnel network will be established between the two nodes. Through this tunnel network, the nodes in the local area network (LAN) and the nodes in the cloud can realize bi-directional access, even if the nodes in the LAN don't have a public IP, the nodes in the cloud are still able to send HTTP requests to the nodes in the LAN and read/write the data of the nodes in the LAN through the tunnel network.
+当出站连接成功连接后，两个节点之间会建立一条隧道网络，通过这条隧道网络，局域网的节点和云端的节点可以实现双向访问，即使局域网的节点没有公网ip, 云端的节点还是能够通过隧道网络向局域网内的节点发送http请求并读写局域网节点的数据。
 
 ![alt text](5.png)
 
-## **Flow Control**
 
- The data collected between the nodes of the VC Hub grouping will not be synchronized in real time, and the cloud nodes will only send data requests to the nodes on the LAN when end users on the cloud nodes view the data from the remote nodes, and this on-demand subscription approach can effectively avoid sky-high bills on the cloud platform.
 
-## **Note**
+#### 流量控制
 
- Due to the complex network environment of the public network, the TCP connection of the group network may not be able to access the cloud node, especially the restriction of the firewall, so you need to pay attention to the following points when configuring the group network of the cloud edge:
+WAGO VC Hub组网的节点之间采集的数据不会进行实时同步，只有当云节点上的终端用户查看远程节点的数据时，云节点才会向局域网的节点发送数据请求，通过这种按需订阅的方式可以有效的避免在云平台上产生天价账单。
 
-1.  The server of cloud environment tries to use static IP, if there is no static IP, you can bind a domain name to the server.
-2.  The server of the cloud platform will only open the port of HTTP service by default, and you need to open the port used for networking before networking.
+#### 注意事项
 
-    Take Azure as an example, you need to add inbound connection rules in the network management page of the virtual machine to open up the network port, and the default network port is 8060.
- 
-    ![alt text](6.png)
+由于公网的网络环境比较复杂，组网的tcp连接可能无法访问云端节点，特别是防火墙的限制，所以配置云边的组网时需要注意以下几点：
 
-3.  LAN firewall outbound rules may also restrict the ports of non-HTTP services, LAN servers sending TCP connections to the public network with a target port of 8060 may be intercepted by the LAN local firewall, so you need to check with the LAN administrator to make sure that the ports used for networking are not blocked, and if blocked, you can apply for the opening of networking ports or change the networking ports of the cloud nodes.
+1. 云环境的服务器尽量采用静态IP, 如果没有静态IP, 可以给服务器绑定一个域名。
+2. 云平台的服务器一个默认只会开放http服务的端口，组网之前需要将组网所使用的端口开放出来。
 
+以Azure为例，需要在虚拟机的网络管理页面新增入站连接规则将组网端口开放出来，组网端口默认为8060。
+
+![alt text](6.png)
+
+3. 局域网防火墙出站规则可能也限制了非http服务的端口，局域网中的服务器向公网发送目标端口为8060的tcp连接可能会被局域网本地的防火墙拦截，所以组网之前需要先向局域网的管理员确认组网用到的端口是否被屏蔽，如果被屏蔽可以申请开放组网端口或者修改云端节点的组网端口。
 
 
 

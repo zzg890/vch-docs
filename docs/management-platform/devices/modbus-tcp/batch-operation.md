@@ -1,72 +1,64 @@
-# Batch Operation of Modbus TCP Devices
+# 批量操作Modbus TCP设备
 
-In industrial settings, it is often necessary to create multiple devices in bulk. VC Hub enables this through its export and import functions.
+在工业现场，往往需要批量创建设备。WAGO VC Hub通过**导出和导入**功能来实现这一功能。
 
-**Note:** To quickly create devices, it is recommended to first manually add a device to the list. Then, export the device and use the exported fields as a reference to add new devices.
+**说明：**要想实现快速创建设备，建议先在列表中手动新增一条设备信息，之后将该设备进行导出，根据导出的字段信息添加新的设备。
 
-## Batch Addition
+#### 批量新增
 
-#### 1.Export Devices
+###### 1.导出设备
 
-Click the "Export" button in the upper right corner of the list to export all device information.
+点击列表右上角的“导出”按钮，可以将列表中的所有设备信息进行导出。
 
-When exporting Modbus TCP devices, the exported file will include frame information.
+导出Modbus TCP设备时，会包含帧的信息一起导出。
 
-**Example of an Exported File:**
+导出文件示例：
 
 ![alt text](7.png)
 
+- 红框中内容为字段信息。
+- 如果是设备，则“IsDevice”字段为True。
+- 帧信息紧跟在对应的设备下面。例如上图的设备“Device1”下，存在9个帧，AAA1~AAA9。
 
-- The content inside the red box represents the field information.
-- If it is a device, the "IsDevice" field is set to **True**.
-- Frame information is listed directly under the corresponding device.For example, in the image above, the device **"Device1"** has **9 frames** associated with it: **AAA1 to AAA9**.
+###### 2.在Excel中新增设备
 
-#### 2.Adding Devices in Excel
+选中设备和帧，拉动鼠标，完成快速复制。
 
-Select the devices and frames, then drag the mouse to quickly copy.
+![alt text](8.gif)
 
-![tcp-1](../../../assets/images/tcp-1.gif)
+如果某一列想保持不变，例如所有设备都使用同样的帧名称，可以先复制一个设备，手动将帧名称改为一致。之后再全选进行拖动复制。
 
+![alt text](9.gif)
 
-If you want to keep a specific column unchanged, such as using the same frame name for all devices, you can first copy one device and manually set the frame name to be consistent. Then, select all and drag to copy.
+对于从站地址，例如上图所示，如果想保持每个设备的从站地址一致，需手动对这列进行修改。选择两组设备数据后，按住Ctrl键进行拖动复制。
 
-![tcp-2](../../../assets/images/tcp-2.gif)
+开始地址，结束地址，频率的操作，同从站地址。
 
-For the **SlaveAddress**, as shown in the image above, if you want to keep the same slave address for each device, you need to manually modify this column. Select two sets of device data, then hold down the Ctrl key while dragging to copy.
+![alt text](10.gif)
 
-The operations for the **StartAddress**, **EndAddress**, and **Frequency** are the same as for the **SlaveAddress**.
+###### 3.导入设备
 
-![tcp-3](../../../assets/images/tcp-3.gif)
+点击列表右上角的“导入”按钮，可以将导出的内容进行导入。导入后，新增的设备的启用状态默认为“已禁用”。
 
-#### 3.Import Devices
+![alt text](11.png)
 
-Click the "**Import**" button in the upper right corner of the list to import the exported content. 
+#### 批量修改
 
-After importing, the newly added devices will have their enabled status set to "Disabled" by default.
+可以通过导出的excel，对设备信息进行批量修改。修改后将excel导入，导入时，将按照名称进行数据更新。
 
-![alt text](8.png)
+- Excel中的设备名称和Modbus TCP列表中的名称一致，则使用excel中的该条配置进行数据更新。
+- Excel中的设备名称和设备下的帧，与Modbus TCP列表中的一致，则使用excel中的该条配置进行数据更新。
+- Excel中的设备名称或者帧名称在Modbus TCP列表中不存在，则在列表中新增该设备和帧。
+- Modbus TCP列表中的设备，不存在于导入文件中，则导入后，列表中的该数据不受影响。
 
+#### 批量删除
 
-## Batch Modification
+勾选需要删除的设备后，点击列表上方的删除按钮进行批量删除。
 
-You can batch modify device information through the exported Excel. After making changes in the Excel, import it back. During the import, the data will be updated based on the name.
+![alt text](12.png)
 
-- If the device name in the Excel matches the name in the Modbus TCP list, the data in the Excel for that entry will be used to update the data.
-- If the device name and frame in the Excel match the entries in the Modbus TCP list, the data in the Excel for that entry will also be used to update the data.
-- If the device name or frame name in the Excel does not exist in the Modbus TCP list, the device and frame will be added to the list.
-- If a device in the Modbus TCP list does not exist in the imported file, the data for that device will remain unaffected in the list.
+**说明：**
 
-## Batch Deletion
-
-After selecting the devices to be deleted, click the **Delete** button at the top of the list to perform batch deletion.
-
-![alt text](9.png)
-
-
-Notes:
-
-- Devices that are **Enabled** cannot be deleted.
-- Only devices on the current page can be deleted; cross-page deletion is not supported.
-- When a device is deleted, its associated frames will also be deleted.
-
-
+1. 已启用状态的设备不允许删除
+2. 只能对当前页的数据进行删除，不支持跨页删除
+3. 删除设备时，会连同帧一起删除

@@ -1,52 +1,27 @@
-# Product License
+# 产品授权
 
-## Trial Version Instructions
+#### 试用版说明
 
-After installation, VC Hub offers a 30-day free trial. During the trial period, all functions of the product can be used.
+WAGO VC Hub网站提供的试用版和购买授权后激活的正式版本拥有完全相同的功能，因此你可以在决定购买WAGO VC Hub前，无限期的试用我们的产品。购买授权之后，只需要将授权码输入到试用版中进行激活，即可将使用版本转换为正式版本。
 
-You can activate the product by purchasing a formal license. Currently, only online activation is supported.
+在试用模式下的唯一限制是WAGO VC Hub会每两小时停止服务，你可以在界面上点击”重置试用“按钮开启新一轮试用。
 
-## Product Authorization Explanation
+#### 产品授权说明
 
-VC Hub supports both **annual subscription** and **one-time purchase**. Users can only choose one of these methods for purchase.
+WAGO VC Hub的产品授权是一种基于服务器的授权方式，并且不限制客户端和点位的数量。接入的点位和客户端数量的上限取决于服务器的性能。
 
-Authorization can be granted based on the following several function modules:
+服务器的授权是根据功能模块组合而成的，您可以根据需要购买不同的功能模块，可参考WAGO VC Hub的[known-link]。
 
-#### I/O Tag
+下面是WAGO VC Hub提供的功能模块：
 
-There are 6 different license quantities available. You can determine the number of licenses to purchase based on your specific situation.
+| **功能模块**   | **依赖模块**              | **说明**                                                                                                                                                                                                                                                                             |
+|----------------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 基础平台模块   | 无                        | 基础平台模块是唯一必须购买的模块。基础平台模块包含了常见的驱动，如Modbus TCP/RTU, OPC UA, Siemens S7, MQTT，以及变量管理，报警管理，后台脚本计算，时间表等功能。基础平台模块也包含组网和冗余 注1的功能。在组网环境中，基础平台可以作为数采服务器独立运行，并按需提供数据给其他WAGO VC Hub节点。 |
+| 2D可视化模块   | 基础平台模块              | 2D可视化模块可以让用户使用WAGO VC Hub的Web编辑器来构建组态监控画面。                                                                                                                                                                                                                  |
+| 3D可视化模块   | 基础平台模块，2D可视化模块 | 3D可视化模块可以让用户使用WAGO VC Hub的Web 3D编辑器来构建数字孪生应用，并可和2D画面进行融合展示。                                                                                                                                                                                      |
+| 数据库连接模块 | 基础平台模块              | 数据库连接模块可以让WAGO VC Hub连接到第三方数据库，如MySQL，PostgreSQL, InfluxDB等。WAGO VC Hub可以把这些数据库变成历史库，将数据存储到这些数据库中。WAGO VC Hub安装包本身自带一个SQLite数据库，可以用于小型和简单的场景。                                                                  |
 
-- 1,000 I/O tags 
-- 2,000 I/O tags
-- 5,000 I/O tags
-- 10,000 I/O tags
-- 20,000 I/O tags
-- 50,000 I/O tags
+注1：冗余功能是指两台WAGO VC Hub服务器互为主备，因此你需要为两台服务器购买两个基础平台模块的授权。
 
-Note: The tag numbers cannot be added together. For example: If you need to use 3,000 I/O tags, then you need to purchase a license that supports 5,000 I/O tags. 
 
-#### Concurrent Online User
-
- The concurrent user count including 3 different types of data. 
-
-- 2 Concurrent Online Users
-- 5 Concurrent Online Users
-- 10 Concurrent Online Users
-
-If the user does not purchase any Concurrent Online User type license, only one concurrent user is allowed.
-
-The number of concurrent users is also not supported for accumulation.
-
-#### Add On 
-
-The following functional modules are Add Ons. Without purchasing the corresponding license, the functions will be restricted. 
-
-- Database: MySQL,SQL Server,PostgreSQL,InfluxDB
-- Report
-- Alarm Notifications: SMS(Twilio),SMS(Ali Cloud),WeCom,DingTalk
-- Open API
-- Driver: MQTT Native,MQTT SparkplugB,WAGO Protocol
-- 3D
-
-Each Add-on module can be purchased separately.
 

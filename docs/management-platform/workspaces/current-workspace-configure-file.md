@@ -1,8 +1,7 @@
-# Current Workspace Configure File
+# 当前工程配置文件
 
- The current workspace configuration file is a .ini suffixed configuration file containing configuration information that is used as a basis for the VC Hub service when it is started.
+当前工程配置文件是一个*.ini*为后缀的配置文件，其中的配置信息，作为WAGO VC Hub服务启动时的依据。
 
- The standard contents of this file are shown in the figure below, where **Current** represents the ID of the current workspace, pointing to the name of a workspace folder, and **OpenTime** represents the time of the latest workspace switch.
+该文件中标准内容如下图所示，其中，**Current**代表当前工程的ID，指向某个工程文件夹名称，**OpenTime**代表最新一次切换工程的时间。
 
 ![alt text](11.png)
-

@@ -1,72 +1,100 @@
-# Typical Architecture Selection Guide
+# 典型架构选型指南
 
-## Single Server Architecture
 
-![alt text](30.png)
 
-| Required Authorized Modules | License Quantity |
-|-----------------------------|------------------|
-| I/O Tags                    | 1                |
-
-## Single Server Redundant Architecture
+#### 单服务器架构
 
 ![alt text](31.png)
 
 
 
-| Required Authorized Modules | License Quantity |
-|-----------------------------|------------------|
-| I/O Tags                    | 2                |
+| 所需授权模块 | 数量 |
+|:--------------|:------|
+| 基础平台     | 1    |
+| 2D可视化     | 1    |
 
-## Single Server + Database Architecture
+
+
+#### 单服务器冗余架构
 
 ![alt text](32.png)
 
-
-
-| Required Authorized Modules | License Quantity |
-|-----------------------------|------------------|
-| I/O Tags                    | 1                |
-| Historical Data             | 1                |
+| 所需授权模块      | 数量 |
+|:-------------------|:------|
+| 基础平台 （含冗余） | 1x2  |
+| 2D可视化（含冗余）  | 1x2  |
 
 
 
-## Basic Networking Architecture
+#### 单服务器+数据库架构
 
 ![alt text](33.png)
 
+| 所需授权模块 | 数量 |
+|:--------------|:------|
+| 基础平台     | 1    |
+| 2D可视化     | 1    |
+| 数据库连接   | 1    |
 
 
-| Required Authorized Modules | License Quantity |
-|-----------------------------|------------------|
-| Line 1 - I/O Tags           | 1                |
-| Line 1 - Historical Data    | 1                |
-| Line 2 - I/O Tags           | 1                |
-| Line 2 - Historical Data    | 1                |
-| Plant - I/O Tags            | 1                |
 
-
-## High Availability Networking Architecture
+#### 基础组网架构
 
 ![alt text](34.png)
 
-| Required Authorized Modules | License Quantity |
-|-----------------------------|------------------|
-| Line 1 - I/O Tags           | 2                |
-| Line 1 - Historical Data    | 2                |
-| Line 2 - I/O Tags           | 2                |
-| Line 2 - Historical Data    | 2                |
-| Plant - I/O Tags            | 2                |
 
-## Cloud-Edge Networking Architecture
+
+| 所需授权模块             | 数量 |
+|:--------------------------|:------|
+| 产线1 VC Hub - 基础平台  | 1    |
+| 产线1 VC Hub- 数据库连接 | 1    |
+| 产线2 VC Hub- 基础平台   | 1    |
+| 产线2 VC Hub- 数据库连接 | 1    |
+| 厂级VC Hub - 基础平台    | 1    |
+| 厂级VC Hub - 2D可视化    | 1    |
+
+
+
+#### 高可用组网架构
 
 ![alt text](35.png)
 
-| Required Authorized Modules | License Quantity |
-|-----------------------------|------------------|
-| Site 1 - I/O Tags           | 1                |
-| Site 1  - Historical Data   | 1                |
-| Site 2  - I/O Tags          | 1                |
-| Site 2  - Historical Data   | 1                |
-| Cloud  - I/O Tags           | 1                |
-| Cloud - Historical Data     | 1                |
+
+
+| 所需授权模块                     | 数量 |
+|:----------------------------------|:------|
+| 产线1 VC Hub - 基础平台（含冗余）  | 1x2  |
+| 产线1 VC Hub- 数据库连接（含冗余） | 1x2  |
+| 产线1 VC Hub- 2D可视化（含冗余）   | 1x2  |
+| 产线2 VC Hub - 基础平台（含冗余）  | 1x2  |
+| 产线2 VC Hub- 数据库连接（含冗余） | 1x2  |
+| 产线2 VC Hub- 2D可视化（含冗余）   | 1x2  |
+| 厂级VC Hub - 基础平台（含冗余）    | 1x2  |
+| 厂级VC Hub - 2D可视化（含冗余）    | 1x2  |
+
+
+
+#### 云边组网架构
+
+
+
+![alt text](36.png)
+
+| 所需授权模块             | 数量 |
+|:--------------------------|:------|
+| 站点1 VC Hub - 基础平台  | 1    |
+| 站点1 VC Hub- 数据库连接 | 1    |
+| 站点1 VC Hub- 2D可视化   | 1    |
+| 站点2 VC Hub - 基础平台  | 1    |
+| 站点2 VC Hub- 数据库连接 | 1    |
+| 站点2 VC Hub- 2D可视化   | 1    |
+| 云端 VC Hub - 基础平台   | 1    |
+| 云端 VC Hub- 数据库连接  | 1    |
+| 云端 VC Hub- 2D可视化    | 1    |
+
+
+
+
+
+
+

@@ -1,61 +1,50 @@
+ # 产品概述
 
-# Product Overview
+#### 什么是WAGO VC Hub?
 
-**What is VC Hub ?**
+WAGO VC Hub是由WAGO开发和销售的一款VC Hub产品。其完全基于现代化Web技术开发实现，这使得您能够轻松使用WAGO VC Hub快速构建各种复杂的现场组态应用。不管在本地还是云端，WAGO VC Hub允许您从任何地点实时监测和控制整个工业过程，确保生产过程的连续性，提高生产效率。WAGO VC Hub更支持规模庞大的现场组态项目，使您能收集大量工业现场数据，并通过WAGO VC Hub内置的报表工具获取深入的洞察，有助于进一步优化生产决策。不受限制的用户数量和设备连接数量，使WAGO VC Hub成为适用于各种规模的工业组态项目经济实惠的选择。
 
- WAGO Visualization and Control Hub(VC Hub) is a SCADA product developed and marketed by WAGO. It is fully based on modern web technology, which allows you to easily use VC Hub to quickly build various complex field configuration applications. Whether on-premises or in the cloud, VC Hub enables you to monitor and control the entire industrial process in real-time from any location, ensuring continuity in production and enhancing efficiency. VC Hub also supports large-scale field configuration projects, allowing you to collect a vast amount of industrial data and gain in-depth insights through the built-in reporting tools, which helps further optimize production decisions. With no restrictions on the number of users and device connections, VC Hub is an economical choice suitable for industrial configuration projects of all sizes.
+WAGO VC Hub致力于为您的工业组态现场提供高效便捷的解决方案。
 
- VC Hub is committed to providing efficient and convenient solutions for your industrial configuration field.
+#### WAGO VC Hub的特点
 
-**Features of VC Hub**
+- 服务器安装：WAGO VC Hub只需要在一台服务器上进行安装，即可在各种浏览器中运行，极大降低了现场安装部署以及后期运维的难度。
+- 所见即所得：WAGO VC Hub提供所见即所得的组态编辑器，所有组态过程提供实时反馈，在组态过程中可随时查看和测试自己的设计。
+- 面向对象建模：WAGO VC Hub允许您基于工业现场物理模型构建监控点，完全以对象化的方式管理您的设备数据。
+- 多维度历史数据：WAGO VC Hub支持市面上主流的各类关系型数据，同时也支持时序数据库，提供多维度的历史存储和处理机制。
+- 云端部署：WAGO VC Hub的云端部署为您提供了高度灵活的选择，将监控和控制功能从边端扩展到云端，从而实现云边协同、远程访问、数据存储和协作，为您的工业操作带来更大的便捷性和可扩展性。
+- 支持移动端：WAGO VC Hub支持移动端，使您能够随时随地通过智能手机和平板电脑等移动设备轻松访问监控和控制功能，以便更加实时地管理您的工业现场。
+- 高可用：WAGO VC Hub支持主备高可用配置，确保系统的稳定性和可靠性，无论是通过备用服务器、冗余存储等机制，都能够持续提供实时监控和控制，以应对潜在的故障和维护需求，保障您的现场平稳运行。
+- 高安全性：WAGO VC Hub提供了卓越的高安全性，通过支持HTTPS、加密存储以及证书配置等一系列功能，确保数据的机密性和完整性，从而提供了可信赖的工业组态解决方案。
+- 灵活组网：WAGO VC Hub支持灵活组网，使其能够轻松扩展应用规模，确保您的工业应用能够随着需求的增长而无缝适应，并持续提供高效的监控和控制。
+- 跨平台：WAGO VC Hub的完全跨平台特性使您能够轻松在不同操作系统和设备上实现统一的监控和控制，无惧任何现场部署条件。
+- 国产化：WAGO VC Hub支持主流国产化操作系统和芯片，以满足国内客户的需求，为工业自动化提供更贴近本土的支持。
+- 3D低代码数字孪生平台：WAGO VC Hub的低代码数字孪生平台结合了强大的数字化建模和低代码开发能力，让用户能够更容易创建数字孪生场景，模拟工业过程，并进行迅速的3D孪生应用开发，为工业自动化提供更快速的创新和响应能力。
 
--  Server Installation: VC Hub only needs to be installed on a single server and can run in various browsers, greatly reducing the difficulty of on-site installation, deployment, and subsequent maintenance.
--  WYSIWYG (What You See Is What You Get): VC Hub provides a WYSIWYG configuration editor, providing real-time feedback during the configuration process, allowing users to view and test their design at any time during the configuration process.
--  Object-Oriented Modeling: VC Hub allows you to build monitoring points based on the physical model of the industrial field, managing your device data entirely in an object-oriented manner.
--  Multi-dimensional Historical Data: VC Hub supports various mainstream relational data on the market, it also supports temporal databases, providing multi-dimensional historical storage and processing mechanisms.
--  Cloud Deployment: The cloud deployment of VC Hub offers highly flexible options, extending monitoring and control functions from the edge to the cloud, enabling cloud edge collaboration, remote access, data storage, and collaboration, bringing greater convenience and scalability to your industrial operations.
--  Mobile Support: VC Hub supports mobile devices, allowing you to easily access and control functions anytime, anywhere through smart phones and tablets, for more real-time management of your industrial field.
--  High Availability: VC Hub supports high-availability configurations, ensuring the stability and reliability of the system, continuously providing real-time monitoring and control through mechanisms such as backup servers and redundant storage, to handle potential failures and maintenance needs, ensuring smooth operation of your site.
--  High Security: VC Hub provides excellent security, with features such as HTTPS support, encrypted storage, and certificate configuration, ensuring the confidentiality and integrity of data, thus providing a reliable industrial configuration solution.
--  Flexible Networking: VC Hub supports flexible networking, making it easy to scale applications, ensuring that your industrial applications can seamlessly adapt to growth in demand and continue to provide efficient monitoring and control.
--  Cross-platform: The fully cross-platform nature of VC Hub allows you to easily implement unified monitoring and control across different operating systems and devices, regardless of any on-site deployment conditions.
--  Localization: VC Hub supports main stream localized operating systems and chips, meeting the needs of domestic customers and providing more local support for industrial automation.
--  3D Low-code Digital Twin Platform: VC Hub is low-code digital twin platform combines powerful digital modeling and low-code development capabilities, allowing users to easily create digital twin scenarios, simulate industrial processes, and rapidly develop 3D twin applications, providing faster innovation and responsiveness for industrial automation.
+#### 基于Web实现
 
-
-
-**Web-based Implementation**
-
- VC Hub is fully implemented based on web standards, so you can directly run and operate your VC Hub application using a web browser. For example, you can connect and configure PLC or historical storage directly through a web browser, and you can also use a web browser to configure your VC Hub application. Another benefit of being based on web standards is that it can make your configuration screen easier to create and more aesthetically pleasing than traditional desktops.
+WAGO VC Hub完全基于Web标准实现，所以您可以使用Web浏览器直接运行和操作您的VC Hub应用。比如，直接通过Web浏览器即可连接和配置PLC或者历史存储，您也可以直接使用Web浏览器组态您的VC Hub应用。基于Web标准的另一个好处是，可以使您的组态画面比传统桌面端的更易创建并且更为美观。
 
 ![alt text](1.png)
+#### 高性能
 
+得益于WAGO VC Hub现代化的设计架构和内建的高性能引擎，其可以实时监控数以万计甚至百万技的现场数据，并且进行存储和分析。
 
-**High Performance**
+#### 报表
 
- Profit from VC Hub is modern design architecture and built-in high-performance engine, it can monitor tens of thousands or even millions of field data points in real-time and perform storage and analysis.
-
-**Reporting**
-
- VC Hub has a built-in online report designer, allowing you to complete report design through drag-and-drop. Report data can be seamlessly integrated with the VC Hub historical database and the company's SQL databases. It comes with a rich set of report controls, helping users easily design various report styles and export to multiple mainstream file formats, including Excel, Word, PDF, HTML, images, and JSON.
+WAGO VC Hub内置在线报表设计器，通过拖拽即可完成报表的设计，报表数据可无缝对接VC Hub历史数据库以及企业的SQL数据库。内置丰富的报表控件，帮助用户轻松设计多种报表样式，可导出多种主流文件格式，包括：Excel、Word、PDF、HTML、图片、JSON。
 
 ![alt text](2.png)
 
+#### 报警
 
-**Alarm**   
-
- VC Hub has built-in standardized alarm tools that you can use at any time to build your on-site alarm application. All alarms can be displayed and stored in real-time, and you can also confirm and suspend alarms at any time.
+WAGO VC Hub内建标准化的报警工具，您可以随时使用这些工具构建您的现场报警应用。所有报警可以实时显示和存储，您也可以随时确认和搁置报警。
 
 ![alt text](3.png)
 
+#### 数据驱动
 
+WAGO VC Hub支持多种数据协议，使您能轻松将现场数据接入WAGO VC Hub。并且我们也在不断增加和扩展这些数据协议，使WAGO VC Hub能应用到更广阔的领域。
 
-
-**Data-driven**
-
- VC Hub supports multiple data protocols, allowing you to easily connect on-site data to VC Hub. And we are also constantly increasing and expanding these data protocols to enable VC Hub to be applied to a wider range of fields.
 
 ![alt text](4.png)
-
-
-

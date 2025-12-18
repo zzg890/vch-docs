@@ -1,99 +1,130 @@
 # SIEMENS S7
 
-The Siemens driver in VC Hub supports the basic connection to S7 devices. Currently, VC Hub has drivers for the following Siemens PLCs:
+WAGO VC Hub中的西门子驱动程序支持与 S7 设备的基本连接。目前，WAGO  VC Hub具有适用于以下西门子 PLC 的驱动程序：
 
 - S7-300
 - S7-400
 - S7-1200
 - S7-1500
-## **Connecting to SIEMENS Devices**
 
-1. On the "**Devices**" -> "**SIEMENS S7**" screen, click the "Add" button.
-2. On the Add page, leave all the default values and enter the following information in the following fields (Note: The following data is only an example, please fill in according to the actual situation).
-    - Device Name: Siemens 1200
-    - Model: S7-1200
-    - Host: Enter the IP or domain name of the device, e.g. 100.10.4.12
-    - Port: 102
-    - Rack: 0
-    - Slot: 2
-    - Frequency: 1000
-3. Click on the **"OK"** button. The data will now be displayed in the device list page of the SIEMENS S7. The status column only indicates the start/stop status of the driver, it does not represent the real connection status with the device. 
-   ![alt text](1.png)
-4. Click the Enable button in the Enable Status column to enable the device.
-   ![alt text](2.png)
+#### 连接到 SIEMENS 设备
+
+1. 在”**设备**“->”**SIEMENS S7**“页面，点击“**新增**”按钮。
+2. 在新增页面，保留所有默认值，并在以下字段中输入如下信息（说明：以下数据仅为示例，请根据实际情况填写）。
+
+       设备名称：西门子1200
+
+       型号：S7-1200
+
+       地址：输入设备的 IP 地址，例如 100.10.4.12
+
+       端口：102
+
+       机架号：0
+
+       槽号：2
+
+       频率：1000
+
+3. 单击**“确认”**按钮。此时该条数据将显示在SIEMENS S7的设备列表页面。状态一栏，仅表示驱动程序的启停状态，并不代表和设备的真正连接状态。
+
+![alt text](1.png)
+
+4. 在启用状态一栏点击启用按钮，启用该设备。
+
+![alt text](2.png)
 
 
-**Configuration Fields**
 
-| **Name**           | **Description**                                                            |
-|--------------------|----------------------------------------------------------------------------|
-| Device Name        | The name of the device connection.                                         |
-| Model              | The model number of the device. Includes S7-300, S7-400, S7-1200, S7-1500. |
-| Host               | The domain name or IP address of the device.                               |
-| Port               | The port to use when connecting to the device.                             |
-| Rack               | The rack number where the device is located.                               |
-| Slot               | The slot number assigned to the CPU.                                       |
-| Frequency          | The frequency of data acquisition in milliseconds.                         |
-| Connection Timeout | Connection timeout in milliseconds.                                        |
-| Read Data Timeout  | Timeout for reading data, in milliseconds.                                 |
-| Write Data Timeout | Timeout for writing data, in milliseconds.                                 |
+**配置字段**
 
-**Note:**
+| **名称**   | **描述**                                      |
+|:------------|:-----------------------------------------------|
+| 设备名称   | 设备连接的名称。                               |
+| 型号       | 设备的型号。包括S7-300、S7-400、S7-1200、S7-1500。 |
+| 地址       | 设备的域名或 IP 地址。                         |
+| 端口       | 连接到设备时要使用的端口。                     |
+| 机架号     | 设备所在的机架编号。                           |
+| 槽号       | 分配给 CPU 的插槽编号。                        |
+| 频率       | 数据采集的频率，单位毫秒。                      |
+| 连接超时   | 连接的超时时间，单位毫秒。                      |
+| 读数据超时 | 读取数据的超时时间，单位毫秒。                  |
+| 写数据超时 | 写入数据的超时时间，单位毫秒。                  |
 
-1. In the device list, The **Enabled Status** indicates whether the device has been enabled or not, unenabled devices will not connect and enabled devices will try to connect; the **Connection Status** indicates whether the device has successfully established a communication connection with the system.
-2. **Enable All** and **Disable All** are to enable or disable all data in the list.
-3. Shared connection of multiple devices under the same IP is not supported for the time being.
-4. Per-bit writes are not supported for Bool tags; each write value overwrites the previous byte.
-5. For S7-1200 and S7-1500, the following precautions and configuration changes must be made:
-    - Optimized block access must be turned off.
-    ![alt text](3.png)
-    - The access level must be "full" and the "connection mechanism" must allow GET/PUT.
-    ![alt text](4.png)
-    - Only the Global DB can be accessed.
-    - Reads and writes are not supported in the Timer (TM) and Counter (CT) areas.
+#### 注意事项
 
-## **Binding to tags**
+1. 设备列表中，**启用状态**表示设备是否已被启用，未启用的设备不会进行连接，启用的设备会尝试进行连接；**连接状态**表示设备是否已成功与系统建立通信连接。
+2. **全部启用**和**全部禁用**，是对列表中的所有数据进行启用或禁用。
+3.  暂不支持相同IP下多个设备共享连接。
+4.  对于Bool变量不支持按位写，每次写值覆盖之前的字节。
+5.  对于S7-1200和S7-1500，必须进行以下注意事项和配置更改 ：
 
-Bind tags to data in the Siemens PLC.
+- 必须 关闭优化块访问。
 
-1. Creating an I/O tag.<br>
-   ![alt text](5.png)
-2. On the add window, click the binding button for the data source.
-   ![alt text](6.png)
-3. In the pop-up data source window, select the created Siemens device and enter the following information in the following fields (Note: The following data is only an example, please fill in according to the actual situation).
-    - Parameter Type: DB
-    - DB No.: 2
-    - Data Type: Int
-    - Address Offset: 4
-   ![alt text](7.png)
-4. Click the **"** **OK** **"** button to complete the setup.
+![alt text](3.png)
 
-**Configuration Fields**
+-  访问级别必须为“完全”且“连接机制”必须允许GET/PUT。
 
-| **Parameter Type**       |                                                                                                                                                                                                                                                                                                                                           |
-|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**                 | **Description**                                                                                                                                                                                                                                                                                                                           |
-| I                        | Inputs                                                                                                                                                                                                                                                                                                                                    |
-| Q                        | Output                                                                                                                                                                                                                                                                                                                                    |
-| M                        | Flags                                                                                                                                                                                                                                                                                                                                     |
-| DB                       | Data block                                                                                                                                                                                                                                                                                                                                |
-| **Supported Data Types** |                                                                                                                                                                                                                                                                                                                                           |
-| **Name**                 | **Description**                                                                                                                                                                                                                                                                                                                           |
-| Byte                     | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| Word                     | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| LWord                    | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| DWord                    | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| Int                      | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| SInt                     | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| UInt                     | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| UDInt                    | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| Dint                     | This data type is displayed when the data type of the tag is Integer.                                                                                                                                                                                                                                                                     |
-| Real                     | This data type is displayed when the data type of the tag is Double.                                                                                                                                                                                                                                                                      |
-| LReal                    | This data type is displayed when the data type of the tag is Double.  | **Note**: Due to Siemens device limitations, this data type is only supported on the following models:   - S7-1200  - S7-1500 | |-------------------------------------------------------------------------------------------------------------------------------| |
-| Bool                     | This data type is displayed when the data type of the tag is Bool.                                                                                                                                                                                                                                                                        |
-| Char                     | This data type is displayed when the data type of the tag is String.                                                                                                                                                                                                                                                                      |
-| String                   | This data type is displayed when the data type of the tag is String.                                                                                                                                                                                                                                                                      |
-| Date                     | This data type is displayed when the data type of the tag is DateTime.                                                                                                                                                                                                                                                                    |
-| **Address Offset**       | The starting address for reading and writing.                                                                                                                                                                                                                                                                                             |
-| **Bit Offset**           | This field is displayed when the tag's data type is Bool. The offset is always treated as one byte.                                                                                                                                                                                                                                       |
+![alt text](4.png)
+
+-  只能访问Global DB。
+- 定时器 （TM） 和计数器 （CT） 区域不支持读取和写入。
+
+#### 和变量绑定
+
+将变量和西门子PLC中的数据进行绑定。
+
+1. 创建一个I/O变量。
+
+![alt text](5.png)
+
+2. 在变量的编辑界面，点击数据源的设置按钮。
+
+![alt text](6.png)
+
+3. 在弹出的数据源窗口中，选择已创建的西门子设备，并在以下字段中输入如下信息（说明：以下数据仅为示例，请根据实际情况填写）。
+
+参数类型：DB
+
+DB数据块号：2
+
+数据类型：Int
+
+地址偏移：4
+
+![alt text](7.png)
+
+4. 点击“确认”按钮，完成设置。
+
+**配置字段**
+
+| **参数类型**       |                                                                                                                                                                                                                            |
+|:--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **名称**           | **描述**                                                                                                                                                                                                                   |
+| I                  | 输入                                                                                                                                                                                                                       |
+| Q                  | 输出                                                                                                                                                                                                                       |
+| M                  | 标志                                                                                                                                                                                                                       |
+| DB                 | 数据块                                                                                                                                                                                                                     |
+| **支持的数据类型** |                                                                                                                                                                                                                            |
+| **名称**           | **描述**                                                                                                                                                                                                                   |
+| Byte               | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| Word               | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| LWord              | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| DWord              | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| Int                | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| SInt               | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| USInt              | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| UInt               | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| UDI nt             | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| DI nt              | 当变量的数据类型为Integer 时，才显示该数据类型。                                                                                                                                                                             |
+| Real               | 当变量的数据类型为Double 时，才显示该数据类型。                                                                                                                                                                              |
+| LReal              | 当变量的数据类型为Double 时，才显示该数据类型。  | **注意：**  由于 Siemens 设备的限制，仅以下型号支持此数据类型：  - S7-1200 - S7-1500 | |-----------------------------------------------------------------------------------| |
+| Bool               | 当变量的数据类型为Bool 时，才显示该数据类型。                                                                                                                                                                                |
+| Char               | 当变量的数据类型为String 时，才显示该数据类型。                                                                                                                                                                              |
+| String             | 当变量的数据类型为String 时，才显示该数据类型。                                                                                                                                                                              |
+| Date               | 当变量的数据类型为DateTime 时，才显示该数据类型。                                                                                                                                                                            |
+| **地址偏移**       | 读写的起始地址。                                                                                                                                                                                                            |
+| **位偏移**         | 当变量的数据类型为Bool 时，才显示该字段。该偏移量始终被视为一个字节。                                                                                                                                                         |
+
+
 

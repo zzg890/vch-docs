@@ -1,22 +1,18 @@
-# Standalone Deployment
+# 单机部署
 
- Standalone deployment is the most fundamental method of deploying VC Hub. The configuration for a standalone deployment is very simple, and other more complex deployment methods are based on this basic approach.
+单机部署是WAGO VC Hub的最基础的部署方式。单机部署的配置非常简单，其他更加复杂的部署方式也是基于单机部署而来的。
 
- In a standalone deployment, VC Hub is installed on a single server. This VC Hub node can connect to multiple PLCs, OPC UA servers, and databases. The VC Hub system in standalone deployment can use the built-in SQLite database to store historical data, or it can connect to other database servers and store historical data within them. Additionally, this server allows any number of clients to access it remotely.
+单机部署是指将WAGO VC Hub部署在一台服务器上，该WAGO VC Hub节点可以连接多个 PLC、OPC UA服务器和数据库。单机部署的VC Hub可以使用内置的SQLite数据库存储历史数据，也可以连接到其他数据库服务器，并将历史数据存储到其他数据库中。同时，该服务器允许任意多个客户端进行远程访问。
+
 
 ![alt text](1.png)
 
-## **Multi-network Support**
+#### 多网络支持
 
- VC Hub supports multi-NIC (Network Interface Card) servers and can act as a bridge between multiple networks or communicate with multiple sites via an enterprise-widearea network. Since clients communicate with the databases and programmable logic controllers (PLCs) through VC Hub, they can launch from both the enterprise network and the isolated control network, providing full access to both. The built-in security settings can restrict access to certain parts of the project or deny access to the entire project based on user roles and network locations, limiting project access to users on different networks.
+WAGO VC Hub支持多网卡服务器，并可充当多个网络之间的桥梁，或通过企业广域网与多个站点进行通信。由于客户端通过WAGO VC Hub与数据库和可编程逻辑控制器（PLCs）通信，因此客户端可以从企业网络和隔离的控制网络启动，并提供对两者的完全访问。内置的安全设置可以通过限制项目中的某些内容或根据用户角色和网络位置拒绝对整个项目的访问，限制项目访问仅限于不同网络上的用户。
 
-![alt text](2.png)
+!![alt text](2.png)
 
-
-
-
-
-  
 
   
 

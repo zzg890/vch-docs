@@ -1,14 +1,18 @@
-# System Deployment
+# 系统部署
 
- The deployment of VC Hub  is flexible enough to meet the needs of any small, large, or medium-sized enterprise infrastructure. You can deploy VC Hub  on a single site, multiple sites, or in the cloud.
+WAGO VC Hub的部署方式足够灵活，可以满足任何小型、大型或介于两者之间的企业基础设施的需求。您可以将WAGO VC Hub部署在一个站点、多个站点或者云上。ffff
 
- Common deployment methods:
+以下是几种常见的部署方式：
 
-- [Standalone Deployment](standalone-deployment.md)
-- [Network Deployment](network-deployment.md) 
-- [Hybrid Cloud and Local Deployment](hybrid-cloud-and-local-deployment.md)
-- [Redundant Deployment](redundant-deployment.md)
-- [Azure Cloud Deployment](azure-cloud-deployment.md) 
+- [单机部署](standalone-deployment.md)
+- [组网部署](network-deployment.md) 
+- [云端本地混合部署](hybrid-cloud-and-local-deployment.md) 
+- [冗余部署](redundant-deployment.md) 
+- [Azure云部署](azure-cloud-deployment.md) 
+
+
+
+
 
 
 

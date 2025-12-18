@@ -168,42 +168,42 @@ not_in_nav: |
 
 # Page tree
 nav:
-        - Product Overview:
+        - 产品概述:
                   - overview/index.md
                   - overview/version-update-notes.md
                   - overview/system-requirements.md
                   - overview/breaking-changes.md
-        - New in this Version:
+        - 此版新功能:
                   - new-version/index.md
-        - Installation and Upgrade:
+        - 安装和升级:
                   - installation/index.md
                   - installation/windows-environment.md
                   - installation/linux-environment.md
                   - installation/product-license.md
                   - installation/typical-architecture-selection-guide.md
                   - installation/setup-service-running-user.md
-        - Quick Start Guide:
+        - 快速入门:
                   - quick-start-guide/index.md
-        - System Deployment:
+        - 系统部署:
                   - system-deployment/index.md
                   - system-deployment/standalone-deployment.md
                   - system-deployment/network-deployment.md
                   - system-deployment/hybrid-cloud-and-local-deployment.md
                   - system-deployment/redundant-deployment.md
                   - system-deployment/azure-cloud-deployment.md
-        - Management Platform:
+        - 管理平台:
                   - management-platform/index.md
                   - management-platform/license-and-activation.md
-                  - Workspaces:
+                  - 工程:
                             - management-platform/workspaces/index.md
                             - management-platform/workspaces/multi-workspace-management.md
                             - management-platform/workspaces/current-workspace-configure-file.md
                             - management-platform/workspaces/workspace-directory.md
                             - management-platform/workspaces/upgrade-workspace.md
                             - management-platform/workspaces/can-not-log-in.md
-                  - Projects:
+                  - 项目:
                             - management-platform/projects/index.md
-                  - Devices:
+                  - 设备:
                             - management-platform/devices/index.md
                             - Modbus TCP:
                                       - management-platform/devices/modbus-tcp/index.md

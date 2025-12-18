@@ -1,64 +1,57 @@
-# Project Properties
+# 项目属性
 
-You can set  configurations for the current project in the 2D Editor. For example, startup page, loading effect of running page, etc.
+您可以在 2D编辑器中为当前项目设置属性配置。例如，启动画面、运行画面的加载效等。
 
-Click the Settings button on the menu bar to set properties.
+单击菜单栏的设置按钮进行属性设置。
+
+![alt text](8.png)
 
 ![alt text](1.png)
 
+| **名称**         | **描述**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 项目名称         | 显示当前所属项目的名称。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 启动画面         | 设置项目的启动画面, 默认选择创建的第一个画面。设置后在项目列表中点击项目的运行按钮时，自动显示该画面。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 登录画面         | 当Identity Provider为Local类型时，可以自定义一个画面，用作运行时的登录页面。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 设计项目         | 为该项目配置设计权限(即在编辑器进行编辑和保存的权限)。  - 默认为空，为空时表示使用Security->Permission中的设计项目权限。 - 若在此重新设置了权限，则以此处权限为准。 - 设计权限的access level路径包含在用户的accesss level路径内，则用户有权设计项目。                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 删除项目         | 为该项目配置删除权限。  - 默认为空，为空时表示使用Security->Permission中的删除项目权限。 - 若在此重新设置了权限，则以此处权限为准。 - 删除权限的access level路径包含在用户的accesss level路径内，则用户有权删除项目。                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 运行页面加载效果 | 用于设置运行画面，在画面内容未完全加载出来之前的loading效果。如果不启用，则使用系统默认的加载效果；如果启用，允许用户自定义运行画面的加载背景色和loading样式。  ![alt text](2.png)                                                                                                                                                                                                                                                                                           |
+| 加载背景色       | 开启“页面加载效果”后才显示该配置项。设置运行画面加载时的背景色。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 加载样式         | 开启“页面加载效果”后才显示该配置项。设置运行画面加载时的loading动画。  内置的样式支持修改颜色。选中样式后，点击“设置颜色”按钮进行颜色修改。  也支持用户自行上传图片。用户自己上传的图片不支持颜色修改。                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 自动登录         | 当Identity Provider为Local类型时，开启自动登录功能后，在访问该项目的运行画面时，无需登录即可查看运行画面。  ![alt text](3.png)                                                                                                                                                                                                                                                                                                                                             |
+| 用户名           | 用于设置自动登录的用户名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 密码             | 用于设置自动登录的用户名对应的密码。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Salt             | 将运行画面分享给无账号的用户进行查看时，为了提升系统安全性，需要手动在运行画面的url后面增加`?salt=xxxxxxxxx`  例如：  当前画面的运行地址为：`http://vpc-sz-scadap52:8066/#/runtime/Project1/Home,`将该页面分享给其他无账号的用户查看时，需将`http://vpc-sz-scadap52:8066/#/runtime/Project1/Home?salt=xxxxxxxxx`提供给被分享人。  如果需要终止某个用户查看已分享的运行画面，只需在上图弹窗中执行以下任一操作：  - 点击 **“重新生成”** 按钮更新 **Salt** 值，或 - 关闭 **自动登录** 功能。  这样，当用户再次访问原分享链接时，将无法继续查看页面。  **提示**：由于浏览器缓存的存在，在缓存仍有效的情况下，用户可能在短时间内仍能继续访问。缓存失效后，使用原链接将无法再查看内容。 |
 
-| **Name**                   | **Description**  |
-|----------------------------|---------------------------------------|
-| Project Name               | Displays the name of the current project.  |
-| Startup Page               | Set the startup page of the project, the first page created is selected by default.  After setting, this page is automatically displayed when you click the run button of the project in the project list.   |
-| Login Page                 | When the Identity Provider is set to **Local** type, you can customize a page to serve as the login page during runtime.   |
-| Design Project             | Configure design permissions for this project (i.e., permissions for editing and saving in the editor).  <br>- By default, this field is empty. When empty, the system uses the design project permissions defined in Security > Permission. <br>- Permissions configured here will replace those set in Security > Permission. <br>-  If the design permissions' access level path is within the user's access level path, the user will have the right to design the project.   |
-| Delete Project             | Configure delete permissions for this project.  <br>- By default, this field is empty. When empty, the system uses the delete project permissions defined in Security > Permission. <br>- Permissions configured here will replace those set in Security > Permission. <br>-  If the delete permissions' access level path is within the user's access level path, the user will have the right to delete the project.    |
-| Running Page Loading Style | Used to set the running page and the loading effect before the page content is fully loaded. If not enabled, the system default loading effect will be used; if enabled, the user is allowed to customize the loading background color and loading style of the running page.  <br>![alt text](2.png)     |
-| Loading Background Color   | This configuration item is only displayed after turning on "Running Page Loading Style". Set the background color of the running page when loading.    |
-| Loading Style              | This configuration item is only displayed after turning on "Running Page Loading Style". Set the loading animation when the running page is loaded.  Built-in styles support changing colors. After selecting the style, click the "Set Color" button to modify the color.  It also supports users to upload pictures by themselves. Images uploaded by users themselves do not support color modification.    |
-| Auto Login                 | When the Auto Login is enabled, you can view the running page without logging in.  <br>![alt text](3.png)  |
-| User Name                  | User name for automatic login.    |
-| Password                   | Password for the automatic login.   |
-| Salt                       | To share a runtime page with users who do not have an account, and to enhance system security, you must manually append `?salt=xxxxxxxxx` to the end of the runtime page URL.  <br>For example:  <br>If the current runtime screen URL is:<br>`http://vpc-sz-scadap52:8066/#/runtime/Project1/Home`  <br>To share this page with other users without an account, you need to provide them with the following URL:  <br>`http://vpc-sz-scadap52:8066/#/runtime/Project1/Home?salt=xxxxxxxxx`  <br>To **terminate access** for a user who has already received the shared link, perform either of the following actions in the dialog shown above:  <br>- Click **“Regenerate”** to update the **Salt** value, or <br>- Disable the **Auto Login** feature.  <br>After doing so, the user will no longer be able to view the page using the previously shared link.  <br>**Note:** Due to browser caching, the user may still be able to access the page for a short time while the cache is valid. Once the cache expires, the original link will no longer work. |
+| **说明**：1. 当网络环境比较好的情况下，运行页面的加载效果会一闪而过。 2. 如果启用了自动登录并已正确配置用户名和密码，再次打开配置页面时，密码框将自动隐藏。如果更改用户名，密码框将会显示，允许更新自动登录的用户名和密码。一旦正确配置了用户名和密码，即使之后修改了密码，自动登录仍然有效。如果不再需要自动登录功能，可随时关闭自动登录。 3. Autologin是项目级别的，登录之后只有当前项目权限。无法在同一个客户端浏览器同时使2个项目的autologin操作生效。比如，已经在当前浏览器中autologin了项目A，现在想要切换到autologin的项目B，必须先退出项目A的登录，才能autologin到项目B。 4. 使用autologin的方式访问运行画面，之后切换到控制台页面，无论该autologin账号配置了何种权限，一旦通过autologin方式登录后，都只具备查看权限。如果想恢复权限，需退出，重新使用账号登录。 |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Notes:** 
+#### 运行页面加载样式
 
-1. If the network connection is good, the loading effect of the runtime page will flash by almost instantly. 
-2. If auto-login is enabled and the username and password are correctly configured, the password field will be automatically hidden when reopening the settings page. If the username is changed, the password field will appear, allowing you to update the auto-login username and password. Once the username and password are correctly configured, auto-login will remain effective even if the password is later changed. If you no longer need the auto-login feature, you can disable it at any time. 
-3. Autologin is configured at the project level, and after logging in, only the current project's permissions are granted. It is not possible to use autologin for two different projects simultaneously in the same client browser. For example, if Project A has already been autologged in on the current browser, switching to autologin for Project B requires first logging out from Project A before autologin for Project B can take effect. 
-4. When accessing the runtime page using autologin, and then switching to the console page, the session will only have view-only permissions — regardless of the permissions configured for the autologin account. To restore proper permissions, the user must log out and log in again using a regular account.
+从画面1导航到画面2时，为运行画面设置加载效果。
 
+1. 创建两个画面，画面1和画面2。
+2. 在画面1上放置一个按钮，点击该按钮时导航到画面2。
 
+| **属性**     | **值**                                                                                                                                                                                                     |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 页面加载效果 | 启用。                                                                                                                                                                                                      |
+| 加载背景色   | 02023b                                                                                                                                                                                                     |
+| Loading样式  | ![alt text](4.png) |
 
-## Run page loading styles
+运行画面，在画面1上点击”打开画面2“按钮，页面处于加载状态，加载完成，显示画面2。
 
-Sets the loading effect for the running page when navigating from Page1 to Page 2.
+![alt text](9.png)
 
-1. Create two pages, Page1 and Page2.
-2. Place a button on Page1 that when clicked navigation to Page2.
+#### 项目的运行画面自动登录
 
-| **Property**               | **Value**    |
-|----------------------------|-----------------------------------------------------|
-| Running Page Loading Style | Enable.  |
-| Loading Background Color   | 02023b      |
-| Loading Style              | ![alt text](4.png)|
+在项目上开启了自动登录功能后，访问该项目的运行画面，无需登录即可直接查看。
 
-Run the page and click the "Open Page 2" button on page 1. The page is loading. When the loading is completed, Page 2 is displayed.
+1. 打开项目管理弹窗。
+2. 开启自动登录。
+3. 输入用户名和密码，点击确认按钮。
+4. 在项目列表页面，点击该项目的”运行“按钮，在运行页面复制链接地址。
+5. 在其他的浏览器或者机器上打开步骤4的链接，无需登录即可自动访问。
 
-    ![page1](../../assets/images/page1.gif)
-
-## Auto-login for Project Runtime Page
-
-When the auto-login feature is enabled on a project, users can directly access the project's runtime page without the need to log in.
-
-1. Open the Project Management Window
-2. Enable Auto-Login
-3. Input the username and password that will be used for auto-login, then click the "OK" button.
-4. On the project list page, click the "Run" button of the project. In the runtime page, copy the link address.
-5. Open the link copied in step 4 in another browser or on a different machine. The project will automatically open without requiring a login.
-
-    ![page2](../../assets/images/page2.gif)
-
-
+![alt text](10.png)
 

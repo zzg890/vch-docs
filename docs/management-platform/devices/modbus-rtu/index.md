@@ -1,114 +1,149 @@
 # Modbus RTU
 
-The Modbus RTU driver in VC Hub communicates data with devices (typically PLCs, sensors or other industrial devices) via the COM port. The driver handles the underlying details of the Modbus RTU communication protocol and ensures that reliable serial data interaction between devices is possible.
+WAGO VC Hub中的Modbus RTU驱动程序通过COM口与设备（通常是 PLC、传感器或其他工业设备）进行数据通信。该驱动程序负责处理Modbus RTU通信协议的底层细节，确保设备之间能够实现可靠的串行数据交互。
 
-## **Connecting to a Modbus RTU Device**
+#### 连接到Modbus RTU设备
 
-1. On the "**Devices**" -> "**Modbus RTU**" page, click the "**Add**" button.
-2. On the Add page, keep the default values and enter the following information in the following fields (Note: The following data is only an example, please fill in the fields according to the actual situation).
-    - Name: test1
-    - COM: 2
-    - Baud Rate: 9600
-    - Data Bits: 8
-    - Stop Bits: 1 bit
-    - Parity: None
-    - Connection Timeout (ms): 10000
-    - Read Data Timeout (ms): 5000
-    - Write Data Timeout (ms): 2000
-3. Click the "**OK**" button. The data will be displayed in the device list page of Modbus RTU.
-   ![alt text](1.png)
-4. Click the Enable button in the Enable Status column to enable the device.
-   ![alt text](2.png)
-    **Configuration Fields**
+1. 在”**设备**“->”**Modbus RTU**“页面，点击“**新增**”按钮。
+2. 在新增页面，保留默认值，并在以下字段中输入如下信息（说明：以下数据仅为示例，请根据实际情况填写）。
 
-   | **Name**              | **Description**        |
-   |-------------------------|-----------------------------|
-   | Name                    | The name of the device connection.                    |
-   | COM                     | The COM port (name of the serial port) of the device. |
-   | Baud Rate               | The baud rate of the device.                          |
-   | Data Bits               | The data bits of the device.                          |
-   | Stop Bits               | The stop bit of the device.                           |
-   | Parity                  | The parity of the device.                             |
-   | Connection Timeout (ms) | Connection timeout of the device in milliseconds.     |
-   | Read Data Timeout (ms)  | Read data timeout of the device in milliseconds       |
-   |Write Data Timeout (ms) | The device's write data timeout in milliseconds.      |
+设备名称：Test1
 
-5.Click on the "**Add Frame**" button on the created device to add a frame to the current device.
+COM口：2
 
-- Frame: The frame is the same as a data frame in the Modbus protocol, it is the basic unit of data transmission, it is used to record the slave address, storage area, start and end address, data encoding format and frequency of data acquisition for data communication, and the I/O tags can be bound to the frame in the VC Hub program.
+波特率：9600
 
-6.In the Add Frame screen, leave the default values and enter the following information in the following fields.
+数据位：8
 
- **Note:** The following data is only an example, please fill in the fields according to the actual situation
+停止位：1位
 
- - Name: HoldingRegister1
- - Slave Address: 1
- - Function: Holding Register
- - Start Address: 1
- - Endind Address: 11
- - Data Encoding: Big Endian
- - Frequency (ms): 1000
+奇偶校验：无校验
 
-7.Click the "**OK**" button. The data will be displayed under the previously created device.
-   ![alt text](3.png)
+连接超时(ms)：10000
 
-**Configuration Fields**
+读数据超时(ms)：5000
 
-   | **Name**    | **Description**                  |
-   |----------------|---------------------------------------|
-   | Name           | Name of the frame connection.      |
-   | Slave Address  | Slave address of the frame.     |
-   | Function       | The memory area of the frame.   |
-   | Start Address  | The start address of the frame.    |
-   | Ending Address | The end address of the frame.      |
-   | Data Encoding  | The data encoding method of the frame.   |
-   | Frequency (ms) | The frequency of data acquisition in milliseconds. (Displayed only when the memory area is an input register, hold register) |
+写数据超时(ms)：2000
 
-**Note:**
+3. 单击"**确认**"按钮。此时该条数据将显示在Modbus RTU的设备列表页面。
 
-1. In the device list, The **Enabled Status** indicates whether the device has been enabled or not, unenabled devices will not connect and enabled devices will try to connect; the **Connection Status** indicates whether the device has successfully established a communication connection with the system.
-2. **Enable All** and **Disable All** are to enable or disable all data in the list.
-3. The data code is not required when the function is a **coil status** and **input status**.
-4. Connections are not shared between all devices.
+![alt text](1.png)
 
-## **Tag Binding**
+4. 在启用状态一栏点击启用按钮，启用该设备。
 
-Bind a tag to the data of a Modbus RTU device.
+![alt text](2.png)
 
-1. Create an I/O tag.<br>
-   ![alt text](4.png)
-2. On the add window, click the binding button of data source.
-   ![alt text](5.png)
-3. In the pop-up data source window, select the frame under the created Modbus RTU device and enter the following information in the following fields (Note: The following data is only an example, please fill in according to the actual situation).
-    - Function: Holding Register
-    - Address Range: 1 ~ 11
-    - Data Type: UINT16
-    - Address: 1
-    - Bit: 1
-   ![alt text](6.png)
 
-**Configuration Fields**
 
-   | **Function**    |     |
-   |--------------------------|------------------------|
-   | **Name**                 | **Description**   |
-   | Coil Status              | Used to store switching-type data, usually indicating the binary switching state (ON/OFF). Corresponds to function codes 01 and 05. |
-   | Input Status             | Used to store read-only switching-type data, usually representing the binary input state. Corresponds to function code 02.          |
-   | Input register           | Used to store read-only 16-bit register data. Corresponds to function code 04.                                                      |
-   | Holding Register         | Holding register is used to store 16-bit register data that can be read and written. Corresponds to function codes 03, 06, and 16.  |
-   | Address Range            | The start address and end address of the frame.    |
-   | **Supported Data Types** |           |
-   | **Name**                 | **Description**        |
-   | INT16                    | This data type is displayed when the data type of the tag is Integer.                                                               |
-   | INT32                    | This data type is displayed when the data type of the tag is Integer.                                                               |
-   | INT64                    | This data type is displayed when the data type of the tag is Integer.                                                               |
-   | INT8                     | This data type is displayed when the data type of the tag is Integer.                                                               |
-   | UINT16                   | This data type is displayed when the data type of the tag is Integer or Bool.                                                       |
-   | UINT32                   | This data type is displayed when the data type of the tag is Integer.                                                               |
-   | UINT64                   | This data type is displayed when the data type of the tag is Integer.                                                               |
-   | UINT8                    | This data type is displayed when the data type of the tag is Integer.                                                               |
-   | DOUBLE                   | This data type is displayed when the data type of the tag is Double.                                                                |
-   | FLOAT32                  | This data type is displayed when the data type of the tag is Double.                                                                |
-   | **Address**              | The address of the storage area.  |
-   | **Bit**                  | The bit of the address of the storage area. This field is displayed when the tag's data type is Bool.                               |
+**配置字段**
+
+| **名称**       | **描述**                       |
+|----------------|--------------------------------|
+| 设备名称       | 设备连接的名称。                |
+| COM口          | 设备的COM口（串行端口的名称）。   |
+| 波特率         | 设备的波特率。                  |
+| 数据位         | 设备的数据位。                  |
+| 停止位         | 设备的停止位。                  |
+| 奇偶校验       | 设备的奇偶校验。                |
+| 连接超时(ms)   | 设备的连接超时时间，单位毫秒。   |
+| 读数据超时(ms) | 设备的读数据超时时间，单位毫秒。 |
+| 写数据超时(ms) | 设备的写数据超时时间，单位毫秒。 |
+
+5. 在创建的设备上单击"**添加帧**"按钮，为当前设备添加一个帧。
+
+**帧**：同Modbus协议中的数据帧，是数据传输的基本单位，用于记录数据通信的从站地址、存储区域、开始和结束地址、数据编码格式和数据采集的频率，在WAGO VC Hub程序中，I/O变量可以和帧绑定。
+
+6. 在添加帧页面，保留默认值，并在以下字段中输入如下信息（说明：以下数据仅为示例，请根据实际情况填写）。
+
+名称：保持寄存器1
+
+从站地址：1
+
+存储区：保持寄存器
+
+开始地址：1
+
+结束地址：11
+
+数据编码：大端
+
+频率(ms)：1000
+
+7. 单击"**确认**"按钮。此时该条数据将显示在之前创建的设备下。
+
+![alt text](3.png)
+
+**配置字段**
+
+| **名称** | **描述**                                                          |
+|----------|-------------------------------------------------------------------|
+| 名称     | 帧连接的名称。                                                     |
+| 从站地址 | 帧的从站地址。                                                     |
+| 存储区   | 帧的存储区。                                                       |
+| 开始地址 | 帧的开始地址。                                                     |
+| 结束地址 | 帧的结束地址。                                                     |
+| 数据编码 | 帧的数据编码方式。                                                 |
+| 频率(ms) | 数据采集的频率，单位毫秒。（只有存储区为输入寄存器、保持寄存器时显示） |
+
+#### 注意事项
+
+1. 设备列表状态一栏，**启用状态**表示设备是否已被启用，未启用的设备不会进行连接，启用的设备会尝试进行连接；**连接状态**表示设备是否已成功与系统建立通信连接。
+2. **全部启用**和**全部禁用**，是对列表中的所有数据进行启用或禁用。
+3. 存储区是**单个线圈**和**离散量输入**时，不需要填写**数据编码**。
+4. 所有设备之间不共享连接。
+
+#### 变量绑定
+
+将变量和Modbus RTU设备的数据进行绑定。
+
+1. 创建一个I/O变量。
+
+![alt text](4.png)
+
+2. 在变量的编辑页面，点击数据源的按钮设置。
+
+![alt text](5.png)
+
+3. 在弹出的数据源窗口中，选择已创建的Modbus RTU设备下的帧,并在以下字段中输入如下信息（说明：以下数据仅为示例，请根据实际情况填写）。
+
+存储区：保持寄存器
+
+地址范围：1 ~ 11
+
+数据类型：UINT16
+
+地址：1
+
+位：1
+
+![alt text](6.png)
+
+4. 点击"确认"按钮，完成设置。
+
+**配置字段**
+
+| **存储区**         |                                                                      |
+|:--------------------|----------------------------------------------------------------------|
+| **名称**           | **描述**                                                             |
+| 单个线圈           | 用于存储开关型数据，通常表示二进制的开关状态（ON/OFF）。对应功能码01、05。 |
+| 离散量输入         | 用于存储只读的开关型数据，通常表示二进制的输入状态。对应功能码02。      |
+| 输入寄存器         | 用于存储只读的 16 位寄存器数据。对应功能码04。                         |
+| 保持寄存器         | 用于存储只读的 16 位寄存器数据。对应功能码03、06、16。                   |
+| **地址范围**       | 帧的开始地址和结束地址。                                              |
+| **支持的数据类型** |                                                                      |
+| **名称**           | **描述**                                                             |
+| INT16              | 当变量的数据类型为Integer 时，才显示该数据类型。                       |
+| INT32              | 当变量的数据类型为Integer 时，才显示该数据类型。                       |
+| INT64              | 当变量的数据类型为Integer 时，才显示该数据类型。                       |
+| INT8               | 当变量的数据类型为Integer 时，才显示该数据类型。                       |
+| UINT16             | 当变量的数据类型为Integer或Bool 时，才显示该数据类型。                 |
+| UINT32             | 当变量的数据类型为Integer 时，才显示该数据类型。                       |
+| UINT64             | 当变量的数据类型为Integer 时，才显示该数据类型。                       |
+| UINT8              | 当变量的数据类型为Integer 时，才显示该数据类型。                       |
+| DOUBLE             | 当变量的数据类型为Double 时，才显示该数据类型。                        |
+| FLOAT32            | 当变量的数据类型为Double 时，才显示该数据类型。                        |
+| **地址**           | 存储区的地址。                                                        |
+| **位**             | 存储区的地址的第几位。 当变量的数据类型为Bool时，才显示该字段。         |
+
+
 

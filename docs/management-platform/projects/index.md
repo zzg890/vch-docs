@@ -1,159 +1,126 @@
-# Projects
+# 项目
 
-## **What is a project?**
+#### 什么是项目？
 
-Projects are used to manage the visualization elements of the **VC Hub** system, and through multi-project management, it is possible to clearly differentiate between the presentation and design of configuration screens in several industrial application scenarios. In a project, **configuration controls**, **tag** **s** and **scripts** allow the user to freely configure a variety of digital visualization interfaces in order to cope with different industrial production scenarios.
+项目主要用于管理**WAGO VC Hub**系统中的可视化元素，通过多项目管理，可以清晰的区分在多个工业应用场景下组态画面的呈现与设计，在项目中，通过**组态控件**、**变量**和**脚本**，用户可以自由组态出各种数字可视化界面，以应付不同的工业生产场景。
 
-In the VC Hub system, the project is a configuration unit that contains:
+在WAGO VC Hub系统中，项目是一个组态单元，其中包含：
 
-- 2D Configuration: A rich graphical configuration editor.
-- 3D Configuration: A three-dimensional graphical configuration editor, which, once configured, can be displayed on the screen by means of the 3D controls in the **2D Configuration**.
+- [known-link] ：丰富的图形化组态编辑器。
+- [known-link] ：三维图形组态编辑器，组态完成后，可通过**2D组态**中的3D控件，展示到画面中。
 
-In a single project, multiple configuration pages can be managed at the same time, the project can be seen as a folder of multiple related configuration screens. Through this mechanism, in an industrial generation environment with relatively more scenes, users can create multiple projects, each managing a production scene in the project, and a production scene consists of multiple screens to achieve the goal of clear management of configuration screens, and to make the later maintenance easier.
+在单个项目中，可以同时管理多个组态画面，项目可以看作是多个相关组态画面的文件夹，通过该机制，在场景相对较多的工业生成环境中，用户可以用创建多个项目，每个项目中管理一个生产场景，而一个生产场景由多个画面组成，以实现清晰管理组态画面的目标，也让后期的维护变得简单。
 
-For example, there is a large factory with 10 production plants.
+比如，存在1个大型工厂，工厂中有10个生产车间。
 
-Under the project management mechanism, you can create a project called "Factory", which contains general information about the factory production and overview controls and data of the 10 workshops.
+在项目管理机制下，用户可以建一个名为“工厂”的项目，包含工厂生产的总体信息以及10个车间的概览控件和数据；
 
-At the same time, you can create a project called "Factory", which contains general information about the production of the factory and an overview of the 10 workshops, as well as data for each of the 10 workshops.
+同时分别创建10个车间项目，在各个车间项目中分别组态各车间的详细生产信息；
 
-Through the screen jump function in the configuration, the workshop controls in the overview screen of the "Factory" and the screens in each workshop project are associated to realize the multi-level management of the production environment.
+再通过组态中的画面跳转功能，将“工厂”总览画面中的车间控件，和各个车间项目中的画面关联起来，实现生产环境的多层级管理。
 
-## **How to use**
+#### 如何使用
 
-After successfully logging in to the system, users will be taken to the project list page, where they can manage their projects.
+用户在成功登录到系统后，会进入到项目列表页面，用户可在该页面中进行项目管理。
 
 ![alt text](1.png)
 
+项目列表中，**自动登录**包含2种状态：**启用，禁用**。
 
-**There are two Auto Login status shown in the project list: Enabled, and Disabled.**
+- 启用：在编辑器内的项目配置窗口中，启用了自动登录功能。
+- 禁用：项目的自动登录功能处于关闭状态。如果该项目是通过导入方式添加到项目列表的，则会在禁用后面显示特殊符号。
 
-- **Enabled**: The auto login feature has been turned on in the project configuration window within the editor.
-- **Disabled**: The auto-login feature for the project is disabled. If the project was added to the project list via import, a special icon will be displayed next to the "Disabled" status.
-
-**Project Configuration Window**:
+项目配置窗口:
 
 ![alt text](2.png)
 
-Projects are presented in both lists and charts, which are switched via the icon in the upper left corner.Default list mode.
+项目有列表和图表两种展示方式，通过左上角的图标进行切换。
 
 ![alt text](3.png)
 
+###### 查询
 
-| Icon        |  Description   |                                                                                                                                                                                                                                                                                                                                                                                                         
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![alt text](4.png)| Use chart mode to display. <br> ![alt text](5.png)|
-| ![alt text](6.png)| Use list mode to display. <br> ![alt text](7.png)|
+用户在项目主页面中，可以查看到当前系统所有项目，默认以**创建时间**倒序，用户可以根据需要，自定义排序，目前仅支持，**创建时间**、**名称**的正序倒序排列。
 
-#### **Query**
+用户可通过左上角按钮切换工厂以列表还是排列方式展示，默认以列表方式展示，点击左侧排列方式后，如下图所示，仅展示项目名称及项目图片。
 
-Users in the main page of the project, you can view all the projects in the current system, the default **creation time** in reverse order, users can customize the order, currently only supports**, creation time, name** of the reverse order of the positive order of the arrangement.
+用户可以通过右上角输入框，通过输入**项目名称**关键字，模糊筛选出所要展示项目。
 
-Users can switch the factory to display in list or arrangement mode through the button on the upper left corner, the default is to display in list mode, after clicking the arrangement mode on the left side, as shown in the figure below, only the project name and project picture are displayed.
+![alt text](4.png)
 
-Users can input the keywords of the **project name** through the input box at the upper right corner to filter out the projects to be displayed by fuzzy filtering.
+###### 新增
+
+用户通过点击右上角按钮**新增**按钮，输入项目基本信息创建新的项目。
+
+![alt text](5.png)
+
+| **配置** | **描述**                                                                                                                             |
+|----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| 项目名称 | 项目的名称，名称不可重复，必填项。                                                                                                      |
+| 项目描述 | 项目的描述，可选填。                                                                                                                   |
+| 项目图片 | 在使用排列方式展示项目时显示的图片，仅支持JPG、GIF、PNG、SVG、JPEG格式。可选填，如没有上传自定义图片，则显示默认图片，如**查询**功能中所展示。 |
+
+###### 设计
+
+选择任意项目，点击**设计**按钮，即可打开项目设计页面，如下图所示，用户可以通过该页面进行组态**。**
+
+设计页面具体功能介绍请参照：[known-link]， [known-link] ，[known-link] 。
+
+![alt text](6.png)
+
+###### 运行
+
+选择任意项目，点击**运行**按钮，即可打开项目**启动画面**，**启动画面**可在**组态**页面设置，具体参考[known-link] 。
+
+###### 复制
+
+选择任意项目，点击右侧**复制**按钮，将弹出编辑框，被复制工程的默认名称为“{*原项目名称}_Copy”*，用户可以根据需求修改名称、描述和项目图片后。
+
+![alt text](7.png)
+
+点击**确认**，即可完成复制。
 
 ![alt text](8.png)
 
+###### 修改
 
-#### **Add**
+用户可将鼠标移动到任意工程**更多**按钮上，会显示更多的下拉菜单选项。
 
 ![alt text](9.png)
 
-
-Users can create a new project by clicking on the Add button in the upper right corner button and entering the basic information of the project.
-
-| **Configuration**   | **Description**                                                                                                                                                                                                                      |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Project Name        | The name of the project, the name cannot be repeated, required.                                                                                                                                                                      |
-| Project Description | The description of the project, optional.                                                                                                                                                                                            |
-| Project Image       | The image that will be displayed when the project is arranged, only JPG, GIF, PNG, SVG, JPEG format is supported. Optional. If no customized image is uploaded, the default image will be displayed, as shown in the query function. |
-
-#### **Design**
-
-Select any project and click Design button to open the project design page.
+用户点击下拉菜单**修改**按钮后，会弹出项目基础信息编辑框，根据需要修改后点击**确认**，修改项目基础信息。
 
 ![alt text](10.png)
 
+###### 删除
+
+用户点击下拉菜单**删除**按钮后，会弹出删除提示框，点击**确认**后，对选中的项目进行删除。
 
 ![alt text](11.png)
 
+#### 项目中的资产窗口
 
-Please refer to: 2D Configuration, 3D Configuration, Assets and Tags for specific function introduction of the design page.
+在项目设计器中，用户可在左下角资产列表中，对资产模型和资产实例进行查看编辑，但特殊的是，资产数据不属于单个项目，比如用户在项目A中添加了变量n，那么在项目B中也同样可以看到该变量，并且可以使用它。
 
-#### **Run**
-
-Select any project and click the **Run** button to open the project **startup page.**
+**说明：**资产数据不属于项目，资产独立存在于系统中，项目和资产之间仅存在使用关系。
 
 ![alt text](12.png)
 
 
-The **startup page** can be set in the “Project Configuration” window of the 2D Designer.
+
+# 导出导入
+
+#### 项目导出
+
+用户可将鼠标移动到任意工程”**更多**”按钮上，会显示更多的下拉菜单选项。
 
 ![alt text](13.png)
 
+用户点击**导出**后，即可将选中项目导出为 wsproj格式文件，可进行项目备份。
 
-#### **Copy**
+#### 项目导入
 
-Select any project, click **Copy** button , an edit box will pop up, the default name of the copied project is "{original project name}_Copy", users can modify the name, description and project picture according to requirements.
+用户可点击右上角**导入**按钮，将之前导出的文件进行导入，导入时将以 wsproj文件的文件名作为项目名称导入，并且会在文件名后加上导入时间作为被导入的项目名称。
 
 ![alt text](14.png)
-
-
-![alt text](15.png)
-
-
-Click  the “OK “  button to complete the copy.
-
-![alt text](16.png)
-
-
-
-#### **Edit**
-
-The user can move the mouse over any of the Project **More** buttons, which will display more drop-down menu options.
-
-![alt text](17.png)
-
-
-After the user clicks on the drop-down menu **Edit** button, the project base information edit box will pop up, modify it as needed and click **OK** to modify the project base information.
-
-![alt text](18.png)
-
-
-#### **Delete**
-
-After the user clicks on the drop-down menu Delete button, a Delete prompt box will pop up, click on OK to delete the selected item. Message.
-
-![alt text](19.png)
-
-
-#### **Export**
-
- Users can move their mouse over any of the project "More" buttons to reveal more drop-down menu options.
-
-![alt text](20.png)
-
- After the user clicks on **Export** , the selected items can be exported to a  wsproj  file, which can be used for project backup.
-
-#### **Import**
-
-Users can click the Import button in the upper right corner to import the previously exported file, which will be imported with the file name of the wsproj file as the name of the project, and the time of import will be added after the file name as the name of the imported project.
-
-![alt text](21.png)
-
-
-## **Asset Window in Project**
-
-In the Project Designer, users can view and edit the asset model and asset instances in the asset list in the lower left corner, but the special thing is that the asset data doesn't belong to a single project, for example, if the user has added the tag n in Project A, the tag will be equally visible in Project B and you can use it.
-
-**Note**: Asset data does not belong to the project, the asset exists independently in the system, and there is only a usage relationship between the project and the asset.
-
-![alt text](22.png)
-
-
-
-
-
-
 
